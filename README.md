@@ -63,6 +63,12 @@ For a detailes list of all the desired features refer to [this discussion](https
     `-- utils         ------>Typography library settings
         `-- typography.js
 ```
+
+##Contributing
+Create a new branch whenever you want to add a new feature and file a PR from that branch only. If the PR is accepted then delete that from locally and rebase your master branch with upstream:
+in the master branch:
+`git pull upstream --rebase master`
+
 ##Styling
 The project is currently set up to support both CSS ans SASS. It is strongly reccomended to use SASS always.
 Use inline styling fot components if you can get away with it but feel free to make a separate SASS module and import it into your component.
