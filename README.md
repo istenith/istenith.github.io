@@ -1,6 +1,6 @@
 # ISTE 2020 website
 
-For a detailes list of all the desired features refer to [this discussion](https://github.com/orgs/istenith/teams/web-dev/discussions/1)
+For a details list of all the desired features refer to [this discussion](https://github.com/orgs/istenith/teams/web-dev/discussions/1)
 
 ## Setting Up
 - Install `npm`
@@ -31,7 +31,7 @@ For a detailes list of all the desired features refer to [this discussion](https
 ```
 |-- LICENSE
 |-- README.md
-|-- content           ------>this folder containst the .md files
+|-- content           ------>this folder contains the .md files
 |   |-- about.md
 |   |-- media
 |   |   |-- horses.jpg
@@ -70,22 +70,22 @@ in the master branch:
 `git pull upstream --rebase master`
 
 ## Styling
-The project is currently set up to support both CSS ans SASS. It is strongly reccomended to use SASS always.
+The project is currently set up to support both CSS ans SASS. It is strongly recommended to use SASS always.
 Use inline styling fot components if you can get away with it but feel free to make a separate SASS module and import it into your component.
-Try not to duplicate the style proberties use the power of inheritence!
+Try not to duplicate the style properties use the power of inheritance!
 
-Typography.js takes care of the fonts throughout the website see `src/utils/typography.js`. Predefined themes are also available for moe informations reffer to the [docs](https://kyleamathews.github.io/typography.js/)!
+Typography.js takes care of the fonts throughout the website see `src/utils/typography.js`. Predefined themes are also available for moe information refer to the [docs](https://kyleamathews.github.io/typography.js/)!
 
 
-## Troublshooting
+## Troubleshooting
 I have not encountered any major error till now except this one
 `Internal watch failed: ENOSPC: System limit for number of file watchers reached`
 
 Fix: `sudo echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p`
 
-Since this occured fairely often I made an alias for this in my `.zshrc`
+Since this occurred fairly often I made an alias for this in my `.zshrc`
 
-## Toutorials
-The [Official Gatsby Ducumentation](https://www.gatsbyjs.org/tutorial/) is the best resourse for getting started with Gatsby and understand the basics.
+## Tutorials
+The [Official Gatsby Documentation](https://www.gatsbyjs.org/tutorial/) is the best resource for getting started with Gatsby and understand the basics.
 
-[The Great Gatsby Bootcamp](https://www.youtube.com/watch?v=8t0vNu2fCCM&t=11105s)
+[The Great Gatsby Boot-Camp](https://www.youtube.com/watch?v=8t0vNu2fCCM&t=11105s)
