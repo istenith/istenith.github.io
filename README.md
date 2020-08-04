@@ -65,6 +65,7 @@ For a details list of all the desired features refer to [this discussion](https:
 ```
 
 ## Contributing
+Fork this repository and clone it as mentioned above
 Create a new branch whenever you want to add a new feature and file a PR from that branch only. If the PR is accepted then delete that from locally and rebase your master branch with upstream:
 in the master branch:
 `git pull upstream --rebase master`
