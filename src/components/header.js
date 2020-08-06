@@ -11,7 +11,9 @@ const Nav = styled.nav`
   display: flex;
   justify-content: space-around;
   align-items: center;
+  margin-bottom: 20px;
   .logo{
+    z-index:400;
     letter-spacing: 5px;
     margin: 0;
     padding:0;
@@ -27,6 +29,7 @@ const Ul = styled.ul`
   width: 30%;
   margin: 0;
   justify-content: space-around;
+  z-index:0;
 
   li{
     list-style: none;
@@ -45,19 +48,17 @@ const Ul = styled.ul`
   }
 
   @media screen and (max-width: 790px){
-    position: absolute;
+    position: fixed;
     flex-flow: column nowrap;
     align-items: center;
-    background-color: #303030;
+    background-color: #303030ff;
     top: 8vh;
-    right: 0px;
     height: 92vh;
-    width: 300px;
-    transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(100%)'};
-    transition: transform 0.3s ease-in-out;
+    width: 100%;
+    transform: ${({ open }) => open ? 'translateY(0%)' : 'translateY(-100%)'};
+    transition: transform 0.5s ease-in-out;
     li{
       opacity: ${({ open }) => open ? 1 : 0};
-      /* opacity: 0; */
       transition: opacity 1s ease-in-out;
     }
   }
