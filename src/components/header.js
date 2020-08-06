@@ -3,6 +3,7 @@ import React, { useState } from "react"
 import styled from 'styled-components'
 
 const Nav = styled.nav`
+  position: fixed;
   width: 100%;
   min-height: 8vh;
   box-sizing: border-box;
@@ -93,7 +94,6 @@ const Burger = styled.div`
 export default function Header(){ 
 
   const [open, setOpen] = useState(false);
-
   return (
     <Nav>
       <h2 className="logo">
