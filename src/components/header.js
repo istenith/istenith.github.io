@@ -4,6 +4,7 @@ import styled from 'styled-components'
 
 const Nav = styled.nav`
   position: fixed;
+  top:0;
   width: 100%;
   min-height: 8vh;
   box-sizing: border-box;
@@ -106,7 +107,7 @@ export default function Header(){
         <li>Alumni</li>
         <li>About Us</li>
       </Ul>
-      <Burger onClick={()=>setOpen(!open)} open={open}>
+      <Burger onClick={()=>{setOpen(!open)}} open={open}>
         <div/>
         <div/>
         <div/>
