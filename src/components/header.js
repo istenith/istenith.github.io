@@ -102,7 +102,6 @@ export default function Header(){
       </h2>
       <Ul open={open}>
         <li>Projects</li>
-        <li>Projects</li>
         <li>Members</li>
         <li>Alumni</li>
         <li>About Us</li>
