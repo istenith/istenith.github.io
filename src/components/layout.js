@@ -9,6 +9,18 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
+import styled from 'styled-components'
+
+const Container = styled.div`
+  margin: 10rem 10rem 0;
+
+  @media screen and (max-width: 780px){
+    margin: 8rem 5rem 0;
+  }
+  @media screen and (max-width: 590px){
+    margin: 8rem 0rem 0;
+  }
+`;
 
 const Layout = ({bgColor, children }) => {
   const data = useStaticQuery(graphql`
@@ -24,10 +36,8 @@ const Layout = ({bgColor, children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <div
+      <Container
         style={{
-          margin: `10vh auto 0 auto`,
-          maxWidth: 960,
           // padding: `0 1.0875rem 1.45rem`,
           backgroundColor : bgColor
         }}
@@ -36,7 +46,7 @@ const Layout = ({bgColor, children }) => {
         <footer>
           © {new Date().getFullYear()}, ISTENITH
         </footer>
-      </div>
+      </Container>
     </>
   )
 }

@@ -5,6 +5,7 @@ module.exports = {
     author: `@istenith`,
   },
   plugins: [
+    'gatsby-plugin-svgr',
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-typography`,

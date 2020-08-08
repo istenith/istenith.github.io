@@ -9,7 +9,7 @@ const Nav = styled.nav`
   min-height: 8vh;
   box-sizing: border-box;
   color: white;
-  background-color: #303030;
+  background-color:black;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -53,7 +53,7 @@ const Ul = styled.ul`
     position: fixed;
     flex-flow: column nowrap;
     align-items: center;
-    background-color: #303030ff;
+    /* background-color: #303030ff; */
     top: 8vh;
     height: 92vh;
     width: 100%;
