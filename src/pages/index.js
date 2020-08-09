@@ -25,14 +25,16 @@ const LandingDiv = styled.div`
       font-size:10rem;
       text-align:start;
     }
-    .team{
+    .TagLine{
+      display: flex;
+      .team, .AnimationContainer{
       font-style: normal;
       font-weight: normal;
       color:#34cc1f;
       font-size: 3rem;
       text-align: start;
-
-      #Team, #Society, #Organisation, #Family {
+    }
+    #Team, #Society, #Organisation, #Family {
         position: absolute;
         padding-left: 1rem;
       }
@@ -48,19 +50,32 @@ const LandingDiv = styled.div`
   @media screen and (max-width: 1080px){
     grid-template-rows: repeat(4, 1fr);
     grid-template-columns: 1fr;
-    margin-top: 5rem;
+    margin-top: 4rem;
     .text{
+      
       grid-row: 2/4;
       grid-column: 1/2;
       .name{
-        font-size: 9rem;
+        font-size: 8rem;
       }
       .name,.team{
         text-align:center;
       }
 
-      #Team, #Society, #Organisation, #Family {
-        grid-row: 4/5;
+      .TagLine{
+        display: block;
+        .team{
+          text-align:center;
+        }
+        .AnimationContainer{
+          font-size: 7vh;
+          #Team, #Society, #Organisation, #Family {
+            position: absolute;
+            text-align: center;
+            padding-left: 0;
+            width: 100%;
+          }
+        }
       }
     }
     .logo{
@@ -155,14 +170,17 @@ export default function IndexPage (){
             },
           ]}
         >
-          <h3 className='team'>WE ARE A
-          <span className="AnimationContainer">
+        <div className='TagLine'>
+          <h3 className='team'>WE ARE A</h3>
+          <h3 className='AnimationContainer'>
+          {/* <span className="AnimationContainer"> */}
             <span id="Team">TEAM</span>
-            <span id="Society"> SOCIETY</span>
+            <span id="Society">SOCIETY</span>
             <span id="Organisation">ORGANISATION</span>
             <span id="Family">FAMILY</span>
-          </span>
+          {/* </span> */}
           </h3>
+        </div>
         </Anime>
       </div>
       <div className='logo'>

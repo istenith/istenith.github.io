@@ -18,7 +18,7 @@ const Container = styled.div`
     margin: 8rem 5rem 0;
   }
   @media screen and (max-width: 590px){
-    margin: 8rem 0rem 0;
+    margin: 4rem 0rem 0;
   }
 `;
 
