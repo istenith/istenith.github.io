@@ -1,6 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import styled from 'styled-components'
+import ReactAnime from 'react-animejs'
 
 import Layout from "../components/layout"
 import Projects from "../components/projects"
@@ -22,14 +23,19 @@ const LandingDiv = styled.div`
       font-weight: normal;
       color: white;
       font-size:10rem;
-      text-align:end;
+      text-align:start;
     }
     .team{
       font-style: normal;
       font-weight: normal;
       color:#34cc1f;
       font-size: 3rem;
-      text-align: end;
+      text-align: start;
+
+      #Team, #Society, #Organisation, #Family {
+        position: absolute;
+        padding-left: 1rem;
+      }
     }
   }
 
@@ -40,14 +46,18 @@ const LandingDiv = styled.div`
   }
 
   @media screen and (max-width: 1080px){
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
     grid-template-columns: 1fr;
     margin-top: 5rem;
     .text{
       grid-row: 2/4;
       grid-column: 1/2;
       .name,.team{
-        text-align:center;
+        text-align:start;
+      }
+
+      #Team, #Society, #Organisation, #Family {
+        grid-row: 4/5;
       }
     }
     .logo{
@@ -58,15 +68,92 @@ const LandingDiv = styled.div`
     }
   }
 `;
+const { Anime, stagger } = ReactAnime
 
 export default function IndexPage (){
+  var ml4 = {};
+  ml4.opacityIn = [0,1];
+  ml4.scaleIn = [0.2, 1];
+  ml4.scaleOut = 3;
+  ml4.durationIn = 800;
+  ml4.durationOut = 600;
+  ml4.delay = 500;
+
   return (
     <Layout>
     <SEO title="Home" />
     <LandingDiv>
       <div className='text'>
         <h1 className='name'>ISTE NITH</h1>
-        <h3 className='team'>WE ARE A TEAM</h3>
+        <Anime 
+          animeConfig={{
+            // autoplay: false,
+            duration: 1500,
+            easing: "easeInOutSine",
+            loop: true
+          }}
+          initial={[
+            {
+              targets: "#Team",
+              opacity: ml4.opacityIn,
+              // scale: ml4.scaleIn,
+              duration: ml4.durationIn,
+            },
+            {
+              targets: "#Team",
+              opacity: 0,
+              // scale: ml4.scaleOut,
+              duration: ml4.durationOut,
+              easing: "easeInExpo",
+            },
+            {
+              targets: "#Society",
+              opacity: ml4.opacityIn,
+              // scale: ml4.scaleIn,
+              duration: ml4.durationIn,
+            },
+            {
+              targets: "#Society",
+              opacity: 0,
+              // scale: ml4.scaleOut,
+              duration: ml4.durationOut,
+              easing: "easeInExpo",
+            },
+            {
+              targets: "#Organisation",
+              opacity: ml4.opacityIn,
+              // scale: ml4.scaleIn,
+              duration: ml4.durationIn,
+            },
+            {
+              targets: "#Organisation",
+              opacity: 0,
+              // scale: ml4.scaleOut,
+              duration: ml4.durationOut,
+              easing: "easeInExpo",
+            },
+            {
+              targets: "#Family",
+              opacity: ml4.opacityIn,
+              // scale: ml4.scaleIn,
+              duration: ml4.durationIn,
+            },
+            {
+              targets: "#Family",
+              opacity: 0,
+              // scale: ml4.scaleOut,
+              duration: ml4.durationOut,
+              easing: "easeInExpo",
+            },
+          ]}
+        >
+          <h3 className='team'>WE ARE A 
+            <span id="Team">TEAM</span>
+            <span id="Society"> SOCIETY</span>
+            <span id="Organisation">ORGANISATION</span>
+            <span id="Family">FAMILY</span>
+          </h3>
+        </Anime>
       </div>
       <div className='logo'>
         <IsteLogo width='300px' height='300px'/>
