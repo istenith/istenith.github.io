@@ -70,6 +70,7 @@ const LandingDiv = styled.div`
         .AnimationContainer{
           font-size: 7vh;
           #Team, #Society, #Organisation, #Family {
+            z-index: -10000;
             position: absolute;
             text-align: center;
             padding-left: 0;
