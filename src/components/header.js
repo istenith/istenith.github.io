@@ -9,7 +9,7 @@ const Nav = styled.nav`
   min-height: 8vh;
   box-sizing: border-box;
   color: white;
-  background-color:black;
+  background-color:#2a2e35;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -53,11 +53,12 @@ const Ul = styled.ul`
     position: fixed;
     flex-flow: column nowrap;
     align-items: center;
-    /* background-color: #303030ff; */
+    background-color: #2a2e35;
+    opacity: 1;
     top: 8vh;
     height: 92vh;
     width: 100%;
-    transform: ${({ open }) => open ? 'translateY(0%)' : 'translateY(-100%)'};
+    transform: ${({ open }) => open ? 'translateY(0%)' : 'translateY(-150%)'};
     transition: transform 0.5s ease-in-out;
     li{
       opacity: ${({ open }) => open ? 1 : 0};

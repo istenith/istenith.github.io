@@ -52,8 +52,11 @@ const LandingDiv = styled.div`
     .text{
       grid-row: 2/4;
       grid-column: 1/2;
+      .name{
+        font-size: 9rem;
+      }
       .name,.team{
-        text-align:start;
+        text-align:center;
       }
 
       #Team, #Society, #Organisation, #Family {
@@ -65,6 +68,11 @@ const LandingDiv = styled.div`
       grid-column: 1/2;
       padding-left: 0rem;
       text-align:center;
+      .img{
+        height: 200px;
+        width: 200px;
+      }
+      
     }
   }
 `;
@@ -147,16 +155,18 @@ export default function IndexPage (){
             },
           ]}
         >
-          <h3 className='team'>WE ARE A 
+          <h3 className='team'>WE ARE A
+          <span className="AnimationContainer">
             <span id="Team">TEAM</span>
             <span id="Society"> SOCIETY</span>
             <span id="Organisation">ORGANISATION</span>
             <span id="Family">FAMILY</span>
+          </span>
           </h3>
         </Anime>
       </div>
       <div className='logo'>
-        <IsteLogo width='300px' height='300px'/>
+        <IsteLogo className='img' width='300px' height='300px'/>
       </div>
     </LandingDiv>
     <Projects></Projects>
