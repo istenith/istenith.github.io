@@ -8,7 +8,7 @@ import {ReactComponent as RightArrow} from "../images/right-arrow.svg"
 
 
 const SliderDiv =  styled.div`
-    width: 80%;
+    width: 90%;
     margin: 10px auto;
     overflow: hidden;
     .Carousel{
@@ -44,7 +44,7 @@ const Slider = styled.div`
         align-items: center;
 
         .Container{
-            padding: 1rem;
+            padding: 1rem 3rem;
         }
     }
 
@@ -116,8 +116,8 @@ export default function Initiatives(){
                 ))}
             </Slider>
             <div className='controls'>
-                <span className='arrow left' onClick={(prevSlide)}><LeftArrow fill='white'/></span>
-                <span className='arrow right' onClick={nextSlide}><RightArrow fill='white'/></span>
+                <span className='arrow left' onClick={(prevSlide)}><LeftArrow fill='white' height='20px' width='20px'/></span>
+                <span className='arrow right' onClick={nextSlide}><RightArrow fill='white' height='20px' width='20px'/></span>
             </div>
         </div>
         </SliderDiv>
