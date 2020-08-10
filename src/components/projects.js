@@ -42,7 +42,7 @@ const FlexContainer = styled.div`
             }
 
             .UnderlineMagical {
-                background-image: linear-gradient(120deg, red 0%, yellow 100%);
+                background-image: linear-gradient(120deg, #e52f6e 0%, #fe8702 100%);
                 background-repeat: no-repeat;
                 background-size: 100% 0.2em;
                 background-position: 0 88%;

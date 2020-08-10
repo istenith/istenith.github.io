@@ -5,6 +5,7 @@ import ReactAnime from 'react-animejs'
 
 import Layout from "../components/layout"
 import Projects from "../components/projects"
+import Initiatives from '../components/initiatives'
 import SEO from "../components/seo"
 import {ReactComponent as IsteLogo} from "../images/iste_logo_hollow.svg"
 
@@ -191,6 +192,7 @@ export default function IndexPage (){
       </div>
     </LandingDiv>
     <Projects></Projects>
+    <Initiatives></Initiatives>
     <Link to="/page-2/">Go to page 2</Link> <br />
     </Layout>
   )
