@@ -12,7 +12,7 @@ import Header from "./header"
 import styled from 'styled-components'
 
 const Container = styled.div`
-  margin: 10rem 10rem 0;
+  margin: 8rem 10rem 0;
 
   @media screen and (max-width: 780px){
     margin: 8rem 5rem 0;

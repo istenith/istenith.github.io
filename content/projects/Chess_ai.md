@@ -1,6 +1,6 @@
 ---
-title: "Lost Lander"
-date: "2020-2-4"
+title: "Chess Ai"
+date: "2020-8-4"
 ---
 
 ![image here](../media/meme.jpg)
