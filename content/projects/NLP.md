@@ -1,6 +1,6 @@
 ---
-title: "Lost Lander"
-date: "2020-2-4"
+title: "NLP"
+date: "2020-8-31"
 ---
 
 ![image here](../media/meme.jpg)

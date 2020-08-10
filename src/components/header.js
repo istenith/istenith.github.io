@@ -10,6 +10,7 @@ const Nav = styled.nav`
   box-sizing: border-box;
   color: white;
   background-color:#2a2e35;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.38);
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -103,6 +104,7 @@ export default function Header(){
       </h2>
       <Ul open={open}>
         <li>Projects</li>
+        <li>Initiatives</li>
         <li>Members</li>
         <li>Alumni</li>
         <li>About Us</li>

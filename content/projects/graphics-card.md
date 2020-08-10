@@ -1,6 +1,6 @@
 ---
 title: "Graphics Card"
-date: "2020-8-4"
+date: "2020-5-4"
 ---
 
 ![image here](../media/horses.jpg)
