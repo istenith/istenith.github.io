@@ -15,6 +15,7 @@ const Nav = styled.nav`
   justify-content: space-around;
   align-items: center;
   margin-bottom: 20px;
+  z-index:2000;
   .logo{
     z-index:400;
     letter-spacing: 5px;

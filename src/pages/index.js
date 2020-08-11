@@ -5,6 +5,7 @@ import ReactAnime from 'react-animejs'
 
 import Layout from "../components/layout"
 import Projects from "../components/projects"
+import Initiatives from '../components/initiatives'
 import SEO from "../components/seo"
 import {ReactComponent as IsteLogo} from "../images/iste_logo_hollow.svg"
 
@@ -13,7 +14,7 @@ const LandingDiv = styled.div`
   grid-template-columns: repeat(3, 1fr);
   justify-items:color-interpolation-filters;
 
-  margin-top:34vh;
+  margin-top:20vh;
   margin-bottom: 10vh;
   .text{
     color: white;
@@ -190,7 +191,8 @@ export default function IndexPage (){
         <IsteLogo className='img' width='300px' height='300px'/>
       </div>
     </LandingDiv>
-    <Projects></Projects>
+    <Initiatives/>
+    <Projects/>
     <Link to="/page-2/">Go to page 2</Link> <br />
     </Layout>
   )
