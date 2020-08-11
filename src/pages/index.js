@@ -191,8 +191,8 @@ export default function IndexPage (){
         <IsteLogo className='img' width='300px' height='300px'/>
       </div>
     </LandingDiv>
-    <Projects></Projects>
-    <Initiatives></Initiatives>
+    <Initiatives/>
+    <Projects/>
     <Link to="/page-2/">Go to page 2</Link> <br />
     </Layout>
   )

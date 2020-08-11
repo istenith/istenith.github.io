@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import styled from 'styled-components'
 import { useStaticQuery, graphql } from "gatsby"
 import { Link } from "gatsby"
+import Img from "gatsby-image"
 
 import {ReactComponent as LeftArrow} from "../images/left-arrow.svg"
 import {ReactComponent as RightArrow} from "../images/right-arrow.svg"
@@ -61,21 +62,22 @@ export default function Initiatives(){
     const data = useStaticQuery(
     graphql`
         query{
-            allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/.*initiatives/"}}, sort: {fields: frontmatter___date}) {
+            allFile(filter: {relativeDirectory: {eq: "initiatives"}, ext: {eq: ".jpg"}}) {
             edges {
                 node {
-                frontmatter {
-                    date
-                    title
+                childImageSharp {
+                    fixed {
+                        ...GatsbyImageSharpFixed
+                    }
                 }
-                html
                 }
             }
             }
         } 
     `
     )
-    const numSlides = data.allMarkdownRemark.edges.length
+
+    const numSlides = data.allFile.edges.length
 
     if (auto)
         setTimeout(()=>{autoSlide()},5000);
@@ -102,15 +104,10 @@ export default function Initiatives(){
         <SliderDiv>
         <div className='Carousel'>
             <Slider className='Slider' numSlides={numSlides} slide={slide}>
-                {/* <section>Contents for section 1</section>
-                <section>Contents for section 2</section>
-                <section>Contents for section 3</section>
-                <section>Contents for section 4</section> */}
-                {data.allMarkdownRemark.edges.map(({node})=>(
+                {data.allFile.edges.map(({node})=>(
                     <section>
                         <div className='Container'>
-                            <h3>{node.frontmatter.title}</h3>
-                            <div dangerouslySetInnerHTML={{ __html: node.html }}></div>
+                            <Img fixed={node.childImageSharp.fixed}/>
                         </div>
                     </section>
                 ))}
