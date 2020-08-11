@@ -1,19 +1,19 @@
 import React from "react"
 import { graphql, useStaticQuery, Link } from "gatsby"
 import Image from "gatsby-image"
-import style from "styled-components"
+import styled from "styled-components"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const FlexDiv = style.div`
+const FlexDiv = styled.div`
     margin-top: 5%;
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
 `
 
-const BannerImage = style(Image)`
+const BannerImage = styled(Image)`
     border-radius: 10px;
     width: 100%;
     height: 250px;
@@ -24,7 +24,7 @@ const BannerImage = style(Image)`
     }
 `
 
-const Card = style.div`
+const Card = styled.div`
     display: flex;
     width: 30%;
     overflow: hidden;
