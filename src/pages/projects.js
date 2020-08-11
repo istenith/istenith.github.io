@@ -1,40 +1,45 @@
 import React from "react"
 import { graphql, useStaticQuery, Link } from "gatsby"
 import Image from "gatsby-image"
-import style from "styled-components"
+import styled from "styled-components"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const FlexDiv = style.div`
+const FlexDiv = styled.div`
     margin-top: 5%;
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
 `
 
-const BannerImage = style(Image)`
-    border-radius: 10px;
+const BannerImage = styled(Image)`
     width: 100%;
     height: 250px;
 
+    img{
+      margin: 0;
+    }
     @media only screen and (max-width: 786px){
         width: 100%;
         height: 200px;
     }
 `
 
-const Card = style.div`
+const Card = styled.div`
     display: flex;
     width: 30%;
     overflow: hidden;
     margin: 0 1% 2%;
-    background-color: #101010;
-    padding: 20px;
-    border: 2px solid rgba(230,225,230,0.8);
-    border-radius: 20px;
+    background-color: #2a2e35;
+    border-radius: 10px;
     box-shadow: 0 20px 20px rgba(10,10,10,0.6);
+    transition: 0.2s ease-out;
 
+
+    .text{
+      padding: 0 1rem 1rem;
+    }
     .header{
         color:white;
         margin-top: 15px;
@@ -51,10 +56,14 @@ const Card = style.div`
         max-height: 150px;
     }
 
+    &:hover{
+      transform: translateY(-2%);
+      transition: 0.2s ease-out;
+    }
+
     @media only screen and (max-width: 786px){
         width: 90%;
         margin: 0 5% 5%;
-        padding: 5%;
     } 
 
 `
@@ -64,7 +73,7 @@ function Projects() {
     query {
       allMarkdownRemark(
         filter: { fileAbsolutePath: { regex: "/.*projects/" } }
-        sort: { fields: frontmatter___date}
+        sort: { fields: frontmatter___date, order: DESC}
       ) {
         edges {
           node {
@@ -73,7 +82,7 @@ function Projects() {
             }
             frontmatter {
               title
-              date
+              date (formatString: "MMMM Do, YYYY")
               featuredImage {
                 childImageSharp {
                   fluid {
@@ -98,11 +107,13 @@ function Projects() {
             alt="Banner Image"
           />
         )}
-        <div className="header">
-          <div className="title">{node.frontmatter.title}</div>
-          <div className="date">{node.frontmatter.date}</div>
+        <div className='text'>
+          <div className="header">
+            <div className="title">{node.frontmatter.title}</div>
+            <div className="date">{node.frontmatter.date}</div>
+          </div>
+          <div className="excerpt">{node.excerpt}</div>
         </div>
-        <div className="excerpt">{node.excerpt}</div>
       </Link>
     </Card>
   ))

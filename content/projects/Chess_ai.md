@@ -1,6 +1,6 @@
 ---
 title: "Chess Ai"
-date: "2020-8-4"
+date: "2020-08-04"
 featuredImage: "../media/meme.jpg"
 ---
 

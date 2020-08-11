@@ -124,7 +124,7 @@ export default function Projects() {
         allMarkdownRemark(
           filter: { fileAbsolutePath: { regex: "/.*projects/" } }
           limit: 10
-          sort: { fields: frontmatter___date }
+          sort: { fields: frontmatter___date, order: DESC}
         ) {
           edges {
             node {
@@ -147,7 +147,7 @@ export default function Projects() {
       <FlexContainer>
       <div className="title">
         <h1>Recent Projects</h1>
-        <Link to='/project' style={{ textDecoration: "none"}}><p className="more">See More</p></Link>
+        <Link to='/projects' style={{ textDecoration: "none"}}><p className="more">See More</p></Link>
       </div>
         <div className="CardContainer">
           {data.allMarkdownRemark.edges.map(({ node }) => (
