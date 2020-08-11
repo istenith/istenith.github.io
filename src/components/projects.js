@@ -9,7 +9,7 @@ const FlexContainer = styled.div`
   flex-wrap: nowrap;
   justify-content:space-around;
   align-items: space-around;
-  margin: 0 0 5rem;
+  margin: 0 0 0rem;
   padding: 2rem 0;
 
   .title {
@@ -41,7 +41,7 @@ const FlexContainer = styled.div`
     /* padding-left: 40px; */
     overflow-x: scroll;
     scrollbar-color: #666 #201c29;
-    padding: 2rem;
+    padding: 2rem 0rem 10px 5rem;;
 
     .Card {
       /* border: 3px dashed white; */
@@ -55,7 +55,7 @@ const FlexContainer = styled.div`
       padding: 20px;
       overflow: hidden;
       background-color: #2a2e35;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.38);
+      box-shadow: -16px 0 36px #000;
       position: relative;
       /* transition: transform 0.5s ease-out; */
       transition: 0.4s ease-out;
