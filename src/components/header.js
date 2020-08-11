@@ -15,6 +15,7 @@ const Nav = styled.nav`
   justify-content: space-around;
   align-items: center;
   margin-bottom: 20px;
+  z-index:2000;
   .logo{
     z-index:400;
     letter-spacing: 5px;
@@ -103,7 +104,7 @@ export default function Header(){
         <Link to="/" style={{textDecoration:'none', color:'white'}}>ISTE-NITH</Link>
       </h2>
       <Ul open={open}>
-        <li>Projects</li>
+        <li><Link to="/project/" style={{textDecoration:'none', color:'white'}}>Projects</Link></li>
         <li>Initiatives</li>
         <li>Members</li>
         <li>Alumni</li>
