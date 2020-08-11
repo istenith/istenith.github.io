@@ -1,6 +1,6 @@
 ---
 title: "NLP"
-date: "2020-8-31"
+date: "2020-08-31"
 featuredImage: "../media/balidaan.jpg"
 ---
 

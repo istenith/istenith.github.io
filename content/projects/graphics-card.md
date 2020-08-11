@@ -1,6 +1,6 @@
 ---
 title: "Graphics Card"
-date: "2020-5-4"
+date: "2020-05-04"
 featuredImage: "../media/gormint.jpg"
 ---
 

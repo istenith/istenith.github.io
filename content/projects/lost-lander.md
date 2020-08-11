@@ -1,6 +1,6 @@
 ---
 title: "Lost Lander"
-date: "2020-2-4"
+date: "2020-02-04"
 featuredImage: "../media/binod.jpg"
 ---
 

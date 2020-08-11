@@ -124,7 +124,7 @@ export default function Projects() {
         allMarkdownRemark(
           filter: { fileAbsolutePath: { regex: "/.*projects/" } }
           limit: 10
-          sort: { fields: frontmatter___date }
+          sort: { fields: frontmatter___date, order: DESC}
         ) {
           edges {
             node {
