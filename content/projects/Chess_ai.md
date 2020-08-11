@@ -1,7 +1,7 @@
 ---
 title: "Chess Ai"
 date: "2020-8-4"
-banner: "../media/meme.jpg"
+featuredImage: "../media/meme.jpg"
 ---
 
 ![image here](../media/meme.jpg)

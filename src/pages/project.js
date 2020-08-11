@@ -35,11 +35,13 @@ const Card = style.div`
     border-radius: 20px;
     box-shadow: 0 20px 20px rgba(10,10,10,0.6);
 
-    .title{
+    .header{
         color:white;
         margin-top: 15px;
-        font-size: xx-large;
-        font-weight: 400;
+        .title{
+            font-size: xx-large;
+            font-weight: 400;
+        }
     }
 
     .excerpt{
@@ -62,6 +64,7 @@ function Projects() {
     query {
       allMarkdownRemark(
         filter: { fileAbsolutePath: { regex: "/.*projects/" } }
+        sort: { fields: frontmatter___date}
       ) {
         edges {
           node {
@@ -71,12 +74,12 @@ function Projects() {
             frontmatter {
               title
               date
-              banner {
-                  childImageSharp {
-                      fluid {
-                          ...GatsbyImageSharpFluid
-                      }
+              featuredImage {
+                childImageSharp {
+                  fluid {
+                    ...GatsbyImageSharpFluid
                   }
+                }
               }
             }
             excerpt(format: PLAIN)
@@ -89,13 +92,16 @@ function Projects() {
   return list.allMarkdownRemark.edges.map(({ node }) => (
     <Card>
       <Link to={node.fields.slug} style={{ textDecoration: "none" }}>
-      {node.frontmatter.banner && (
-        <BannerImage
-          fluid={node.frontmatter.banner.childImageSharp.fluid}
-          alt="Banner Image"
-        />
-      )}
-        <div className="title">{node.frontmatter.title}</div>
+        {node.frontmatter.featuredImage && (
+          <BannerImage
+            fluid={node.frontmatter.featuredImage.childImageSharp.fluid}
+            alt="Banner Image"
+          />
+        )}
+        <div className="header">
+          <div className="title">{node.frontmatter.title}</div>
+          <div className="date">{node.frontmatter.date}</div>
+        </div>
         <div className="excerpt">{node.excerpt}</div>
       </Link>
     </Card>
