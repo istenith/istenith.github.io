@@ -80,14 +80,13 @@ const FlexContainer = styled.div`
     }
   }
 
-  @media screen and (min-width: 800px) {
     .Card {
       margin: 0 1rem 1rem;
     }
     .Card:hover {
       transform: translateY(-5%);
       transition: transform 0.5s ease-out;
-      transition: 0.4s ease-out;
+      transition: 0.2s ease-out;
       .UnderlineMagical {
         background-size: 100% 80%;
       }
@@ -95,16 +94,18 @@ const FlexContainer = styled.div`
     .Card:hover~.Card{
       position: relative;
       left: 50px;
-      transition: 0.4s ease-out;
+      transition: 0.2s ease-out;
     }
-  }
 
   @media screen and (max-width: 1080px) {
     .CardContainer {
       .Card:hover {
-        .UnderlineMagical {
+        .link{
+          .UnderlineMagical {
           background-size: 100% 80%;
         }
+        }
+        
       }
     }
 
@@ -122,7 +123,7 @@ export default function Projects() {
       query {
         allMarkdownRemark(
           filter: { fileAbsolutePath: { regex: "/.*projects/" } }
-          limit: 4
+          limit: 10
           sort: { fields: frontmatter___date }
         ) {
           edges {
@@ -151,7 +152,7 @@ export default function Projects() {
         <div className="CardContainer">
           {data.allMarkdownRemark.edges.map(({ node }) => (
           <div className="Card">
-            <Link to={node.fields.slug} style={{ textDecoration: "none" }}>
+            <Link to={node.fields.slug} style={{ textDecoration: "none" }} className='link'>
               <h3 className="ProjTitle">
                 <span className="UnderlineMagical">
                   {node.frontmatter.title}
