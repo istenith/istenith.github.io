@@ -1,6 +1,7 @@
 ---
 title: "Lost Lander"
 date: "2020-2-4"
+featuredImage: "../media/meme.jpg"
 ---
 
 ![image here](../media/meme.jpg)

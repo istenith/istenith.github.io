@@ -1,6 +1,7 @@
 ---
 title: "Graphics Card"
 date: "2020-5-4"
+featuredImage: "../media/horses.jpg"
 ---
 
 ![image here](../media/horses.jpg)
