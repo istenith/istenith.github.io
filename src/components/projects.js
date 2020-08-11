@@ -4,46 +4,62 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 
-const ProjectSection = styled.div`
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;  
-  flex-direction: column;
-
-  .title {
-    margin: 15px 0 15px;
-    font-size: xx-large;
-    color: white;
-    text-align: center;
-    font-weight: 600;
-  }
-`
-
 const FlexContainer = styled.div`
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: top;
+  flex-wrap: nowrap;
+  justify-content:space-around;
+  align-items: space-around;
+  margin: 0 0 5rem;
+  padding: 2rem 0;
 
+  .title {
+    max-width: 250px;
+    margin: 2rem 0;
+    flex: 0 10 320px;
+    margin: 2rem 1rem 1rem;
+    background-image:  linear-gradient(0deg,#ff8a00,#e52e71);
+    display: flex;
+    flex-direction:column;
+    justify-content: flex-end;
+    max-height: 350px;
+    color: white;
+    border-radius: 20px;
+    padding: 0.5rem;
+    h1{
+      margin-bottom: 0;
+    }
+    .more{
+        color: #ffb4b4;
+        text-align:start;
+      }
+  }
 
   .CardContainer {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-wrap: nowrap;
+    /* width: 100%; */
+    /* padding-left: 40px; */
+    overflow-x: scroll;
+    scrollbar-color: #666 #201c29;
+    padding: 2rem;
 
     .Card {
       /* border: 3px dashed white; */
       width: 250px;
-      margin: 0 1rem 1rem;
+      margin: 0 -25px 1rem;
       max-height: 350px;
       max-width: 300px;
       border-radius: 20px;
       text-align: left;
+      flex: 0 0 250px;
       padding: 20px;
+      overflow: hidden;
       background-color: #2a2e35;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.38);
-
-      transition: transform 0.5s ease-out;
+      position: relative;
+      /* transition: transform 0.5s ease-out; */
+      transition: 0.4s ease-out;
+      left: 0px;
 
       .ProjTitle {
         color: white;
@@ -69,11 +85,17 @@ const FlexContainer = styled.div`
       margin: 0 1rem 1rem;
     }
     .Card:hover {
-      transform: translateY(-2%);
+      transform: translateY(-5%);
       transition: transform 0.5s ease-out;
+      transition: 0.4s ease-out;
       .UnderlineMagical {
         background-size: 100% 80%;
       }
+    }
+    .Card:hover~.Card{
+      position: relative;
+      left: 50px;
+      transition: 0.4s ease-out;
     }
   }
 
@@ -84,6 +106,12 @@ const FlexContainer = styled.div`
           background-size: 100% 80%;
         }
       }
+    }
+
+    .title{
+      writing-mode: vertical-rl;
+      /* text-align: right; */
+      transform: rotate(180deg);
     }
   }
 `;
@@ -114,32 +142,31 @@ export default function Projects() {
     `
   )
 
-  return (
-    <ProjectSection>
-      <div className="title">
-        Recent Projects
-      </div>
+  return (    
       <FlexContainer>
+      <div className="title">
+        <h1>Recent Projects</h1>
+        <Link to='/project' style={{ textDecoration: "none"}}><p className="more">See More</p></Link>
+      </div>
         <div className="CardContainer">
           {data.allMarkdownRemark.edges.map(({ node }) => (
+          <div className="Card">
             <Link to={node.fields.slug} style={{ textDecoration: "none" }}>
-              <div className="Card">
-                <h3 className="ProjTitle">
-                  <span className="UnderlineMagical">
-                    {node.frontmatter.title}
-                  </span>
-                </h3>
-                <p className="Date">
-                  <span className="UnderlineMagical">
-                    {node.frontmatter.date}
-                  </span>
-                </p>
-                <p className="Excerpt">{node.excerpt}</p>
-              </div>
+              <h3 className="ProjTitle">
+                <span className="UnderlineMagical">
+                  {node.frontmatter.title}
+                </span>
+              </h3>
+              <p className="Date">
+                <span className="UnderlineMagical">
+                  {node.frontmatter.date}
+                </span>
+              </p>
+              <p className="Excerpt">{node.excerpt}</p>
             </Link>
-          ))}
-        </div>
+          </div>
+        ))}
+      </div>
       </FlexContainer>
-    </ProjectSection>
   )
 }
