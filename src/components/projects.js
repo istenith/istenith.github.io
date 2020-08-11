@@ -62,6 +62,7 @@ const FlexContainer = styled.div`
           transition: background-size 0.25s ease-in;
       }
     }
+  }
 
   @media screen and (min-width: 800px) {
     .Card {
@@ -104,7 +105,6 @@ export default function Projects() {
               frontmatter {
                 title
                 date
-                tags
               }
               excerpt(format: PLAIN)
             }
