@@ -27,6 +27,7 @@ const BannerImage = style(Image)`
 const Card = style.div`
     display: flex;
     width: 30%;
+    overflow: hidden;
     margin: 0 1% 2%;
     background-color: #101010;
     padding: 20px;
@@ -45,6 +46,7 @@ const Card = style.div`
         color:white;
         margin-top: 15px;
         text-align: justify;
+        max-height: 150px;
     }
 
     @media only screen and (max-width: 786px){
