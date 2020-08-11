@@ -14,7 +14,7 @@ const LandingDiv = styled.div`
   grid-template-columns: repeat(3, 1fr);
   justify-items:color-interpolation-filters;
 
-  margin-top:34vh;
+  margin-top:20vh;
   margin-bottom: 10vh;
   .text{
     color: white;

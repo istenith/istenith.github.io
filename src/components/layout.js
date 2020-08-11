@@ -10,9 +10,18 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import styled from 'styled-components'
+import Footer from './footer'
+
+const Master = styled.div`
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+`;
 
 const Container = styled.div`
   margin: 8rem 10rem 0;
+  flex: 1 0 auto;
 
   @media screen and (max-width: 780px){
     margin: 8rem 5rem 0;
@@ -35,18 +44,18 @@ const Layout = ({bgColor, children }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <Container
-        style={{
-          // padding: `0 1.0875rem 1.45rem`,
-          backgroundColor : bgColor
-        }}
-      >
-        {children}
-        <footer>
-          © {new Date().getFullYear()}, ISTENITH
-        </footer>
-      </Container>
+      <Master>
+        <Header siteTitle={data.site.siteMetadata.title} />
+        <Container
+          style={{
+            // padding: `0 1.0875rem 1.45rem`,
+            backgroundColor : bgColor,
+          }}
+        >
+          {children}
+        </Container>
+        <Footer/>
+      </Master>
     </>
   )
 }
