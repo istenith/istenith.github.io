@@ -54,16 +54,14 @@ const FlexContainer = styled.div`
         color: white;
       }
 
-            .UnderlineMagical {
-                background-image: linear-gradient(120deg, #e52f6e 0%, #fe8702 100%);
-                background-repeat: no-repeat;
-                background-size: 100% 0.2em;
-                background-position: 0 88%;
-                transition: background-size 0.25s ease-in;
-            }
-        }
+      .UnderlineMagical {
+          background-image: linear-gradient(120deg, #e52f6e 0%, #fe8702 100%);
+          background-repeat: no-repeat;
+          background-size: 100% 0.2em;
+          background-position: 0 88%;
+          transition: background-size 0.25s ease-in;
+      }
     }
-  }
 
   @media screen and (min-width: 800px) {
     .Card {
@@ -87,7 +85,7 @@ const FlexContainer = styled.div`
       }
     }
   }
-`
+`;
 
 export default function Projects() {
   const data = useStaticQuery(
@@ -106,6 +104,7 @@ export default function Projects() {
               frontmatter {
                 title
                 date
+                tags
               }
               excerpt(format: PLAIN)
             }
