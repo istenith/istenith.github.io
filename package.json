@@ -21,6 +21,7 @@
     "gatsby-remark-image-attributes": "^0.2.1",
     "gatsby-remark-images": "^3.3.24",
     "gatsby-source-filesystem": "^2.3.23",
+    "gatsby-transformer-excel": "^2.4.10",
     "gatsby-transformer-remark": "^2.8.27",
     "gatsby-transformer-sharp": "^2.5.7",
     "node-sass": "^4.14.1",
