@@ -1,11 +1,26 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import styled from "styled-components"
-import { node } from "prop-types"
 
-const Card = styled.div`
+const Flex = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  overflow-x: scroll;
+  height: 250px;
+  scrollbar-color: #666 #201c29;
+  margin: 20px 0 20px;
+  width: 100%;
+
+  .Card {
+    height: 100%
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: 5px 2px 5px;
+    background-color: #2a2e35;
+    border-radius: 10px;
+    width: 50%;
+  }
 `
 
 export default function Members() {
@@ -15,7 +30,6 @@ export default function Members() {
         edges {
           node {
             name
-            year
             description
           }
         }
@@ -24,7 +38,6 @@ export default function Members() {
         edges {
           node {
             name
-            year
             description
           }
         }
@@ -33,7 +46,6 @@ export default function Members() {
         edges {
           node {
             name
-            year
             description
           }
         }
@@ -42,7 +54,6 @@ export default function Members() {
         edges {
           node {
             name
-            year
             description
           }
         }
@@ -52,42 +63,45 @@ export default function Members() {
 
   return (
     <div>
-      <div>
+      <Flex>
+        <div className="year">First</div>
         {data.allMembersXlsxSheet1.edges.map((row, i) => (
-          <Card>
+          <div className="Card">
             <div>{row.node.name}</div>
             <div>{row.node.description}</div>
-            <div>{row.node.year}</div>
-          </Card>
+          </div>
         ))}
-      </div>
-      <div>
+      </Flex>
+
+      <Flex>
+        <div className="year">Second</div>
         {data.allMembersXlsxSheet2.edges.map((row, i) => (
-          <Card>
+          <div className="Card">
             <div>{row.node.name}</div>
             <div>{row.node.description}</div>
-            <div>{row.node.year}</div>
-        </Card>
+          </div>
         ))}
-      </div>
-      <div>
+      </Flex>
+
+      <Flex>
+        <div className="year">Third</div>
         {data.allMembersXlsxSheet3.edges.map((row, i) => (
-          <Card>
+          <div className="Card">
             <div>{row.node.name}</div>
             <div>{row.node.description}</div>
-            <div>{row.node.year}</div>
-        </Card>
+          </div>
         ))}
-      </div>
-      <div>
+      </Flex>
+
+      <Flex>
+        <div className="year">Final</div>   
         {data.allMembersXlsxSheet4.edges.map((row, i) => (
-          <Card>
+          <div className="Card">
             <div>{row.node.name}</div>
             <div>{row.node.description}</div>
-            <div>{row.node.year}</div>
-        </Card>
+          </div>
         ))}
-      </div>
+      </Flex>
     </div>
   )
 }
