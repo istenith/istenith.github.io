@@ -3,6 +3,7 @@ import { graphql, Link} from "gatsby"
 import Layout from '../components/layout'
 import SEO from "../components/seo"
 import styled from 'styled-components'
+import kebabCase from "lodash/kebabCase"
 
 const Title = styled.div`
     color: white;
@@ -42,7 +43,7 @@ export default function Project ({ data }) {
                 <h1>{project.frontmatter.title}</h1>
                 <div className='tags'>
                 {project.frontmatter.tags.map((tag)=>(
-                    <Link to={'/tags/'+tag} style={{ textDecoration: "none", color: 'white'}}>
+                    <Link to={'/tags/'+kebabCase(tag)} style={{ textDecoration: "none", color: 'white'}}>
                         <div className='tag'>{tag}</div>
                     </Link>
                 ))}
