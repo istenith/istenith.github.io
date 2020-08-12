@@ -1,6 +1,6 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
-import styled, { withTheme } from 'styled-components'
+import { Link } from "gatsby"
+import styled from 'styled-components'
 import ReactAnime from 'react-animejs'
 
 import Layout from "../components/layout"
@@ -95,7 +95,7 @@ const LandingDiv = styled.div`
     }
   }
 `;
-const { Anime, stagger } = ReactAnime
+const { Anime } = ReactAnime
 
 export default function IndexPage (){
   var ml4 = {};
