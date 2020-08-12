@@ -1,26 +1,29 @@
 import React from "react"
-import { Link, graphql, useStaticQuery } from "gatsby"
-import styled from "styled-components"
+import { graphql,useStaticQuery } from "gatsby"
 
 export default function Members(){
-    const data = graphql`
-            query {
-                allMembersXlsxMembers{
-                    edges{
-                        node{
-                            name
-                            year
-                            description
-                        }
-                    }
-                }
+    const data = useStaticQuery(graphql`
+    query {
+        allMembersXlsxSheet1 {
+          edges {
+            node {
+              name
+              year
+              description
             }
+          }
+        }
+      }
         
     `
+)
 
-    return data.allMembersXlsxMembers.edges.map( (node) => {
-    <div>{node.name}</div>
-    <div>{node.year}</div>
-    <div>{node.description}</div>
-    })
+    return data.allMembersXlsxSheet1.edges.map( (row,i) => (
+    <div>
+        <div>{ row.node.name}</div>
+        <div>{ row.node.year}</div>
+        <div>{ row.node.description}</div>
+    </div>
+    ))
 }
+
