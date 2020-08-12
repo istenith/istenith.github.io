@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql, useStaticQuery, Link } from "gatsby"
+import Image from "gatsby-image"
 import styled from "styled-components"
 
 const FlexContainer = styled.div`
@@ -7,34 +8,45 @@ const FlexContainer = styled.div`
   flex-direction: column;
 `
 
+const Img = styled(Image)`
+  width: 100%;
+  height: 150px;
+
+  img {
+    margin: 0;
+  }
+  @media only screen and (max-width: 786px) {
+    width: 100%;
+  }
+`
+
 const Flex = styled.div`
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content:space-around;
-    align-items: space-around;
-    margin: 0 0 0rem;
-    padding: 2rem 0;
-    height: 500px;
-    
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: space-around;
+  margin: 0 0 0rem;
+  padding: 2rem 0;
+  height: 500px;
+
   .title {
     min-width: 250px;
     margin: 2rem 0;
     margin: 2rem 1rem 1rem;
-    background-image:  linear-gradient(0deg,#ff8a00,#e52e71);
+    background-image: linear-gradient(0deg, #ff8a00, #e52e71);
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     justify-content: flex-end;
     color: white;
     border-radius: 20px;
     padding: 0.5rem;
-    h1{
+    h1 {
       margin-bottom: 0;
       width: 100%;
     }
   }
 
-  .CardContainer{
-
+  .CardContainer {
     display: flex;
     flex-wrap: nowrap;
     /* width: 100%; */
@@ -54,7 +66,6 @@ const Flex = styled.div`
       border-radius: 20px;
       text-align: left;
       flex: 0 0 250px;
-      padding: 20px;
       overflow: hidden;
       background-color: #2a2e35;
       box-shadow: -16px 0 36px #000;
@@ -63,33 +74,39 @@ const Flex = styled.div`
       transition: 0.4s ease-out;
       left: 0px;
 
-      .name{
-          font-size: 1.5rem;
+      .content {
+        padding: 20px;
+        .name {
+          font-size: 1.3rem;
           font-family: Montserrat;
-          min-height: 90px;
-      }
+          min-height: 80px;
+        }
 
-      .description{
+        .description {
           font-size: 1rem;
-          font-family: century-gothic,Montserrat;
+          font-family: century-gothic, Montserrat;
           margin-top: 10px;
+        }
       }
     }
-}
+  }
 
+  .Card {
+    margin: 0 1rem 1rem;
+  }
   .Card:hover {
     transform: translateY(-5%);
     transition: transform 0.5s ease-out;
     transition: 0.2s ease-out;
   }
-  .Card:hover~.Card{
+  .Card:hover {
     position: relative;
-    left: 50px;
+    left: -25px;
     transition: 0.2s ease-out;
   }
 
   @media screen and (max-width: 1080px) {
-    .title{
+    .title {
       writing-mode: vertical-rl;
       /* text-align: right; */
       transform: rotate(180deg);
@@ -102,47 +119,67 @@ const Flex = styled.div`
 export default function Members() {
   const data = useStaticQuery(graphql`
     query {
-      allMembersXlsxSheet1 (
-          sort: { fields: name, order: ASC }
-      ){
+      allMembersXlsxSheet1(sort: { fields: name, order: ASC }) {
         edges {
           node {
             name
             description
             link
+            img {
+              childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
       }
-      allMembersXlsxSheet2 (
-        sort: { fields: name, order: ASC }
-      ){
+      allMembersXlsxSheet2(sort: { fields: name, order: ASC }) {
         edges {
           node {
             name
             description
             link
+            img {
+              childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
       }
-      allMembersXlsxSheet3 (
-        sort: { fields: name, order: ASC }
-      ){
+      allMembersXlsxSheet3(sort: { fields: name, order: ASC }) {
         edges {
           node {
             name
             description
             link
+            img {
+              childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
       }
-      allMembersXlsxSheet4 (
-        sort: { fields: name, order: ASC }
-      ){
+      allMembersXlsxSheet4(sort: { fields: name, order: ASC }) {
         edges {
           node {
             name
             description
             link
+            img {
+              childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
       }
@@ -157,10 +194,17 @@ export default function Members() {
         </div>
         <div className="CardContainer">
           {data.allMembersXlsxSheet4.edges.map((row, i) => (
-            <Link to={row.node.link} style={{textDecoration: "none"}} target="blank">
+            <Link
+              to={row.node.link}
+              style={{ textDecoration: "none" }}
+              target="blank"
+            >
               <div className="Card">
-                <div className="name">{row.node.name}</div>
-                <div className="description">{row.node.description}</div>
+                <Img fluid={row.node.img.childImageSharp.fluid}></Img>
+                <div className="content">
+                  <div className="name">{row.node.name}</div>
+                  <div className="description">{row.node.description}</div>
+                </div>
               </div>
             </Link>
           ))}
@@ -173,12 +217,19 @@ export default function Members() {
         </div>
         <div className="CardContainer">
           {data.allMembersXlsxSheet3.edges.map((row, i) => (
-            <Link to={row.node.link} target="blank">
-            <div className="Card" style={{textDecoration: "none"}}>
-              <div className="name">{row.node.name}</div>
-              <div className="description">{row.node.description}</div>
-            </div>
-          </Link>
+            <Link
+              to={row.node.link}
+              style={{ textDecoration: "none" }}
+              target="blank"
+            >
+              <div className="Card">
+                <Img fluid={row.node.img.childImageSharp.fluid}></Img>
+                <div className="content">
+                  <div className="name">{row.node.name}</div>
+                  <div className="description">{row.node.description}</div>
+                </div>
+              </div>
+            </Link>
           ))}
         </div>
       </Flex>
@@ -189,12 +240,19 @@ export default function Members() {
         </div>
         <div className="CardContainer">
           {data.allMembersXlsxSheet2.edges.map((row, i) => (
-            <Link to={row.node.link} style={{textDecoration: "none"}} target="blank">
-            <div className="Card">
-              <div className="name">{row.node.name}</div>
-              <div className="description">{row.node.description}</div>
-            </div>
-          </Link>
+            <Link
+              to={row.node.link}
+              style={{ textDecoration: "none" }}
+              target="blank"
+            >
+              <div className="Card">
+                <Img fluid={row.node.img.childImageSharp.fluid}></Img>
+                <div className="content">
+                  <div className="name">{row.node.name}</div>
+                  <div className="description">{row.node.description}</div>
+                </div>
+              </div>
+            </Link>
           ))}
         </div>
       </Flex>
@@ -205,12 +263,19 @@ export default function Members() {
         </div>
         <div className="CardContainer">
           {data.allMembersXlsxSheet1.edges.map((row, i) => (
-            <Link to={row.node.link} style={{textDecoration: "none"}} target="blank">
-            <div className="Card">
-              <div className="name">{row.node.name}</div>
-              <div className="description">{row.node.description}</div>
-            </div>
-          </Link>
+            <Link
+              to={row.node.link}
+              style={{ textDecoration: "none" }}
+              target="blank"
+            >
+              <div className="Card">
+                <Img fluid={row.node.img.childImageSharp.fluid}></Img>
+                <div className="content">
+                  <div className="name">{row.node.name}</div>
+                  <div className="description">{row.node.description}</div>
+                </div>
+              </div>
+            </Link>
           ))}
         </div>
       </Flex>
