@@ -51,6 +51,19 @@ const Card = styled.div`
         }
     }
 
+    .tags{
+      color:white;
+      display: flex;
+      .tag{
+          background-image:linear-gradient(0deg,#ff8a00,#e52e71);
+          border-radius: 20px;
+          margin: 5px;
+          padding: 0 4px;
+          min-width: 50px;
+          text-align: center;
+      }
+    } 
+
     .excerpt{
         color:white;
         margin-top: 15px;
@@ -85,6 +98,7 @@ function Projects() {
             frontmatter {
               title
               date (formatString: "MMMM Do, YYYY")
+              tags
               featuredImage {
                 childImageSharp {
                   fluid {
@@ -115,6 +129,11 @@ function Projects() {
             <div className="date">{node.frontmatter.date}</div>
           </div>
           <div className="excerpt">{node.excerpt}</div>
+          <div className='tags'>{node.frontmatter.tags.map((tag)=>(
+              <Link to={'/tags/'+tag} style={{ textDecoration: "none", color: 'white'}}>
+                <div className='tag'>{tag}</div>
+              </Link>
+            ))}</div>
         </div>
       </Link>
     </Card>
