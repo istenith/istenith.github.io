@@ -2,6 +2,7 @@ import React from "react"
 import { graphql, useStaticQuery, Link } from "gatsby"
 import Image from "gatsby-image"
 import styled from "styled-components"
+import kebabCase from "lodash/kebabCase"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -130,7 +131,7 @@ function Projects() {
           </div>
           <div className="excerpt">{node.excerpt}</div>
           <div className='tags'>{node.frontmatter.tags.map((tag)=>(
-              <Link to={'/tags/'+tag} style={{ textDecoration: "none", color: 'white'}}>
+              <Link to={'/tags/'+kebabCase(tag)} style={{ textDecoration: "none", color: 'white'}}>
                 <div className='tag'>{tag}</div>
               </Link>
             ))}</div>
