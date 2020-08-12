@@ -39,7 +39,7 @@ const FlexDiv = styled.div`
 `
 function Projects({ posts }) {
   return posts.map(({ node }) => (
-    <Card title={node.frontmatter.title} date={node.frontmatter.date} excerpt={node.excerpt} fluid={node.frontmatter.featuredImage.childImageSharp.fluid} slug={node.fields.slug} tags={node.frontmatter.tags}/>
+    <Card frontmatter={node.frontmatter} excerpt={node.excerpt} slug={node.fields.slug}/>
   ))
 }
 

@@ -73,23 +73,23 @@ const CardDiv = styled.div`
 
 `
 
-const Card = ({title, date, excerpt, slug, fluid, tags}) =>{
+const Card = ({frontmatter, excerpt, slug}) =>{
     return (
     <CardDiv>
       <Link to={slug} style={{ textDecoration: "none" }}>
-        {fluid && (
+        {frontmatter.featuredImage.childImageSharp && (
           <BannerImage
-            fluid={fluid}
+            fluid={frontmatter.featuredImage.childImageSharp.fluid}
             alt="Banner Image"
           />
         )}
         <div className='text'>
           <div className="header">
-            <div className="title">{title}</div>
-            <div className="date">{date}</div>
+            <div className="title">{frontmatter.title}</div>
+            <div className="date">{frontmatter.date}</div>
           </div>
           <div className="excerpt">{excerpt}</div>
-          <div className='tags'>{tags.map((tag) => (
+          <div className='tags'>{frontmatter.tags.map((tag) => (
             <Link to={'/tags/' + kebabCase(tag)} style={{ textDecoration: "none", color: 'white' }}>
               <div className='tag'>{tag}</div>
             </Link>
