@@ -2,6 +2,7 @@
 title: "NLP"
 date: "2020-08-31"
 featuredImage: "../media/balidaan.jpg"
+tags: ['tensorflow']
 ---
 
 ![image here](../media/balidaan.jpg)

@@ -2,6 +2,7 @@
 title: "Chess Ai"
 date: "2020-08-04"
 featuredImage: "../media/meme.jpg"
+tags: ['ai', 'ml']
 ---
 
 ![image here](../media/meme.jpg)

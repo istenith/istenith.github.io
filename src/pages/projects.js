@@ -11,6 +11,7 @@ const FlexDiv = styled.div`
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
+    position: relative;
 `
 
 const BannerImage = styled(Image)`
@@ -36,6 +37,7 @@ const Card = styled.div`
     box-shadow: 0 20px 20px rgba(10,10,10,0.6);
     transition: 0.2s ease-out;
 
+    flex: 0 0 300px;
 
     .text{
       padding: 0 1rem 1rem;

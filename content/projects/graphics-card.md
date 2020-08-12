@@ -2,6 +2,7 @@
 title: "Graphics Card"
 date: "2020-05-04"
 featuredImage: "../media/gormint.jpg"
+tags: ['ai', 'tutorial']
 ---
 
 ![image here](../media/gormint.jpg)
