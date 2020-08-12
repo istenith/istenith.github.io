@@ -2,6 +2,7 @@
 title: "Chess Ai"
 date: "2020-08-04"
 featuredImage: "../media/meme.jpg"
+tags: ['gormint']
 ---
 
 ![image here](../media/meme.jpg)
