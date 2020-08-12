@@ -17,18 +17,17 @@ const Flex = styled.div`
     height: 500px;
     
   .title {
-    max-width: 250px;
+    width: 300px;
     margin: 2rem 0;
-    flex: 0 10 320px;
     margin: 2rem 1rem 1rem;
     background-image:  linear-gradient(0deg,#ff8a00,#e52e71);
     display: flex;
     flex-direction:column;
     justify-content: flex-end;
-    max-height: 350px;
+    max-height: 450px;
     color: white;
     border-radius: 20px;
-    padding: 0.5rem;
+    padding: 1rem;
     h1{
       margin-bottom: 0;
     }
@@ -42,14 +41,15 @@ const Flex = styled.div`
     /* padding-left: 40px; */
     overflow-x: scroll;
     scrollbar-color: #666 #201c29;
-    padding: 2rem 0rem 10px 5rem;
+    padding: 2rem 0rem 10px 3rem;
     height: 100%;
 
     .Card {
+      color: white;
       /* border: 3px dashed white; */
       width: 250px;
-      margin: 0 -15px 1rem;
       height: 100%;
+      margin: 0 -5px 0;
       max-width: 300px;
       border-radius: 20px;
       text-align: left;
@@ -62,10 +62,21 @@ const Flex = styled.div`
       /* transition: transform 0.5s ease-out; */
       transition: 0.4s ease-out;
       left: 0px;
+
+      .name{
+          font-size: 1.5rem;
+          font-family: Montserrat;
+      }
+
+      .description{
+          font-size: 1rem;
+          font-family: century-gothic,Montserrat;
+          margin-top: 20px;
+      }
     }
 }
 
-.Card:hover {
+  .Card:hover {
     transform: translateY(-5%);
     transition: transform 0.5s ease-out;
     transition: 0.2s ease-out;
@@ -137,8 +148,8 @@ export default function Members() {
           {data.allMembersXlsxSheet4.edges.map((row, i) => (
             <Link to={row.node.link} style={{textDecoration: "none"}} target="blank">
               <div className="Card">
-                <div>{row.node.name}</div>
-                <div>{row.node.description}</div>
+                <div className="name">{row.node.name}</div>
+                <div className="description">{row.node.description}</div>
               </div>
             </Link>
           ))}
@@ -153,8 +164,8 @@ export default function Members() {
           {data.allMembersXlsxSheet3.edges.map((row, i) => (
             <Link to={row.node.link} target="blank">
             <div className="Card" style={{textDecoration: "none"}}>
-              <div>{row.node.name}</div>
-              <div>{row.node.description}</div>
+              <div className="name">{row.node.name}</div>
+              <div className="description">{row.node.description}</div>
             </div>
           </Link>
           ))}
@@ -169,8 +180,8 @@ export default function Members() {
           {data.allMembersXlsxSheet2.edges.map((row, i) => (
             <Link to={row.node.link} style={{textDecoration: "none"}} target="blank">
             <div className="Card">
-              <div>{row.node.name}</div>
-              <div>{row.node.description}</div>
+              <div className="name">{row.node.name}</div>
+              <div className="description">{row.node.description}</div>
             </div>
           </Link>
           ))}
@@ -185,8 +196,8 @@ export default function Members() {
           {data.allMembersXlsxSheet1.edges.map((row, i) => (
             <Link to={row.node.link} style={{textDecoration: "none"}} target="blank">
             <div className="Card">
-              <div>{row.node.name}</div>
-              <div>{row.node.description}</div>
+              <div className="name">{row.node.name}</div>
+              <div className="description">{row.node.description}</div>
             </div>
           </Link>
           ))}
