@@ -17,19 +17,19 @@ const Flex = styled.div`
     height: 500px;
     
   .title {
-    width: 300px;
+    min-width: 250px;
     margin: 2rem 0;
     margin: 2rem 1rem 1rem;
     background-image:  linear-gradient(0deg,#ff8a00,#e52e71);
     display: flex;
     flex-direction:column;
     justify-content: flex-end;
-    max-height: 450px;
     color: white;
     border-radius: 20px;
-    padding: 1rem;
+    padding: 0.5rem;
     h1{
       margin-bottom: 0;
+      width: 100%;
     }
   }
 
@@ -66,12 +66,13 @@ const Flex = styled.div`
       .name{
           font-size: 1.5rem;
           font-family: Montserrat;
+          min-height: 90px;
       }
 
       .description{
           font-size: 1rem;
           font-family: century-gothic,Montserrat;
-          margin-top: 20px;
+          margin-top: 10px;
       }
     }
 }
@@ -92,6 +93,8 @@ const Flex = styled.div`
       writing-mode: vertical-rl;
       /* text-align: right; */
       transform: rotate(180deg);
+      min-width: 80px;
+      padding: 1rem;
     }
   }
 `
@@ -99,7 +102,9 @@ const Flex = styled.div`
 export default function Members() {
   const data = useStaticQuery(graphql`
     query {
-      allMembersXlsxSheet1 {
+      allMembersXlsxSheet1 (
+          sort: { fields: name, order: ASC }
+      ){
         edges {
           node {
             name
@@ -108,7 +113,9 @@ export default function Members() {
           }
         }
       }
-      allMembersXlsxSheet2 {
+      allMembersXlsxSheet2 (
+        sort: { fields: name, order: ASC }
+      ){
         edges {
           node {
             name
@@ -117,7 +124,9 @@ export default function Members() {
           }
         }
       }
-      allMembersXlsxSheet3 {
+      allMembersXlsxSheet3 (
+        sort: { fields: name, order: ASC }
+      ){
         edges {
           node {
             name
@@ -126,7 +135,9 @@ export default function Members() {
           }
         }
       }
-      allMembersXlsxSheet4 {
+      allMembersXlsxSheet4 (
+        sort: { fields: name, order: ASC }
+      ){
         edges {
           node {
             name
