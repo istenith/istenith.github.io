@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { graphql, useStaticQuery, Link } from "gatsby"
 import Image from "gatsby-image"
 import styled from "styled-components"
@@ -6,6 +6,30 @@ import kebabCase from "lodash/kebabCase"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+
+const Search = styled.input`
+  background: #e84118;
+  opacity: 0.7;
+  padding: 0 2rem;
+  width: 50%;
+  height: 50px;
+  border-radius: 50px;
+  box-shadow: 0 -3px 50px black;
+  border: none;
+  color: white;
+  font-family: Roboto;
+  transition : 0.2s ease-in;
+  box-shadow: inset 0.2rem 0px 0.3rem black;
+  &:focus{
+    opacity: 1;
+    box-shadow: none;
+    transition : 0.2s ease-in;
+  }
+
+  @media screen and (max-width: 1080px){
+    width: 90%;
+  }
+`;
 
 const FlexDiv = styled.div`
     margin-top: 5%;
@@ -84,7 +108,34 @@ const Card = styled.div`
 
 `
 
-function Projects() {
+function Projects({ posts }) {
+  return posts.map(({ node }) => (
+    <Card>
+      <Link to={node.fields.slug} style={{ textDecoration: "none" }}>
+        {node.frontmatter.featuredImage && (
+          <BannerImage
+            fluid={node.frontmatter.featuredImage.childImageSharp.fluid}
+            alt="Banner Image"
+          />
+        )}
+        <div className='text'>
+          <div className="header">
+            <div className="title">{node.frontmatter.title}</div>
+            <div className="date">{node.frontmatter.date}</div>
+          </div>
+          <div className="excerpt">{node.excerpt}</div>
+          <div className='tags'>{node.frontmatter.tags.map((tag) => (
+            <Link to={'/tags/' + kebabCase(tag)} style={{ textDecoration: "none", color: 'white' }}>
+              <div className='tag'>{tag}</div>
+            </Link>
+          ))}</div>
+        </div>
+      </Link>
+    </Card>
+  ))
+}
+
+const ProjectPage = () => {
   const list = useStaticQuery(graphql`
     query {
       allMarkdownRemark(
@@ -115,41 +166,52 @@ function Projects() {
     }
   `)
 
-  return list.allMarkdownRemark.edges.map(({ node }) => (
-    <Card>
-      <Link to={node.fields.slug} style={{ textDecoration: "none" }}>
-        {node.frontmatter.featuredImage && (
-          <BannerImage
-            fluid={node.frontmatter.featuredImage.childImageSharp.fluid}
-            alt="Banner Image"
-          />
-        )}
-        <div className='text'>
-          <div className="header">
-            <div className="title">{node.frontmatter.title}</div>
-            <div className="date">{node.frontmatter.date}</div>
-          </div>
-          <div className="excerpt">{node.excerpt}</div>
-          <div className='tags'>{node.frontmatter.tags.map((tag)=>(
-              <Link to={'/tags/'+kebabCase(tag)} style={{ textDecoration: "none", color: 'white'}}>
-                <div className='tag'>{tag}</div>
-              </Link>
-            ))}</div>
-        </div>
-      </Link>
-    </Card>
-  ))
-}
+  const posts = list.allMarkdownRemark.edges;
 
-const ProjectPage = () => (
+  const emptyQuery = ""
+  const [state, setState] = useState({
+    filteredData: posts,
+    query: emptyQuery,
+  })
+
+  const handleInputChange = event => {
+    const query = event.target.value
+    const data = list
+    const posts = data.allMarkdownRemark.edges || []
+    const filteredData = posts.filter(post => {
+      const {title, tags } = post.node.frontmatter
+      const excerpt = post.node.excerpt;
+      return (
+        excerpt.toLowerCase().includes(query.toLowerCase())||
+        title.toLowerCase().includes(query.toLowerCase()) ||
+        (tags && tags
+          .join("") 
+          .toLowerCase()
+          .includes(query.toLowerCase()))
+      )
+    })
+    
+    setState({
+      query,
+      filteredData,
+    })
+  }
+
+  return (
   <Layout>
     <SEO title="Projects" />
     <center>
+      <Search
+        type="text"
+        aria-label="Search"
+        placeholder="Type to filter posts..."
+        onChange={handleInputChange}
+      />
       <FlexDiv>
-        <Projects></Projects>
+        <Projects posts={state.filteredData}></Projects>
       </FlexDiv>
     </center>
-  </Layout>
-)
+  </Layout>)
+}
 
 export default ProjectPage
