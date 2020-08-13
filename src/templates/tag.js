@@ -12,6 +12,12 @@ const PageTitle= styled.h1`
   color: white;
 `;
 
+const Container = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:center;
+`;
+
 const Tags = ({ pageContext, data }) => {
   const { tag } = pageContext
   const { edges, totalCount } = data.allMarkdownRemark
@@ -22,16 +28,18 @@ const Tags = ({ pageContext, data }) => {
   return (
     <Layout>
       <SEO title={tag}/>
-      <div>
+      <center>
         <PageTitle>{tagHeader}</PageTitle>
-          {edges.map(({ node }) => {
-            const { slug } = node.fields
-            const excerpt = node.excerpt;
-            return (
-              <Card frontmatter={node.frontmatter} slug={slug} excerpt={excerpt}/>
-            )
-          })}
-      </div>
+        <Container>
+            {edges.map(({ node }) => {
+              const { slug } = node.fields
+              const excerpt = node.excerpt;
+              return (
+                <Card frontmatter={node.frontmatter} slug={slug} excerpt={excerpt}/>
+              )
+            })}
+        </Container>
+      </center>
     </Layout>
     
       
