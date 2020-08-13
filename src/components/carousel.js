@@ -18,11 +18,11 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css'
 //     }
 // `;
 
-export default function Initiatives(){
+export default function PhotoCarousel(){
     const data = useStaticQuery(
     graphql`
         query{
-            allFile(filter: {relativeDirectory: {eq: "initiatives"}, ext: {eq: ".jpg"}}) {
+            allFile(filter: {relativeDirectory: {eq: "carousel"}, ext: {eq: ".jpg"}}) {
             edges {
                 node {
                 childImageSharp {
