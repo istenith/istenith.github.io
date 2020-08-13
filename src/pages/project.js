@@ -32,7 +32,8 @@ const Card = style.div`
     background-color: #101010;
     padding: 20px;
     border: 2px solid rgba(230,225,230,0.8);
-    border-radius: 20px;
+    border-radius: 20px; textDecoration: "none" }}>
+    {node.front
     box-shadow: 0 20px 20px rgba(10,10,10,0.6);
 
     .header{
@@ -63,7 +64,7 @@ function Projects() {
   const list = useStaticQuery(graphql`
     query {
       allMarkdownRemark(
-        filter: { fileAbsolutePath: { regex: "/.*about/" } }
+        filter: { fileAbsolutePath: { regex: "/.*projects/" } }
         sort: { fields: frontmatter___date}
       ) {
         edges {

@@ -150,7 +150,7 @@ export default function Projects() {
         <Link to='/project' style={{ textDecoration: "none"}}><p className="more">See More</p></Link>
       </div>
         <div className="CardContainer">
-          {data.allMarkdownRemark.edges.map(({ node }) => (
+          {data.allMarkdownRemark.edges.map(({ node }) => (                                               
           <div className="Card">
             <Link to={node.fields.slug} style={{ textDecoration: "none" }} className='link'>
               <h3 className="ProjTitle">

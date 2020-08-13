@@ -12,6 +12,11 @@ import Header from "./header"
 import styled from 'styled-components'
 import Footer from './footer'
 
+if (typeof window !== "undefined") {
+  // eslint-disable-next-line global-require
+  require("smooth-scroll")('a[href*="#"]')
+}
+
 const Master = styled.div`
   display: flex;
   flex-direction: column;

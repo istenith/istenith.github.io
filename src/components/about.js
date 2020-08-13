@@ -7,12 +7,35 @@ import Img from "gatsby-image"
 
 const AboutFlex=styled.div`
 display:flex;
-margin 40px 0;
-padding:2rem
+margin:20rem 0;
+padding:30px ;
+padding-top:20%;
+
+
 .inner-about{
     .content{
         h3{
-            color:#ffb4b4;
+            color:#fffff;
+            font-weight:700;
+            font-size:5rem;
+            @media(max-width:411px){
+              font-size:4rem;
+            }
+            @media(max-width:768px){
+              display:inline;
+              font-size:5rem;
+              padding-top:10%
+            }
+        }
+        p{
+          font-size:1.5rem;
+          @media(max-width:411px){
+            font-size:1.2rem
+          }
+          @media(max-width:768px){
+            margin:4rem 0;
+            font-size:1.7rem;
+          }
         }
     }
 }
@@ -42,13 +65,8 @@ const About = ()=> {
                   }
                 }
             }
-            teamimg: file(relativePath: { eq: "teamSrijan.jpg" }) {
-              childImageSharp {
-                fluid(maxWidth: 300) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
+            
+            
         }
       `
     )
@@ -56,7 +74,7 @@ const About = ()=> {
 
     return(
         
-            <div className="container">
+            <div className="container" id="about">
             {data.allMarkdownRemark.edges.map(({ node }) => (
                 <AboutFlex>
                 <div className="inner-about">
@@ -67,7 +85,7 @@ const About = ()=> {
                         <Para>
                         <p>{node.excerpt}</p>
                         </Para>
-                        <Img fluid={data.teamimg.childImageSharp.fluid} />
+                        
                     </div>
                     
                 </div>

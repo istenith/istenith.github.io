@@ -29,13 +29,13 @@ const Nav = styled.nav`
 `;
 
 const Ul = styled.ul`
-  $font:"Helvetica Neue", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+ 
   display: flex;
   width: 30%;
   margin: 0;
   justify-content: space-around;
   z-index:0;
-  font-family:$font;
+  
 
   li{
     list-style: none;
@@ -43,6 +43,10 @@ const Ul = styled.ul`
     margin: 0px;
     padding-right: 5px;
     padding-left: 5px;
+    a{
+      text-decoration:none;
+      color:white;
+    }
     
     transition: 0.5s ease-in-out;
     &:hover{
@@ -115,7 +119,7 @@ export default function Header(){
         <li>Initiatives</li>
         <li>Members</li>
         <li>Alumni</li>
-        <li>About</li>
+        <li><Link to="/#about">About</Link></li>
       </Ul>
       <Burger onClick={()=>{setOpen(!open)}} open={open}>
         <div/>
