@@ -61,7 +61,6 @@ const Flex = styled.div`
       /* border: 3px dashed white; */
       width: 250px;
       height: 100%;
-      margin: 0 -5px 0;
       max-width: 300px;
       border-radius: 20px;
       text-align: left;
@@ -73,6 +72,7 @@ const Flex = styled.div`
       /* transition: transform 0.5s ease-out; */
       transition: 0.4s ease-out;
       left: 0px;
+      margin: 0 -2rem 1rem;
 
       .content {
         padding: 20px;
@@ -90,18 +90,17 @@ const Flex = styled.div`
       }
     }
   }
-
-  .Card {
-    margin: 0 1rem 1rem;
-  }
+  /* .Card {
+    margin: 0 -1rem 1rem;
+  } */
   .Card:hover {
     transform: translateY(-5%);
     transition: transform 0.5s ease-out;
     transition: 0.2s ease-out;
   }
-  .Card:hover {
+  .Card:hover~.Card{
     position: relative;
-    left: -25px;
+    left: 1.5rem;
     transition: 0.2s ease-out;
   }
 
@@ -194,19 +193,19 @@ export default function Members() {
         </div>
         <div className="CardContainer">
           {data.allMembersXlsxSheet4.edges.map((row, i) => (
-            <Link
-              to={row.node.link}
-              style={{ textDecoration: "none" }}
-              target="blank"
-            >
               <div className="Card">
-                <Img fluid={row.node.img.childImageSharp.fluid}></Img>
-                <div className="content">
-                  <div className="name">{row.node.name}</div>
-                  <div className="description">{row.node.description}</div>
-                </div>
+                <Link
+                to={row.node.link}
+                style={{ textDecoration: "none" , color: "white"}}
+                target="blank"
+                >
+                  <Img fluid={row.node.img.childImageSharp.fluid}></Img>
+                  <div className="content">
+                    <div className="name">{row.node.name}</div>
+                    <div className="description">{row.node.description}</div>
+                  </div>
+              </Link>
               </div>
-            </Link>
           ))}
         </div>
       </Flex>
@@ -217,19 +216,19 @@ export default function Members() {
         </div>
         <div className="CardContainer">
           {data.allMembersXlsxSheet3.edges.map((row, i) => (
-            <Link
-              to={row.node.link}
-              style={{ textDecoration: "none" }}
-              target="blank"
-            >
-              <div className="Card">
-                <Img fluid={row.node.img.childImageSharp.fluid}></Img>
-                <div className="content">
-                  <div className="name">{row.node.name}</div>
-                  <div className="description">{row.node.description}</div>
-                </div>
-              </div>
-            </Link>
+            <div className="Card">
+              <Link
+                to={row.node.link}
+                style={{ textDecoration: "none", color: 'white'}}
+                target="blank"
+              >
+                  <Img fluid={row.node.img.childImageSharp.fluid}></Img>
+                  <div className="content">
+                    <div className="name">{row.node.name}</div>
+                    <div className="description">{row.node.description}</div>
+                  </div>
+              </Link>
+            </div>
           ))}
         </div>
       </Flex>
@@ -240,19 +239,19 @@ export default function Members() {
         </div>
         <div className="CardContainer">
           {data.allMembersXlsxSheet2.edges.map((row, i) => (
-            <Link
-              to={row.node.link}
-              style={{ textDecoration: "none" }}
-              target="blank"
-            >
-              <div className="Card">
-                <Img fluid={row.node.img.childImageSharp.fluid}></Img>
-                <div className="content">
-                  <div className="name">{row.node.name}</div>
-                  <div className="description">{row.node.description}</div>
-                </div>
-              </div>
-            </Link>
+            <div className="Card">
+              <Link
+                to={row.node.link}
+                style={{ textDecoration: "none", color:"white"}}
+                target="blank"
+              >
+                  <Img fluid={row.node.img.childImageSharp.fluid}></Img>
+                  <div className="content">
+                    <div className="name">{row.node.name}</div>
+                    <div className="description">{row.node.description}</div>
+                  </div>
+              </Link>
+            </div>
           ))}
         </div>
       </Flex>
@@ -263,19 +262,19 @@ export default function Members() {
         </div>
         <div className="CardContainer">
           {data.allMembersXlsxSheet1.edges.map((row, i) => (
-            <Link
-              to={row.node.link}
-              style={{ textDecoration: "none" }}
-              target="blank"
-            >
-              <div className="Card">
-                <Img fluid={row.node.img.childImageSharp.fluid}></Img>
-                <div className="content">
-                  <div className="name">{row.node.name}</div>
-                  <div className="description">{row.node.description}</div>
-                </div>
-              </div>
-            </Link>
+            <div className="Card">
+              <Link
+                to={row.node.link}
+                style={{ textDecoration: "none", color:'white'}}
+                target="blank"
+              >
+                  <Img fluid={row.node.img.childImageSharp.fluid}></Img>
+                  <div className="content">
+                    <div className="name">{row.node.name}</div>
+                    <div className="description">{row.node.description}</div>
+                  </div>
+              </Link>
+            </div>
           ))}
         </div>
       </Flex>
