@@ -105,7 +105,7 @@ export default function Header(){
       </h2>
       <Ul open={open}>
         <li><Link to="/projects/" style={{textDecoration:'none', color:'white'}}>Projects</Link></li>
-        <li>Initiatives</li>
+        <li><Link to="/initiatives/" style={{textDecoration:'none', color:'white'}}>Initiatives</Link></li>
         <li><Link to="/members/" style={{textDecoration:'none', color:'white'}}>Members</Link></li>
         <li>Alumni</li>
         <li>About Us</li>

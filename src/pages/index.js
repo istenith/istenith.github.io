@@ -5,7 +5,7 @@ import ReactAnime from 'react-animejs'
 
 import Layout from "../components/layout"
 import Projects from "../components/projects"
-import Initiatives from '../components/initiatives'
+import PhotoCarousel from '../components/carousel'
 import SEO from "../components/seo"
 import {ReactComponent as IsteLogo} from "../images/iste_logo_hollow.svg"
 
@@ -191,7 +191,7 @@ export default function IndexPage (){
         <IsteLogo className='img' width='300px' height='300px'/>
       </div>
     </LandingDiv>
-    <Initiatives/>
+    <PhotoCarousel/>
     <Projects/>
     <Link to="/page-2/">Go to page 2</Link> <br />
     </Layout>
