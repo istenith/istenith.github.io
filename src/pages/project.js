@@ -63,7 +63,7 @@ function Projects() {
   const list = useStaticQuery(graphql`
     query {
       allMarkdownRemark(
-        filter: { fileAbsolutePath: { regex: "/.*projects/" } }
+        filter: { fileAbsolutePath: { regex: "/.*about/" } }
         sort: { fields: frontmatter___date}
       ) {
         edges {

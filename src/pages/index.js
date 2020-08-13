@@ -6,6 +6,7 @@ import ReactAnime from 'react-animejs'
 import Layout from "../components/layout"
 import Projects from "../components/projects"
 import Initiatives from '../components/initiatives'
+import About from "../components/about"
 import SEO from "../components/seo"
 import {ReactComponent as IsteLogo} from "../images/iste_logo_hollow.svg"
 import styles from "../styles/global-styles.scss"
@@ -28,52 +29,6 @@ const LandingDiv = styled.div`
       text-align:start;
       position:relative;
       -webkit-text-stroke: 2px #fff;
-      
-      &:hover {
-        color: #fff;
-        font-style: normal;
-        font-weight: normal;
-        color: white;
-        font-size:10rem;
-        text-align:start;
-				-webkit-text-stroke: 1px #000;
-        transition: 0.5s;
-        text-shadow: 0 0 5px #fff, 0 0 10px #fff,;
-        
-				&::before {
-					color: red;
-					z-index: 1;
-					-webkit-text-stroke: 0.5px #000;
-          transform: translate(7px,-7px);
-          
-				}
-				&:after {
-					color: #0ff;
-					z-index: 2;
-					-webkit-text-stroke: 0.5px #000;
-					transform: translate(14px,-14px);
-				}
-			}
-			&:before {
-				content: attr(data-text);
-				position: absolute;
-        top: 0;
-        bottom:0;
-        left: 0;
-        right:0;
-        transition: 0.5s;
-        
-        
-			}
-			&:after {
-				content: attr(data-text);
-				position: absolute;
-        top: 0;
-        bottom:0;
-				left: 0;
-        transition: 0.5s;
-        
-			}
 
     }
     .TagLine{
@@ -240,6 +195,7 @@ export default function IndexPage (){
         <IsteLogo className='img' width='300px' height='300px'/>
       </div>
     </LandingDiv>
+    <About />
     <Initiatives/>
     <Projects/>
     <Link to="/page-2/">Go to page 2</Link> <br />
