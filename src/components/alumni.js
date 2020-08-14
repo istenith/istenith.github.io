@@ -52,14 +52,14 @@ const CardContainer = styled.div`
         }
 
         .batch{
-            margin-top: 1rem
+            margin-top: 1rem;
             display: flex;
             font-size: medium;
             font-weight: century-gothic,Montserrat;
         }
 
         .position{
-            margin-top: 1rem
+            margin-top: 1rem;
             font-size: large;
             font-family: Montserrat;
             font-weight: 400;

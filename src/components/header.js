@@ -107,7 +107,7 @@ export default function Header(){
         <li><Link to="/projects/" style={{textDecoration:'none', color:'white'}}>Projects</Link></li>
         <li><Link to="/initiatives/" style={{textDecoration:'none', color:'white'}}>Initiatives</Link></li>
         <li><Link to="/members/" style={{textDecoration:'none', color:'white'}}>Members</Link></li>
-        <li>Alumni</li>
+        <li><Link to="/alumni/" style={{textDecoration:'none', color:'white'}}>Alumni</Link></li>
         <li>About Us</li>
       </Ul>
       <Burger onClick={()=>{setOpen(!open)}} open={open}>
