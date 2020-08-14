@@ -5,7 +5,7 @@ import styled from "styled-components"
 
 const Img = styled(Image)`
   width: 100%;
-  height: 150px;
+  height: 50%;
 
   img {
     margin: 0;
@@ -27,12 +27,11 @@ const CardContainer = styled.div`
 
   .Card{
     color: white;
-    width: 250px;
-    height: 100%;
     max-width: 300px;
+    height: 400px;
     border-radius: 20px;
     text-align: left;
-    flex: 0 0 250px;
+    flex: 0 0 300px;
     overflow: hidden;
     background-color: #2a2e35;
     box-shadow: -16px 0 36px #000;
@@ -40,10 +39,11 @@ const CardContainer = styled.div`
     /* transition: transform 0.5s ease-out; */
     /* transition: 0.4s ease-out; */
     left: 0px;
-    margin: 0 -2rem 1rem;
+    margin: 0.5rem 1rem 1rem;
 
     .content{
         margin-top: 10px;
+        padding: 1rem;
 
         .name{
             font-size: x-large;
@@ -54,13 +54,8 @@ const CardContainer = styled.div`
         .batch{
             margin-top: 1rem
             display: flex;
-            flex-direction: column;
-            flex-wrap: nowrap;
-
-            .start, .end{
-                font-size: medium;
-                font-weight: century-gothic,Montserrat;
-            }
+            font-size: medium;
+            font-weight: century-gothic,Montserrat;
         }
 
         .position{
@@ -72,12 +67,22 @@ const CardContainer = styled.div`
     }
   }
 
+  @media only screen and (max-width: 680px){
+
+    width: 100%;
+    justify-content: center;
+    
+      .Card{
+          width: 100%;
+      }
+  }
+
 `
 
-export default function Members() {
+export default function Alumni() {
   const data = useStaticQuery(graphql`
     query {
-      allAlumniXlsxSheet1(sort: { fields: name, order: ASC }) {
+      allAlumniXlsxSheet1(sort: { fields: [ start,name ], order: [ DESC,ASC ] }) {
         edges {
           node {
             name
@@ -111,10 +116,8 @@ export default function Members() {
               <Img fluid={row.node.img.childImageSharp.fluid}></Img>
               <div className="content">
                 <div className="name">{row.node.name}</div>
-                <div className="batch">
-                    <div className="start">{row.node.start}</div> - <div className="end">{row.node.end}</div>
-                </div>
-                <div className="position">{row.node.name}</div>
+                <div className="batch">{row.node.start} - {row.node.end}</div>
+                <div className="position">{row.node.position}</div>
               </div>
             </Link>
           </div>
