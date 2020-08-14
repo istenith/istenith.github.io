@@ -8,6 +8,7 @@ import SEO from "../components/seo"
 
 const Container = styled.div`
     color: white;
+    position: relative;
     background-color: #2a2e35;
     border-radius: 20px;
     padding: 1rem 2rem;
@@ -16,6 +17,28 @@ const Container = styled.div`
 
     .Title{
         margin: 0;
+    }
+
+    .link{
+        position: absolute;
+        right: 1rem;
+        bottom : 1rem;
+        padding: 0.5rem;
+        background-color: #3a3e45;
+        text-decoration: none;
+        color: white;
+        border-top-left-radius : 15px;
+        border-bottom-right-radius : 15px;
+        transition: 0.5s;
+    }
+
+    .link:hover{
+        color: #2a2e35;
+        background-color: white;
+        border-top-right-radius : 15px;
+        border-bottom-left-radius : 15px;
+        border-top-left-radius : 0;
+        border-bottom-right-radius : 0;
     }
 
     .FlexContainer{
@@ -44,6 +67,7 @@ export default function Initiatives(){
                 node {
                     frontmatter {
                         title
+                        link
                         featuredImage {
                             childImageSharp {
                                 fluid{
@@ -75,6 +99,7 @@ export default function Initiatives(){
                         </div>
                         <div dangerouslySetInnerHTML={{__html: node.html}}></div>
                     </div>
+                    <Link to={node.frontmatter.link} className="link" target="blank">{node.frontmatter.title}</Link>
                 </Container>
             ))}
         </Layout>
