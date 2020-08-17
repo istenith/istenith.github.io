@@ -22,7 +22,7 @@ const Container = styled.footer`
 
     .Copyright{
         flex: 1;
-        text-align:end;
+        text-align: center;
     }
 
     .icons{
@@ -43,31 +43,41 @@ const Container = styled.footer`
         margin: 0 10px;
         text-align: center;
     }
+
+    @media only screen and (max-width: 680px){
+        .text{
+            font-size: 0.5rem;
+        }
+
+        .Copyright{
+            font-size: 0.7rem;
+        }
+    }
 `;
 
 const Footer = ()=>{
     return(
         <Container>
             <div className='Copyright'>© {new Date().getFullYear()}, ISTENITH</div>
-            <p className='text'>Wanna talk to ISTE? Or be a part of it? You can contact any of our members personally or email us at <b>teamiste@gmail.com</b>!</p>
+            <p className='text'>Wanna talk to ISTE? Or be a part of it? You can contact any of our members personally or email us at <strong>teamiste@gmail.com</strong>!</p>
             <div className='icons'>
                 <a href="https://www.facebook.com/teamistenith/">
-                    <FontAwesomeIcon icon={faFacebook} size="1.5x" />
+                    <FontAwesomeIcon icon={faFacebook} size="1x" />
                 </a>
                 <a href="https://twitter.com/istenith">
-                    <FontAwesomeIcon icon={faTwitter} size="1.5x" />
+                    <FontAwesomeIcon icon={faTwitter} size="1x" />
                 </a>
                 <a href="https://www.instagram.com/teamistenith/?hl=en">
-                    <FontAwesomeIcon icon={faInstagram} size="1.5x" />
+                    <FontAwesomeIcon icon={faInstagram} size="1x" />
                 </a>
                 <a href="https://www.youtube.com/channel/UCIC-jhIbxXkcDxyQtJ3OKkQ">
-                    <FontAwesomeIcon icon={faYoutube} size="1.5x" />
+                    <FontAwesomeIcon icon={faYoutube} size="1x" />
                 </a>
                 <a href="https://www.linkedin.com/company/iste-nith/?originalSubdomain=in">
-                    <FontAwesomeIcon icon={faLinkedin} size="1.5x" />
+                    <FontAwesomeIcon icon={faLinkedin} size="1x" />
                 </a>
                 <a href="https://github.com/istenith">
-                    <FontAwesomeIcon icon={faGithub} size="1.5x" />
+                    <FontAwesomeIcon icon={faGithub} size="1x" />
                 </a>
             </div> 
         </Container>
