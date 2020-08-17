@@ -16,6 +16,13 @@ const About = styled.div`
     }
 
     .content{
+        display: flex;
+        align-items: center;
+        .Image{
+            flex: 1 0 200;
+            width: 50%;
+            margin: 2rem;
+        }
         .desc{
             color: white;
             p{
@@ -33,6 +40,13 @@ export default function AboutUs(){
                 childMarkdownRemark {
                   frontmatter {
                     title
+                    featuredImage{
+                        childImageSharp {
+                            fluid {
+                                ...GatsbyImageSharpFluid
+                            }
+                        }
+                    }
                   }
                   html
                 }
@@ -45,10 +59,14 @@ export default function AboutUs(){
 
     const title = data.file.childMarkdownRemark.frontmatter.title
     const html = data.file.childMarkdownRemark.html
+    const fluid = data.file.childMarkdownRemark.frontmatter.featuredImage.childImageSharp.fluid
     return (
            <About id='about'>
                <h1>{title}</h1>
                <div className = 'content'>
+                    <div className='Image'>
+                        <Img fluid={fluid}/>
+                    </div>
                    <div className='desc' dangerouslySetInnerHTML={{__html: html}}></div>
                </div>
            </About> 
