@@ -27,7 +27,7 @@ const CardDiv = styled.div`
     box-shadow: 0 20px 20px rgba(10,10,10,0.6);
     transition: 0.2s ease-out;
 
-    flex: 0 0 300px;
+    flex: 0 0 350px;
 
     .text{
       padding: 0 1rem 1rem;
@@ -42,6 +42,7 @@ const CardDiv = styled.div`
     }
 
     .tags{
+      margin: 2rem 0 0;
       color:white;
       display: flex;
       .tag{
