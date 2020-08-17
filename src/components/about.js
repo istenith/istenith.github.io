@@ -12,21 +12,43 @@ const About = styled.div`
     box-shadow: 0 20px 20px rgba(10,10,10,0.6);
     h1{
         color: white;
-        margin: 0;
+        margin: 1rem 0 0;
+        text-align:center;
     }
 
     .content{
         display: flex;
-        align-items: center;
+        flex-direction: row;
+        justify-content: center;
         .Image{
             flex: 1 0 200;
-            width: 50%;
-            margin: 2rem;
+            width: 30%;
+            margin: 1rem 1rem 0;
         }
         .desc{
             color: white;
+            margin-top: 1rem;
             p{
                 margin-bottom: 0;
+                text-align: justify;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 680px){
+        width: 90%;
+        margin: 2rem 5% 5%;
+
+        .content{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            .Image{
+                margin: 2rem 0 0;
+                width: 100%;
+            }
+            .desc{
+                margin-top: 2rem;
             }
         }
     }
