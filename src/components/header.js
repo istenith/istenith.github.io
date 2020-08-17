@@ -19,11 +19,17 @@ const Nav = styled.nav`
   .logo{
     z-index:400;
     letter-spacing: 5px;
-    margin: 0;
+    margin: 5px 0 0;
     padding:0;
     Link{
       color: inherit;
       text-decoration: none;
+    }
+  }
+
+  @media only screen and (max-width: 680px){
+    .logo{
+      margin-left:20%;
     }
   }
 `;
@@ -41,6 +47,8 @@ const Ul = styled.ul`
     margin: 0;
     padding-right: 4px;
     padding-left: 4px;
+    font-weight: 600;
+    font-family: Montserrat; 
   }
 
   @media screen and (max-width: 1200px){
