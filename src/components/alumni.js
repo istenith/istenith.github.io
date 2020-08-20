@@ -31,7 +31,7 @@ const CardContainer = styled.div`
 
 .Card{
     position:relative;
-    margin:20px 8px 20px 20px;
+    margin:20px 8px 25px 20px;
 
     ul li{
       list-style: none;
@@ -39,7 +39,7 @@ const CardContainer = styled.div`
      
 .inner-box{    
   position:relative;
-  padding:40px 40px 60px 0px;
+  padding:40px 40px 35px 0px;
     
    :before{
     position:absolute;
@@ -63,15 +63,14 @@ const CardContainer = styled.div`
     transition:all 600ms ease;
     background-image: linear-gradient(0deg, #ff8a00, #e52e71);/* the transition color*/
   }
-
     :hover::after{
-    width:78.5%;
+     width:78.5%;
   }
 
     .social-icons{
     position:absolute;
-    right:25px;
-    top:50px;
+    right:30px;
+    top:75px;
     z-index:1;
       
       li{
@@ -92,6 +91,8 @@ const CardContainer = styled.div`
     position:relative;
     z-index:1;
     weight :90%;
+    width:230px;
+    height:230px;
     border-radius:50%;
     display:inline-block;
   }
@@ -161,7 +162,7 @@ export default function Alumni() {
       <CardContainer>
         {data.allAlumniXlsxSheet1.edges.map((row, i) => (
           <div className="Card">
-          <div class="inner-box " data-wow-delay="0ms" data-wow-duration="1500ms">
+          <div class="inner-box">
                         <ul class="social-icons">
                             <li><a href="#"><FontAwesomeIcon icon={faFacebook} size="1x" /></a></li>
                             <li><a href="#"><FontAwesomeIcon icon={faLinkedin} size="1x" /></a></li>
