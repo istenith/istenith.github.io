@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql, useStaticQuery, Link } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 import Image from "gatsby-image"
 import styled from "styled-components"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -159,7 +159,7 @@ export default function Alumni() {
   return (
     <Flex>
       <CardContainer>
-        {data.allAlumniXlsxSheet1.edges.map((row, i) => (
+        {data.allAlumniXlsxSheet1.edges.map((row) => (
           <div className="Card">
           <div class="inner-box " data-wow-delay="0ms" data-wow-duration="1500ms">
                         <ul class="social-icons">

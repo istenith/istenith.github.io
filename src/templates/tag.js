@@ -6,7 +6,7 @@ import Card from "../components/card"
 
 
 // Components
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 
 const PageTitle= styled.h1`
   color: white;

@@ -1,5 +1,5 @@
+import React from 'react'
 import { Link } from "gatsby"
-import React, { useState } from "react"
 import Image from "gatsby-image"
 import styled from "styled-components"
 import kebabCase from "lodash/kebabCase"
