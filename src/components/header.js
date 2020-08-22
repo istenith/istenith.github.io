@@ -47,8 +47,6 @@ const Ul = styled.ul`
     margin: 0;
     padding-right: 4px;
     padding-left: 4px;
-    font-weight: 600;
-    font-family: Montserrat; 
   }
 
   @media screen and (max-width: 1200px){
