@@ -141,7 +141,9 @@ export default function Alumni() {
             name
             start
             end
-            link
+            instagram
+            linkedin
+            facebook
             position
             img {
               childImageSharp {
@@ -163,10 +165,10 @@ export default function Alumni() {
           <div className="Card">
           <div class="inner-box " data-wow-delay="0ms" data-wow-duration="1500ms">
                         <ul class="social-icons">
-                            <li><a href="#"><FontAwesomeIcon icon={faFacebook} size="1x" /></a></li>
-                            <li><a href="#"><FontAwesomeIcon icon={faLinkedin} size="1x" /></a></li>
+                            <li><a href={row.node.facebook}><FontAwesomeIcon icon={faFacebook} size="1x" /></a></li>
+                            <li><a href={row.node.linkedin}><FontAwesomeIcon icon={faLinkedin} size="1x" /></a></li>
 
-                            <li><a href="#"><FontAwesomeIcon icon={faInstagram} size="1x" /></a></li>
+                            <li><a href={row.node.instagram}><FontAwesomeIcon icon={faInstagram} size="1x" /></a></li>
                         </ul>
             <Img className="image" fluid={row.node.img.childImageSharp.fluid}></Img>        
               <div className="content">
