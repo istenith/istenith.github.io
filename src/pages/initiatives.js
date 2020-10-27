@@ -35,15 +35,15 @@ const Container = styled.div`
             border-top-left-radius : 15px;
             border-bottom-right-radius : 15px;
             transition: 0.5s;
-        }
-    
-        .link:hover{
-            color: #2a2e35;
-            background-color: white;
-            border-top-right-radius : 15px;
-            border-bottom-left-radius : 15px;
-            border-top-left-radius : 0;
-            border-bottom-right-radius : 0;
+
+            &:hover{
+                color: #2a2e35;
+                background-color: white;
+                border-top-right-radius : 15px;
+                border-bottom-left-radius : 15px;
+                border-top-left-radius : 0;
+                border-bottom-right-radius : 0;
+            }
         }
     }
 
@@ -109,7 +109,7 @@ export default function Initiatives(){
                     <div className="links">
                         {
                             node.frontmatter.links.map( (link) => (
-                                <Link to={link} className="link" target="blank">{link}</Link>
+                                <Link to={link} className="link" target="blank">{node.frontmatter.title}</Link>
                             ))
                         }
                     </div>
