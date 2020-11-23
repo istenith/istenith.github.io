@@ -23,8 +23,8 @@ const LandingDiv = styled.div`
     .name{
       font-style: normal;
       font-weight: normal;
+      font-size: 7rem;
       color: white;
-      font-size:10rem;
       text-align:start;
     }
     .TagLine{
@@ -59,7 +59,7 @@ const LandingDiv = styled.div`
       grid-row: 2/4;
       grid-column: 1/2;
       .name{
-        font-size: 8rem;
+        font-size: 7rem;
       }
       .name,.team{
         text-align:center;

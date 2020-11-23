@@ -16,6 +16,7 @@ const Container = styled.div`
     box-shadow: 0 20px 20px rgba(10,10,10,0.6);
 
     .Title{
+        color: white;
         margin: 0;
     }
 

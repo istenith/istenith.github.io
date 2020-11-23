@@ -42,6 +42,7 @@ const Flex = styled.div`
     padding: 0.5rem;
     h1 {
       margin-bottom: 0;
+      color: white;
       width: 100%;
     }
   }
@@ -107,6 +108,7 @@ const Flex = styled.div`
   @media screen and (max-width: 1080px) {
     .title {
       writing-mode: vertical-rl;
+      color: white;
       /* text-align: right; */
       transform: rotate(180deg);
       min-width: 80px;
