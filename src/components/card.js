@@ -49,7 +49,7 @@ const CardDiv = styled.div`
           background-image:linear-gradient(0deg,#ff8a00,#e52e71);
           border-radius: 20px;
           margin: 5px;
-          padding: 0 4px;
+          padding: 0 10px;
           min-width: 50px;
           text-align: center;
       }

@@ -15,11 +15,15 @@ import fairyTheme from "typography-theme-fairy-gates"
     //bodyFontFamily: ["Georgia", "serif"],
   //})
 
-fairyTheme.overrideThemeStyles = () => ({
+fairyTheme.overrideThemeStyles = ({ rhythm }) => ({
   a:{
     textShadow: `none`,
     backgroundImage: `none`,
   },
+  'h1,h2,h3,p':{
+    marginBottom: rhythm(1/2),
+    marginTop: rhythm(1/4),
+  }
 });
 
 const typography = new Typography(fairyTheme);

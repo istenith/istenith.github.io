@@ -90,8 +90,9 @@ const CardContainer = styled.div`
 
     .image{
     position:relative;
+    height: 200px;
+    width: 200px;
     z-index:1;
-    weight :90%;
     border-radius:50%;
     display:inline-block;
   }
@@ -120,7 +121,6 @@ const CardContainer = styled.div`
 }
 }
 }
-.
    @media only screen and (max-width: 680px){
     width: 75%;
     justify-content: center;

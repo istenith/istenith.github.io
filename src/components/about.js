@@ -12,7 +12,7 @@ const About = styled.div`
     box-shadow: 0 20px 20px rgba(10,10,10,0.6);
     h1{
         color: white;
-        margin: 1rem 0 0;
+        margin: 0 0;
         text-align:center;
     }
 

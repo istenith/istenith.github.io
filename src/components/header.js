@@ -121,11 +121,11 @@ export default function Header(){
         <Link to="/" style={{textDecoration:'none', color:'white'}}>ISTE-NITH</Link>
       </h2>
       <Ul open={open}>
-        <li><StyledLink to="/projects/" activeStyle={{textDecoration:'underline', color:'#e63468'}}>Projects</StyledLink></li>
-        <li><StyledLink to="/initiatives/" activeStyle={{textDecoration:'underline', color:'#e63468'}}>Initiatives</StyledLink></li>
-        <li><StyledLink to="/members/" activeStyle={{textDecoration:'underline', color:'#e63468'}}>Members</StyledLink></li>
-        <li><StyledLink to="/alumni/" activeStyle={{textDecoration:'underline', color:'#e63468'}}>Alumni</StyledLink></li>
-        <li><StyledLink to="/#about" activeStyle={{textDecoration:'underline', color:'#e63468'}}>About Us</StyledLink></li>
+        <li><StyledLink to="/projects/" activeStyle={{fontWeight:'bold', color:'#e63468'}}>Projects</StyledLink></li>
+        <li><StyledLink to="/initiatives/" activeStyle={{fontWeight:'bold', color:'#e63468'}}>Initiatives</StyledLink></li>
+        <li><StyledLink to="/members/" activeStyle={{fontWeight:'bold', color:'#e63468'}}>Members</StyledLink></li>
+        <li><StyledLink to="/alumni/" activeStyle={{fontWeight:'bold', color:'#e63468'}}>Alumni</StyledLink></li>
+        <li><StyledLink to="/#about" activeStyle={{fontWeight:'bold', color:'#e63468'}}>About Us</StyledLink></li>
       </Ul>
       <Burger onClick={()=>{setOpen(!open)}} open={open}>
         <div/>
