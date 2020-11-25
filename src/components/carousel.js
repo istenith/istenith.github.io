@@ -22,12 +22,12 @@ export default function PhotoCarousel(){
     const data = useStaticQuery(
     graphql`
         query{
-            allFile(filter: {relativeDirectory: {eq: "carousel"}, ext: {eq: ".jpg"}}) {
+            allFile(filter: {relativeDirectory: {eq: "carousel"}, ext: {eq: ".png"}}) {
             edges {
                 node {
                 childImageSharp {
-                    fluid(maxHeight: 200){
-                        ...GatsbyImageSharpFluid_withWebp
+                    fixed{
+                        ...GatsbyImageSharpFixed
                     }
                 }
                 }
@@ -40,7 +40,7 @@ export default function PhotoCarousel(){
         <Carousel autoPlay>
             {data.allFile.edges.map(({node})=>(
                 <div>
-                    <Img fluid={node.childImageSharp.fluid}/>
+                    <Img fixed={node.childImageSharp.fixed}/>
                 </div>
             ))}
         </Carousel>
