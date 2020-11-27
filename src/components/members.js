@@ -41,7 +41,8 @@ const Flex = styled.div`
     border-radius: 20px;
     padding: 0.5rem;
     h1 {
-      margin-bottom: 0;
+      margin-bottom: 20px;
+      color: white;
       width: 100%;
     }
   }
@@ -78,13 +79,11 @@ const Flex = styled.div`
         padding: 20px;
         .name {
           font-size: 1.3rem;
-          font-family: Montserrat;
           min-height: 80px;
         }
 
         .description {
           font-size: 1rem;
-          font-family: century-gothic, Montserrat;
           margin-top: 10px;
         }
       }
@@ -107,6 +106,7 @@ const Flex = styled.div`
   @media screen and (max-width: 1080px) {
     .title {
       writing-mode: vertical-rl;
+      color: white;
       /* text-align: right; */
       transform: rotate(180deg);
       min-width: 80px;

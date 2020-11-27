@@ -12,8 +12,7 @@ const About = styled.div`
     box-shadow: 0 20px 20px rgba(10,10,10,0.6);
     h1{
         color: white;
-        margin: 1rem 0 0;
-        text-align:center;
+        margin: 1rem 0;
     }
 
     .content{
@@ -22,15 +21,18 @@ const About = styled.div`
         justify-content: center;
         .Image{
             flex: 1 0 200;
-            width: 30%;
+            width: 100%;
             margin: 1rem 1rem 0;
         }
         .desc{
             color: white;
             margin-top: 1rem;
+            display:flex;
+            align-items:center;
             p{
                 margin-bottom: 0;
                 text-align: justify;
+                justify-content:center;
             }
         }
     }
@@ -39,6 +41,10 @@ const About = styled.div`
         width: 90%;
         margin: 2rem 5% 5%;
 
+        h1{
+            color: white;
+            margin: 0.5rem 0;
+        }
         .content{
             display: flex;
             justify-content: center;
@@ -48,7 +54,7 @@ const About = styled.div`
                 width: 100%;
             }
             .desc{
-                margin-top: 2rem;
+                margin-top: 0;
             }
         }
     }
@@ -64,7 +70,7 @@ export default function AboutUs(){
                     title
                     featuredImage{
                         childImageSharp {
-                            fluid {
+                            fluid(maxWidth: 1000){
                                 ...GatsbyImageSharpFluid
                             }
                         }
@@ -84,12 +90,14 @@ export default function AboutUs(){
     const fluid = data.file.childMarkdownRemark.frontmatter.featuredImage.childImageSharp.fluid
     return (
            <About id='about'>
-               <h1>{title}</h1>
                <div className = 'content'>
                     <div className='Image'>
-                        <Img fluid={fluid}/>
+                        <Img fluid={fluid} style={{borderRadius:"5%"}}/>
                     </div>
-                   <div className='desc' dangerouslySetInnerHTML={{__html: html}}></div>
+                    <div>
+                       <h1>{title}</h1>
+                       <div className='desc' dangerouslySetInnerHTML={{__html: html}}></div>
+                    </div>
                </div>
            </About> 
     )

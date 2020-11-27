@@ -39,7 +39,7 @@ const Container = styled.footer`
         flex:2;
         margin:0;
         width: 20%;
-        font-size: 0.7rem;
+        font-size: 0.8rem;
         margin: 0 10px;
         text-align: center;
     }
@@ -59,7 +59,7 @@ const Footer = ()=>{
     return(
         <Container>
             <div className='Copyright'>© {new Date().getFullYear()}, ISTENITH</div>
-            <p className='text'>Wanna talk to ISTE? Or be a part of it? You can contact any of our members personally or email us at <strong>teamiste@gmail.com</strong>!</p>
+            <p className='text'>Wanna talk to ISTE? Or be a part of it? You can contact any of our members personally or 📧 us at <strong><a href="mailto:teamiste@gmail.com">teamiste@gmail.com</a></strong>!</p>
             <div className='icons'>
                 <a href="https://www.facebook.com/teamistenith/">
                     <FontAwesomeIcon icon={faFacebook} size="1x" />

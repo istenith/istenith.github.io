@@ -47,6 +47,7 @@ const Ul = styled.ul`
     margin: 0;
     padding-right: 4px;
     padding-left: 4px;
+    transition: 2ms;
   }
 
   @media screen and (max-width: 1200px){
@@ -101,6 +102,16 @@ const Burger = styled.div`
   }
 `;
 
+const StyledLink = styled(Link)`
+    text-decoration: none;
+    color: white;
+
+    transition: 0.2s;
+    &:hover{
+        color: #e63468;
+    }
+`;
+
 export default function Header(){ 
 
   const [open, setOpen] = useState(false);
@@ -110,11 +121,11 @@ export default function Header(){
         <Link to="/" style={{textDecoration:'none', color:'white'}}>ISTE-NITH</Link>
       </h2>
       <Ul open={open}>
-        <li><Link to="/projects/" style={{textDecoration:'none', color:'white'}}>Projects</Link></li>
-        <li><Link to="/initiatives/" style={{textDecoration:'none', color:'white'}}>Initiatives</Link></li>
-        <li><Link to="/members/" style={{textDecoration:'none', color:'white'}}>Members</Link></li>
-        <li><Link to="/alumni/" style={{textDecoration:'none', color:'white'}}>Alumni</Link></li>
-        <li><Link to="/#about" style={{textDecoration:'none', color:'white'}}>About Us</Link></li>
+        <li><StyledLink to="/projects/" activeStyle={{fontWeight:'bold', color:'#e63468'}}>Projects</StyledLink></li>
+        <li><StyledLink to="/initiatives/" activeStyle={{fontWeight:'bold', color:'#e63468'}}>Initiatives</StyledLink></li>
+        <li><StyledLink to="/members/" activeStyle={{fontWeight:'bold', color:'#e63468'}}>Members</StyledLink></li>
+        <li><StyledLink to="/alumni/" activeStyle={{fontWeight:'bold', color:'#e63468'}}>Alumni</StyledLink></li>
+        <li><StyledLink to="/#about" activeStyle={{fontWeight:'bold', color:'#e63468'}}>About Us</StyledLink></li>
       </Ul>
       <Burger onClick={()=>{setOpen(!open)}} open={open}>
         <div/>

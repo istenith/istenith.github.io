@@ -12,6 +12,7 @@ const Title = styled.div`
     justify-content: space-between;
     h1{
         margin-bottom: 0;
+        color: white;
     }
     .tags{
         color:white;
@@ -20,8 +21,7 @@ const Title = styled.div`
             background-image:linear-gradient(0deg,#ff8a00,#e52e71);
             border-radius: 20px;
             margin: 5px;
-            padding: 0 4px;
-            min-width: 50px;
+            padding: 0 10px;
             text-align: center;
         }
     }

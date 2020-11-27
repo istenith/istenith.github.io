@@ -7,19 +7,17 @@ import SEO from "../components/seo"
 import Card from "../components/card"
 
 const Search = styled.input`
-  background: #e84118;
+  background: #2a2e35;
   opacity: 0.7;
   padding: 0 2rem;
   width: 50%;
   height: 50px;
   border-radius: 50px;
-  box-shadow: 0 -3px 50px black;
   border: none;
   color: white;
   font-family: Roboto;
   transition : 0.2s ease-in;
-  box-shadow: inset 0.2rem 0px 0.3rem black;
-  &:focus{
+  &:focus, &:hover{
     opacity: 1;
     box-shadow: none;
     transition : 0.2s ease-in;
@@ -112,7 +110,7 @@ const ProjectPage = () => {
       <Search
         type="text"
         aria-label="Search"
-        placeholder="Type to filter posts..."
+        placeholder="🔍 Type to filter posts..."
         onChange={handleInputChange}
       />
       <FlexDiv>

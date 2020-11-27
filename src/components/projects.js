@@ -25,10 +25,12 @@ const FlexContainer = styled.div`
     border-radius: 20px;
     padding: 0.5rem;
     h1{
-      margin-bottom: 0;
+      margin: 0 0 10px 0;
+      color:white;
     }
     .more{
-        color: #ffb4b4;
+        color: #2a2e35;
+        margin: 0 0 10px 0;
         text-align:start;
       }
   }
@@ -62,7 +64,7 @@ const FlexContainer = styled.div`
 
       .ProjTitle {
         color: white;
-        margin-bottom: 0;
+        margin-top: 1.0rem;
       }
       .Date,
       .Excerpt {
@@ -112,6 +114,9 @@ const FlexContainer = styled.div`
       writing-mode: vertical-rl;
       /* text-align: right; */
       transform: rotate(180deg);
+      h1{
+        margin-top: 0;
+      }
     }
   }
 `;
