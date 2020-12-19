@@ -1,7 +1,11 @@
 ---
 title: "Pahal"
 date: "2020-01-04"
-featuredImage: "../media/meme.jpg"
+featuredImage: "pahal_banner.jpeg"
 links: ["https://istenith.com/pahal/"]
 ---
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ac massa tristique metus auctor luctus sed quis ex. Nam condimentum metus ornare feugiat convallis. Phasellus pharetra accumsan neque, at accumsan mauris ultrices sit amet. Nullam egestas nunc et mi hendrerit, id fermentum metus viverra. Quisque efficitur enim eget ex commodo venenatis. Aenean et risus euismod, aliquet ante vulputate, interdum lorem. Nunc malesuada ipsum non rutrum ornare. In dictum in erat pulvinar sagittis. Pellentesque non nunc sit amet lorem molestie finibus. Sed sagittis lacinia sollicitudin. Fusce sit amet nisi nec nisi sagittis aliquam sit amet in tortor. 
+Team ISTE here at NIT Hamirpur is taking an initiative PAHAL to help freshers in the admission process by setting up a help-desk, in-person guidance, and in every way possible.
+
+The website is to provide necessary tools and information.
+
+It is mobile-oriented to minimise load on users' devices. Dark mode is recommended for power savings but light mode is also available and fully functional.
