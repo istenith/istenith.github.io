@@ -256,7 +256,7 @@ export default function Members() {
         </div>
       </Flex>
 
-      <Flex>
+      {/* <Flex>
         <div className="title">
           <h1>First Year</h1>
         </div>
@@ -277,7 +277,7 @@ export default function Members() {
             </div>
           ))}
         </div>
-      </Flex>
+      </Flex> */}
     </FlexContainer>
   )
 }
