@@ -2,6 +2,8 @@
 title: "Hult Prize"
 date: "2020-01-04"
 featuredImage: "./hult.png" 
-links: ["https://istenith.com/hult/"]
+links: ["http://hultprizeat.com/nithamirpur"]
 ---
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ac massa tristique metus auctor luctus sed quis ex. Nam condimentum metus ornare feugiat convallis. Phasellus pharetra accumsan neque, at accumsan mauris ultrices sit amet. Nullam egestas nunc et mi hendrerit, id fermentum metus viverra. Quisque efficitur enim eget ex commodo venenatis. Aenean et risus euismod, aliquet ante vulputate, interdum lorem. Nunc malesuada ipsum non rutrum ornare. In dictum in erat pulvinar sagittis. Pellentesque non nunc sit amet lorem molestie finibus. Sed sagittis lacinia sollicitudin. Fusce sit amet nisi nec nisi sagittis aliquam sit amet in tortor. 
+The Hult Prize is an annual, year-long competition that crowd-sources ideas from college students after challenging them to solve a pressing social issue around topics such as food security, water access, energy, and education. It was founded by Ahmad Ashkar and is funded by Bertil Hult, the latter of whom, along with his family – founders of EF Education First – donates US$1 million in seed capital to help the winning team launch a social enterprise.
+
+The Prize is a partnership between Hult International Business School and the United Nations Foundation. Former U.S. president Bill Clinton selects the challenge topic and announces the winner each September. The Hult prize has been referred to as the "Nobel Prize for students" by Nobel laureate Muhammad Yunus.
