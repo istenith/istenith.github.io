@@ -53,7 +53,7 @@ const FlexContainer = styled.div`
       border-radius: 20px;
       text-align: left;
       flex: 0 0 250px;
-      padding: 20px;
+      padding: 10px 20px;
       overflow: hidden;
       background-color: #2a2e35;
       box-shadow: -16px 0 36px #000;
