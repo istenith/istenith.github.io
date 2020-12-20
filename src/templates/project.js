@@ -5,7 +5,7 @@ import Layout from '../components/layout'
 import SEO from "../components/seo"
 import styled from 'styled-components'
 import kebabCase from "lodash/kebabCase"
-import {head1, head2, head3, head4, para} from "./elements"
+import {head1, head2, head3, head4, para, line} from "./elements"
 
 const Title = styled.div`
     color: white;
@@ -33,11 +33,7 @@ const Title = styled.div`
     }
     
 `;
-const Content = styled.div`
-    *{
-        //color: white;
-    }
-`;
+
 const Date = styled.p`
     color: white;
 `;
@@ -50,6 +46,7 @@ const renderAst = new RehypeReact({
         h3: head3,
         h4: head4,
         p: para,
+        hr: line,
     },
 }).Compiler;
 
@@ -73,7 +70,9 @@ export default function Project ({ data }) {
                 </div>
             </Title>
             <Date>{project.frontmatter.date}</Date>
-            <Content dangerouslySetInnerHTML={{ __html: project.html }}></Content>
+            {
+                renderAst(project.htmlAst)
+            }
         </Layout>
     )
 }

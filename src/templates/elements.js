@@ -19,3 +19,7 @@ export const head4 = styled.h4`
 export const para = styled.p`
     color: white;
 `;
+
+export const line = styled.hr`
+    border-top: 1px solid white;
+`;
