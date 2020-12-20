@@ -1,9 +1,11 @@
 import React from 'react'
+import RehypeReact from "rehype-react";
 import { graphql, Link} from "gatsby"
 import Layout from '../components/layout'
 import SEO from "../components/seo"
 import styled from 'styled-components'
 import kebabCase from "lodash/kebabCase"
+import {head1, head2, head3, head4, para} from "./elements"
 
 const Title = styled.div`
     color: white;
@@ -13,6 +15,10 @@ const Title = styled.div`
     h1{
         margin-bottom: 0;
         color: white;
+    }
+    p{
+        padding-bottom: 0;
+        margin: 0;
     }
     .tags{
         color:white;
@@ -28,11 +34,24 @@ const Title = styled.div`
     
 `;
 const Content = styled.div`
-    color: white;
+    *{
+        //color: white;
+    }
 `;
 const Date = styled.p`
     color: white;
 `;
+
+const renderAst = new RehypeReact({
+    createElement: React.createElement,
+    components: {
+        h1: head1,
+        h2: head2,
+        h3: head3,
+        h4: head4,
+        p: para,
+    },
+}).Compiler;
 
 export default function Project ({ data }) {
     const project = data.markdownRemark
@@ -40,7 +59,11 @@ export default function Project ({ data }) {
         <Layout>
             <SEO title={project.frontmatter.title}/>
             <Title>
-                <h1>{project.frontmatter.title}</h1>
+                <div>
+                    <h1>{project.frontmatter.title}</h1>
+                    <p>Author: {project.frontmatter.author}</p>
+                    <p>{project.frontmatter.email}</p>
+                </div>
                 <div className='tags'>
                 {project.frontmatter.tags.map((tag)=>(
                     <Link to={'/tags/'+kebabCase(tag)} style={{ textDecoration: "none", color: 'white'}}>
@@ -59,8 +82,11 @@ export const query = graphql`
     query($slug: String){
         markdownRemark(fields: { slug: { eq: $slug }}){
             html
+            htmlAst
             frontmatter{
                 title
+                author
+                email
                 date(formatString: "MMMM Do, YYYY")
                 tags
             }
