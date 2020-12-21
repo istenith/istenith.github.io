@@ -23,3 +23,16 @@ export const para = styled.p`
 export const line = styled.hr`
     border-top: 1px solid white;
 `;
+
+export const Pre = styled.pre`
+    color: white;
+    background-color: #253270;
+    border-radius: 10px;
+    padding: 10px;
+`;
+
+export const Code = styled.code`
+    background-color: #253270;
+    border-radius: 10px;
+    padding: 5px 10px;
+`;

@@ -150,7 +150,7 @@ export default function Projects() {
   return (    
       <FlexContainer>
       <div className="title">
-        <h1>Recent Projects</h1>
+        <h1>Recent Activity</h1>
         <Link to='/projects' style={{ textDecoration: "none"}}><p className="more">See More</p></Link>
       </div>
         <div className="CardContainer">
