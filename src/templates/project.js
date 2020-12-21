@@ -5,7 +5,7 @@ import Layout from '../components/layout'
 import SEO from "../components/seo"
 import styled from 'styled-components'
 import kebabCase from "lodash/kebabCase"
-import {head1, head2, head3, head4, para, line} from "./elements"
+import {head1, head2, head3, head4, para, line, Pre, Code} from "./elements"
 
 const Title = styled.div`
     color: white;
@@ -38,6 +38,15 @@ const Date = styled.p`
     color: white;
 `;
 
+const Pad = styled.div`
+    width: 70%;
+    margin: 0 auto;
+
+    @media screen and (max-width: 1080px){
+        width: 90%;
+    }
+`;
+
 const renderAst = new RehypeReact({
     createElement: React.createElement,
     components: {
@@ -47,6 +56,8 @@ const renderAst = new RehypeReact({
         h4: head4,
         p: para,
         hr: line,
+        pre: Pre,
+        code: Code
     },
 }).Compiler;
 
@@ -54,25 +65,27 @@ export default function Project ({ data }) {
     const project = data.markdownRemark
     return (
         <Layout>
+        <Pad>
             <SEO title={project.frontmatter.title}/>
             <Title>
-                <div>
-                    <h1>{project.frontmatter.title}</h1>
-                    <p>Author: {project.frontmatter.author}</p>
-                    <p>{project.frontmatter.email}</p>
-                </div>
-                <div className='tags'>
-                {project.frontmatter.tags.map((tag)=>(
-                    <Link to={'/tags/'+kebabCase(tag)} style={{ textDecoration: "none", color: 'white'}}>
-                        <div className='tag'>{tag}</div>
-                    </Link>
-                ))}
-                </div>
+            <div>
+            <h1>{project.frontmatter.title}</h1>
+            <p>Author: {project.frontmatter.author}</p>
+            <p>{project.frontmatter.email}</p>
+            </div>
+            <div className='tags'>
+            {project.frontmatter.tags.map((tag)=>(
+                <Link to={'/tags/'+kebabCase(tag)} style={{ textDecoration: "none", color: 'white'}}>
+                <div className='tag'>{tag}</div>
+                </Link>
+            ))}
+            </div>
             </Title>
             <Date>{project.frontmatter.date}</Date>
             {
                 renderAst(project.htmlAst)
             }
+        </Pad>
         </Layout>
     )
 }
