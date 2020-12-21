@@ -70,5 +70,11 @@ module.exports = {
       },
     },
     `gatsby-transformer-excel`,
+    {
+        resolve: `gatsby-plugin-styled-components`,
+        options:{
+
+        },
+    },
   ],
 }
