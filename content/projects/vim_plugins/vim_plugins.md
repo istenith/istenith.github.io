@@ -1,5 +1,5 @@
 ---
-title: "Vim pugins that make life easy!"
+title: "Vim plugins that make life easy!"
 date: "2020-12-21"
 featuredImage: "vim.png"
 author: "Parth Pant"
