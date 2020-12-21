@@ -4,6 +4,7 @@ module.exports = {
     description: `Indian Society for Technical Eduction Student's Chapter, NIT Hamirpur`,
     author: `@istenith`,
   },
+  pathPrefix: "/website2020-21",
   plugins: [
     'gatsby-plugin-svgr',
     `gatsby-plugin-react-helmet`,
