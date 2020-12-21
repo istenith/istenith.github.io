@@ -75,7 +75,7 @@ export default function Project ({ data, location}) {
             <p>{project.frontmatter.email}</p>
             </div>
             <div className='tags'>
-            {project.frontmatter.tags.map((tag)=>(
+            {project.frontmatter.tags && project.frontmatter.tags.map((tag)=>(
                 <Link to={'/tags/'+kebabCase(tag)} style={{ textDecoration: "none", color: 'white'}}>
                 <div className='tag'>{tag}</div>
                 </Link>
