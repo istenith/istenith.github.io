@@ -33,6 +33,6 @@ export const Pre = styled.pre`
 
 export const Code = styled.code`
     background-color: #253270;
-    border-radius: 10px;
-    padding: 5px 10px;
+    border-radius: 5px;
+    padding: 1px 4px;
 `;
