@@ -1,10 +1,10 @@
 ---
-title: "Choosing the right Linux Distribution"
+title: "Choosing the right Linux distribution"
 date: "2020-12-20"
 featuredImage: "cover.jpg"
 author: "Parth Pant"
 email: "parthpant4@gmail.com"
-tags: ['linux', 'noob-friendly']
+tags: ['linux', 'noobfriendly']
 ---
 
 ![image here](cover.jpg)
