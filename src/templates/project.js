@@ -2,6 +2,7 @@ import React from 'react'
 import RehypeReact from "rehype-react";
 import { graphql, Link} from "gatsby"
 import Layout from '../components/layout'
+import Share from '../components/share'
 import SEO from "../components/seo"
 import styled from 'styled-components'
 import kebabCase from "lodash/kebabCase"
@@ -61,7 +62,7 @@ const renderAst = new RehypeReact({
     },
 }).Compiler;
 
-export default function Project ({ data }) {
+export default function Project ({ data, location}) {
     const project = data.markdownRemark
     return (
         <Layout>
@@ -85,6 +86,7 @@ export default function Project ({ data }) {
             {
                 renderAst(project.htmlAst)
             }
+            <Share title={project.frontmatter.title} tags={project.frontmatter.tags} url={location.href}/>            
         </Pad>
         </Layout>
     )
