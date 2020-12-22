@@ -36,3 +36,7 @@ export const Code = styled.code`
     border-radius: 5px;
     padding: 1px 4px;
 `;
+
+export const UL = styled.ul`
+    color: white;
+`;
