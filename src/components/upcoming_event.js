@@ -3,113 +3,101 @@ import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 import styled from 'styled-components'
 
-const Upcoming = styled.div`
+const Heading = styled.h1`
     color: white;
-    background-color: #238636;
-    border-radius: 20px;
-    padding: 0.5rem 1rem;
-    margin: 2rem 0 4rem 0;
+    text-align:center;
+    margin: 1rem 0;
+`;
+
+const Card = styled.div`
+    display: flex;
+    flex-direction:column;
     box-shadow: 0 20px 20px rgba(10,10,10,0.6);
-    h1{
+    border-radius: 20px;
+    max-height: 600px;
+    overflow-y: auto; 
+    background-color: #238636;
+    flex:1;
+    flex-basis: auto;
+    justify-content: flex-start;
+    margin: 1rem;
+    padding: 1rem;
+    h2{
         color: white;
-        margin: 1rem 0;
+        text-align: center;
     }
-
-    .content{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        .Image{
-            flex: 1 0 200;
-            width: 100%;
-            margin: 1rem 1rem 0;
-        }
-
-        h2{
-            color: white;
-            margin: 1rem 0;
-        }
-        .desc{
-            color: white;
-            margin-top: 1rem;
-            display:flex;
-            flex-wrap: wrap;
-            align-items:center;
-            p{
-                margin-bottom: 0;
-                text-align: justify;
-                justify-content:center;
-                a{
-                    color: #0f0f0f;
-                }
-            }
-        }
+    .Image{
+        margin-bottom: 2em;
     }
-
-    @media only screen and (max-width: 680px){
-        width: 90%;
-        margin: 0.2rem 5% 3rem;
-
-        h1{
+    .text{
+        a{
             color: white;
-            margin: 0.5rem 0;
-        }
-        .content{
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            .Image{
-                margin: 2rem 0 0;
-                width: 100%;
-            }
-            .desc{
-                margin-top: 0;
-            }
+            font-weight: bold;
+            text-decoration: underline;
         }
     }
 `;
 
+const Upcoming = styled.div`
+    color: white;
+    margin: 2rem 0 4rem 0;
+    display: flex;
+
+    @media screen and (max-width: 1300px){
+        flex-direction:column;
+    }
+`;
+
 export default function UpcomingEvent(){
-    const data = useStaticQuery(
-        graphql`
-          query {
-            file(absolutePath: {regex: "/.*upcoming/"}) {
-                childMarkdownRemark {
-                  frontmatter {
-                    title
-                    featuredImage{
-                        childImageSharp {
-                            fluid(maxWidth: 1000){
-                                ...GatsbyImageSharpFluid
-                            }
-                        }
+      const list = useStaticQuery(graphql`
+        query {
+          allMarkdownRemark(
+            filter: { fileAbsolutePath: { regex: "/.*upcoming/" } }
+            sort: {fields: frontmatter___date, order: DESC}
+          ) {
+            edges {
+              node {
+                frontmatter {
+                  title
+                  featuredImage {
+                    childImageSharp {
+                      fluid {
+                        ...GatsbyImageSharpFluid
+                      }
                     }
                   }
-                  html
                 }
+                html
               }
-        }
-    `
-    )
-
-    if(data.file != null){
-        const title = data.file.childMarkdownRemark.frontmatter.title
-        const html = data.file.childMarkdownRemark.html
-        return (
-                <Upcoming id='upcoming_events'>
-                    <center><h1>Upcoming Event</h1></center>
-                    <div className = 'content'>
-            {   data.file.childMarkdownRemark.frontmatter.featuredImage &&
-                <div className='Image'>
-                <Img fluid={data.file.childMarkdownRemark.frontmatter.featuredImage.childImageSharp.fluid} style={{borderRadius:"5%"}}/>
-                </div>
             }
-                        <div>
-                            <h2>{title}</h2>
-                            <div className='desc' dangerouslySetInnerHTML={{__html: html}}></div>
-                        </div>
-                   </div>
+          }
+        }
+      `)
+
+    if(list.allMarkdownRemark.edges.length !== 0){
+        return (
+            <>
+            <Heading>Upcoming Events</Heading>
+                <Upcoming>
+                {list.allMarkdownRemark.edges.map(({node})=>
+                    <Card>
+                    {
+                        node.frontmatter.featuredImage &&
+                        <>
+                            <h2>{node.frontmatter.title}</h2>
+                            <div className='Image'>
+                            <Img fluid={node.frontmatter.featuredImage.childImageSharp.fluid} style={{borderRadius:"5%"}}/>
+                            </div>
+                            <div className="text">
+                                <div className='desc' dangerouslySetInnerHTML={{__html: node.html}}></div>
+                            </div>
+                        </>
+                    }
+                    </Card>
+                )
+                }
                 </Upcoming> 
+            </>
         )
     }else{
         return null
