@@ -67,7 +67,7 @@ const Container = styled.div`
     }
 `;
 
-export default function Initiatives(){
+export default function Events(){
     const list = useStaticQuery(graphql`
     query {
         allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/.*initiatives/"}}) {
