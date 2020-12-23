@@ -29,10 +29,19 @@ export const Pre = styled.pre`
     background-color: #253270;
     border-radius: 10px;
     padding: 10px;
+    white-space: pre-wrap;       /* Since CSS 2.1 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
 `;
 
 export const Code = styled.code`
     background-color: #253270;
-    border-radius: 10px;
-    padding: 5px 10px;
+    border-radius: 5px;
+    padding: 1px 4px;
+`;
+
+export const UL = styled.ul`
+    color: white;
 `;

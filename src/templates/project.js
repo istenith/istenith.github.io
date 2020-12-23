@@ -6,7 +6,7 @@ import Share from '../components/share'
 import SEO from "../components/seo"
 import styled from 'styled-components'
 import kebabCase from "lodash/kebabCase"
-import {head1, head2, head3, head4, para, line, Pre, Code} from "./elements"
+import {head1, head2, head3, head4, para, line, Pre, Code, UL} from "./elements"
 
 const Title = styled.div`
     color: white;
@@ -58,7 +58,8 @@ const renderAst = new RehypeReact({
         p: para,
         hr: line,
         pre: Pre,
-        code: Code
+        code: Code,
+        ul: UL,
     },
 }).Compiler;
 
