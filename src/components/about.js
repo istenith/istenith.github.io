@@ -83,8 +83,6 @@ export default function AboutUs(){
     `
     )
 
-    console.log(data)
-
     const title = data.file.childMarkdownRemark.frontmatter.title
     const html = data.file.childMarkdownRemark.html
     const fluid = data.file.childMarkdownRemark.frontmatter.featuredImage.childImageSharp.fluid

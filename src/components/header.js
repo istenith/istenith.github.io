@@ -121,7 +121,7 @@ export default function Header(){
         <Link to="/" style={{textDecoration:'none', color:'white'}}>ISTE-NITH</Link>
       </h2>
       <Ul open={open}>
-        <li><StyledLink to="/projects/" activeStyle={{fontWeight:'bold', color:'#e63468'}}>Projects</StyledLink></li>
+        <li><StyledLink to="/projects/" activeStyle={{fontWeight:'bold', color:'#e63468'}}>Blog</StyledLink></li>
         <li><StyledLink to="/events/" activeStyle={{fontWeight:'bold', color:'#e63468'}}>Events</StyledLink></li>
         <li><StyledLink to="/members/" activeStyle={{fontWeight:'bold', color:'#e63468'}}>Members</StyledLink></li>
       {/*

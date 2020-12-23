@@ -7,6 +7,7 @@ import Projects from "../components/projects"
 import PhotoCarousel from '../components/carousel'
 import AboutUs from '../components/about'
 import SEO from "../components/seo"
+import UpcomingEvent from "../components/upcoming_event"
 import {ReactComponent as IsteLogo} from "../images/iste_logo_hollow.svg"
 
 const LandingDiv = styled.div`
@@ -191,6 +192,7 @@ export default function IndexPage (){
         <IsteLogo className='img' width='300px' height='300px'/>
       </div>
     </LandingDiv>
+    <UpcomingEvent/>
     <PhotoCarousel/>
     <Projects/>
     <AboutUs/>

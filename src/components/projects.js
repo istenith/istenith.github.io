@@ -9,7 +9,7 @@ const FlexContainer = styled.div`
   justify-content:space-around;
   align-items: space-around;
   margin: 0 0 0rem;
-  padding: 2rem 0;
+  padding: 0 0;
 
   .title {
     max-width: 250px;
