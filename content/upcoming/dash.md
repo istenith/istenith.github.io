@@ -7,7 +7,7 @@ Time Table Chaos is a special event sponsored by Dash Management, a platform to 
 
 [Visit to know more](https://docs.google.com/document/d/e/2PACX-1vQrbcWi_mwwocOLS0jk1ZBjvHcOJNlFJo8r0DKQRrHXBsGDOBG0_fTeGGgBejqEqB15rSRbOqOdqY-A/pub)
 
-[Register Here](www.time-table-chaos.devfolio.co)
+[Register Here](https://www.time-table-chaos.devfolio.co)
 
 **Last date to register: 30th Dec 2020**
 
