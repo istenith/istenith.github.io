@@ -1,6 +1,6 @@
 ---
 title: "Time Table Chaos"
-date: "2020-12-25"
+date: "2020-12-26"
 featuredImage: "dd.png"
 ---
 Time Table Chaos is a special event sponsored by Dash Management, a platform to manage your organization. It is a online event in which the participants have to write a time table making algorithm in a language of their choice(preferred javascript). **Prizes worth 10k**.
@@ -9,5 +9,5 @@ Time Table Chaos is a special event sponsored by Dash Management, a platform to 
 
 [Register Here](www.time-table-chaos.devfolio.co)
 
-**Last date to register: 30th dec**
+**Last date to register: 30th Dec 2020**
 
