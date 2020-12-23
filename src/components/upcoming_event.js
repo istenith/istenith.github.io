@@ -8,7 +8,7 @@ const Upcoming = styled.div`
     background-color: #238636;
     border-radius: 20px;
     padding: 0.5rem 1rem;
-    margin: 2rem 0;
+    margin: 2rem 0 4rem 0;
     box-shadow: 0 20px 20px rgba(10,10,10,0.6);
     h1{
         color: white;
@@ -48,7 +48,7 @@ const Upcoming = styled.div`
 
     @media only screen and (max-width: 680px){
         width: 90%;
-        margin: 2rem 5% 5%;
+        margin: 0.2rem 5% 3rem;
 
         h1{
             color: white;
@@ -92,22 +92,26 @@ export default function UpcomingEvent(){
     `
     )
 
-    const title = data.file.childMarkdownRemark.frontmatter.title
-    const html = data.file.childMarkdownRemark.html
-    const fluid = data.file.childMarkdownRemark.frontmatter.featuredImage.childImageSharp.fluid
-
-    return (
-            <Upcoming id='upcoming_events'>
-                <center><h1>Upcoming Event</h1></center>
-                <div className = 'content'>
-                    <div className='Image'>
-                        <Img fluid={fluid} style={{borderRadius:"5%"}}/>
-                    </div>
-                    <div>
-                        <h2>{title}</h2>
-                        <div className='desc' dangerouslySetInnerHTML={{__html: html}}></div>
-                    </div>
-               </div>
-            </Upcoming> 
-    )
+    if(data.file != null){
+        const title = data.file.childMarkdownRemark.frontmatter.title
+        const html = data.file.childMarkdownRemark.html
+        return (
+                <Upcoming id='upcoming_events'>
+                    <center><h1>Upcoming Event</h1></center>
+                    <div className = 'content'>
+            {   data.file.childMarkdownRemark.frontmatter.featuredImage &&
+                <div className='Image'>
+                <Img fluid={data.file.childMarkdownRemark.frontmatter.featuredImage.childImageSharp.fluid} style={{borderRadius:"5%"}}/>
+                </div>
+            }
+                        <div>
+                            <h2>{title}</h2>
+                            <div className='desc' dangerouslySetInnerHTML={{__html: html}}></div>
+                        </div>
+                   </div>
+                </Upcoming> 
+        )
+    }else{
+        return null
+    }
 }

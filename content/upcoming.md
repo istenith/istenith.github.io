@@ -1,7 +1,7 @@
 ---
 title: "Fresher's Quiz"
 date: "2020-12-25"
-featuredImage: 'freshers.jpg'
+featuredImage: "freshers.jpg"
 ---
 Fresher's Quiz is an event organized by **Team ISTE** every year at the start of the session. It is an event just for the newly arrived freshers to give them the best technical start they require for their amazing journey in the college.
 
