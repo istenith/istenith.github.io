@@ -122,7 +122,7 @@ export default function Header(){
       </h2>
       <Ul open={open}>
         <li><StyledLink to="/projects/" activeStyle={{fontWeight:'bold', color:'#e63468'}}>Blog</StyledLink></li>
-        <li><StyledLink to="/initiatives/" activeStyle={{fontWeight:'bold', color:'#e63468'}}>Initiatives</StyledLink></li>
+        <li><StyledLink to="/events/" activeStyle={{fontWeight:'bold', color:'#e63468'}}>Events</StyledLink></li>
         <li><StyledLink to="/members/" activeStyle={{fontWeight:'bold', color:'#e63468'}}>Members</StyledLink></li>
       {/*
           <li><StyledLink to="/alumni/" activeStyle={{fontWeight:'bold', color:'#e63468'}}>Alumni</StyledLink></li>
