@@ -9,6 +9,7 @@ import AboutUs from '../components/about'
 import SEO from "../components/seo"
 import UpcomingEvent from "../components/upcoming_event"
 import {ReactComponent as IsteLogo} from "../images/iste_logo_hollow.svg"
+import Tagline from "../components/tagline"
 
 const LandingDiv = styled.div`
   display: grid;
@@ -27,20 +28,6 @@ const LandingDiv = styled.div`
       font-size: 7rem;
       color: white;
       text-align:start;
-    }
-    .TagLine{
-      display: flex;
-      .team, .AnimationContainer{
-      font-style: normal;
-      font-weight: normal;
-      color:#34cc1f;
-      font-size: 3rem;
-      text-align: start;
-    }
-    #Team, #Society, #Organisation, #Family {
-        position: absolute;
-        padding-left: 1rem;
-      }
     }
   }
 
@@ -66,22 +53,6 @@ const LandingDiv = styled.div`
         text-align:center;
       }
 
-      .TagLine{
-        display: block;
-        .team{
-          text-align:center;
-        }
-        .AnimationContainer{
-          font-size: 7vh;
-          #Team, #Society, #Organisation, #Family {
-            z-index: -10000;
-            position: absolute;
-            text-align: center;
-            padding-left: 0;
-            width: 100%;
-          }
-        }
-      }
     }
     .logo{
       grid-row: 1/2;
@@ -96,7 +67,6 @@ const LandingDiv = styled.div`
     }
   }
 `;
-const { Anime } = ReactAnime
 
 export default function IndexPage (){
   var ml4 = {};
@@ -113,80 +83,7 @@ export default function IndexPage (){
     <LandingDiv>
       <div className='text'>
         <h1 className='name'>ISTE NITH</h1>
-        <Anime 
-          animeConfig={{
-            // autoplay: false,
-            duration: 1500,
-            easing: "easeInOutSine",
-            loop: true
-          }}
-          initial={[
-            {
-              targets: "#Team",
-              opacity: ml4.opacityIn,
-              // scale: ml4.scaleIn,
-              duration: ml4.durationIn,
-            },
-            {
-              targets: "#Team",
-              opacity: 0,
-              // scale: ml4.scaleOut,
-              duration: ml4.durationOut,
-              easing: "easeInExpo",
-            },
-            {
-              targets: "#Society",
-              opacity: ml4.opacityIn,
-              // scale: ml4.scaleIn,
-              duration: ml4.durationIn,
-            },
-            {
-              targets: "#Society",
-              opacity: 0,
-              // scale: ml4.scaleOut,
-              duration: ml4.durationOut,
-              easing: "easeInExpo",
-            },
-            {
-              targets: "#Organisation",
-              opacity: ml4.opacityIn,
-              // scale: ml4.scaleIn,
-              duration: ml4.durationIn,
-            },
-            {
-              targets: "#Organisation",
-              opacity: 0,
-              // scale: ml4.scaleOut,
-              duration: ml4.durationOut,
-              easing: "easeInExpo",
-            },
-            {
-              targets: "#Family",
-              opacity: ml4.opacityIn,
-              // scale: ml4.scaleIn,
-              duration: ml4.durationIn,
-            },
-            {
-              targets: "#Family",
-              opacity: 0,
-              // scale: ml4.scaleOut,
-              duration: ml4.durationOut,
-              easing: "easeInExpo",
-            },
-          ]}
-        >
-        <div className='TagLine'>
-          <h3 className='team'>WE ARE A</h3>
-          <h3 className='AnimationContainer'>
-          {/* <span className="AnimationContainer"> */}
-            <span id="Team">TEAM</span>
-            <span id="Society">SOCIETY</span>
-            <span id="Organisation">ORGANISATION</span>
-            <span id="Family">FAMILY</span>
-          {/* </span> */}
-          </h3>
-        </div>
-        </Anime>
+        <Tagline/>
       </div>
       <div className='logo'>
         <IsteLogo className='img' width='300px' height='300px'/>
