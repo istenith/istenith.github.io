@@ -14,6 +14,10 @@ const Tag = styled.div`
     @media screen and (max-width:1120px){
         flex-direction: column;
         align-content: center;
+        
+        #name{
+            margin-top: 1em;
+        }
     }
 `;
 
@@ -42,7 +46,7 @@ class Tagline extends React.Component{
         return(
             <Tag>
                 <div>WE ARE {['A', 'E', 'I', 'O', 'U'].includes(name.charAt(0)) ? 'AN' : 'A'} </div>
-                <div style={{opacity: this.state.opacity, transition:'opacity 0.5s ease-in'}}>{name}</div>
+                <div id="name" style={{opacity: this.state.opacity, transition:'opacity 0.5s ease-in'}}>{name}</div>
             </Tag>
         )
     }
