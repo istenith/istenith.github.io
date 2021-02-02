@@ -3,12 +3,13 @@ import { graphql, useStaticQuery, Link } from "gatsby"
 import Image from "gatsby-image"
 import styled from "styled-components"
 
-const FlexContainer = styled.div`
+const FlexContainer = styled.div `
   display: flex;
   flex-direction: column;
 `
 
-const Img = styled(Image)`
+const Img = styled(Image)
+`
   width: 100%;
   height: 150px;
 
@@ -20,7 +21,7 @@ const Img = styled(Image)`
   }
 `
 
-const Flex = styled.div`
+const Flex = styled.div `
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-around;
@@ -116,7 +117,7 @@ const Flex = styled.div`
 `
 
 export default function Members() {
-  const data = useStaticQuery(graphql`
+    const data = useStaticQuery(graphql `
     query {
       allMembersXlsxSheet1(sort: { fields: name, order: ASC }) {
         edges {
@@ -185,99 +186,128 @@ export default function Members() {
     }
   `)
 
-  return (
-    <FlexContainer>
-      <Flex>
-        <div className="title">
-          <h1>Final Year</h1>
-        </div>
-        <div className="CardContainer">
-          {data.allMembersXlsxSheet4.edges.map((row, i) => (
-              <div className="Card">
-                <Link
-                to={row.node.link}
-                style={{ textDecoration: "none" , color: "white"}}
-                target="blank"
-                >
-                  <Img fluid={row.node.img.childImageSharp.fluid}></Img>
-                  <div className="content">
-                    <div className="name">{row.node.name}</div>
-                    <div className="description">{row.node.description}</div>
-                  </div>
-              </Link>
-              </div>
-          ))}
-        </div>
-      </Flex>
+    return ( <
+        FlexContainer >
+        <
+        Flex >
+        <
+        div className = "title" >
+        <
+        h1 > Final Year < /h1> < /
+        div > <
+        div className = "CardContainer" > {
+            data.allMembersXlsxSheet4.edges.map((row, i) => ( <
+                div className = "Card" >
+                <
+                Link to = { row.node.link }
+                style = {
+                    { textDecoration: "none", color: "white" }
+                }
+                target = "blank" >
+                <
+                Img fluid = { row.node.img.childImageSharp.fluid } > < /Img> <
+                div className = "content" >
+                <
+                div className = "name" > { row.node.name } < /div> <
+                div className = "description" > { row.node.description } < /div> < /
+                div > <
+                /Link> < /
+                div >
+            ))
+        } <
+        /div> < /
+        Flex >
 
-      <Flex>
-        <div className="title">
-          <h1>Third Year</h1>
-        </div>
-        <div className="CardContainer">
-          {data.allMembersXlsxSheet3.edges.map((row, i) => (
-            <div className="Card">
-              <Link
-                to={row.node.link}
-                style={{ textDecoration: "none", color: 'white'}}
-                target="blank"
-              >
-                  <Img fluid={row.node.img.childImageSharp.fluid}></Img>
-                  <div className="content">
-                    <div className="name">{row.node.name}</div>
-                    <div className="description">{row.node.description}</div>
-                  </div>
-              </Link>
-            </div>
-          ))}
-        </div>
-      </Flex>
+        <
+        Flex >
+        <
+        div className = "title" >
+        <
+        h1 > Third Year < /h1> < /
+        div > <
+        div className = "CardContainer" > {
+            data.allMembersXlsxSheet3.edges.map((row, i) => ( <
+                div className = "Card" >
+                <
+                Link to = { row.node.link }
+                style = {
+                    { textDecoration: "none", color: 'white' }
+                }
+                target = "blank" >
+                <
+                Img fluid = { row.node.img.childImageSharp.fluid } > < /Img> <
+                div className = "content" >
+                <
+                div className = "name" > { row.node.name } < /div> <
+                div className = "description" > { row.node.description } < /div> < /
+                div > <
+                /Link> < /
+                div >
+            ))
+        } <
+        /div> < /
+        Flex >
 
-      <Flex>
-        <div className="title">
-          <h1>Second Year</h1>
-        </div>
-        <div className="CardContainer">
-          {data.allMembersXlsxSheet2.edges.map((row, i) => (
-            <div className="Card">
-              <Link
-                to={row.node.link}
-                style={{ textDecoration: "none", color:"white"}}
-                target="blank"
-              >
-                  <Img fluid={row.node.img.childImageSharp.fluid}></Img>
-                  <div className="content">
-                    <div className="name">{row.node.name}</div>
-                    <div className="description">{row.node.description}</div>
-                  </div>
-              </Link>
-            </div>
-          ))}
-        </div>
-      </Flex>
+        <
+        Flex >
+        <
+        div className = "title" >
+        <
+        h1 > Second Year < /h1> < /
+        div > <
+        div className = "CardContainer" > {
+            data.allMembersXlsxSheet2.edges.map((row, i) => ( <
+                div className = "Card" >
+                <
+                Link to = { row.node.link }
+                style = {
+                    { textDecoration: "none", color: "white" }
+                }
+                target = "blank" >
+                <
+                Img fluid = { row.node.img.childImageSharp.fluid } > < /Img> <
+                div className = "content" >
+                <
+                div className = "name" > { row.node.name } < /div> <
+                div className = "description" > { row.node.description } < /div> < /
+                div > <
+                /Link> < /
+                div >
+            ))
+        } <
+        /div> < /
+        Flex >
 
-      {/* <Flex>
-        <div className="title">
-          <h1>First Year</h1>
-        </div>
-        <div className="CardContainer">
-          {data.allMembersXlsxSheet1.edges.map((row, i) => (
-            <div className="Card">
-              <Link
-                to={row.node.link}
-                style={{ textDecoration: "none", color:'white'}}
-                target="blank"
-              >
-                  <Img fluid={row.node.img.childImageSharp.fluid}></Img>
-                  <div className="content">
-                    <div className="name">{row.node.name}</div>
-                    <div className="description">{row.node.description}</div>
-                  </div>
-              </Link>
-            </div>
-          ))}
-        </div>
-      </Flex> */}
-    </FlexContainer>
-  )
+
+        <
+        Flex >
+        <
+        div className = "title" >
+        <
+        h1 > First Year < /h1> < /
+        div > <
+        div className = "CardContainer" > {
+            data.allMembersXlsxSheet1.edges.map((row, i) => ( <
+                div className = "Card" >
+                <
+                Link to = { row.node.link }
+                style = {
+                    { textDecoration: "none", color: 'white' }
+                }
+                target = "blank" >
+                <
+                Img fluid = { row.node.img.childImageSharp.fluid } > < /Img> <
+                div className = "content" >
+                <
+                div className = "name" > { row.node.name } < /div> <
+                div className = "description" > { row.node.description } < /div> < /
+                div > <
+                /Link> < /
+                div >
+            ))
+        } <
+        /div> < /
+        Flex > <
+        /FlexContainer>
+    )
 }
