@@ -256,7 +256,7 @@ export default function Members() {
         </div>
       </Flex>
 
-      {/* <Flex>
+      <Flex>
         <div className="title">
           <h1>First Year</h1>
         </div>
@@ -265,7 +265,7 @@ export default function Members() {
             <div className="Card">
               <Link
                 to={row.node.link}
-                style={{ textDecoration: "none", color:'white'}}
+                style={{ textDecoration: "none", color:"white"}}
                 target="blank"
               >
                   <Img fluid={row.node.img.childImageSharp.fluid}></Img>
@@ -277,7 +277,7 @@ export default function Members() {
             </div>
           ))}
         </div>
-      </Flex> */}
+      </Flex>
     </FlexContainer>
   )
 }
