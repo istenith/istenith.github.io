@@ -13,9 +13,9 @@ For a details list of all the desired features refer to [this discussion](https:
     `sudo npm install gatsby`
 
 - clone this repository
-    `git clone https://github.com/istenith/website2020-21.git`
+    `https://github.com/istenith/istenith.github.io.git`
 
-- `cd website2020-21`
+- `cd istenith.github.io`
 
 - Install all the dependencies
     `npm install`
