@@ -10,7 +10,7 @@ const FlexContainer = styled.div`
 
 const Img = styled(Image)`
   width: 100%;
-  height: 150px;
+  height: 300px;
 
   img {
     margin: 0;
@@ -27,7 +27,7 @@ const Flex = styled.div`
   align-items: space-around;
   margin: 0 0 0rem;
   padding: 2rem 0;
-  height: 500px;
+  height: px;
 
   .title {
     min-width: 250px;
@@ -76,15 +76,15 @@ const Flex = styled.div`
       margin: 0 -2rem 1rem;
 
       .content {
-        padding: 20px;
+        padding: 10px;
         .name {
-          font-size: 1.3rem;
+          font-size: 1.1rem;
           min-height: 80px;
         }
 
         .description {
-          font-size: 1rem;
-          margin-top: 10px;
+          font-size: 0.9rem;
+          margin-top: 5px;
         }
       }
     }
@@ -281,3 +281,4 @@ export default function Members() {
     </FlexContainer>
   )
 }
+   
