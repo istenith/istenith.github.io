@@ -7,10 +7,10 @@ For a details list of all the desired features refer to [this discussion](https:
     Ubuntu\Debian:
     `sudo apt install npm`
     Arch:
-    `sudo pacman -S npm`
+    `sudo pacman -S npm-lts`
 
 - Install Gatsby
-    `sudo npm install gatsby`
+    `sudo npm install gatsby-cli`
 
 - clone this repository
     `https://github.com/istenith/istenith.github.io.git`
