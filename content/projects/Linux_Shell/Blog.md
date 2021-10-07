@@ -4,7 +4,7 @@ date: "2021-10-05"
 featuredImage: "cover.jpg"
 author: "Sumit Dhiman"
 email: "sd08012003@gmail.com"
-tags: ['linux', 'userfriendly']
+tags: ['linux', 'userfriendly', shell, bash]
 ---
 
 ![image here](cover.jpg)
@@ -58,8 +58,6 @@ Shells are like brands. Everyone has a favourite and religiously defends that ch
 **2.** Not that much customizable.
 
 **3.** No syntax highlighting
-
-**4.** No plugins support.
 
 ------------
 
