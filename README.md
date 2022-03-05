@@ -7,7 +7,7 @@ For a details list of all the desired features refer to [this discussion](https:
     Ubuntu\Debian:
     `sudo apt install npm`
     Arch:
-    `sudo pacman -S npm-lts`
+    `sudo pacman -S npm nodejs-lts-gallium`
 
 - Install Gatsby
     `sudo npm install gatsby-cli`
