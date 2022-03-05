@@ -28,7 +28,7 @@ For a details list of all the desired features refer to [this discussion](https:
     `https:\\localhost:8000\__graphql`
 
 ## Folder Structure
-```
+`````````````
 |-- LICENSE
 |-- README.md
 |-- content           ------>this folder contains the .md files
