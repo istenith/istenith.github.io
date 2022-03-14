@@ -96,7 +96,7 @@ You may just install it and customise it with a framework called **OH MY FISH**.
     fish_config
 ![Fish_COnfig](https://i.ibb.co/WDBVBZV/ezgif-com-gif-maker-1.gif "Fish_COnfig")
 
-##Advantages of fish:
+## Advantages of fish:
 **1.**  **Autosuggestion**: This feature gives you the capability of quick access to the commands as you type.
 
 ![Auto sugessttion fish](https://i.ibb.co/Hn2PRdC/Screenshot-from-2021-10-05-20-22-13.png "Auto sugessttion fish")
