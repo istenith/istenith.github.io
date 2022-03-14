@@ -62,7 +62,7 @@ Shells are like brands. Everyone has a favourite and religiously defends that ch
 ------------
 
 
-#The Z-Shell:
+# The Z-Shell:
 ZSH, also called the Z shell, is an extended version of the Bourne Shell (sh), with plenty of new features, and support for plugins and themes. Since it’s based on the same shell as Bash, ZSH has many of the same features, and switching over is a breeze.
 One of the coolest things about is color customization. You can change the theme and color of your shell just by using a framework called, **OH MY ZSH**.
 
@@ -111,7 +111,7 @@ You may just install it and customise it with a framework called **OH MY FISH**.
 
 **5.**  Every feature that zsh and bash have.
 
-##Disadvantages of Fish:
+## Disadvantages of Fish:
 **Obvious error messeges:** When you screw up, Fish shows the errors and your faults plus the way that you can handle it!
 
 
