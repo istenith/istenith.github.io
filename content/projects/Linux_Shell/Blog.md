@@ -53,11 +53,9 @@ Shells are like brands. Everyone has a favourite and religiously defends that ch
 
 ## Disadvantages of Bash:
 
-**1.** Themes can't be applied at much extent.
+**1.** Not that much customizable.
 
-**2.** Not that much customizable.
-
-**3.** No syntax highlighting
+**2.** No syntax highlighting
 
 ------------
 
