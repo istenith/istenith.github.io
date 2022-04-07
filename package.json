@@ -43,6 +43,7 @@
     "react-typography": "^0.16.20",
     "rehype-react": "^7.0.4",
     "remark-image-attributes": "^0.2.1",
+    "rgt": "^1.0.7",
     "sass": "^1.49.9",
     "styled-components": "^5.3.3",
     "typography": "^0.16.21",
@@ -72,4 +73,3 @@
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   }
 }
-
