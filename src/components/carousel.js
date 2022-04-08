@@ -8,7 +8,7 @@ export default function PhotoCarousel(){
     const data = useStaticQuery(
     graphql`
         query{
-            allFile(filter: {relativeDirectory: {eq: "carousel"}, ext: {eq: ".png"}}) {
+            allFile(filter: {relativeDirectory: {eq: "carousel"}, ext: {eq: ".jpeg"}}) {
             edges {
                 node {
                 childImageSharp {
