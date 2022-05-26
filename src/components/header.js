@@ -1,7 +1,7 @@
 import { Link } from "gatsby"
 import React, { useState } from "react"
 import styled from "styled-components"
-import Gradient from "rgt"
+// import Gradient from "rgt"
 const Nav = styled.nav`
   position: fixed;
   top: 0;
