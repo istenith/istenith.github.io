@@ -155,7 +155,7 @@ export default function Header() {
           </StyledLink>
         </li>
 
-        <li>
+        {/* <li>
           <StyledLink
             href="https://www.istenith.com/convention/"
             target="_blank"
@@ -165,7 +165,7 @@ export default function Header() {
               Convention
             </Gradient>
           </StyledLink>
-        </li>
+        </li> */}
 
         <li>
           <StyledLink
