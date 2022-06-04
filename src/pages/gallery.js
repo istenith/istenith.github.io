@@ -100,7 +100,7 @@ export default function GalleryImage() {
             }
         }
     `)
-    console.log("screen width = ",  window.innerWidth)
+    // console.log("screen width = ",  window.innerWidth)
     var custom_image_css = []
     for (var j = 0; j <= 6; j++) {
         var img_width = 0;
