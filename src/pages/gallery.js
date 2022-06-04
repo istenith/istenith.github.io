@@ -3,6 +3,7 @@ import { useStaticQuery, graphql } from "gatsby" // to query for image data
 import Image from "gatsby-image" // to take image data and render it
 import styled from "styled-components"
 import Fade from 'react-reveal/Fade';
+import { width } from "@mui/system";
 
 const Marquee = styled.div`
     width:70%;
@@ -14,6 +15,10 @@ const Marquee = styled.div`
     -webkit-box-shadow: 0px 4px 88px 0px rgba(0,0,0,0.99);
     -moz-box-shadow: 0px 4px 88px 0px rgba(0,0,0,0.99);
     box-shadow: 0px 4px 88px 0px rgba(0,0,0,0.99);
+    @media screen and (max-width: 700px) {  
+        width:90%;
+        margin-left:5%;
+    }
 `
 
 const GalImage = styled.div`
@@ -95,12 +100,17 @@ export default function GalleryImage() {
             }
         }
     `)
-
+    console.log("screen width = ",  window.innerWidth)
     var custom_image_css = []
     for (var j = 0; j <= 6; j++) {
         var img_width = 0;
         var delay = 30;
         var margTop = Math.random() * 10;
+        if (window.innerWidth>700){
+            var Swidth= '600px'
+        }else{
+            var Swidth= '400px'
+        }
         while (img_width < 30 || img_width > 70) {
             img_width = Math.random() * 100
         }
@@ -112,7 +122,7 @@ export default function GalleryImage() {
             // width: '' + img_width + '%',
             // marginTop: '' + margTop + '%',
             // height: '100%',
-            width:'600px',
+            width:Swidth,
             animationName: 'moving' + j,
             animationDuration: '' + delay + 's',
             animationIterationCount: 'infinite',

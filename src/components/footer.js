@@ -14,71 +14,73 @@ import styled from 'styled-components'
 import { faEnvelope, faMap } from '@fortawesome/free-regular-svg-icons'
 
 const Footer = styled.div`
-.container{
-  background-color: #101010;
-  padding-top: 2rem;
-  .contact-row{
-    margin: 0rem 4rem 0rem 4rem;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    font-size: 1rem;
-    a{
-      font-weight: medium;
-      padding: 2px;
+  .container{
+    background-color: #101010;
+    padding-top: 1rem;
+    .contact-row{
+      margin: 0rem 4rem 0rem 4rem;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      font-size: 1rem;
+      @media screen and (max-width: 700px) {
+        display:block;
+        text-align:center;
+      }
+      a{
+        font-weight: medium;
+      }
+      a:hover{
+        /* font-weight: bold; */
+        color: rgba(108, 50, 224, 0.8);
+        transition: 0.2s ease-in-out;
+      }s
     }
-    a:hover{
-      /* font-weight: bold; */
-      color: rgba(108, 50, 224, 0.8);
-      transition: 0.2s ease-in-out;
-    }s
-  }
-  a{
-    text-decoration: none;
-    color: white;
-  
-  }
-  .social-icons{
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 0.25rem;
-    li{
+    a{
+      text-decoration: none;
+      color: white;
+    
+    }
+    .social-icons{
+      list-style: none;
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 0.5rem;
-      margin: 0.25rem;
-      FontAwesomeIcon{
-        color: black;
+      li{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 0.5rem;
+        margin: 0.25rem;
+        FontAwesomeIcon{
+          color: black;
+        }
+        .main-icon{
+          font-size: 28px;
+        }
+        .main-icon:hover{
+          transition: 0.25s ease-in-out;
+          color: rgba(108, 50, 224, 0.99);
+        }
       }
-      .main-icon{
-        font-size: 28px;
-      }
-      .main-icon:hover{
-        transition: 0.25s ease-in-out;
-        color: rgba(108, 50, 224, 0.99);
-      }
-    }
 
+    }
+    .social-icons:hover{
+      cursor: pointer;
+      transition: 0.3s ease-in-out;
+      background-color: #161516;
+      border-radius: 10px;
+    }
+    .copyright{
+      background-color: #161516;
+      padding: 0.25rem;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: medium;
+    }
   }
-  .social-icons:hover{
-    cursor: pointer;
-    transition: 0.3s ease-in-out;
-    background-color: #161516;
-    border-radius: 10px;
-  }
-  .copyright{
-    background-color: #161516;
-    padding: 1rem;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: medium;
-  }
-}
 
 `
 const footer = () => {

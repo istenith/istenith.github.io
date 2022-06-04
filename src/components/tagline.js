@@ -17,7 +17,6 @@ const Tag = styled.div`
         align-content: center;
         
         #name{
-            margin-top: 1em;
         }
     }
 `;
