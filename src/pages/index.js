@@ -16,6 +16,7 @@ import Tagline from '../components/tagline'
 import Footer from '../components/footer'
 import GalleryImage from './gallery'
 import Tilt from 'react-parallax-tilt'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const mainup = styled.div`
   background: #14a098;
@@ -68,7 +69,9 @@ const LandingDiv = styled.div`
     transition: 0.5s ease-in-out;
     transform: scale(1.1);
   }
-
+  .Dev{
+    color: white;
+  }
   @media screen and (max-width: 1080px) {
     grid-template-rows: repeat(3, 1fr);
     grid-template-columns: 1fr;
@@ -133,6 +136,8 @@ export default function IndexPage() {
         <SEO title='Home' />
         <LandingDiv>
           <div className='text'>
+            {/* <FontAwesomeIcon icon={fa} size='1x' /> */}
+            <h2 className='Dev'>Website is Under Development</h2>
             <h1 className='name'>ISTE NITH</h1>
             <Tagline />
           </div>
