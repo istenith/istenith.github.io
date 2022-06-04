@@ -148,7 +148,7 @@ export default function IndexPage() {
           transform: "translate(-50%,-50%)",
         }}
       >
-        <IsteLogo className="img" width="400px" height="400px" />
+        <IsteLogo className="img" width="300px" height="300px" />
         <div style={{ fontSize: '60px', color: 'white', marginTop: '20px' }}>
           🚧 Website is under Development 🚧
         </div>
