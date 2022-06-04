@@ -95,11 +95,15 @@ const SocialLinks = styled.div`
     flex: none;
     margin: auto 1%;
     svg {
-      width: 2.5vw;
-      height: 2.5vw;
+      width: 2vw;
+      height: 2vw;
       @media screen and (max-width: 1356px) {
         width: 43px;
         height: 43px;
+      }
+      @media screen and (max-width: 700px) {
+        width: 30px;
+        height: 30px;
       }
     }
   }
@@ -108,6 +112,11 @@ const Img = styled.img`
   margin: 4%;
   width: 100px;
   position: absolute;
+  left:0;
+  top:0;
+  @media screen and (max-width: 700px) {
+    width: 70px;
+  }
 `
 
 const ImgLogo = styled.img`
@@ -117,6 +126,9 @@ const ImgLogo = styled.img`
   left: 0;
   top: 0;
   position: fixed;
+  @media screen and (max-width: 700px) {
+    width: 70px;
+  }
 `
 
 const ExtraForClose = styled.div`
@@ -190,15 +202,6 @@ const Navbar = () => {
                 Events
               </StyledLink>
             </Bounce>
-            {/* <Bounce right delay={160}>
-              <StyledLink
-                to='/activites'
-                activeClassName='active'
-                activeStyle={{ fontWeight: 'bold', color: '#E05215' }}
-              >
-                Activites
-              </StyledLink>
-            </Bounce> */}
             <Bounce right delay={180}>
               <StyledLink
                 to='/members'

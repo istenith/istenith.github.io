@@ -49,9 +49,10 @@ const About = styled.div`
     }
   }
 
-  @media only screen and (max-width: 680px) {
-    width: 90%;
-    margin: 2rem 5% 5%;
+  @media only screen and (max-width: 700px) {
+    width: 100%;
+    margin:0;
+    margin-bottom:1rem;
 
     h1 {
       color: white;

@@ -16,8 +16,7 @@ import Tagline from '../components/tagline'
 import Footer from '../components/footer'
 import GalleryImage from './gallery'
 import Tilt from 'react-parallax-tilt'
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const mainup = styled.div`
   background: #14a098;
@@ -32,13 +31,10 @@ const mainup = styled.div`
   }
 `
 const LandingDiv = styled.div`
-  display: grid;
-
-  grid-template-columns: repeat(3, 1fr);
   padding: 2em;
-  justify-items: color-interpolation-filters;
   ${'' /* margin-top:1vh; */}
   margin-bottom: 10vh;
+  margin-top: 10vh;
   .text {
     margin: auto;
     color: white;
@@ -53,32 +49,46 @@ const LandingDiv = styled.div`
       font-weight: normal;
       font-size: 5rem;
       color: white;
-      margin-bottom: 1em;
+      margin-top: 4vh;
       text-align: center;
     }
   }
 
   .logo {
-    grid-column-gap: 20px;
-    grid-column: 2/3;
+    text-align: center;
+    width: max-content;
+    margin: auto;
     color: #14a098;
-    padding-left: 6rem;
-    margin: 3em;
     transition: 0.5s ease-in-out;
   }
   .logo:hover {
     transition: 0.5s ease-in-out;
     transform: scale(1.1);
   }
-
-  @media screen and (max-width: 1080px) {
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-columns: 1fr;
-    margin-top: 1rem;
-    margin-bottom: 7rem;
+  .Dev {
+    color: white;
+  }
+  @media screen and (max-width: 700px) {
     .text {
-      grid-row: 2/4;
-      grid-column: 1/2;
+      .name {
+        font-size: 4rem !important;
+        margin-bottom: 4rem;
+      }
+      .name,
+      .team {
+        text-align: center;
+      }
+    }
+    .logo {
+      text-align: center;
+      .img {
+        height: 200px !important;
+        width: 200px !important;
+      }
+    }
+  }
+  @media screen and (max-width: 1080px) {
+    .text {
       .name {
         font-size: 5rem;
       }
@@ -88,14 +98,10 @@ const LandingDiv = styled.div`
       }
     }
     .logo {
-      grid-row: 1/2;
-      grid-column: 1/2;
-      left: 10px;
-      padding-left: 1rem;
       text-align: center;
       .img {
-        height: 200px;
-        width: 200px;
+        height: 300px;
+        width: 300px;
       }
     }
   }
@@ -131,35 +137,53 @@ export default function IndexPage() {
 
   return (
     <>
-      <div className='mainup'>
-        <SEO title='Home' />
-        <LandingDiv>
-          <div className='text'>
-            <h1 className='name'>ISTE NITH</h1>
-            <Tagline />
-          </div>
-          <div className='logo'>
-            <Tilt>
-              <IsteLogo className='img' width='300px' height='300px' />
-            </Tilt>
-          </div>
-        </LandingDiv>
-      </div>
+      {/* replace from div code with below code I have commented to remove from under development status */}
+      <div
+        className='logo'
+        style={{
+          textAlign: 'center',
+          position: 'absolute',
+          top: '40%',
+          left: '50%',
+          transform: 'translate(-50%,-50%)',
+        }}
+      >
+        <IsteLogo className='img' width='300px' height='400px' />
 
-      <GalleryImage />
-      <Layout>
-        <div style={mystyle}>
-          {/* <div data-aos='zoom-in-up'> */}
-          <Carousel>
-            <PhotoCarousel />
-          </Carousel>
-          {/* </div> */}
+        <div style={{ fontSize: '60px', color: 'white', marginTop: '20px' }}>
+          🚧 Website is under Development 🚧
         </div>
-        <div>
-          <AboutUs />
-        </div>
-      </Layout>
-      <Footer />
+      </div>
     </>
   )
+}
+
+{
+  /* <div className='mainup'>
+<SEO title='Home' />
+<LandingDiv>
+  <div className='logo'>
+    <Tilt>
+      <IsteLogo className='img' width='300px' height='300px' />
+    </Tilt>
+  </div>
+  <div className='text'>
+    <h1 className='name'>ISTE NITH</h1>
+    <Tagline />
+  </div>
+</LandingDiv>
+</div>
+
+<GalleryImage />
+<Layout>
+<div style={mystyle}>
+  <Carousel>
+    <PhotoCarousel />
+  </Carousel>
+</div>
+<div>
+  <AboutUs />
+</div>
+</Layout>
+<Footer /> */
 }

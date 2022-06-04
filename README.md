@@ -22,7 +22,7 @@
     `npm install`
 
 - Run a Development server
-    `gatsby develop`
+    `gatsby develop` or `npm start`
     the server runs on port:8000 access it from your browser at:
     `https:\\localhost:8000`
     for GraphQl editor:
