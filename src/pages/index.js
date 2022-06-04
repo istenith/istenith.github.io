@@ -149,9 +149,9 @@ export default function IndexPage() {
         }}
       >
         <IsteLogo className="img" width="300px" height="300px" />
-        <div style={{ fontSize: '60px', color: 'white', marginTop: '20px' }}>
+        <h2 style={{ fontSize: '40px', color: 'white', marginTop: '20px' }}>
           🚧 Website is under Development 🚧
-        </div>
+        </h2>
       </div>
 
       {/* <div className="mainup">
