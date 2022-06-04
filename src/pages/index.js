@@ -1,22 +1,22 @@
-import React, { useEffect, useState } from 'react'
-import styled from 'styled-components'
+import React, { useEffect, useState } from "react"
+import styled from "styled-components"
 // import ReactAnime from 'react-animejs'
 // import Zoom from 'react-reveal/Zoom';
 // import Flip from 'react-reveal/Flip';
-import 'aos/dist/aos.css'
-import Aos from 'aos'
-import Layout from '../components/layout'
+import "aos/dist/aos.css"
+import Aos from "aos"
+import Layout from "../components/layout"
 // import Projects from '../components/projects'
-import PhotoCarousel from '../components/carousel'
-import AboutUs from '../components/about'
-import SEO from '../components/seo'
+import PhotoCarousel from "../components/carousel"
+import AboutUs from "../components/about"
+import SEO from "../components/seo"
 // import UpcomingEvent from '../components/upcoming_event'
-import { ReactComponent as IsteLogo } from '../images/iste_logo_hollow.svg'
-import Tagline from '../components/tagline'
-import Footer from '../components/footer'
-import GalleryImage from './gallery'
-import Tilt from 'react-parallax-tilt'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { ReactComponent as IsteLogo } from "../images/iste_logo_hollow.svg"
+import Tagline from "../components/tagline"
+import Footer from "../components/footer"
+import GalleryImage from "./gallery"
+import Tilt from "react-parallax-tilt"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 const mainup = styled.div`
   background: #14a098;
@@ -36,7 +36,7 @@ const LandingDiv = styled.div`
   grid-template-columns: repeat(3, 1fr);
   padding: 2em;
   justify-items: color-interpolation-filters;
-  ${'' /* margin-top:1vh; */}
+  ${"" /* margin-top:1vh; */}
   margin-bottom: 10vh;
   .text {
     margin: auto;
@@ -69,7 +69,7 @@ const LandingDiv = styled.div`
     transition: 0.5s ease-in-out;
     transform: scale(1.1);
   }
-  .Dev{
+  .Dev {
     color: white;
   }
   @media screen and (max-width: 1080px) {
@@ -132,37 +132,51 @@ export default function IndexPage() {
 
   return (
     <>
-      <div className='mainup'>
-        <SEO title='Home' />
-        <LandingDiv>
-          <div className='text'>
-            {/* <FontAwesomeIcon icon={fa} size='1x' /> */}
-            <h2 className='Dev'>Website is Under Development</h2>
-            <h1 className='name'>ISTE NITH</h1>
-            <Tagline />
-          </div>
-          <div className='logo'>
-            <Tilt>
-              <IsteLogo className='img' width='300px' height='300px' />
-            </Tilt>
-          </div>
-        </LandingDiv>
+      <div className="logo" 
+        style={
+          {
+            textAlign:'center',
+            position:'absolute',
+            top:'40%',
+            left:'50%',
+            transform:'translate(-50%,-50%)',
+          }
+        }
+      >
+          <IsteLogo className="img" width="400px" height="400px" />
+          <h2 style={{fontSize:'60px', color:'white', marginTop:'20px'}}>Website it under Development</h2>
       </div>
-
-      <GalleryImage />
-      <Layout>
-        <div style={mystyle}>
-          {/* <div data-aos='zoom-in-up'> */}
-          <Carousel>
-            <PhotoCarousel />
-          </Carousel>
-          {/* </div> */}
-        </div>
-        <div>
-          <AboutUs />
-        </div>
-      </Layout>
-      <Footer />
     </>
   )
 }
+
+// <div className='mainup'>
+//         <SEO title='Home' />
+//         <LandingDiv>
+//           <div className='text'>
+//             {/* <FontAwesomeIcon icon={fa} size='1x' /> */}
+//             <h1 className='name'>ISTE NITH</h1>
+//             <Tagline />
+//           </div>
+//           <div className='logo'>
+//             <Tilt>
+//               <IsteLogo className='img' width='300px' height='300px' />
+//             </Tilt>
+//           </div>
+//         </LandingDiv>
+//       </div>
+
+//       <GalleryImage />
+//       <Layout>
+//         <div style={mystyle}>
+//           {/* <div data-aos='zoom-in-up'> */}
+//           <Carousel>
+//             <PhotoCarousel />
+//           </Carousel>
+//           {/* </div> */}
+//         </div>
+//         <div>
+//           <AboutUs />
+//         </div>
+//       </Layout>
+//       <Footer />
