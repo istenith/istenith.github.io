@@ -137,7 +137,7 @@ export default function IndexPage() {
 
   return (
     <>
-    {/* replace from div code with below code I have commented to remove from under development status */}
+      {/* replace from div code with below code I have commented to remove from under development status */}
       <div
         className="logo"
         style={{
@@ -153,36 +153,34 @@ export default function IndexPage() {
           Website it under Development
         </h2>
       </div>
+
+      {/* <div className="mainup">
+        <SEO title="Home" />
+        <LandingDiv>
+          <div className="logo">
+            <Tilt>
+              <IsteLogo className="img" width="300px" height="300px" />
+            </Tilt>
+          </div>
+          <div className="text">
+            <h1 className="name">ISTE NITH</h1>
+            <Tagline />
+          </div>
+        </LandingDiv>
+      </div>
+
+      <GalleryImage />
+      <Layout>
+        <div style={mystyle}>
+          <Carousel>
+            <PhotoCarousel />
+          </Carousel>
+        </div>
+        <div>
+          <AboutUs />
+        </div>
+      </Layout>
+      <Footer /> */}
     </>
   )
-}
-
-{
-  /* <div className='mainup'>
-<SEO title='Home' />
-<LandingDiv>
-  <div className='logo'>
-    <Tilt>
-      <IsteLogo className='img' width='300px' height='300px' />
-    </Tilt>
-  </div>
-  <div className='text'>
-    <h1 className='name'>ISTE NITH</h1>
-    <Tagline />
-  </div>
-</LandingDiv>
-</div>
-
-<GalleryImage />
-<Layout>
-<div style={mystyle}>
-  <Carousel>
-    <PhotoCarousel />
-  </Carousel>
-</div>
-<div>
-  <AboutUs />
-</div>
-</Layout>
-<Footer /> */
 }

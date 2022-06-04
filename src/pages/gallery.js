@@ -100,17 +100,11 @@ export default function GalleryImage() {
             }
         }
     `)
-    // console.log("screen width = ",  window.innerWidth)
     var custom_image_css = []
     for (var j = 0; j <= 6; j++) {
         var img_width = 0;
         var delay = 30;
         var margTop = Math.random() * 10;
-        if (window.innerWidth>700){
-            var Swidth= '600px'
-        }else{
-            var Swidth= '400px'
-        }
         while (img_width < 30 || img_width > 70) {
             img_width = Math.random() * 100
         }
@@ -122,7 +116,7 @@ export default function GalleryImage() {
             // width: '' + img_width + '%',
             // marginTop: '' + margTop + '%',
             // height: '100%',
-            width:Swidth,
+            width:'60vh',
             animationName: 'moving' + j,
             animationDuration: '' + delay + 's',
             animationIterationCount: 'infinite',
