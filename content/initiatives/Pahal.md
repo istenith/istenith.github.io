@@ -1,7 +1,7 @@
 ---
-title: "Pahal"
+title: "PAHAL"
 date: "2020-01-04"
-featuredImage: "pahal_banner.jpeg"
+featuredImage: "pahal_banner.png"
 links: ["https://istenith.com/pahal/"]
 ---
 Team ISTE here at NIT Hamirpur is taking an initiative PAHAL to help freshers in the admission process by setting up a help-desk, in-person guidance, and in every way possible.

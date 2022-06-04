@@ -7,7 +7,7 @@ email: "ds9210048@gmail.com"
 tags: ['terminal', 'linux','noobfriendly']
 ---
 
-![terminal](terminal.png)
+![Terminal](terminal.png)
 
 The Linux command line is a text-based computer interface, and It is also known as the shell, terminal, console, prompt, and a variety of other names, and it can be intimidating at first for beginners.
 However, once you've grown accustomed to it, you'll realise how significant it is.

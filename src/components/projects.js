@@ -2,6 +2,9 @@ import { Link } from "gatsby"
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
+import "aos/dist/aos.css";
+import Aos from "aos";
+import Fade from 'react-reveal/Fade';
 
 const FlexContainer = styled.div`
   display: flex;
@@ -16,12 +19,12 @@ const FlexContainer = styled.div`
     margin: 2rem 0;
     flex: 0 10 320px;
     margin: 2rem 1rem 1rem;
-    background-image:  linear-gradient(0deg,#ff8a00,#e52e71);
+    background-image:  #14a098;
     display: flex;
     flex-direction:column;
     justify-content: flex-end;
     max-height: 350px;
-    color: white;
+    color: black;
     border-radius: 20px;
     padding: 0.5rem;
     h1{
@@ -36,26 +39,27 @@ const FlexContainer = styled.div`
   }
 
   .CardContainer {
+    border: 2px solid blue;
     display: flex;
     flex-wrap: nowrap;
-    /* width: 100%; */
+    width: 50%; 
     /* padding-left: 40px; */
     overflow-x: scroll;
     scrollbar-color: #666 #201c29;
     padding: 2rem 0rem 10px 5rem;;
 
     .Card {
-      /* border: 3px dashed white; */
-      width: 250px;
+      border: 3px dashed red; 
+      width: 100%;
       margin: 0 -25px 1rem;
       max-height: 350px;
       max-width: 300px;
-      border-radius: 20px;
+      border-radius: 0px;
       text-align: left;
       flex: 0 0 250px;
       padding: 10px 20px;
       overflow: hidden;
-      background-color: #2a2e35;
+      background-color: black;
       box-shadow: -16px 0 36px #000;
       position: relative;
       /* transition: transform 0.5s ease-out; */
@@ -63,6 +67,7 @@ const FlexContainer = styled.div`
       left: 0px;
 
       .ProjTitle {
+        border: 1 px solid blue;
         color: white;
         margin-top: 1.0rem;
       }
@@ -122,8 +127,8 @@ const FlexContainer = styled.div`
 `;
 
 export default function Projects() {
-  const data = useStaticQuery(
-    graphql`
+	const data = useStaticQuery(
+		graphql`
       query {
         allMarkdownRemark(
           filter: { fileAbsolutePath: { regex: "/.*projects/" } }
@@ -145,14 +150,18 @@ export default function Projects() {
         }
       }
     `
-  )
+	);
+
 
   return (    
+    <>
+  <Fade left>
       <FlexContainer>
       <div className="title">
         <h1>Recent Activity</h1>
-        <Link to='/projects' style={{ textDecoration: "none"}}><p className="more">See More</p></Link>
+        {/* <Link to='/projects' style={{ textDecoration: "none"}}><p className="more">See More</p></Link> */}
       </div>
+      <div data-aos="fade-left">
         <div className="CardContainer">
           {data.allMarkdownRemark.edges.map(({ node }) => (
           <div className="Card">
@@ -171,7 +180,9 @@ export default function Projects() {
             </Link>
           </div>
         ))}
-      </div>
-      </FlexContainer>
+      </div></div>
+      </FlexContainer></Fade>
+      </>
   )
+
 }

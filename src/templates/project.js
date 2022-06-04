@@ -1,12 +1,12 @@
-import React from 'react'
+import React from "react";
 import RehypeReact from "rehype-react";
-import { graphql, Link} from "gatsby"
-import Layout from '../components/layout'
-import Share from '../components/share'
-import SEO from "../components/seo"
-import styled from 'styled-components'
-import kebabCase from "lodash/kebabCase"
-import {head1, head2, head3, head4, para, line, Pre, Code, UL} from "./elements"
+import { graphql, Link} from "gatsby";
+import Layout from "../components/layout";
+import Share from "../components/share";
+import SEO from "../components/seo";
+import styled from "styled-components";
+import kebabCase from "lodash/kebabCase";
+import {head1, head2, head3, head4, para, line, Pre, Code, UL} from "./elements";
 
 const Title = styled.div`
     color: white;
@@ -49,48 +49,48 @@ const Pad = styled.div`
 `;
 
 const renderAst = new RehypeReact({
-    createElement: React.createElement,
-    components: {
-        h1: head1,
-        h2: head2,
-        h3: head3,
-        h4: head4,
-        p: para,
-        hr: line,
-        pre: Pre,
-        code: Code,
-        ul: UL,
-    },
+	createElement: React.createElement,
+	components: {
+		h1: head1,
+		h2: head2,
+		h3: head3,
+		h4: head4,
+		p: para,
+		hr: line,
+		pre: Pre,
+		code: Code,
+		ul: UL,
+	},
 }).Compiler;
 
 export default function Project ({ data, location}) {
-    const project = data.markdownRemark
-    return (
-        <Layout>
-        <Pad>
-            <SEO title={project.frontmatter.title}/>
-            <Title>
-            <div>
-            <h1>{project.frontmatter.title}</h1>
-            <p>Author: {project.frontmatter.author}</p>
-            <p>{project.frontmatter.email}</p>
-            </div>
-            <div className='tags'>
-            {project.frontmatter.tags && project.frontmatter.tags.map((tag)=>(
-                <Link to={'/tags/'+kebabCase(tag)} style={{ textDecoration: "none", color: 'white'}}>
-                <div className='tag'>{tag}</div>
-                </Link>
-            ))}
-            </div>
-            </Title>
-            <Date>{project.frontmatter.date}</Date>
-            {
-                renderAst(project.htmlAst)
-            }
-            <Share title={project.frontmatter.title} tags={project.frontmatter.tags} url={location.href}/>            
-        </Pad>
-        </Layout>
-    )
+	const project = data.markdownRemark;
+	return (
+		<Layout>
+			<Pad>
+				<SEO title={project.frontmatter.title}/>
+				<Title>
+					<div>
+						<h1>{project.frontmatter.title}</h1>
+						<p>Author: {project.frontmatter.author}</p>
+						<p>{project.frontmatter.email}</p>
+					</div>
+					<div className='tags'>
+						{project.frontmatter.tags && project.frontmatter.tags.map((tag)=>(
+							<Link to={"/tags/"+kebabCase(tag)} style={{ textDecoration: "none", color: "white"}}>
+								<div className='tag'>{tag}</div>
+							</Link>
+						))}
+					</div>
+				</Title>
+				<Date>{project.frontmatter.date}</Date>
+				{
+					renderAst(project.htmlAst)
+				}
+				<Share title={project.frontmatter.title} tags={project.frontmatter.tags} url={location.href}/>            
+			</Pad>
+		</Layout>
+	);
 }
 
 export const query = graphql`
@@ -107,4 +107,4 @@ export const query = graphql`
             }
         }
     }
-`
+`;

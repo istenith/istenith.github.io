@@ -1,6 +1,7 @@
-# ISTE 2020 website
-
-For a details list of all the desired features refer to [this discussion](https://github.com/orgs/istenith/teams/web-dev/discussions/1)
+<p align='center'>
+  <img src="src/images/iste_logo_hollow.svg" alt="ISTE LOGO">
+  </p>
+<h1 align='center'>ISTE NITH</h1>
 
 ## Setting Up
 - Install `npm`
@@ -28,7 +29,7 @@ For a details list of all the desired features refer to [this discussion](https:
     `https:\\localhost:8000\__graphql`
 
 ## Folder Structure
-`````````````
+```
 |-- LICENSE
 |-- README.md
 |-- content           ------>this folder contains the .md files
@@ -63,6 +64,7 @@ For a details list of all the desired features refer to [this discussion](https:
     `-- utils         ------>Typography library settings
         `-- typography.js
 ```
+
 
 ## Contributing
 Fork this repository and clone it as mentioned above

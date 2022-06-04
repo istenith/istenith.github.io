@@ -1,3 +1,26 @@
-html{
-    background: #111717;
+html {
+    background: #15171F;
+    overflow-x:hidden;
+}
+
+/* whole scrollbar css */
+::-webkit-scrollbar {
+  width: 9px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #ffffff50;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #E05215;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #E3622A;
 }

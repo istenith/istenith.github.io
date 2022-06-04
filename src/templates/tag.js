@@ -1,12 +1,11 @@
-import React from "react"
-import Layout from '../components/layout'
-import SEO from "../components/seo"
-import styled from 'styled-components'
-import Card from "../components/card"
-
+import React from "react";
+import Layout from "../components/layout";
+import SEO from "../components/seo";
+import styled from "styled-components";
+import Card from "../components/card";
 
 // Components
-import { graphql } from "gatsby"
+import { graphql } from "gatsby";
 
 const PageTitle= styled.h1`
   color: white;
@@ -19,34 +18,34 @@ const Container = styled.div`
 `;
 
 const Tags = ({ pageContext, data }) => {
-  const { tag } = pageContext
-  const { edges, totalCount } = data.allMarkdownRemark
-  const tagHeader = `${totalCount} post${
-    totalCount === 1 ? "" : "s"
-  } tagged with "${tag}"`
+	const { tag } = pageContext;
+	const { edges, totalCount } = data.allMarkdownRemark;
+	const tagHeader = `${totalCount} post${
+		totalCount === 1 ? "" : "s"
+	} tagged with "${tag}"`;
 
-  return (
-    <Layout>
-      <SEO title={tag}/>
-      <center>
-        <PageTitle>{tagHeader}</PageTitle>
-        <Container>
-            {edges.map(({ node }) => {
-              const { slug } = node.fields
-              const excerpt = node.excerpt;
-              return (
-                <Card frontmatter={node.frontmatter} slug={slug} excerpt={excerpt}/>
-              )
-            })}
-        </Container>
-      </center>
-    </Layout>
+	return (
+		<Layout>
+			<SEO title={tag}/>
+			<center>
+				<PageTitle>{tagHeader}</PageTitle>
+				<Container>
+					{edges.map(({ node }) => {
+						const { slug } = node.fields;
+						const excerpt = node.excerpt;
+						return (
+							<Card frontmatter={node.frontmatter} slug={slug} excerpt={excerpt}/>
+						);
+					})}
+				</Container>
+			</center>
+		</Layout>
     
       
-  )
-}
+	);
+};
 
-export default Tags
+export default Tags;
 
 export const pageQuery = graphql`
   query($tag: String) {
@@ -78,4 +77,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

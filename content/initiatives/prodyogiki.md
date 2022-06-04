@@ -1,5 +1,5 @@
 ---
-title: "Prodyogiki"
+title: "PRODYOGIKI"
 date: "2020-01-04"
 featuredImage: "pg.png"
 links: ["https://istenith.com/prody/"]

@@ -1,7 +1,7 @@
-import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
-import Img from "gatsby-image"
-import styled from 'styled-components'
+import React from "react";
+import { graphql, useStaticQuery } from "gatsby";
+import Img from "gatsby-image";
+import styled from "styled-components";
 
 const Heading = styled.h1`
     color: white;
@@ -49,7 +49,7 @@ const Upcoming = styled.div`
 `;
 
 export default function UpcomingEvent(){
-      const list = useStaticQuery(graphql`
+	const list = useStaticQuery(graphql`
         query {
           allMarkdownRemark(
             filter: { fileAbsolutePath: { regex: "/.*upcoming/" } }
@@ -72,34 +72,34 @@ export default function UpcomingEvent(){
             }
           }
         }
-      `)
+      `);
 
-    if(list.allMarkdownRemark.edges.length !== 0){
-        return (
-            <>
-            <Heading>Upcoming Events</Heading>
-                <Upcoming>
-                {list.allMarkdownRemark.edges.map(({node})=>
-                    <Card>
-                    {
-                        node.frontmatter.featuredImage &&
+	if(list.allMarkdownRemark.edges.length !== 0){
+		return (
+			<>
+				<Heading>Upcoming Events</Heading>
+				<Upcoming>
+					{list.allMarkdownRemark.edges.map(({node})=>
+						<Card>
+							{
+								node.frontmatter.featuredImage &&
                         <>
-                            <h2>{node.frontmatter.title}</h2>
-                            <div className='Image'>
-                            <Img fluid={node.frontmatter.featuredImage.childImageSharp.fluid} style={{borderRadius:"5%"}}/>
-                            </div>
-                            <div className="text">
-                                <div className='desc' dangerouslySetInnerHTML={{__html: node.html}}></div>
-                            </div>
+                        	<h2>{node.frontmatter.title}</h2>
+                        	<div className='Image'>
+                        		<Img fluid={node.frontmatter.featuredImage.childImageSharp.fluid} style={{borderRadius:"5%"}}/>
+                        	</div>
+                        	<div className="text">
+                        		<div className='desc' dangerouslySetInnerHTML={{__html: node.html}}></div>
+                        	</div>
                         </>
-                    }
-                    </Card>
-                )
-                }
-                </Upcoming> 
-            </>
-        )
-    }else{
-        return null
-    }
+							}
+						</Card>
+					)
+					}
+				</Upcoming> 
+			</>
+		);
+	}else{
+		return null;
+	}
 }

@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=League+Gothic&display=swap');
+.Navbar {
+  height: 65px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background: rgba(0, 0, 0, 0.5); */
+  /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); */
+  padding-left: 130px;
+  padding-right: 130px;
+  /* padding-top: 25px; */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  align-items: center;
+}
+
+.Navbar > .nav-logo {
+  font-weight: 400;
+  font-size: 40px;
+  margin: 15px;
+  font-family: Bebas Neue;
+  color: #ffffff;
+  z-index: 1000;
+  position: sticky;
+}
+
+.Navbar > .nav-items > a {
+  color: #ffffff;
+  font-size: 20px;
+  text-decoration: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 25px;
+  position: relative;
+  opacity: 0.9;
+  z-index: 999;
+}
+
+.Navbar > .nav-items > a:hover {
+  opacity: 1;
+}
+
+.Navbar > .nav-items > a::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: #ffffff;
+  transition: all 0.45s;
+}
+
+.Navbar > .nav-items > a.active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: #f50057;
+  transition: all 0.45s;
+}
+
+span.icons {
+  color: #f50057;
+}
+
+.Navbar > .nav-items > a:hover::before {
+  width: 100%;
+}
+
+.Navbar > .nav-toggle {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .Navbar > .nav-items {
+    position: absolute;
+    top: 65px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    transform: translateX(-100%);
+    transition: all 0.45s;
+    z-index: 999;
+    backdrop-filter: blur(5px);
+  }
+
+  .Navbar {
+    height: 65px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+  .Navbar > .nav-items > a::before {
+    background: transparent;
+  }
+  /* .Navbar > .nav-items > a { */
+  /*   margin: 3.8em; */
+  /* } */
+  .Navbar > .nav-items.open {
+    transform: translateX(0);
+  }
+
+  .Navbar > .nav-toggle {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .nav-toggle > .bar {
+    position: relative;
+    width: 32px;
+    height: 2px;
+    background: #ffffff;
+    transition: all 0.45s ease-in-out;
+    z-index: 999;
+  }
+
+  .nav-toggle > .bar::before,
+  .nav-toggle > .bar::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    background: #ffffff;
+    border-radius: 2px;
+    transition: all 0.45s ease-in-out;
+  }
+
+  .nav-toggle > .bar::before {
+    width: 25px;
+    transform: translateY(-8px);
+    right: 0;
+  }
+
+  .nav-toggle > .bar::after {
+    width: 32px;
+    transform: translateY(8px);
+  }
+
+  .nav-toggle.open > .bar {
+    transform: translateX(-40px);
+    background: transparent;
+  }
+
+  .nav-toggle.open > .bar::before {
+    width: 32px;
+    transform: rotate(45deg) translate(26px, -26px);
+  }
+
+  .nav-toggle.open > .bar::after {
+    transform: rotate(-45deg) translate(26px, 26px);
+  }
+}
