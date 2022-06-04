@@ -16,6 +16,7 @@
     "@svgr/webpack": "^6.2.1",
     "aos": "^2.3.4",
     "babel-plugin-styled-components": "^2.0.6",
+    "eslint": "^7.32.0",
     "framer-motion": "^6.2.8",
     "gatsby": "^4.10.3",
     "gatsby-image": "^3.11.0",
@@ -59,8 +60,6 @@
     "typography-theme-fairy-gates": "^0.16.19"
   },
   "devDependencies": {
-    "eslint": "^8.12.0",
-    "eslint-plugin-react": "^7.29.4",
     "prettier": "^2.6.1"
   },
   "keywords": [
@@ -74,8 +73,6 @@
     "start": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "lint": "eslint src/**/*.js",
-    "lint-fix": "eslint src/**/*.js --fix",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "repository": {

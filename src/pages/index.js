@@ -16,6 +16,8 @@ import Tagline from '../components/tagline'
 import Footer from '../components/footer'
 import GalleryImage from './gallery'
 import Tilt from 'react-parallax-tilt'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 
 const mainup = styled.div`
   background: #14a098;
