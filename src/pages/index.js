@@ -148,42 +148,39 @@ export default function IndexPage() {
           transform: 'translate(-50%,-50%)',
         }}
       >
-        <IsteLogo className='img' width='300px' height='400px' />
-
-        <h2 style={{ fontSize: '60px', color: 'white', marginTop: '20px' }}>
+        <IsteLogo className='img' width='300px' height='300px' />
+        <h2 style={{ fontSize: '40px', color: 'white', marginTop: '20px' }}>
           🚧 Website is under Development 🚧
         </h2>
       </div>
+
+      {/* <div className="mainup">
+        <SEO title="Home" />
+        <LandingDiv>
+          <div className="logo">
+            <Tilt>
+              <IsteLogo className="img" width="300px" height="300px" />
+            </Tilt>
+          </div>
+          <div className="text">
+            <h1 className="name">ISTE NITH</h1>
+            <Tagline />
+          </div>
+        </LandingDiv>
+      </div>
+
+      <GalleryImage />
+      <Layout>
+        <div style={mystyle}>
+          <Carousel>
+            <PhotoCarousel />
+          </Carousel>
+        </div>
+        <div>
+          <AboutUs />
+        </div>
+      </Layout>
+      <Footer /> */}
     </>
   )
-}
-
-{
-  /* <div className='mainup'>
-<SEO title='Home' />
-<LandingDiv>
-  <div className='logo'>
-    <Tilt>
-      <IsteLogo className='img' width='300px' height='300px' />
-    </Tilt>
-  </div>
-  <div className='text'>
-    <h1 className='name'>ISTE NITH</h1>
-    <Tagline />
-  </div>
-</LandingDiv>
-</div>
-
-<GalleryImage />
-<Layout>
-<div style={mystyle}>
-  <Carousel>
-    <PhotoCarousel />
-  </Carousel>
-</div>
-<div>
-  <AboutUs />
-</div>
-</Layout>
-<Footer /> */
 }
