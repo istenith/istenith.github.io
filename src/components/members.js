@@ -254,9 +254,7 @@ const Flex = styled.div`
         }
       }
     }
-  }
-}
-`
+  }`
 export default function Members() {
 
   const data = useStaticQuery(graphql`
@@ -476,7 +474,7 @@ export default function Members() {
       </svg>
     )
   }
-  
+
   function Selected_member(props) {
     return (
       <div className="Info">
@@ -525,7 +523,7 @@ export default function Members() {
             <div className="social_links">
               <div className="linkedin">
                 <a href={props.linkedin}>
-                  <Instagram height="3vw" width="3vw"/>
+                  <Instagram height="3vw" width="3vw" />
                 </a>
               </div>
               <div className="insta">
