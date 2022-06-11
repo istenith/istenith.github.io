@@ -3,18 +3,14 @@ import { graphql, useStaticQuery, Link } from "gatsby"
 import Image from "gatsby-image"
 import styled from "styled-components"
 import iste_logo from "../images/albert.jpeg"
-import Bounce from 'react-reveal/Bounce';
-
-
-
-
+import Bounce from "react-reveal/Bounce"
 
 const FlexContainer = styled.div`
-  position:absolute;
-  top:8vh;
-  left:0;
-  width:100vw;
-  height:100vh;
+  position: absolute;
+  top: 8vh;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
 `
 
 const Img = styled(Image)`
@@ -31,14 +27,14 @@ const Img_Container = styled.div`
 `
 
 const Flex = styled.div`
-  width:100%;
-  ${'' /* max-width:1800px; */}
+  width: 100%;
+  ${"" /* max-width:1800px; */}
   display:flex;
-  height:97vh;
-  box-shadow: 2px 20px 38px rgba(0,0,0,0.30);
+  height: 97vh;
+  box-shadow: 2px 20px 38px rgba(0, 0, 0, 0.3);
 
-  @media screen and (max-width:1177px){
-    display:block!important;
+  @media screen and (max-width: 1177px) {
+    display: block !important;
   }
 
   .container {
@@ -47,21 +43,21 @@ const Flex = styled.div`
   }
 
   .year {
-    flex:none;
-    margin:0;
-    padding:0;
+    flex: none;
+    margin: 0;
+    padding: 0;
     font-size: 10vh;
-    margin-bottom:20px;
-    @media screen and (min-width:1177px){
-      margin-top:40vh;
+    margin-bottom: 20px;
+    @media screen and (min-width: 1177px) {
+      margin-top: 40vh;
     }
-    @media screen and (max-width:1177px){
-      margin-top:5vh;
+    @media screen and (max-width: 1177px) {
+      margin-top: 5vh;
     }
     h1 {
       color: rgba(108, 50, 224, 0.8);
       text-align: center;
-      @media screen and (min-width:1177px){
+      @media screen and (min-width: 1177px) {
         transform: rotate(-90deg);
       }
     }
@@ -75,188 +71,189 @@ const Flex = styled.div`
     overflow: hidden;
     overflow-y: scroll;
     border-radius: 30px;
-    margin-top:5%;
-    box-shadow: 2px 20px 38px rgba(0,0,0,0.30);
-    @media screen and (min-width:1177px){
+    margin-top: 5%;
+    box-shadow: 2px 20px 38px rgba(0, 0, 0, 0.3);
+    @media screen and (min-width: 1177px) {
       width: 50%;
       justify-content: space-around;
-      left:6%;
-      margin-bottom:5%;
+      left: 6%;
+      margin-bottom: 5%;
     }
-    @media screen and (max-width:1177px){
+    @media screen and (max-width: 1177px) {
       height: 250px;
-      display:flex;
-      flex-wrap:nowrap;
-      width:95%;
-      margin-left:2.5%;
+      display: flex;
+      flex-wrap: nowrap;
+      width: 95%;
+      margin-left: 2.5%;
       border-radius: 1vw 1vw 0 0;
       overflow-x: scroll;
     }
   }
   .right-container {
     width: 50%;
-    @media screen and (max-width:1177px){
-      width:100%;
+    @media screen and (max-width: 1177px) {
+      width: 100%;
     }
-    .Info{
+    .Info {
       width: 80%;
-      margin-left:13%;
-      position:relative;
-      @media screen and (max-width:1177px){
-        margin-left:2.5%;
-        width:95%;
+      margin-left: 13%;
+      position: relative;
+      @media screen and (max-width: 1177px) {
+        margin-left: 2.5%;
+        width: 95%;
       }
-      .selected_member{
-        position:relative;
-        padding:50px 80px 80px;
+      .selected_member {
+        position: relative;
+        padding: 50px 80px 80px;
         border-radius: 0 0 1vw 1vw;
-        width:100%;
-        background:black;
-        text-align:center;
+        width: 100%;
+        background: black;
+        text-align: center;
         background: rgba(196, 196, 196, 0.14);
         box-shadow: 7px 8px 20px 5px rgba(0, 0, 0, 0.5);
-        @media screen and (min-width:1178px){
-          height:27vh;
+        @media screen and (min-width: 1178px) {
+          height: 27vh;
         }
-        @media screen and (max-width:1177px){
-          margin-top:0;
+        @media screen and (max-width: 1177px) {
+          margin-top: 0;
           border-radius: 0px 0px 15px 15px;
           box-shadow: none;
-          display:flex;
-          padding:4vw 2vw;
-          width:100%;
+          display: flex;
+          padding: 4vw 2vw;
+          width: 100%;
         }
-        h1{
+        h1 {
           color: white;
           font-size: 2.5vw;
-          @media screen and (max-width:1177px){
-            font-size:4vw;
+          @media screen and (max-width: 1177px) {
+            font-size: 4vw;
           }
         }
-        h3{
+        h3 {
           color: rgba(108, 50, 224, 0.7);
           font-size: 1.5vw;
-          @media screen and (max-width:1177px){
-            font-size:3vw;
+          @media screen and (max-width: 1177px) {
+            font-size: 3vw;
           }
         }
-        .before1177{
-          @media screen and (max-width:1177px){
-            width:50%;
-            text-align:left;
+        .before1177 {
+          @media screen and (max-width: 1177px) {
+            width: 50%;
+            text-align: left;
           }
-          .handle1177{
-            @media screen and (min-width:1178px){
-              display:none;
+          .handle1177 {
+            @media screen and (min-width: 1178px) {
+              display: none;
             }
-            .social_links{
-              @media screen and (max-width:1177px){
-                display:flex;
-                bottom:4vh;
-                position:absolute;
+            .social_links {
+              @media screen and (max-width: 1177px) {
+                display: flex;
+                bottom: 4vh;
+                position: absolute;
               }
               .linkedin svg,
-              .insta svg{
-                flex:none;
-                width:3vw;
-                margin-left:2vw;
-                @media screen and (max-width:530px){
-                  width:5vw;  
+              .insta svg {
+                flex: none;
+                width: 3vw;
+                margin-left: 2vw;
+                @media screen and (max-width: 530px) {
+                  width: 5vw;
                 }
               }
             }
           }
         }
-        .after1177{
-          flex:none;
-          width:50%;
-          display:none;
-          @media screen and (max-width:1177px){
-            display:block;
-            text-align:right;
-            color:white;
+        .after1177 {
+          flex: none;
+          width: 50%;
+          display: none;
+          @media screen and (max-width: 1177px) {
+            display: block;
+            text-align: right;
+            color: white;
           }
         }
       }
-      .selected_member_desc{
-        background-color:#120606;
+      .selected_member_desc {
+        background-color: #120606;
         box-shadow: 10px 8px 20px 5px rgba(0, 0, 0, 0.5);
-        position:absolute;
-        width:80%;
-        border-radius:30px 0 30px 30px;
-        right:-9%;
-        bottom:8vh;
-        ${'' /* top:40vh; */}
+        position: absolute;
+        width: 80%;
+        border-radius: 30px 0 30px 30px;
+        right: -9%;
+        bottom: 8vh;
+        ${"" /* top:40vh; */}
         display:flex;
-        @media screen and (max-width:1177px){
-	        display:none;
-	      }
-	    .selected_member_img{
-          position:absolute;
-          top:0px;
-          left:0px;
-          transform:translate(-50%,-50%);
-          img{
-            border-radius:100%;
-            margin:0;
-            height:15vw;
-            width:15vw;
+        @media screen and (max-width: 1177px) {
+          display: none;
+        }
+        .selected_member_img {
+          position: absolute;
+          top: 0px;
+          left: 0px;
+          transform: translate(-50%, -50%);
+          img {
+            border-radius: 100%;
+            margin: 0;
+            height: 15vw;
+            width: 15vw;
             box-shadow: 10px 50px 50px 10px rgba(0, 0, 0, 0.25);
           }
         }
-        .social_handle{
-          flex:none;
-          border-radius:30px 0 0 30px;
-          padding:1.2vw;
+        .social_handle {
+          flex: none;
+          border-radius: 30px 0 0 30px;
+          padding: 1.2vw;
           background: rgba(108, 50, 224, 0.7);
-          width:20%;
-          width:fit-content;
-          .social_links{
-            height:max-content;
+          width: 20%;
+          width: fit-content;
+          .social_links {
+            height: max-content;
             margin-top: 30vh;
             .linkedin svg,
-            .insta svg{
-                width:1.3vw;
-              }
+            .insta svg {
+              width: 1.3vw;
+            }
           }
         }
-        .description{
-          flex:none;
-          width:80%;
-          .Branch{
-            margin:40px 20px 40px 40px;
-            text-align:right;
-            h3{
-              color:rgba(108, 50, 224, 0.8);
+        .description {
+          flex: none;
+          width: 80%;
+          .Branch {
+            margin: 40px 20px 40px 40px;
+            text-align: right;
+            h3 {
+              color: rgba(108, 50, 224, 0.8);
             }
-            @media screen and (max-width:1105px){
-              margin-right:30px;
-            }
-          }
-          .desc{
-            p{
-              width:80%;
-              color:#ffff;
-              margin:auto;
-              margin-top:1vw;
-              text-align:justify;
-              font-weight:light;
-              font-size:1.25rem;
+            @media screen and (max-width: 1105px) {
+              margin-right: 30px;
             }
           }
-          .location{
-            margin:40px 10px 40px 10px;
+          .desc {
+            p {
+              width: 80%;
+              color: #ffff;
+              margin: auto;
+              margin-top: 1vw;
+              text-align: justify;
+              font-weight: light;
+              font-size: 1.25rem;
+            }
           }
-          .area, .State{
-            color:#fff;
-            text-align:right;
+          .location {
+            margin: 40px 10px 40px 10px;
+          }
+          .area,
+          .State {
+            color: #fff;
+            text-align: right;
           }
         }
       }
     }
-  }`
+  }
+`
 export default function Members() {
-
   const data = useStaticQuery(graphql`
     query {
       allMembersXlsxSheet1(sort: { fields: name, order: ASC }) {
@@ -268,7 +265,6 @@ export default function Members() {
             image_link
             img {
               childImageSharp {
-
                 fluid {
                   ...GatsbyImageSharpFluid
                 }
@@ -353,42 +349,40 @@ export default function Members() {
   const onFocus = {
     filter: "blur(10px)",
     opacity: 0.5,
-    transition: '0.3s ease-in-out',
+    transition: "0.3s ease-in-out",
   }
 
-
-  const [scrollDir, setScrollDir] = useState("scrolling down");
+  const [scrollDir, setScrollDir] = useState("scrolling down")
 
   useEffect(() => {
-    const threshold = 0;
-    let lastScrollY = window.pageYOffset;
-    let ticking = false;
+    const threshold = 0
+    let lastScrollY = window.pageYOffset
+    let ticking = false
 
     const updateScrollDir = () => {
-      const scrollY = window.pageYOffset;
+      const scrollY = window.pageYOffset
 
       if (Math.abs(scrollY - lastScrollY) < threshold) {
-        ticking = false;
-        return;
+        ticking = false
+        return
       }
-      setScrollDir(scrollY > lastScrollY ? "scrolling down" : "scrolling up");
-      lastScrollY = scrollY > 0 ? scrollY : 0;
-      ticking = false;
-    };
+      setScrollDir(scrollY > lastScrollY ? "scrolling down" : "scrolling up")
+      lastScrollY = scrollY > 0 ? scrollY : 0
+      ticking = false
+    }
 
     const onScroll = () => {
       if (!ticking) {
-        window.requestAnimationFrame(updateScrollDir);
-        ticking = true;
+        window.requestAnimationFrame(updateScrollDir)
+        ticking = true
       }
-    };
+    }
 
-    window.addEventListener("scroll", onScroll);
-    console.log(scrollDir);
+    window.addEventListener("scroll", onScroll)
+    console.log(scrollDir)
 
-    return () => window.removeEventListener("scroll", onScroll);
-  }, [scrollDir]);
-
+    return () => window.removeEventListener("scroll", onScroll)
+  }, [scrollDir])
 
   const [name, setName] = useState("Albert Sharma")
   const [desc, setDesc] = useState("Executive Member")
@@ -454,7 +448,6 @@ export default function Members() {
     )
   }
 
-
   function Linkedin(props) {
     return (
       <svg
@@ -494,7 +487,10 @@ export default function Members() {
                   </a>
                 </div>
                 <div className="insta">
-                  <a href="https://www.instagram.com/teamistenith/?hl=en" target="_blank">
+                  <a
+                    href="https://www.instagram.com/teamistenith/?hl=en"
+                    target="_blank"
+                  >
                     <Linkedin />
                   </a>
                 </div>
@@ -550,7 +546,6 @@ export default function Members() {
     )
   }
 
-
   const myContainer = useRef(null)
 
   useEffect(() => {
@@ -564,59 +559,69 @@ export default function Members() {
           <h1>FINAL YEAR</h1>
         </div>
         <div className="left-container container">
-          {data.allMembersXlsxSheet4.edges.map((row, i) => (
-            i != key ? (<Bounce><Member_Card
-              className="Card"
-              key={i}
-              id={i}
-              ref={myContainer}
-              data-key={i}
-              name={row.node.name}
-              style={mouse}
-              data-description={row.node.description}
-              data-img={row.node.image_link}
-              data-linkedin={row.node.link}
-              data-name={row.node.name}
-              data-branch={row.node.branch}
-              data-city={row.node.city}
-              data-state={row.node.state}
-              data-about={row.node.about}
-              onMouseOver={ReadName}
-              onMouseOut={mouseOut}
-            >
-              <Img fluid={row.node.img.childImageSharp.fluid}></Img>
-              <div className="content" style={{ color: "white" }}>
-                <div className="name">{row.node.name}</div>
-              </div>
-              {/* </Link> */}
-            </Member_Card></Bounce>) : (<Bounce><Member_Card
-              className="Card"
-              key={i}
-              id={i}
-              ref={myContainer}
-              data-key={i}
-              style={{ cursor: 'pointer', transition: '0.3s ease-in-out', transform: 'scale(1.0)' }}
-              name={row.node.name}
-              data-description={row.node.description}
-              data-img={row.node.image_link}
-              data-linkedin={row.node.link}
-              data-name={row.node.name}
-              data-branch={row.node.branch}
-              data-city={row.node.city}
-              data-state={row.node.state}
-              data-about={row.node.about}
-              onMouseOver={ReadName}
-              onMouseOut={mouseOut}
-            >
-              <Img fluid={row.node.img.childImageSharp.fluid}></Img>
-              <div className="content" style={{ color: "white" }}>
-                <div className="name">{row.node.name}</div>
-              </div>
-              {/* </Link> */}
-            </Member_Card>
-            </Bounce>)
-
-          ))}
+          {data.allMembersXlsxSheet4.edges.map((row, i) =>
+            i != key ? (
+              <Bounce>
+                <Member_Card
+                  className="Card"
+                  key={i}
+                  id={i}
+                  ref={myContainer}
+                  data-key={i}
+                  name={row.node.name}
+                  style={mouse}
+                  data-description={row.node.description}
+                  data-img={row.node.image_link}
+                  data-linkedin={row.node.link}
+                  data-name={row.node.name}
+                  data-branch={row.node.branch}
+                  data-city={row.node.city}
+                  data-state={row.node.state}
+                  data-about={row.node.about}
+                  onMouseOver={ReadName}
+                  onMouseOut={mouseOut}
+                >
+                  <Img fluid={row.node.img.childImageSharp.fluid}></Img>
+                  <div className="content" style={{ color: "white" }}>
+                    <div className="name">{row.node.name}</div>
+                  </div>
+                  {/* </Link> */}
+                </Member_Card>
+              </Bounce>
+            ) : (
+              <Bounce>
+                <Member_Card
+                  className="Card"
+                  key={i}
+                  id={i}
+                  ref={myContainer}
+                  data-key={i}
+                  style={{
+                    cursor: "pointer",
+                    transition: "0.3s ease-in-out",
+                    transform: "scale(1.0)",
+                  }}
+                  name={row.node.name}
+                  data-description={row.node.description}
+                  data-img={row.node.image_link}
+                  data-linkedin={row.node.link}
+                  data-name={row.node.name}
+                  data-branch={row.node.branch}
+                  data-city={row.node.city}
+                  data-state={row.node.state}
+                  data-about={row.node.about}
+                  onMouseOver={ReadName}
+                  onMouseOut={mouseOut}
+                >
+                  <Img fluid={row.node.img.childImageSharp.fluid}></Img>
+                  <div className="content" style={{ color: "white" }}>
+                    <div className="name">{row.node.name}</div>
+                  </div>
+                  {/* </Link> */}
+                </Member_Card>
+              </Bounce>
+            )
+          )}
         </div>
         <div className="right-container container">
           <Selected_member
@@ -637,58 +642,69 @@ export default function Members() {
           <h1>THIRD YEAR</h1>
         </div>
         <div className="left-container container">
-          {data.allMembersXlsxSheet3.edges.map((row, i) => (
-            i != key ? (<Bounce><Member_Card
-              className="Card"
-              key={i}
-              id={i}
-              ref={myContainer}
-              data-key={i}
-              name={row.node.name}
-              style={mouse}
-              data-description={row.node.description}
-              data-img={row.node.image_link}
-              data-linkedin={row.node.link}
-              data-name={row.node.name}
-              data-branch={row.node.branch}
-              data-city={row.node.city}
-              data-state={row.node.state}
-              data-about={row.node.about}
-              onMouseOver={ReadName}
-              onMouseOut={mouseOut}
-            >
-              <Img fluid={row.node.img.childImageSharp.fluid}></Img>
-              <div className="content" style={{ color: "white" }}>
-                <div className="name">{row.node.name}</div>
-              </div>
-              {/* </Link> */}
-            </Member_Card></Bounce>) : (<Bounce><Member_Card
-              className="Card"
-              key={i}
-              id={i}
-              ref={myContainer}
-              data-key={i}
-              style={{ cursor: 'pointer', transition: '0.3s ease-in-out', transform: 'scale(1.0)' }}
-              name={row.node.name}
-              data-description={row.node.description}
-              data-img={row.node.image_link}
-              data-linkedin={row.node.link}
-              data-name={row.node.name}
-              data-branch={row.node.branch}
-              data-city={row.node.city}
-              data-state={row.node.state}
-              data-about={row.node.about}
-              onMouseOver={ReadName}
-              onMouseOut={mouseOut}
-            >
-              <Img fluid={row.node.img.childImageSharp.fluid}></Img>
-              <div className="content" style={{ color: "white" }}>
-                <div className="name">{row.node.name}</div>
-              </div>
-              {/* </Link> */}
-            </Member_Card></Bounce>)
-
-          ))}
+          {data.allMembersXlsxSheet3.edges.map((row, i) =>
+            i != key ? (
+              <Bounce>
+                <Member_Card
+                  className="Card"
+                  key={i}
+                  id={i}
+                  ref={myContainer}
+                  data-key={i}
+                  name={row.node.name}
+                  style={mouse}
+                  data-description={row.node.description}
+                  data-img={row.node.image_link}
+                  data-linkedin={row.node.link}
+                  data-name={row.node.name}
+                  data-branch={row.node.branch}
+                  data-city={row.node.city}
+                  data-state={row.node.state}
+                  data-about={row.node.about}
+                  onMouseOver={ReadName}
+                  onMouseOut={mouseOut}
+                >
+                  <Img fluid={row.node.img.childImageSharp.fluid}></Img>
+                  <div className="content" style={{ color: "white" }}>
+                    <div className="name">{row.node.name}</div>
+                  </div>
+                  {/* </Link> */}
+                </Member_Card>
+              </Bounce>
+            ) : (
+              <Bounce>
+                <Member_Card
+                  className="Card"
+                  key={i}
+                  id={i}
+                  ref={myContainer}
+                  data-key={i}
+                  style={{
+                    cursor: "pointer",
+                    transition: "0.3s ease-in-out",
+                    transform: "scale(1.0)",
+                  }}
+                  name={row.node.name}
+                  data-description={row.node.description}
+                  data-img={row.node.image_link}
+                  data-linkedin={row.node.link}
+                  data-name={row.node.name}
+                  data-branch={row.node.branch}
+                  data-city={row.node.city}
+                  data-state={row.node.state}
+                  data-about={row.node.about}
+                  onMouseOver={ReadName}
+                  onMouseOut={mouseOut}
+                >
+                  <Img fluid={row.node.img.childImageSharp.fluid}></Img>
+                  <div className="content" style={{ color: "white" }}>
+                    <div className="name">{row.node.name}</div>
+                  </div>
+                  {/* </Link> */}
+                </Member_Card>
+              </Bounce>
+            )
+          )}
         </div>
         <div className="right-container container">
           <Selected_member
@@ -709,58 +725,69 @@ export default function Members() {
           <h1>SECOND YEAR</h1>
         </div>
         <div className="left-container container">
-          {data.allMembersXlsxSheet2.edges.map((row, i) => (
-            i != key ? (<Bounce><Member_Card
-              className="Card"
-              key={i}
-              id={i}
-              ref={myContainer}
-              data-key={i}
-              name={row.node.name}
-              style={mouse}
-              data-description={row.node.description}
-              data-img={row.node.image_link}
-              data-linkedin={row.node.link}
-              data-name={row.node.name}
-              data-branch={row.node.branch}
-              data-city={row.node.city}
-              data-state={row.node.state}
-              data-about={row.node.about}
-              onMouseOver={ReadName}
-              onMouseOut={mouseOut}
-            >
-              <Img fluid={row.node.img.childImageSharp.fluid}></Img>
-              <div className="content" style={{ color: "white" }}>
-                <div className="name">{row.node.name}</div>
-              </div>
-              {/* </Link> */}
-            </Member_Card></Bounce>) : (<Bounce><Member_Card
-              className="Card"
-              key={i}
-              id={i}
-              ref={myContainer}
-              data-key={i}
-              style={{ cursor: 'pointer', transition: '0.3s ease-in-out', transform: 'scale(1.0)' }}
-              name={row.node.name}
-              data-description={row.node.description}
-              data-img={row.node.image_link}
-              data-linkedin={row.node.link}
-              data-name={row.node.name}
-              data-branch={row.node.branch}
-              data-city={row.node.city}
-              data-state={row.node.state}
-              data-about={row.node.about}
-              onMouseOver={ReadName}
-              onMouseOut={mouseOut}
-            >
-              <Img fluid={row.node.img.childImageSharp.fluid}></Img>
-              <div className="content" style={{ color: "white" }}>
-                <div className="name">{row.node.name}</div>
-              </div>
-              {/* </Link> */}
-            </Member_Card></Bounce>)
-
-          ))}
+          {data.allMembersXlsxSheet2.edges.map((row, i) =>
+            i != key ? (
+              <Bounce>
+                <Member_Card
+                  className="Card"
+                  key={i}
+                  id={i}
+                  ref={myContainer}
+                  data-key={i}
+                  name={row.node.name}
+                  style={mouse}
+                  data-description={row.node.description}
+                  data-img={row.node.image_link}
+                  data-linkedin={row.node.link}
+                  data-name={row.node.name}
+                  data-branch={row.node.branch}
+                  data-city={row.node.city}
+                  data-state={row.node.state}
+                  data-about={row.node.about}
+                  onMouseOver={ReadName}
+                  onMouseOut={mouseOut}
+                >
+                  <Img fluid={row.node.img.childImageSharp.fluid}></Img>
+                  <div className="content" style={{ color: "white" }}>
+                    <div className="name">{row.node.name}</div>
+                  </div>
+                  {/* </Link> */}
+                </Member_Card>
+              </Bounce>
+            ) : (
+              <Bounce>
+                <Member_Card
+                  className="Card"
+                  key={i}
+                  id={i}
+                  ref={myContainer}
+                  data-key={i}
+                  style={{
+                    cursor: "pointer",
+                    transition: "0.3s ease-in-out",
+                    transform: "scale(1.0)",
+                  }}
+                  name={row.node.name}
+                  data-description={row.node.description}
+                  data-img={row.node.image_link}
+                  data-linkedin={row.node.link}
+                  data-name={row.node.name}
+                  data-branch={row.node.branch}
+                  data-city={row.node.city}
+                  data-state={row.node.state}
+                  data-about={row.node.about}
+                  onMouseOver={ReadName}
+                  onMouseOut={mouseOut}
+                >
+                  <Img fluid={row.node.img.childImageSharp.fluid}></Img>
+                  <div className="content" style={{ color: "white" }}>
+                    <div className="name">{row.node.name}</div>
+                  </div>
+                  {/* </Link> */}
+                </Member_Card>
+              </Bounce>
+            )
+          )}
         </div>
         <div className="right-container container">
           <Selected_member
@@ -778,61 +805,72 @@ export default function Members() {
       </Flex>
       <Flex className="First_Year">
         <div className="year">
-          <h1>SECOND YEAR</h1>
+          <h1>FIRST YEAR</h1>
         </div>
         <div className="left-container container">
-          {data.allMembersXlsxSheet1.edges.map((row, i) => (
-            i != key ? (<Bounce><Member_Card
-              className="Card"
-              key={i}
-              id={i}
-              ref={myContainer}
-              data-key={i}
-              name={row.node.name}
-              style={mouse}
-              data-description={row.node.description}
-              data-img={row.node.image_link}
-              data-linkedin={row.node.link}
-              data-name={row.node.name}
-              data-branch={row.node.branch}
-              data-city={row.node.city}
-              data-state={row.node.state}
-              data-about={row.node.about}
-              onMouseOver={ReadName}
-              onMouseOut={mouseOut}
-            >
-              <Img fluid={row.node.img.childImageSharp.fluid}></Img>
-              <div className="content" style={{ color: "white" }}>
-                <div className="name">{row.node.name}</div>
-              </div>
-              {/* </Link> */}
-            </Member_Card></Bounce>) : (<Bounce><Member_Card
-              className="Card"
-              key={i}
-              id={i}
-              ref={myContainer}
-              data-key={i}
-              style={{ cursor: 'pointer', transition: '0.3s ease-in-out', transform: 'scale(1.0)' }}
-              name={row.node.name}
-              data-description={row.node.description}
-              data-img={row.node.image_link}
-              data-linkedin={row.node.link}
-              data-name={row.node.name}
-              data-branch={row.node.branch}
-              data-city={row.node.city}
-              data-state={row.node.state}
-              data-about={row.node.about}
-              onMouseOver={ReadName}
-              onMouseOut={mouseOut}
-            >
-              <Img fluid={row.node.img.childImageSharp.fluid}></Img>
-              <div className="content" style={{ color: "white" }}>
-                <div className="name">{row.node.name}</div>
-              </div>
-              {/* </Link> */}
-            </Member_Card></Bounce>)
-
-          ))}
+          {data.allMembersXlsxSheet1.edges.map((row, i) =>
+            i != key ? (
+              <Bounce>
+                <Member_Card
+                  className="Card"
+                  key={i}
+                  id={i}
+                  ref={myContainer}
+                  data-key={i}
+                  name={row.node.name}
+                  style={mouse}
+                  data-description={row.node.description}
+                  data-img={row.node.image_link}
+                  data-linkedin={row.node.link}
+                  data-name={row.node.name}
+                  data-branch={row.node.branch}
+                  data-city={row.node.city}
+                  data-state={row.node.state}
+                  data-about={row.node.about}
+                  onMouseOver={ReadName}
+                  onMouseOut={mouseOut}
+                >
+                  <Img fluid={row.node.img.childImageSharp.fluid}></Img>
+                  <div className="content" style={{ color: "white" }}>
+                    <div className="name">{row.node.name}</div>
+                  </div>
+                  {/* </Link> */}
+                </Member_Card>
+              </Bounce>
+            ) : (
+              <Bounce>
+                <Member_Card
+                  className="Card"
+                  key={i}
+                  id={i}
+                  ref={myContainer}
+                  data-key={i}
+                  style={{
+                    cursor: "pointer",
+                    transition: "0.3s ease-in-out",
+                    transform: "scale(1.0)",
+                  }}
+                  name={row.node.name}
+                  data-description={row.node.description}
+                  data-img={row.node.image_link}
+                  data-linkedin={row.node.link}
+                  data-name={row.node.name}
+                  data-branch={row.node.branch}
+                  data-city={row.node.city}
+                  data-state={row.node.state}
+                  data-about={row.node.about}
+                  onMouseOver={ReadName}
+                  onMouseOut={mouseOut}
+                >
+                  <Img fluid={row.node.img.childImageSharp.fluid}></Img>
+                  <div className="content" style={{ color: "white" }}>
+                    <div className="name">{row.node.name}</div>
+                  </div>
+                  {/* </Link> */}
+                </Member_Card>
+              </Bounce>
+            )
+          )}
         </div>
         <div className="right-container container">
           <Selected_member
