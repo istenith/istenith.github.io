@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest # Action uses Docker so only Linux is supported
     steps:
       - uses: actions/checkout@v1 # Checkout your triggered branch
-      - uses: xmflsct/action-publish-gatsby@v1 # Uses this action to run further steps
+      - uses: xmflsct/action-publish-gatsby@v1.0.0 # Uses this action to run further steps
         with:
           token: ${{ secrets.DEPLOY_SITE}} # Your personal access token of GitHub, read more below of how to obtain one and keep it safe
 # =======
