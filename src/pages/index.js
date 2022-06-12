@@ -138,7 +138,7 @@ export default function IndexPage() {
   return (
     <>
       {/* replace from div code with below code I have commented to remove from under development status */}
-      {/* <div
+       <div
         className='logo'
         style={{
           textAlign: 'center',
@@ -152,9 +152,9 @@ export default function IndexPage() {
         <h2 style={{ fontSize: '40px', color: 'white', marginTop: '20px' }}>
           🚧 Website is under Development 🚧
         </h2>
-      </div> */}
+      </div>
 
-      <div className="mainup">
+      {/* <div className="mainup">
         <SEO title="Home" />
         <LandingDiv>
           <div className="logo">
@@ -180,7 +180,7 @@ export default function IndexPage() {
           <AboutUs />
         </div>
       </Layout>
-      <Footer />
+      <Footer /> */}
     </>
   )
 }
