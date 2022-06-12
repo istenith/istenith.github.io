@@ -8,7 +8,7 @@
     Ubuntu\Debian:
     `sudo apt install npm`
     Arch:
-    `sudo pacman -S npm nodejs-lts-gallium`
+    `sudo pacman -S npm nodejs`
 
 - Install Gatsby
     `sudo npm install gatsby-cli`
