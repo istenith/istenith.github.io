@@ -16,7 +16,6 @@
     "@svgr/webpack": "^6.2.1",
     "aos": "^2.3.4",
     "babel-plugin-styled-components": "^2.0.6",
-    "eslint": "^7.32.0",
     "framer-motion": "^6.2.8",
     "gatsby": "^4.10.3",
     "gatsby-cli": "^4.15.1",
