@@ -1,25 +1,16 @@
-name: Deploy # Name of your workflow
+name: Deploy
 
 on:
-  push:
-    branches: [ source ] # The trigger of the this workflow
+    push:
+        branches: [ source ]
 
 jobs:
-  build:
-    runs-on: ubuntu-latest # Action uses Docker so only Linux is supported
-    steps:
-      - uses: actions/checkout@v1 # Checkout your triggered branch
-      - uses: xmflsct/action-publish-gatsby@v1.0.0 # Uses this action to run further steps
-        with:
-          token: ${{ secrets.DEPLOY_SITE}} # Your personal access token of GitHub, read more below of how to obtain one and keep it safe
-# =======
-#     build:
-#         runs-on: ubuntu-latest
-#         steps:
-#             - uses: actions/checkout@v2
-#             - uses: enriikke/gatsby-gh-pages-action@v2
-#               with:
-#                   access-token: ${{ secrets.DEPLOY_SITE }}
-#                   deploy-branch: master
-#                   gatsby-args: --verbose
-# >>>>>>> 84a80b491983a007d0ddd0040d57fc5ffb17074d
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+            - uses: enriikke/gatsby-gh-pages-action@v2.2.0
+              with:
+                  access-token: ${{ secrets.DEPLOY_SITE }}
+                  deploy-branch: master
+                  gatsby-args: --verbose
