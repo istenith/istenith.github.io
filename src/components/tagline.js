@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const Tag = styled.div`
-    color: #E05215;
+    color: rgba(108, 50, 224, 0.8);
 	margin-bottom: 1em;
     font-size: 1.8rem;
     font-family: 'Work Sans',sans-serif;
@@ -15,9 +15,6 @@ const Tag = styled.div`
     @media screen and (max-width:1120px){
         flex-direction: column;
         align-content: center;
-        
-        #name{
-        }
     }
 `;
 

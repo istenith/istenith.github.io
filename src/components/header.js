@@ -22,21 +22,11 @@ const StyledLink = styled(Link)`
   position: relative;
   display: inline-block;
   border-radius: 10px 10px 0px 0px;
-  /* border: 1px solid white; */
-  /* border:1px solid white; */
   @media screen and (max-width:1356px){
     font-size:40px;
   }
   &::before {
-    /* position: absolute;
-    content: ' ';
-    z-index: -1;
-    width: 25%;
-    top: 50%;
-    left: -15%;
-    height: 1px;
-    /* background:#161516; */
-    /* background: #E05215; */
+
     background: rgba(108, 50, 224, 0.3);
     transition: all 0.3s ease; */
   }
@@ -46,8 +36,7 @@ const StyledLink = styled(Link)`
   }
   transition: 0.2s;
   &:hover {
-    /* background: #E0521550; */
-    /* background:#161516; */
+
     background: rgba(22, 21, 22, 0.8);
     border-bottom: 0.5px solid rgba(108, 50, 224, 0.6);
     color: #fff;
@@ -64,10 +53,9 @@ const Menu = styled.div`
   height: 100vh;
   left: 0;
   z-index: 99;
-  /* border: 2px solid white; */
+
   background-color: rgba(22, 21, 22, 0.7);
   backdrop-filter: blur(10px);
-  /* box-shadow: 0 30px 40px rgba(0,0,0,1); */
   @media screen and (max-width: 700px) {
     width: 100vw;
   }
@@ -91,6 +79,7 @@ const SocialLinks = styled.div`
   width: 100%;
   bottom: 0;
   transform: translate(-50%, 0);
+
   div {
     flex: none;
     margin: auto 1%;
@@ -105,6 +94,9 @@ const SocialLinks = styled.div`
         width: 30px;
         height: 30px;
       }
+    }
+    svg:hover{
+      cursor: pointer;
     }
   }
 `
@@ -231,7 +223,7 @@ const Navbar = () => {
             <div>
               <Fade left delay={1400}>
                 <a href='https://www.instagram.com/teamistenith/?hl=en'>
-                  <InstagramIcon style={{ color: 'white' }} />
+                  <InstagramIcon style={{ color: 'white'}} />
                 </a>
               </Fade>
             </div>
