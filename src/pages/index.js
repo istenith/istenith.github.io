@@ -1,22 +1,22 @@
-import React, { useEffect, useState } from 'react'
-import styled from 'styled-components'
+import React, { useEffect, useState } from "react"
+import styled from "styled-components"
 // import ReactAnime from 'react-animejs'
 // import Zoom from 'react-reveal/Zoom';
 // import Flip from 'react-reveal/Flip';
-import 'aos/dist/aos.css'
-import Aos from 'aos'
-import Layout from '../components/layout'
+import "aos/dist/aos.css"
+import Aos from "aos"
+import Layout from "../components/layout"
 // import Projects from '../components/projects'
-import PhotoCarousel from '../components/carousel'
-import AboutUs from '../components/about'
-import SEO from '../components/seo'
+import PhotoCarousel from "../components/carousel"
+import AboutUs from "../components/about"
+import SEO from "../components/seo"
 // import UpcomingEvent from '../components/upcoming_event'
-import { ReactComponent as IsteLogo } from '../images/iste_logo_hollow.svg'
-import Tagline from '../components/tagline'
-import Footer from '../components/footer'
-import GalleryImage from './gallery'
-import Tilt from 'react-parallax-tilt'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { ReactComponent as IsteLogo } from "../images/iste_logo_hollow.svg"
+import Tagline from "../components/tagline"
+import Footer from "../components/footer"
+import GalleryImage from "./gallery"
+import Tilt from "react-parallax-tilt"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 const mainup = styled.div`
   background: #14a098;
@@ -32,7 +32,7 @@ const mainup = styled.div`
 `
 const LandingDiv = styled.div`
   padding: 2em;
-  ${'' /* margin-top:1vh; */}
+  ${"" /* margin-top:1vh; */}
   margin-bottom: 10vh;
   margin-top: 10vh;
   .text {
@@ -138,18 +138,18 @@ export default function IndexPage() {
   return (
     <>
       {/* replace from div code with below code I have commented to remove from under development status */}
-       <div
-        className='logo'
+      <div
+        className="logo"
         style={{
-          textAlign: 'center',
-          position: 'absolute',
-          top: '40%',
-          left: '50%',
-          transform: 'translate(-50%,-50%)',
+          textAlign: "center",
+          position: "absolute",
+          top: "40%",
+          left: "50%",
+          transform: "translate(-50%,-50%)",
         }}
       >
-        <IsteLogo className='img' width='300px' height='300px' />
-        <h2 style={{ fontSize: '40px', color: 'white', marginTop: '20px' }}>
+        <IsteLogo className="img" width="300px" height="300px" />
+        <h2 style={{ fontSize: "40px", color: "white", marginTop: "20px" }}>
           🚧 Website is under Development 🚧
         </h2>
       </div>
