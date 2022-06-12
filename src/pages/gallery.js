@@ -9,7 +9,6 @@ const Marquee = styled.div`
     width:70%;
     margin-left:15%;
     overflow:hidden;
-    /* border:1px solid #E05215; */
     border: 3px solid #260240;
     border-radius:10px;
     -webkit-box-shadow: 0px 4px 88px 0px rgba(0,0,0,0.99);
@@ -25,8 +24,6 @@ const GalImage = styled.div`
     padding:10px;
     display:flex;
     width:100%;
-    // overflow:hidden;
-    // overflow-x:scroll;
     position: relative;
     animation-name: marquee;
     animation-duration: 110s;
@@ -108,18 +105,11 @@ export default function GalleryImage() {
         while (img_width < 30 || img_width > 70) {
             img_width = Math.random() * 100
         }
-        // while(delay<30 || delay>60){
-        //     delay = Math.random()*60
-        // }
-
         var gal_css = {
-            // width: '' + img_width + '%',
-            // marginTop: '' + margTop + '%',
-            // height: '100%',
             width:'60vh',
             animationName: 'moving' + j,
             animationDuration: '' + delay + 's',
-            animationIterationCount: 'infinite',
+            animationIterationCount: 'infinite'
         }
         custom_image_css.push(gal_css)
     }
