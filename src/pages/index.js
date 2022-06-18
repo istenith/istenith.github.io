@@ -16,17 +16,6 @@ import Tagline from '../components/tagline'
 import Footer from '../components/footer'
 import GalleryImage from './gallery'
 import Tilt from 'react-parallax-tilt'
-import video from './3100081219.mp4'
-
-const video = styled.video`
-  min-width: 100%;
-  min-height: 100%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  z-index: -1;
-  transform: translateX(-50%) translateY(-50%);
-`
 
 const mainup = styled.div`
   background: #14a09800;
@@ -149,9 +138,6 @@ export default function IndexPage() {
 
   return (
     <>
-      <video className='video' autostart autoPlay muted loop>
-        <source src={video} type='video/mp4' />
-      </video>
       <div className='mainup'>
         <SEO title='Home' />
         <LandingDiv>
