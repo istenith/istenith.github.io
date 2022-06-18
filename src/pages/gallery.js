@@ -80,7 +80,7 @@ export default function GalleryImage() {
         query {
             allFile(
             filter: {
-                extension: { regex: "/(jpg)|(png)|(jpeg)/" }
+                extension: { regex: "/(webp)/" }
                 relativeDirectory: { eq: "gallery_images" }
             }
             ) {

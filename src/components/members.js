@@ -262,7 +262,6 @@ export default function Members() {
             name
             description
             link
-            image_link
             img {
               childImageSharp {
                 fluid {
@@ -284,7 +283,6 @@ export default function Members() {
             name
             description
             link
-            image_link
             img {
               childImageSharp {
                 fluid {
@@ -306,7 +304,6 @@ export default function Members() {
             name
             description
             link
-            image_link
             img {
               childImageSharp {
                 fluid {

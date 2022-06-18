@@ -1,25 +1,35 @@
-import React, { useEffect, useState } from "react"
-import styled from "styled-components"
+import React, { useEffect, useState } from 'react'
+import styled from 'styled-components'
 // import ReactAnime from 'react-animejs'
 // import Zoom from 'react-reveal/Zoom';
 // import Flip from 'react-reveal/Flip';
-import "aos/dist/aos.css"
-import Aos from "aos"
-import Layout from "../components/layout"
+import 'aos/dist/aos.css'
+import Aos from 'aos'
+import Layout from '../components/layout'
 // import Projects from '../components/projects'
-import PhotoCarousel from "../components/carousel"
-import AboutUs from "../components/about"
-import SEO from "../components/seo"
+import PhotoCarousel from '../components/carousel'
+import AboutUs from '../components/about'
+import SEO from '../components/seo'
 // import UpcomingEvent from '../components/upcoming_event'
-import { ReactComponent as IsteLogo } from "../images/iste_logo_hollow.svg"
-import Tagline from "../components/tagline"
-import Footer from "../components/footer"
-import GalleryImage from "./gallery"
-import Tilt from "react-parallax-tilt"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { ReactComponent as IsteLogo } from '../images/iste_logo_hollow.svg'
+import Tagline from '../components/tagline'
+import Footer from '../components/footer'
+import GalleryImage from './gallery'
+import Tilt from 'react-parallax-tilt'
+import video from './3100081219.mp4'
+
+const video = styled.video`
+  min-width: 100%;
+  min-height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+  transform: translateX(-50%) translateY(-50%);
+`
 
 const mainup = styled.div`
-  background: #14a098;
+  background: #14a09800;
   margin: 8rem 10rem 0;
   flex: 1 0 auto;
 
@@ -32,10 +42,11 @@ const mainup = styled.div`
 `
 const LandingDiv = styled.div`
   padding: 2em;
-  ${"" /* margin-top:1vh; */}
+  background
+  ${'' /* margin-top:1vh; */}
   margin-bottom: 10vh;
   margin-top: 10vh;
-  .text {
+    .text {
     margin: auto;
     color: white;
     grid-column: 2/3;
@@ -53,6 +64,7 @@ const LandingDiv = styled.div`
       text-align: center;
     }
   }
+
 
   .logo {
     text-align: center;
@@ -137,33 +149,19 @@ export default function IndexPage() {
 
   return (
     <>
-      {/* replace from div code with below code I have commented to remove from under development status */}
-      <div
-        className="logo"
-        style={{
-          textAlign: "center",
-          position: "absolute",
-          top: "40%",
-          left: "50%",
-          transform: "translate(-50%,-50%)",
-        }}
-      >
-        <IsteLogo className="img" width="300px" height="300px" />
-        <h2 style={{ fontSize: "40px", color: "white", marginTop: "20px" }}>
-          🚧 Website is under Development 🚧
-        </h2>
-      </div>
-
-      {/* <div className="mainup">
-        <SEO title="Home" />
+      <video className='video' autostart autoPlay muted loop>
+        <source src={video} type='video/mp4' />
+      </video>
+      <div className='mainup'>
+        <SEO title='Home' />
         <LandingDiv>
-          <div className="logo">
+          <div className='logo'>
             <Tilt>
-              <IsteLogo className="img" width="300px" height="300px" />
+              <IsteLogo className='img' width='300px' height='300px' />
             </Tilt>
           </div>
-          <div className="text">
-            <h1 className="name">ISTE NITH</h1>
+          <div className='text'>
+            <h1 className='name'>ISTE NITH</h1>
             <Tagline />
           </div>
         </LandingDiv>
@@ -180,7 +178,7 @@ export default function IndexPage() {
           <AboutUs />
         </div>
       </Layout>
-      <Footer /> */}
+      <Footer />
     </>
   )
 }
