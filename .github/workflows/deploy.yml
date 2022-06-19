@@ -8,10 +8,9 @@ jobs:
     build:
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@v2
-            - uses: enriikke/gatsby-gh-pages-action@v2.2.0
+            - uses: actions/checkout@v1
+            - uses: xmflsct/action-publish-gatsby@v1
               with:
-                  access-token: ${{ secrets.DEPLOY_SITE }}
-                  deploy-branch: master
-                  gatsby-args: --verbose
+                  token: ${{ secrets.DEPLOY_SITE }}
+                  publishBranch: master
 
