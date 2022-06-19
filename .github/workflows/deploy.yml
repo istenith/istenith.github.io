@@ -14,3 +14,4 @@ jobs:
                   access-token: ${{ secrets.DEPLOY_SITE }}
                   deploy-branch: master
                   gatsby-args: --verbose
+
