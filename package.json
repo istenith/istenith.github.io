@@ -59,7 +59,7 @@
     "typography-theme-fairy-gates": "^0.16.19"
   },
   "devDependencies": {
-    "prettier": "^2.6.1"
+    "prettier": "^2.6.2"
   },
   "keywords": [
     "gatsby"
@@ -68,7 +68,7 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css}\"",
     "start": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
@@ -81,4 +81,3 @@
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   }
-}
