@@ -389,7 +389,7 @@ export default function Members() {
   const [city, setCity] = useState('Bilaspur')
   const [state, setState] = useState('Himanchal Pradesh')
   const [about, setAbout] = useState(
-    'Hamara PR ka banda. Bahut Source hai iske'
+    'Loves to explore the world around Data. Loves to devote time in reading about the Defence forces and the analysis of field decision.'
   )
   const [key, setKey] = useState(-1)
 
