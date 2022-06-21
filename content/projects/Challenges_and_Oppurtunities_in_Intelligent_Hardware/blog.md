@@ -4,7 +4,7 @@ date: '2022-06-18'
 featuredImage: 'cover.jpeg'
 author: 'Vansh'
 email: '20bee028@nith.ac.in'
-tags: ['hardware', 'IoT', AI, 'artificial intelligence', 'embedded systems']
+tags: ['hardware', 'IoT', 'AI','embedded systems']
 ---
 
 ![Cover Image](./cover.jpeg)
