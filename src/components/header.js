@@ -61,6 +61,7 @@ const Menu = styled.div`
   }
   ul {
     text-align: center;
+    margin-bottom:23px;
     padding-top: 25vh;
   }
 `
@@ -170,6 +171,7 @@ const Navbar = () => {
                 Home
               </StyledLink>
             </Bounce>
+              <br/>
             <Bounce right delay={120}>
               <StyledLink
                 to='/projects'
@@ -182,6 +184,7 @@ const Navbar = () => {
                 Blog
               </StyledLink>
             </Bounce>
+            <br/>
             <Bounce right delay={140}>
               <StyledLink
                 to='/events'
@@ -194,6 +197,7 @@ const Navbar = () => {
                 Events
               </StyledLink>
             </Bounce>
+            <br/>
             <Bounce right delay={180}>
               <StyledLink
                 to='/members'
@@ -206,6 +210,7 @@ const Navbar = () => {
                 Members
               </StyledLink>
             </Bounce>
+            <br/>
             <Bounce right delay={220}>
               <StyledLink
                 to='/#about'
@@ -218,6 +223,7 @@ const Navbar = () => {
                 About
               </StyledLink>
             </Bounce>
+            <br/>
           </ul>
           <SocialLinks>
             <div>
