@@ -802,7 +802,7 @@ export default function Members() {
       </Flex>
       <Flex className='First_Year'>
         <div className='year'>
-          <h1>SECOND YEAR</h1>
+          <h1>FIRST YEAR</h1>
         </div>
         <div className='left-container container'>
           {data.allMembersXlsxSheet1.edges.map((row, i) =>
