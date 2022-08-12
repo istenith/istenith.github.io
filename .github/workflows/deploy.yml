@@ -1,18 +1,15 @@
-name: Deploy
+name: Gatsby Publish
 
 on:
-    push:
-        branches: [ source ]
+  push:
+    branches:
+      - source
 
 jobs:
-    build:
-        runs-on: ubuntu-latest
-        steps:
-            - uses: actions/checkout@v1
-            - uses: enriikke/gatsby-gh-pages-action@v2.2.0
-              with:
-                  access-token: ${{ secrets.DEPLOY_SITE }}
-                  deploy-branch: master
-                  gatsby-args: --verbose
-                  
-
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: enriikke/gatsby-gh-pages-action@v2.2.0
+        with:
+          access-token: ${{ secrets.DEPLOY_SITE }}
