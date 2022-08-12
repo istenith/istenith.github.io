@@ -224,6 +224,19 @@ const Navbar = () => {
               </StyledLink>
             </Bounce>
             <br/>
+                 <Bounce right delay={220}>
+              <StyledLink
+                to='https://join.istenith.com/'
+                activeClassName='active'
+                activeStyle={{
+                  fontWeight: 'bold',
+                  color: 'rgba(108, 50, 224, 0.7)',
+                }}
+              >
+                About
+              </StyledLink>
+            </Bounce>
+            <br/>
           </ul>
           <SocialLinks>
             <div>
