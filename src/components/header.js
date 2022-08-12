@@ -1,16 +1,17 @@
-import React, { useState } from 'react'
-import '../styles/header.css'
-import { Link } from 'gatsby'
-import styled from 'styled-components'
-import Hamburger from 'hamburger-react'
-import Fade from 'react-reveal/Fade'
-import InstagramIcon from '@mui/icons-material/Instagram'
-import FacebookIcon from '@mui/icons-material/Facebook'
-import LinkedInIcon from '@mui/icons-material/LinkedIn'
-import ISTE_Logo from '../images/iste_logo_hollow.svg'
-import Bounce from 'react-reveal/Bounce'
+import React, { useState } from "react"
+import "../styles/header.css"
+import { Link } from "gatsby"
+import styled from "styled-components"
+import Hamburger from "hamburger-react"
+import Fade from "react-reveal/Fade"
+import InstagramIcon from "@mui/icons-material/Instagram"
+import FacebookIcon from "@mui/icons-material/Facebook"
+import LinkedInIcon from "@mui/icons-material/LinkedIn"
+import ISTE_Logo from "../images/iste_logo_hollow.svg"
+import Bounce from "react-reveal/Bounce"
 
-const StyledLink = styled(Link)`
+const StyledLink = styled(Link)
+`
   width: 80%;
   font-size: 1.8vw;
   text-decoration: none;
@@ -42,12 +43,12 @@ const StyledLink = styled(Link)`
     color: #fff;
   }
 `
-const Navmenu = styled.div`
+const Navmenu = styled.div `
   position: absolute;
   top: 0;
   left: 0;
 `
-const Menu = styled.div`
+const Menu = styled.div `
   font-size: 1vw;
   width: 40vw;
   height: 100vh;
@@ -61,11 +62,11 @@ const Menu = styled.div`
   }
   ul {
     text-align: center;
-    margin-bottom:23px;
+    margin-bottom: 23px;
     padding-top: 25vh;
   }
 `
-const Menuburger = styled.div`
+const Menuburger = styled.div `
   position: absolute;
   right: 0;
   @media screen and (min-width: 699px) {
@@ -73,7 +74,7 @@ const Menuburger = styled.div`
   }
 `
 
-const SocialLinks = styled.div`
+const SocialLinks = styled.div `
   display: flex;
   position: absolute;
   left: 50%;
@@ -96,23 +97,23 @@ const SocialLinks = styled.div`
         height: 30px;
       }
     }
-    svg:hover{
+    svg:hover {
       cursor: pointer;
     }
   }
 `
-const Img = styled.img`
+const Img = styled.img `
   margin: 4%;
   width: 100px;
   position: absolute;
-  left:0;
-  top:0;
+  left: 0;
+  top: 0;
   @media screen and (max-width: 700px) {
     width: 70px;
   }
 `
 
-const ImgLogo = styled.img`
+const ImgLogo = styled.img `
   margin: 2%;
   z-index: 100;
   width: 100px;
@@ -124,7 +125,7 @@ const ImgLogo = styled.img`
   }
 `
 
-const ExtraForClose = styled.div`
+const ExtraForClose = styled.div `
   position: absolute;
   top: 0;
   left: 0;
@@ -134,154 +135,196 @@ const ExtraForClose = styled.div`
 `
 
 const Navbar = () => {
-  const [isOpen, setOpen] = useState(false)
+        const [isOpen, setOpen] = useState(false)
 
-  function clicked() {
-    setOpen(!isOpen)
-  }
+        function clicked() {
+            setOpen(!isOpen)
+        }
 
-  const ToggleNav = () => {
-    return (
-      <>
-        <ExtraForClose onClick={clicked}></ExtraForClose>
-        <Menu>
-          <Fade bottom delay={900}>
-            <Menuburger>
-              <Hamburger
-                toggled={isOpen}
-                toggle={setOpen}
-                color={'white'}
-                direction={'right'}
-              />
-            </Menuburger>
-            <div>
-              <Img src={ISTE_Logo} />
-            </div>
-          </Fade>
-          <ul>
-            <Bounce right delay={100}>
-              <StyledLink
-                to='/'
-                activeClassName='active'
-                activeStyle={{
-                  fontWeight: 'bold',
-                  color: 'rgba(108, 50, 224, 0.7)',
-                }}
-              >
-                Home
-              </StyledLink>
-            </Bounce>
-              <br/>
-            <Bounce right delay={120}>
-              <StyledLink
-                to='/projects'
-                activeClassName='active'
-                activeStyle={{
-                  fontWeight: 'bold',
-                  color: 'rgba(108, 50, 224, 0.7)',
-                }}
-              >
-                Blog
-              </StyledLink>
-            </Bounce>
-            <br/>
-            <Bounce right delay={140}>
-              <StyledLink
-                to='/events'
-                activeClassName='active'
-                activeStyle={{
-                  fontWeight: 'bold',
-                  color: 'rgba(108, 50, 224, 0.7)',
-                }}
-              >
-                Events
-              </StyledLink>
-            </Bounce>
-            <br/>
-            <Bounce right delay={180}>
-              <StyledLink
-                to='/members'
-                activeClassName='active'
-                activeStyle={{
-                  fontWeight: 'bold',
-                  color: 'rgba(108, 50, 224, 0.7)',
-                }}
-              >
-                Members
-              </StyledLink>
-            </Bounce>
-            <br/>
-            <Bounce right delay={220}>
-              <StyledLink
-                to='/#about'
-                activeClassName='active'
-                activeStyle={{
-                  fontWeight: 'bold',
-                  color: 'rgba(108, 50, 224, 0.7)',
-                }}
-              >
-                About
-              </StyledLink>
-            </Bounce>
-            <br/>
-                 <Bounce right delay={220}>
-              <StyledLink
-                to='https://join.istenith.com/'
-                activeClassName='active'
-                activeStyle={{
-                  fontWeight: 'bold',
-                  color: 'rgba(108, 50, 224, 0.7)',
-                }}
-              >
-                About
-              </StyledLink>
-            </Bounce>
-            <br/>
-          </ul>
-          <SocialLinks>
-            <div>
-              <Fade left delay={1400}>
-                <a href='https://www.instagram.com/teamistenith/?hl=en'>
-                  <InstagramIcon style={{ color: 'white'}} />
-                </a>
-              </Fade>
-            </div>
-            <div>
-              <Fade left delay={1200}>
-                <a href='https://www.facebook.com/teamistenith/'>
-                  <FacebookIcon style={{ color: 'white' }} />
-                </a>
-              </Fade>
-            </div>
-            <div>
-              <Fade left delay={1000}>
-                <a href='https://www.linkedin.com/company/iste-nith'>
-                  <LinkedInIcon style={{ color: 'white' }} />
-                </a>
-              </Fade>
-            </div>
-          </SocialLinks>
-        </Menu>
-      </>
-    )
-  }
+        const ToggleNav = () => {
+            return ( <
+                >
+                <
+                ExtraForClose onClick = { clicked } > < /ExtraForClose>{" "} <
+                Menu >
+                <
+                Fade bottom delay = { 900 } >
+                <
+                Menuburger >
+                <
+                Hamburger toggled = { isOpen }
+                toggle = { setOpen }
+                color = { "white" }
+                direction = { "right" }
+                />{" "} <
+                /Menuburger>{" "} <
+                div >
+                <
+                Img src = { ISTE_Logo }
+                />{" "} <
+                /div>{" "} <
+                /Fade>{" "} <
+                ul >
+                <
+                Bounce right delay = { 100 } >
+                <
+                StyledLink to = "/"
+                activeClassName = "active"
+                activeStyle = {
+                    {
+                        fontWeight: "bold",
+                        color: "rgba(108, 50, 224, 0.7)",
+                    }
+                } >
+                Home { " " } <
+                /StyledLink>{" "} <
+                /Bounce>{" "} <
+                br / >
+                <
+                Bounce right delay = { 120 } >
+                <
+                StyledLink to = "/projects"
+                activeClassName = "active"
+                activeStyle = {
+                    {
+                        fontWeight: "bold",
+                        color: "rgba(108, 50, 224, 0.7)",
+                    }
+                } >
+                Blog { " " } <
+                /StyledLink>{" "} <
+                /Bounce>{" "} <
+                br / >
+                <
+                Bounce right delay = { 140 } >
+                <
+                StyledLink to = "/events"
+                activeClassName = "active"
+                activeStyle = {
+                    {
+                        fontWeight: "bold",
+                        color: "rgba(108, 50, 224, 0.7)",
+                    }
+                } >
+                Events { " " } <
+                /StyledLink>{" "} <
+                /Bounce>{" "} <
+                br / >
+                <
+                Bounce right delay = { 180 } >
+                <
+                StyledLink to = "/members"
+                activeClassName = "active"
+                activeStyle = {
+                    {
+                        fontWeight: "bold",
+                        color: "rgba(108, 50, 224, 0.7)",
+                    }
+                } >
+                Members { " " } <
+                /StyledLink>{" "} <
+                /Bounce>{" "} <
+                br / >
+                <
+                Bounce right delay = { 220 } >
+                <
+                StyledLink to = "/#about"
+                activeClassName = "active"
+                activeStyle = {
+                    {
+                        fontWeight: "bold",
+                        color: "rgba(108, 50, 224, 0.7)",
+                    }
+                } >
+                About { " " } <
+                /StyledLink>{" "} <
+                /Bounce>{" "} <
+                br / >
+                <
+                Bounce right delay = { 220 } >
+                <
+                StyledLink to = "https://join.istenith.com/"
+                target = { "_blank" }
+                activeClassName = "active"
+                activeStyle = {
+                    {
+                        fontWeight: "bold",
+                        color: "rgba(108, 50, 224, 0.7)",
+                    }
+                } >
+                Wanna Join ISTE ? { " " } <
+                /StyledLink>{" "} <
+                /Bounce>{" "} <
+                br / >
+                <
+                /ul>{" "} <
+                SocialLinks >
+                <
+                div >
+                <
+                Fade left delay = { 1400 } >
+                <
+                a href = "https://www.instagram.com/teamistenith/?hl=en" >
+                <
+                InstagramIcon style = {
+                    { color: "white" } }
+                />{" "} <
+                /a>{" "} <
+                /Fade>{" "} <
+                /div>{" "} <
+                div >
+                <
+                Fade left delay = { 1200 } >
+                <
+                a href = "https://www.facebook.com/teamistenith/" >
+                <
+                FacebookIcon style = {
+                    { color: "white" } }
+                />{" "} <
+                /a>{" "} <
+                /Fade>{" "} <
+                /div>{" "} <
+                div >
+                <
+                Fade left delay = { 1000 } >
+                <
+                a href = "https://www.linkedin.com/company/iste-nith" >
+                <
+                LinkedInIcon style = {
+                    { color: "white" } }
+                />{" "} <
+                /a>{" "} <
+                /Fade>{" "} <
+                /div>{" "} <
+                /SocialLinks>{" "} <
+                /Menu>{" "} <
+                />
+            )
+        }
 
-  return (
-    <div className='Navbar' style={{ zIndex: '+1000' }}>
-      <span className='nav-logo'>
-        <Link style={{ textDecoration: 'none', color: 'white' }} to='/'>
-          {!isOpen ? <ImgLogo src={ISTE_Logo} /> : <></>}
-        </Link>
-      </span>
-      <Hamburger
-        toggled={isOpen}
-        toggle={setOpen}
-        color={'white'}
-        direction={'right'}
-      />
-      <Navmenu>{isOpen ? <ToggleNav /> : <></>}</Navmenu>
-    </div>
-  )
-}
+        return ( <
+            div className = "Navbar"
+            style = {
+                { zIndex: "+1000" } } >
+            <
+            span className = "nav-logo" >
+            <
+            Link style = {
+                { textDecoration: "none", color: "white" } }
+            to = "/" > { " " } {!isOpen ? < ImgLogo src = { ISTE_Logo }
+                /> : <></ > } { " " } <
+            /Link>{" "} <
+            /span>{" "} <
+            Hamburger toggled = { isOpen }
+            toggle = { setOpen }
+            color = { "white" }
+            direction = { "right" }
+            />{" "} <
+            Navmenu > {
+                isOpen ? < ToggleNav / > : < > < />}</Navmenu >
+                    <
+                    /div>
+            )
+        }
 
-export default Navbar
+        export default Navbar
