@@ -5,14 +5,14 @@
 
 ## Setting Up
 
-- Install `npm`
+- Install `yarn`
   Ubuntu\Debian:
-  `sudo apt install npm`
+  `sudo apt install yarn`
   Arch:
-  `sudo pacman -S npm nodejs`
+  `sudo pacman -S yarn nodejs`
 
 - Install Gatsby
-  `sudo npm install gatsby-cli`
+  `sudo yarn install gatsby-cli`
 
 - clone this repository
   `https://github.com/istenith/istenith.github.io.git`
@@ -20,10 +20,10 @@
 - `cd istenith.github.io`
 
 - Install all the dependencies
-  `npm install`
+  `yarn install`
 
 - Run a Development server
-  `gatsby develop` or `npm start`
+  `gatsby develop` or `yarn start`
   the server runs on port:8000 access it from your browser at:
   `https:\\localhost:8000`
   for GraphQl editor:
