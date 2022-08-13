@@ -233,7 +233,7 @@ const Navbar = () => {
                   color: 'rgba(108, 50, 224, 0.7)',
                 }}
               >
-                About
+               Join 
               </StyledLink>
             </Bounce>
             <br/>
