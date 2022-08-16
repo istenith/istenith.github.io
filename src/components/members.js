@@ -376,26 +376,28 @@ export default function Members() {
     }
 
     window.addEventListener("scroll", onScroll)
-    console.log(scrollDir)
+    // console.log(scrollDir)
 
     return () => window.removeEventListener("scroll", onScroll)
   }, [scrollDir])
-
-  const [name, setName] = useState("Albert Sharma")
-  const [desc, setDesc] = useState("Coordinator")
+  const [fulldata, setFullData] = useState(false);
+  const [name, setName] = useState("Abhay Raj Singh Rathod")
+  const [desc, setDesc] = useState("Ex-Joint Technical Secretary")
   const [img, setImg] = useState(iste_logo)
   const [linkedin, setLinkedin] = useState("")
-  const [branch, setBranch] = useState("Mathematics and Scientific Computing")
-  const [city, setCity] = useState("Bilaspur")
-  const [state, setState] = useState("Himanchal Pradesh")
+  const [branch, setBranch] = useState("Material Science and Engineering")
+  const [city, setCity] = useState("Gurugram")
+  const [state, setState] = useState("Haryana")
   const [about, setAbout] = useState(
-    "Loves to explore the world around Data. Loves to devote time in reading about the Defence forces and the analysis of field decision."
+    "A Material Science Engineer with a special love for softwares and their development, especially for the back-end development."
   )
   const [key, setKey] = useState(-1)
 
   const [mouse, setMouse] = useState({})
 
   function ReadName(event) {
+
+    setFullData(false);
     var Name = event.currentTarget.getAttribute("data-name")
     var Desc = event.currentTarget.getAttribute("data-description")
     var Linkedin = event.currentTarget.getAttribute("data-linkedin")
@@ -405,7 +407,7 @@ export default function Members() {
     var State = event.currentTarget.getAttribute("data-state")
     var About = event.currentTarget.getAttribute("data-about")
     var key = event.currentTarget.getAttribute("data-key")
-    console.log(Branch, Img, City, State, About)
+    // console.log(Branch, Img, City, State, About)
     setName(Name)
     setDesc(Desc)
     setLinkedin(Linkedin)
@@ -415,15 +417,17 @@ export default function Members() {
     setState(State)
     setAbout(About)
     setKey(key)
-    console.log(branch, img, city, state, about)
+    // console.log(branch, img, city, state, about)
     var key = event.currentTarget.getAttribute("data-key")
     setMouse(onFocus)
   }
 
   function mouseOut(event) {
     setMouse({})
+
+    // setFullData(true);
     var key = event.currentTarget.getAttribute("data-key")
-    console.log(key)
+    // console.log(key)
   }
   function Instagram(props) {
     return (
@@ -462,6 +466,17 @@ export default function Members() {
           d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
         ></path>
       </svg>
+    )
+  }
+  function fulldataShowCrowww(){
+    setFullData(true);
+  }
+  function TodaAurDikhao(props){
+    var desc = props.desc
+    return(
+      <div>
+        {!fulldata?<div>{desc.substring(0,150)}...<a onClick={fulldataShowCrowww}>Read More</a></div>:desc}
+      </div>
     )
   }
 
@@ -508,10 +523,6 @@ export default function Members() {
           </div>
         </div>
         <div className="selected_member_desc">
-          {/* <div className="selected_member_img">
-            {" "}
-            <img src={props.img} alt={props.name}></img>
-          </div> */}
           <div className="social_handle">
             <div className="social_links">
               <div className="linkedin">
@@ -531,7 +542,12 @@ export default function Members() {
               <h3>{props.branch}</h3>
             </div>
             <div className="desc">
-              <p>{props.about}</p>
+              <p>
+                {props.about.length<=150 ? 
+                  (props.about)
+                  :
+                  (<TodaAurDikhao desc={props.about}/>)
+                }</p>
             </div>
             <div className="location">
               <div className="area">{props.city}, </div>
@@ -546,7 +562,7 @@ export default function Members() {
   const myContainer = useRef(null)
 
   useEffect(() => {
-    console.log("myContainer..", myContainer.current.attributes.className)
+    // console.log("myContainer..", myContainer.current.attributes.className)
   })
 
   return (
