@@ -20,7 +20,7 @@
 - `cd istenith.github.io`
 
 - Install all the dependencies
-  `yarn install`
+  `yarn add`
 
 - Run a Development server
   `gatsby develop` or `yarn start`
