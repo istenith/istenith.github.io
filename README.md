@@ -11,9 +11,6 @@
   Arch:
   `sudo pacman -S yarn nodejs`
 
-- Install Gatsby
-  `sudo yarn install gatsby-cli`
-
 - clone this repository
   `https://github.com/istenith/istenith.github.io.git`
 
@@ -23,7 +20,7 @@
   `yarn install`
 
 - Run a Development server
-  `gatsby develop` or `yarn start`
+  `yarn start`
   the server runs on port:8000 access it from your browser at:
   `https:\\localhost:8000`
   for GraphQl editor:
