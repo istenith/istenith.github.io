@@ -36,7 +36,7 @@ const StyledLink = styled(Link)`
   }
   transition: 0.2s;
   &:hover {
-
+    font-size: 2.4vw;
     background: rgba(22, 21, 22, 0.8);
     border-bottom: 0.5px solid rgba(108, 50, 224, 0.6);
     color: #fff;
