@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import Img from "gatsby-image";
 import styled from "styled-components";
+import { Modal } from "../components/modal";
 import Fade from 'react-reveal/Fade'
+import "../styles/modal.css";
 
 const About = styled.div`
   color: white;
@@ -101,12 +103,19 @@ export default function AboutUs() {
   const fluid =
     data.file.childMarkdownRemark.frontmatter.featuredImage.childImageSharp
       .fluid;
+
+  const [showModal, setShowModal] = useState(false);
+  const openModal = () => { setShowModal(true); };
+
   return (
     <About id="about">
       <div className="content">
         <h1>ABOUT US</h1>
         <Fade>
+
           <div className="Image">
+             {/* onClick={openModal}>
+             {showModal ? <Modal setShowModal={setShowModal} Img={Img} fluid={fluid}/> : null} */}
             <Img fluid={fluid} style={{ borderRadius: "10px" }} />
           </div>
         </Fade>
