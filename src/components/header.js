@@ -226,14 +226,14 @@ const Navbar = () => {
             <br/>
                  <Bounce right delay={220}>
               <StyledLink
-                to='https://join.istenith.com/'
+                to='http://hult.istenith.com/'
                 activeClassName='active'
                 activeStyle={{
                   fontWeight: 'bold',
                   color: 'rgba(108, 50, 224, 0.7)',
                 }}
               >
-               Join 
+               Hult Prize
               </StyledLink>
             </Bounce>
             <br/>
