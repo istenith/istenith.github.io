@@ -9,6 +9,7 @@ import FacebookIcon from '@mui/icons-material/Facebook'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import ISTE_Logo from '../images/iste_logo_hollow.svg'
 import Bounce from 'react-reveal/Bounce'
+import newgif from '../images/new.gif'
 
 const StyledLink = styled(Link)`
   width: 80%;
@@ -224,16 +225,18 @@ const Navbar = () => {
               </StyledLink>
             </Bounce>
             <br/>
+            
                  <Bounce right delay={220}>
               <StyledLink
-                to='http://hult.istenith.com/'
+                to='http://hult.istenith.com/register'
                 activeClassName='active'
                 activeStyle={{
                   fontWeight: 'bold',
                   color: 'rgba(108, 50, 224, 0.7)',
-                }}
+                }} target="_blank"
               >
-               Hult Prize
+               Register for Hult Prize
+                <img src={newgif} alt='new_gif' style={{position: 'fixed'}} />
               </StyledLink>
             </Bounce>
             <br/>
