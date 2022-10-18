@@ -25,6 +25,7 @@ const StyledLink = styled(Link)`
   border-radius: 10px 10px 0px 0px;
   @media screen and (max-width:1356px){
     font-size:40px;
+    line-height: initial;
   }
   &::before {
 
@@ -37,7 +38,7 @@ const StyledLink = styled(Link)`
   }
   transition: 0.2s;
   &:hover {
-    font-size: 2.4vw;
+    font-size: 50px;
     background: rgba(22, 21, 22, 0.8);
     border-bottom: 0.5px solid rgba(108, 50, 224, 0.6);
     color: #fff;
