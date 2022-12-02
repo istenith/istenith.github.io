@@ -2,7 +2,7 @@
 title: "HULT PRIZE"
 date: "2020-01-04"
 featuredImage: "./hult1.png" 
-links: ["http://hultprizeat.com/nithamirpur"]
+links: ["http://hult.istenith.com"]
 ---
 The Hult Prize is an annual, year-long competition that crowd-sources ideas from college students after challenging them to solve a pressing social issue around topics such as food security, water access, energy, and education. It was founded by Ahmad Ashkar and is funded by Bertil Hult, the latter of whom, along with his family – founders of EF Education First – donates US$1 million in seed capital to help the winning team launch a social enterprise.
 
