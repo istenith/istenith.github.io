@@ -7,6 +7,7 @@ import SEO from "../components/seo"
 import "aos/dist/aos.css";
 import Aos from "aos";
 import Footer from "../components/footer"
+import Button from 'react-bootstrap/Button';
 
 
 const Container = styled.div`
@@ -44,6 +45,12 @@ const Container = styled.div`
     @media screen and (max-width:1312px){
       display:block;
       margin: 10px, 10px, 10px, 10px;
+      .btn-primary{
+        margin-left: 10px;
+        margin-top: 20px;
+        z-index: 10;
+
+      }
     }
     .Image {
       background: rgba(108, 50, 224, 0.55);
@@ -81,6 +88,20 @@ const Container = styled.div`
     padding:20px;
     margin-left:-3px;
     box-shadow: ;
+  }
+  a{
+    color: white!important;
+  }
+  .btn-primary{
+    z-index: 10;
+    margin-left: -168px;
+    margin-top: 196px;
+    background-color: rgb(108 50 224 / 45%);
+    color: white;
+    border-radius: 56px;
+    height: 46px;
+    width: 134px;
+    border-color: azure;
   }
   .gatsby-image-wrapper{
     img{
@@ -140,8 +161,9 @@ export default function Events() {
             <div
               dangerouslySetInnerHTML={{ __html: node.html }}
               className="EventContent"
-            >{/* </div> */}
-          </div></div>
+            ></div>
+            <div><Button class="eventBtn"><a href="">More info</a></Button>{' '}</div> 
+          </div>
         </Container>
       ))}
     </Layout>

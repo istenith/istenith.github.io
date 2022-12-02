@@ -1,6 +1,6 @@
 ---
 title: "PAHAL"
-date: "2020-01-04"
+date: "2022-11-07"
 featuredImage: "pahal_banner.png"
 links: ["https://istenith.com/pahal/"]
 ---
