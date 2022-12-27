@@ -47,7 +47,7 @@ const Container = styled.div`
       margin: 10px, 10px, 10px, 10px;
       .btn-primary{
         margin-left: 10px;
-        margin-top: 20px;
+        margin-top: 17px;
         z-index: 10;
 
       }
