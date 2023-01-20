@@ -233,7 +233,7 @@ const Navbar = () => {
             
                  <Bounce right delay={220}>
               <StyledLink
-                to='http://hult.istenith.com/register'
+                to='http://hult.istenith.com'
                 activeClassName='active'
                 activeStyle={{
                   fontWeight: 'bold',
