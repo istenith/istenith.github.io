@@ -340,6 +340,26 @@ export default function Members() {
           }
         }
       }
+      allMembersXlsxSheet5(sort: { fields: name, order: ASC }) {
+        edges {
+          node {
+            name
+            description
+            link
+            img {
+              childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            branch
+            city
+            state
+            about
+          }
+        }
+      }
     }
   `)
 
@@ -822,6 +842,89 @@ export default function Members() {
         </div>
         <div className="left-container container">
           {data.allMembersXlsxSheet1.edges.map((row, i) =>
+            i != key ? (
+              <Bounce>
+                <Member_Card
+                  className="Card"
+                  key={i}
+                  id={i}
+                  ref={myContainer}
+                  data-key={i}
+                  name={row.node.name}
+                  style={mouse}
+                  data-description={row.node.description}
+                  data-img={row.node.image_link}
+                  data-linkedin={row.node.link}
+                  data-name={row.node.name}
+                  data-branch={row.node.branch}
+                  data-city={row.node.city}
+                  data-state={row.node.state}
+                  data-about={row.node.about}
+                  onMouseOver={ReadName}
+                  onMouseOut={mouseOut}
+                >
+                  <Img fluid={row.node.img.childImageSharp.fluid}></Img>
+                  <div className="content" style={{ color: "white" }}>
+                    <div className="name">{row.node.name}</div>
+                  </div>
+                  {/* </Link> */}
+                </Member_Card>
+              </Bounce>
+            ) : (
+              <Bounce>
+                <Member_Card
+                  className="Card"
+                  key={i}
+                  id={i}
+                  ref={myContainer}
+                  data-key={i}
+                  style={{
+                    cursor: "pointer",
+                    transition: "0.3s ease-in-out",
+                    transform: "scale(1.0)",
+                  }}
+                  name={row.node.name}
+                  data-description={row.node.description}
+                  data-img={row.node.image_link}
+                  data-linkedin={row.node.link}
+                  data-name={row.node.name}
+                  data-branch={row.node.branch}
+                  data-city={row.node.city}
+                  data-state={row.node.state}
+                  data-about={row.node.about}
+                  onMouseOver={ReadName}
+                  onMouseOut={mouseOut}
+                >
+                  <Img fluid={row.node.img.childImageSharp.fluid}></Img>
+                  <div className="content" style={{ color: "white" }}>
+                    <div className="name">{row.node.name}</div>
+                  </div>
+                  {/* </Link> */}
+                </Member_Card>
+              </Bounce>
+            )
+          )}
+        </div>
+        <div className="right-container container">
+          <Selected_member
+            name={name}
+            desc={desc}
+            img={img}
+            linkedin={linkedin}
+            branch={branch}
+            city={city}
+            state={state}
+            about={about}
+          />
+        </div>
+        {/* </div> */}
+      </Flex>
+      <Flex className="First_Year">
+        <div className="year">
+          <h1>FIRST YEAR</h1>
+        </div>
+        <div className="left-container container">
+          {data.allMembersXlsxSheet5.edges.map((row, i) =>
             i != key ? (
               <Bounce>
                 <Member_Card
