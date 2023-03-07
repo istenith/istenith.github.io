@@ -232,18 +232,7 @@ const Navbar = () => {
             <br/>
             
                  <Bounce right delay={220}>
-              <StyledLink
-                to='http://hult.istenith.com'
-                activeClassName='active'
-                activeStyle={{
-                  fontWeight: 'bold',
-                  color: 'rgba(108, 50, 224, 0.7)',
-                }} target="_blank"
-              >
-               Register for Hult Prize
-                <img src={newgif} alt='new_gif' style={{position: 'fixed'}} />
-              </StyledLink>
-            </Bounce>
+                 </Bounce>
             <br/>
           </ul>
           <SocialLinks>
