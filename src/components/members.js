@@ -340,27 +340,7 @@ export default function Members() {
           }
         }
       }
-      allMembersXlsxSheet5(sort: { fields: name, order: ASC }) {
-        edges {
-          node {
-            name
-            description
-            link
-            img {
-              childImageSharp {
-                fluid {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-            branch
-            city
-            state
-            about
-          }
-        }
-      }
-    }
+     }
   `)
 
   const onFocus = {
@@ -401,15 +381,15 @@ export default function Members() {
     return () => window.removeEventListener("scroll", onScroll)
   }, [scrollDir])
   const [fulldata, setFullData] = useState(false);
-  const [name, setName] = useState("Abhay Raj Singh Rathod")
-  const [desc, setDesc] = useState("Ex-Joint Technical Secretary")
+  const [name, setName] = useState("Ayushi Sharma")
+  const [desc, setDesc] = useState("Secretary")
   const [img, setImg] = useState(iste_logo)
   const [linkedin, setLinkedin] = useState("")
-  const [branch, setBranch] = useState("Material Science and Engineering")
-  const [city, setCity] = useState("Gurugram")
-  const [state, setState] = useState("Haryana")
+  const [branch, setBranch] = useState("Civil Engineering")
+  const [city, setCity] = useState("Solan")
+  const [state, setState] = useState("Himachal Pradesh")
   const [about, setAbout] = useState(
-    "A Material Science Engineer with a special love for softwares and their development, especially for the back-end development."
+    "Passionate about Glaciology and High Mountain Environments."
   )
   const [key, setKey] = useState(-1)
 
@@ -587,9 +567,9 @@ export default function Members() {
 
   return (
     <FlexContainer>
-      <Flex className="Final_Year">
+<Flex className="Final_Year">
         <div className="year">
-          <h1>BATCH 2022</h1>
+          <h1>FINAL YEAR</h1>
         </div>
         <div className="left-container container">
           {data.allMembersXlsxSheet4.edges.map((row, i) =>
@@ -670,9 +650,10 @@ export default function Members() {
         </div>
         {/* </div> */}
       </Flex>
+
       <Flex className="Third_Year">
         <div className="year">
-          <h1>FINAL YEAR</h1>
+          <h1>THIRD YEAR</h1>
         </div>
         <div className="left-container container">
           {data.allMembersXlsxSheet3.edges.map((row, i) =>
@@ -753,9 +734,9 @@ export default function Members() {
         </div>
         {/* </div> */}
       </Flex>
-      <Flex className="Second_Year">
+        <Flex className="Second_Year">
         <div className="year">
-          <h1>THIRD YEAR</h1>
+          <h1>SECOND YEAR</h1>
         </div>
         <div className="left-container container">
           {data.allMembersXlsxSheet2.edges.map((row, i) =>
@@ -838,93 +819,10 @@ export default function Members() {
       </Flex>
       <Flex className="First_Year">
         <div className="year">
-          <h1>SECOND YEAR</h1>
-        </div>
-        <div className="left-container container">
-          {data.allMembersXlsxSheet1.edges.map((row, i) =>
-            i != key ? (
-              <Bounce>
-                <Member_Card
-                  className="Card"
-                  key={i}
-                  id={i}
-                  ref={myContainer}
-                  data-key={i}
-                  name={row.node.name}
-                  style={mouse}
-                  data-description={row.node.description}
-                  data-img={row.node.image_link}
-                  data-linkedin={row.node.link}
-                  data-name={row.node.name}
-                  data-branch={row.node.branch}
-                  data-city={row.node.city}
-                  data-state={row.node.state}
-                  data-about={row.node.about}
-                  onMouseOver={ReadName}
-                  onMouseOut={mouseOut}
-                >
-                  <Img fluid={row.node.img.childImageSharp.fluid}></Img>
-                  <div className="content" style={{ color: "white" }}>
-                    <div className="name">{row.node.name}</div>
-                  </div>
-                  {/* </Link> */}
-                </Member_Card>
-              </Bounce>
-            ) : (
-              <Bounce>
-                <Member_Card
-                  className="Card"
-                  key={i}
-                  id={i}
-                  ref={myContainer}
-                  data-key={i}
-                  style={{
-                    cursor: "pointer",
-                    transition: "0.3s ease-in-out",
-                    transform: "scale(1.0)",
-                  }}
-                  name={row.node.name}
-                  data-description={row.node.description}
-                  data-img={row.node.image_link}
-                  data-linkedin={row.node.link}
-                  data-name={row.node.name}
-                  data-branch={row.node.branch}
-                  data-city={row.node.city}
-                  data-state={row.node.state}
-                  data-about={row.node.about}
-                  onMouseOver={ReadName}
-                  onMouseOut={mouseOut}
-                >
-                  <Img fluid={row.node.img.childImageSharp.fluid}></Img>
-                  <div className="content" style={{ color: "white" }}>
-                    <div className="name">{row.node.name}</div>
-                  </div>
-                  {/* </Link> */}
-                </Member_Card>
-              </Bounce>
-            )
-          )}
-        </div>
-        <div className="right-container container">
-          <Selected_member
-            name={name}
-            desc={desc}
-            img={img}
-            linkedin={linkedin}
-            branch={branch}
-            city={city}
-            state={state}
-            about={about}
-          />
-        </div>
-        {/* </div> */}
-      </Flex>
-      <Flex className="First_Year">
-        <div className="year">
           <h1>FIRST YEAR</h1>
         </div>
         <div className="left-container container">
-          {data.allMembersXlsxSheet5.edges.map((row, i) =>
+          {data.allMembersXlsxSheet1.edges.map((row, i) =>
             i != key ? (
               <Bounce>
                 <Member_Card
