@@ -624,6 +624,7 @@ export default function Members() {
                   data-description={row.node.description}
                   data-img={row.node.image_link}
                   data-linkedin={row.node.link}
+                  data-insta={row.node.insta}
                   data-name={row.node.name}
                   data-branch={row.node.branch}
                   data-city={row.node.city}
@@ -677,6 +678,7 @@ export default function Members() {
                   data-description={row.node.description}
                   data-img={row.node.image_link}
                   data-linkedin={row.node.link}
+                  data-insta={row.node.insta}
                   data-name={row.node.name}
                   data-branch={row.node.branch}
                   data-city={row.node.city}
@@ -709,6 +711,7 @@ export default function Members() {
                   data-description={row.node.description}
                   data-img={row.node.image_link}
                   data-linkedin={row.node.link}
+                  data-insta={row.node.insta}
                   data-name={row.node.name}
                   data-branch={row.node.branch}
                   data-city={row.node.city}
@@ -761,6 +764,7 @@ export default function Members() {
                   data-description={row.node.description}
                   data-img={row.node.image_link}
                   data-linkedin={row.node.link}
+                  data-insta={row.node.insta}
                   data-name={row.node.name}
                   data-branch={row.node.branch}
                   data-city={row.node.city}
