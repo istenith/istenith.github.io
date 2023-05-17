@@ -4,6 +4,7 @@ import Image from "gatsby-image"
 import styled from "styled-components"
 import iste_logo from "../images/albert.jpeg"
 import Bounce from "react-reveal/Bounce"
+import { SettingsInputAntennaSharp } from "@mui/icons-material"
 
 const FlexContainer = styled.div`
   position: absolute;
@@ -262,6 +263,7 @@ export default function Members() {
             name
             description
             link
+            insta
             img {
               childImageSharp {
                 fluid {
@@ -283,6 +285,7 @@ export default function Members() {
             name
             description
             link
+            insta
             img {
               childImageSharp {
                 fluid {
@@ -304,6 +307,7 @@ export default function Members() {
             name
             description
             link
+            insta
             img {
               childImageSharp {
                 fluid {
@@ -325,7 +329,7 @@ export default function Members() {
             name
             description
             link
-            image_link
+            insta
             img {
               childImageSharp {
                 fluid {
@@ -384,6 +388,7 @@ export default function Members() {
   const [name, setName] = useState("Ayushi Sharma")
   const [desc, setDesc] = useState("Secretary")
   const [img, setImg] = useState(iste_logo)
+  const [insta, setInsta] = useState("")
   const [linkedin, setLinkedin] = useState("")
   const [branch, setBranch] = useState("Civil Engineering")
   const [city, setCity] = useState("Solan")
@@ -401,6 +406,7 @@ export default function Members() {
     var Name = event.currentTarget.getAttribute("data-name")
     var Desc = event.currentTarget.getAttribute("data-description")
     var Linkedin = event.currentTarget.getAttribute("data-linkedin")
+    var Instagram= event.currentTarget.getAttribute("data-insta")
     var Img = event.currentTarget.getAttribute("data-img")
     var Branch = event.currentTarget.getAttribute("data-branch")
     var City = event.currentTarget.getAttribute("data-city")
@@ -411,6 +417,7 @@ export default function Members() {
     setName(Name)
     setDesc(Desc)
     setLinkedin(Linkedin)
+    setInsta(Instagram)
     setImg("https://drive.google.com/thumbnail?id=" + Img)
     setBranch(Branch)
     setCity(City)
@@ -499,10 +506,7 @@ export default function Members() {
                   </a>
                 </div>
                 <div className="insta">
-                  <a
-                    href="https://www.instagram.com/teamistenith/?hl=en"
-                    target="_blank"
-                  >
+                   <a href={props.insta} target="_blank">
                     <Linkedin />
                   </a>
                 </div>
@@ -526,12 +530,13 @@ export default function Members() {
           <div className="social_handle">
             <div className="social_links">
               <div className="linkedin">
-                <a href={props.linkedin}>
+                <a href={props.linkedin} target="_blank">
                   <Instagram height="3vw" width="3vw" />
                 </a>
+                \ 
               </div>
               <div className="insta">
-                <a href="https://www.instagram.com/teamistenith/?hl=en">
+                 <a href={props.insta} target="_blank">
                   <Linkedin />
                 </a>
               </div>
@@ -586,6 +591,7 @@ export default function Members() {
                   data-description={row.node.description}
                   data-img={row.node.image_link}
                   data-linkedin={row.node.link}
+                  data-insta={row.node.insta}
                   data-name={row.node.name}
                   data-branch={row.node.branch}
                   data-city={row.node.city}
@@ -642,6 +648,7 @@ export default function Members() {
             desc={desc}
             img={img}
             linkedin={linkedin}
+            insta={insta}
             branch={branch}
             city={city}
             state={state}
@@ -726,6 +733,7 @@ export default function Members() {
             desc={desc}
             img={img}
             linkedin={linkedin}
+            insta={insta}
             branch={branch}
             city={city}
             state={state}
@@ -785,6 +793,7 @@ export default function Members() {
                   data-description={row.node.description}
                   data-img={row.node.image_link}
                   data-linkedin={row.node.link}
+                  data-insta={row.node.insta}
                   data-name={row.node.name}
                   data-branch={row.node.branch}
                   data-city={row.node.city}
@@ -809,6 +818,7 @@ export default function Members() {
             desc={desc}
             img={img}
             linkedin={linkedin}
+            insta={insta}
             branch={branch}
             city={city}
             state={state}
@@ -836,6 +846,7 @@ export default function Members() {
                   data-description={row.node.description}
                   data-img={row.node.image_link}
                   data-linkedin={row.node.link}
+                  data-insta={row.node.insta}
                   data-name={row.node.name}
                   data-branch={row.node.branch}
                   data-city={row.node.city}
@@ -868,6 +879,7 @@ export default function Members() {
                   data-description={row.node.description}
                   data-img={row.node.image_link}
                   data-linkedin={row.node.link}
+                  data-insta={row.node.insta}
                   data-name={row.node.name}
                   data-branch={row.node.branch}
                   data-city={row.node.city}
@@ -892,6 +904,7 @@ export default function Members() {
             desc={desc}
             img={img}
             linkedin={linkedin}
+            insta={insta}
             branch={branch}
             city={city}
             state={state}
