@@ -162,7 +162,7 @@ export default function Events() {
               dangerouslySetInnerHTML={{ __html: node.html }}
               className="EventContent"
             ></div>
-            <div><Button class="eventBtn"><a href="">More info</a></Button>{' '}</div> 
+            
           </div>
         </Container>
       ))}
