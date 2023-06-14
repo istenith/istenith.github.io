@@ -103,6 +103,44 @@ const Container = styled.div`
     width: 134px;
     border-color: azure;
   }
+
+
+
+
+   .btn-primary::after, .btn-primary::before{
+    content: '';
+    background-color: rgb(224 82 21 / 45%);
+    height: 50%;
+    width: 0;
+    position: absolute;
+    transition: 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    -webkit-transition: 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    z-index: -1;
+  }
+  .btn-primary:hover::before{
+    width: 100%;
+    right: 0;
+    left: auto;
+  }
+  .btn-primary::before{
+    top: 0;
+    left: 0;
+    right: auto;
+  }
+  .btn-primary:hover:after{
+    width: 100%;
+    left: 0;
+    right: auto;
+  }
+  .btn-primary::after{
+    bottom: 0;
+    right: 0;
+    left: auto;
+  }
+
+
+
+
   .gatsby-image-wrapper{
     img{
       ${"" /* @media screen and (max-width:1312px){
@@ -170,5 +208,5 @@ export default function Events() {
     <Footer />
     </>
   )
-
 }
+
