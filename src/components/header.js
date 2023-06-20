@@ -187,7 +187,7 @@ const Navbar = () => {
                   color: 'rgba(108, 50, 224, 0.7)',
                 }}
               >
-                Blog
+                Blogs
               </StyledLink>
             </Bounce>
             <br/>
@@ -214,19 +214,6 @@ const Navbar = () => {
                 }}
               >
                 Members
-              </StyledLink>
-            </Bounce>
-            <br/>
-            <Bounce right delay={220}>
-              <StyledLink
-                to='https://meet.istenith.com'
-                activeClassName='active'
-                activeStyle={{
-                  fontWeight: 'bold',
-                  color: 'rgba(108, 50, 224, 0.7)',
-                }}
-              >
-                Meet
               </StyledLink>
             </Bounce>
             <br/>
