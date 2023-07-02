@@ -1,95 +1,99 @@
-<p align='center'>
-  <img src="src/images/iste_logo_hollow.svg" alt="ISTE LOGO">
-  </p>
-<h1 align='center'>ISTE NITH</h1>
+<p align="center"><img src="src/static/images/iste-logo.png" width="120px"><h1 align="center"> ISTE-NITH </h1> </p>
 
-## Setting Up
-
-- Install `yarn`
-  Ubuntu\Debian:
-  `sudo apt install yarn`
-  Arch:
-  `sudo pacman -S yarn nodejs`
-
-- clone this repository
-  `https://github.com/istenith/istenith.github.io.git`
-
-- `cd istenith.github.io`
-
-- Install all the dependencies
-  `yarn install`
-
-- Run a Development server
-  `yarn start`
-  the server runs on port:8000 access it from your browser at:
-  `https:\\localhost:8000`
-  for GraphQl editor:
-  `https:\\localhost:8000\__graphql`
+## Setting up
+1. Install NodeJS & NPM on the system, can refer [this website](https://radixweb.com/blog/installing-npm-and-nodejs-on-windows-and-mac) for Windows/Mac, on Ubuntu\Debian `sudo apt-get install nodejs npm` and on Arch based distributuions with `sudo pacman -S nodejs npm`
+`
+2. Go to the project directory with `cd iste-2k23` and install the required dependencies with 
+```
+npm install
+```
+3. Run the development server with
+```
+npm start
+```
 
 ## Folder Structure
-
 ```
-|-- LICENSE
-|-- README.md
-|-- content           ------>this folder contains the .md files
-|   |-- about.md
-|   |-- media
-|   |   |-- horses.jpg
-|   |   `-- meme.jpg
-|   `-- projects
-|       |-- graphics-card.md
-|       `-- lost-lander.md
-|-- gatsby-browser.js
-|-- gatsby-config.js  ------>main Gatsby config file define ur plugins here
-|-- gatsby-node.js    ------>Gatsby Node API for making slugs and linking Templates
-|-- gatsby-ssr.js
-|-- package-lock.json
-|-- package.json
-`-- src
-    |-- components    ------>Folder to contain all the react components
-    |   |-- header.js
-    |   |-- header.module.scss
-    |   |-- layout.js
-    |   |-- projects.js
-    |   `-- seo.js
-    |-- images        ------>For images to be used in the website
-    |   `-- iste-logo-blue.png
-    |-- pages         ------>Put all the pages you define here
-    |   |-- 404.js
-    |   |-- index.js
-    |   `-- page-2.js
-    |-- templates     ------>Template for rendering the .md files
-    |   `-- project.js
-    `-- utils         ------>Typography library settings
-        `-- typography.js
+.
+├── package.json
+├── package-lock.json
+├── public
+│   ├── cards.css
+│   ├── events.css
+│   ├── home.css
+│   ├── index.html
+│   ├── navbar.css
+│   ├── particles.js
+│   └── styles.css
+├── README.md
+├── src
+│   ├── App.css
+│   ├── App.js
+│   ├── App.test.js
+│   ├── components
+│   │   ├── animatedCursor.jsx
+│   │   ├── AnimatedRoutes.jsx
+│   │   ├── BackgroundParticles.jsx
+│   │   ├── ChatBot.jsx
+│   │   ├── config
+│   │   │   └── particles_config.js
+│   │   ├── DarkMode
+│   │   │   ├── DarkMode.css
+│   │   │   ├── DarkMode.js
+│   │   │   ├── Moon.svg
+│   │   │   └── Sun.svg
+│   │   ├── GalleryPageWrapper.jsx
+│   │   ├── graphicAnimation.jsx
+│   │   ├── homePageComponents
+│   │   │   ├── aboutUs.jsx
+│   │   │   ├── domains.jsx
+│   │   │   ├── eventBrief.jsx
+│   │   │   └── homeIntro.jsx
+│   │   ├── ImageGallery.jsx
+│   │   ├── navbar.jsx
+│   │   └── particlesBackground.jsx
+│   ├── CSS
+│   │   └── ChatBot.css
+│   ├── data
+│   │   └── galleryData.js
+│   ├── index.css
+│   ├── index.js
+│   ├── logo.svg
+│   ├── pages
+│   │   ├── blogPage.jsx
+│   │   ├── eventsPage.jsx
+│   │   ├── home.jsx
+│   │   ├── ImageGalleryPage.jsx
+│   │   └── membersPage.jsx
+│   ├── reportWebVitals.js
+│   ├── setupTests.js
+│   └── static
+│       ├── images
+│       │   ├── events-background.jpg
+│       │   ├── hult1.JPG
+│       │   ├── iste-logo-blue.png
+│       │   └── teamiste-jan2k23.webp
+│       └── svgs
+│           ├── design-animation.json
+│           ├── finance-animation.json
+│           ├── intro-animation-light.json
+│           ├── istelogo.svg
+│           ├── pr-animation.json
+│           ├── resourceAnimation.json
+│           └── tech-animation.json
+└── yarn-error.log
 ```
-
 ## Contributing
 
-Fork this repository and clone it as mentioned above
-Create a new branch whenever you want to add a new feature and file a PR from that branch only. If the PR is accepted then delete that from locally and rebase your master branch with upstream:
-in the master branch:
-`git pull upstream --rebase master`
+- Fork the project to your github.
 
-## Styling
+- Clone the Repository.
 
-The project is currently set up to support both CSS ans SASS. It is strongly recommended to use SASS always.
-Use inline styling fot components if you can get away with it but feel free to make a separate SASS module and import it into your component.
-Try not to duplicate the style properties use the power of inheritance!
+- Create a seperate ```feature``` branch by `git checkout -b 'featureBranch'`
 
-Typography.js takes care of the fonts throughout the website see `src/utils/typography.js`. Predefined themes are also available for moe information refer to the [docs](https://kyleamathews.github.io/typography.js/)!
+- Commit your changes by `git commit -m 'amazingfeature'`
 
-## Troubleshooting
+- Push the changes by `git push origin featureBranch`
 
-I have not encountered any major error till now except this one
-`Internal watch failed: ENOSPC: System limit for number of file watchers reached`
+- Wait for reviews :")
 
-Fix: `sudo echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p`
-
-Since this occurred fairly often I made an alias for this in my `.zshrc`
-
-## Tutorials
-
-The [Official Gatsby Documentation](https://www.gatsbyjs.org/tutorial/) is the best resource for getting started with Gatsby and understand the basics.
-
-[The Great Gatsby Boot-Camp](https://www.youtube.com/watch?v=8t0vNu2fCCM&t=11105s)
