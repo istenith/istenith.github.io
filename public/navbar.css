@@ -1,0 +1,106 @@
+.navbar {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+  background-color: transparent;
+  padding: 0 20px;
+}
+
+.navbar a {
+  position: relative;
+  z-index: 1000;
+  text-decoration: none;
+  color: var(--link-color);
+}
+
+.navbar a:hover {
+  text-decoration: none;
+}
+
+.navbar li {
+  position: relative;
+  z-index: 1000;
+  list-style-type: none;
+}
+
+.logo {
+  font-size: 30px;
+}
+
+.nav-links {
+  position: relative;
+  z-index: 1000;
+  display: flex;
+  justify-content: flex-end;
+  width: 75%;
+}
+
+.nav-links li {
+  position: relative;
+  z-index: 1000;
+  color: var(--link-color);
+  font-size: 20px;
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+.navlink-text {
+  transform: translateY(10px);
+}
+
+.mobile-menu-icon {
+  display: none;
+  position: relative;
+  z-index: 1000;
+  border: none;
+  text-decoration: none;
+  font-size: 20px;
+  background: none;
+  color: var(--color-text-primary);
+}
+
+/* button { */
+
+@media (max-width: 820px) {
+  .logo {
+    position: relative;
+    /* top: 15px;
+      left: 305px; */
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-links-mobile {
+    position: absolute;
+    display: block;
+    list-style: none;
+    box-shadow: rgba(50, 50, 93, 0.23) 0px 50px 100px -20px,
+      rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    left: 0;
+    top: 10%;
+    transition: all 0.5s ease-in-out;
+    width: 100%;
+    background: transparent;
+    background-color: var(--body-background);
+    padding: 0; /* Added padding to remove default padding */
+    margin: 0; /* Added margin to remove default margin */
+  }
+
+  ul li {
+    padding: 32px;
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+    text-align: center;
+  }
+
+  .mobile-menu-icon {
+    position: absolute;
+    display: block;
+    right: 20px;
+  }
+}

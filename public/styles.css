@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;800&display=swap");
+:root {
+  /* fonts */
+  --font-inter: Inter;
+
+  /* font sizes */
+  --font-size-11xl: 30px;
+  --font-size-8xl: 27px;
+  --font-size-41xl: 60px;
+  --font-size-16xl: 35px;
+  --font-section-heading: 2.5rem;
+  --font-subheading: 1.4rem;
+  --font-size-paragraph: 0.8rem;
+
+  /* Colors */
+  --color-red: #e8505b;
+  --color-blue: #4e95fe;
+  --color-dark-blue: #02275e;
+  --color-yellow: #ffd966;
+  --color-purple: #892be0;
+  --color-dark-purple: #33085c;
+  --color-green: #00d085;
+  --color-white-text: #dddddd;
+  --dark-body-background: #131418;
+
+  /* Theme Colors */
+  --body-background: #fff;
+  --footer-background: #ddd;
+  --body-darker-background: #bbb;
+  --body_color: #000;
+  --link-color: navy;
+  --color-text-primary: #121212;
+  --color-text-secondary: #191919;
+  --color-text-tertiary: #2e2e2e;
+  --variant-color: var(--color-red);
+  --scroll-start-color: var(--color-blue);
+  --scroll-end-color: var(--color-dark-blue);
+}
+
+[data-theme="dark"] {
+  --body-background: #131418;
+  /* --body-background : #000; */
+  --footer-background: #222;
+  --body-darker-background: #555;
+  --body_color: #fff;
+  /* --link-color : #129eeb; */
+  --link-color: #892be0;
+  --color-text-primary: #dddddd;
+  --color-text-secondary: #bfbfbf;
+  --color-text-tertiary: #7e7e7e;
+  --variant-color: var(--color-yellow);
+  --scroll-start-color: var(--color-purple);
+  --scroll-end-color: var(--color-dark-purple);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* transition: all 0.1s ease-in-out; */
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  overflow: auto;
+  background-color: var(--body-background);
+  color: var(--color-text-primary);
+  overflow-x: hidden;
+}
+
+.gallery-page {
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--scroll-end-color);
+  background: -webkit-linear-gradient(
+    0deg,
+    var(--scroll-end-color) 0%,
+    var(--scroll-start-color) 100%
+  );
+  background: linear-gradient(
+    0deg,
+    var(--scroll-end-color) 0%,
+    var(--scroll-start-color) 100%
+  );
+  border-radius: 8px;
+}
+
+.center-header-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  margin: auto;
+}
+
+.center-heading {
+  font-size: var(--font-section-heading);
+  font-weight: 400;
+  padding-bottom: 4%;
+  text-align: center;
+}
