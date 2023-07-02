@@ -11,6 +11,7 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "babel-jest": "^29.5.0",
     "framer-motion": "^10.12.16",
     "gsap": "^3.12.1",
     "jest-canvas-mock": "^2.5.2",
