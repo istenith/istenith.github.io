@@ -11,7 +11,6 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-    "babel-jest": "^29.5.0",
     "framer-motion": "^10.12.16",
     "gsap": "^3.12.1",
     "jest-canvas-mock": "^2.5.2",
@@ -45,6 +44,14 @@
       "react-app/jest"
     ]
   },
+  "jest": {
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest"
+    },
+    "transformIgnorePatterns": [
+      "/node_modules/(?!(react-markdown|vfile))/"
+    ]
+  },
   "browserslist": {
     "production": [
       ">0.2%",
@@ -58,7 +65,12 @@
     ]
   },
   "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "7.21.11",
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@babel/preset-env": "^7.22.5",
+    "@babel/preset-react": "^7.22.5",
+    "babel-jest": "^29.5.0",
+    "babel-preset-react-app": "^10.0.1",
+    "esm": "^3.2.25",
     "gh-pages": "^5.0.0"
   }
 }
