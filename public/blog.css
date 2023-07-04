@@ -123,7 +123,8 @@
   width: 60%;
   border-radius: 5px;
   margin: auto;
-  color: black;
+  color: var(--color-grey-primary);
+  background-color: var(--color-grey-primary);
 }
 
 .search-icon {

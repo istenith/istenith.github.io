@@ -1,7 +1,6 @@
 // eslint-disable-next-line
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-
 export function BlogCard(props) {
   const navigate = useNavigate();
   const navigatetoblogDetails = () => {
@@ -21,6 +20,9 @@ export function BlogCard(props) {
             <img src={props.image} alt="blog-img" className="blogImage" />
             <h3 className="blogName ">{props.blog_title}</h3>
           </div>
+          <br />
+          <h4 className="blogCompany">{props.author}</h4>
+          <div className="blog-description">{props.description}</div>
           <div className="displayStack__1">
             <div className="tagsContainer">
               {props.tags.map((tag, index) => (
@@ -34,10 +36,9 @@ export function BlogCard(props) {
               ))}
             </div>
           </div>
-          <h3 className="blogCompany">{props.author}</h3>
-          <div className="blog-description">{props.description}</div>
         </div>
       </div>
     </div>
   );
 }
+

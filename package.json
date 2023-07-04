@@ -1,8 +1,8 @@
 {
   "name": "istenith.github.io",
-  "version": "0.2.0",
-  "homepage": "https://istenith.github.io",
+  "version": "0.1.0",
   "private": true,
+  "homepage": "http://istenith.github.io",
   "dependencies": {
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
@@ -13,7 +13,6 @@
     "@testing-library/user-event": "^13.5.0",
     "framer-motion": "^10.12.16",
     "gsap": "^3.12.1",
-    "jest-canvas-mock": "^2.5.2",
     "lottie-react": "^2.4.0",
     "pace-js": "^1.2.4",
     "particles.js": "^2.0.0",
@@ -31,8 +30,6 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "predeply": "npm run build",
-    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -42,14 +39,6 @@
     "extends": [
       "react-app",
       "react-app/jest"
-    ]
-  },
-  "jest": {
-    "transform": {
-      "^.+\\.jsx?$": "babel-jest"
-    },
-    "transformIgnorePatterns": [
-      "/node_modules/(?!(react-markdown|vfile))/"
     ]
   },
   "browserslist": {
@@ -62,6 +51,14 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
+    ]
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest"
+    },
+    "transformIgnorePatterns": [
+      "/node_modules/(?!(react-markdown|vfile))/"
     ]
   },
   "devDependencies": {

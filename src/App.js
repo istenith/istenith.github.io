@@ -13,7 +13,7 @@ import Footer from "./components/footer";
 const App = () => {
   return (
     <>
-      <Preloader />
+      {/* <Preloader /> */}
       <AnimatedCursor />
       <HashRouter>
         <Headroom>
