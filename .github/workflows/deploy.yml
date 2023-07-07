@@ -1,29 +1,10 @@
-# name: Deploy
-
-# on:
-#     push:
-#         branches: [ source ]
-
-# jobs:
-#     build:
-#         runs-on: ubuntu-latest
-#         steps:
-#             - uses: actions/checkout@v1
-#             - uses: enriikke/gatsby-gh-pages-action@v2.2.0
-#               with:
-#                   access-token: ${{ secrets.DEPLOY_SITE }}
-#                   deploy-branch: master
-#                   gatsby-args: --verbose
-
 name: Deploy to GitHub Pages
 
-# Controls when the action will run.
 on:
   push:
     branches:
       - source
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -48,3 +29,10 @@ jobs:
         with:
           deploy_key: ${{ secrets.DEPLOY_SITE }}
           publish_dir: ./build
+          publish_branch: master
+          allow_empty_commit: false
+          keep_files: false
+          force_orphan: false
+          enable_jekyll: false
+          disable_nojekyll: false
+          exclude_assets: .github
