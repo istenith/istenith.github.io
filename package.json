@@ -1,7 +1,8 @@
 {
-  "name": "iste-site",
+  "name": "istenith.github.io",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://istenith.github.io",
   "dependencies": {
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
@@ -52,5 +53,22 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest"
+    },
+    "transformIgnorePatterns": [
+      "/node_modules/(?!(react-markdown|vfile))/"
+    ]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@babel/preset-env": "^7.22.5",
+    "@babel/preset-react": "^7.22.5",
+    "babel-jest": "^29.5.0",
+    "babel-preset-react-app": "^10.0.1",
+    "esm": "^3.2.25",
+    "gh-pages": "^5.0.0"
   }
 }

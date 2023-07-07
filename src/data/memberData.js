@@ -3,6 +3,7 @@
 // import AmbasthaImg from "../static/members/mehulambastha.webp";
 
 //Final Year
+
 import AlbertImg from "../static/finalYrimg/Albert.webp";
 import DeepakImg from "../static/finalYrimg/deepak.webp";
 import DevImg from "../static/finalYrimg/Dev.webp";
@@ -21,6 +22,7 @@ import ShrutiImg from "../static/finalYrimg/Shruti.webp";
 import SumitImg from "../static/finalYrimg/sumit.webp";
 import VanshImg from "../static/finalYrimg/Vansh.webp";
 import VanshikaImg from "../static/finalYrimg/Vanshika2.webp";
+
 
 //Third Year
 import AdityaImg from "../static/members/aditya.webp";
@@ -587,6 +589,7 @@ const profileData = [
   {
     section: "secondYear",
     name: "Ayan Choradia",
+
     branch: "Electrical Engineering",
     location: "Jodhpur, Rajasthan",
     instagram: "https://instagram.com/ayanchoradia?igshid=ZDdkNTZiNTM=",

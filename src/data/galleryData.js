@@ -1,3 +1,4 @@
+
 import Img01 from "../static/images/Hult_Images/Hult_01N.webp";
 import Img02 from "../static/images/Hult_Images/Hult_02N.webp";
 import Img03 from "../static/images/Hult_Images/Hult_03N.webp";
@@ -29,6 +30,7 @@ import Img28 from "../static/images/Technex_Images/Technex 02.webp";
 import Img29 from "../static/images/Technex_Images/Technex 03.webp";
 import Img30 from "../static/images/Technex_Images/Technex 04.webp";
 import Img31 from "../static/images/Technex_Images/Technex 05.webp";
+
 let data = [
   {
     id: 30,
@@ -186,6 +188,142 @@ let data = [
     imgSrc: Img11,
     author: "Hult Prize",
   },
+  {
+    id: 26,
+    imgSrc: Img26,
+    author: "Hult Prize",
+  },
+  {
+    id: 27,
+    imgSrc: Img27,
+    author: "Hult Prize",
+  },
+  {
+    id: 28,
+    imgSrc: Img28,
+    author: "Hult Prize",
+  },
+  {
+    id: 29,
+    imgSrc: Img29,
+    author: "Hult Prize",
+  },
+  {
+    id: 30,
+    imgSrc: Img30,
+    author: "Hult Prize",
+  },
+  {
+    id: 31,
+    imgSrc: Img31,
+    author: "Hult Prize",
+  },
+  {
+    id: 32,
+    imgSrc: Img32,
+    author: "Hult Prize",
+  },
+  {
+    id: 33,
+    imgSrc: Img33,
+    author: "",
+  },
+  {
+    id: 34,
+    imgSrc: Img34,
+    author: "Hult Prize",
+  },
+  {
+    id: 35,
+    imgSrc: Img35,
+    author: "Hult Prize",
+  },
+  {
+    id: 36,
+    imgSrc: Img36,
+    author: "Hult Prize",
+  },
+  {
+    id: 42,
+    imgSrc: Img42,
+    author: "Pahal",
+  },
+  {
+    id: 43,
+    imgSrc: Img43,
+    author: "Pahal",
+  },
+  {
+    id: 44,
+    imgSrc: Img44,
+    author: "Pahal",
+  },
+  {
+    id: 45,
+    imgSrc: Img45,
+    author: "Pahal",
+  },
+  {
+    id: 46,
+    imgSrc: Img46,
+    author: "Pahal",
+  },
+  {
+    id: 47,
+    imgSrc: Img47,
+    author: "Pahal",
+  },
+  {
+    id: 48,
+    imgSrc: Img48,
+    author: "Pahal",
+  },
+  {
+    id: 49,
+    imgSrc: Img49,
+    author: "Pahal",
+  },
+  {
+    id: 50,
+    imgSrc: Img50,
+    author: "Pahal",
+  },
+  {
+    id: 51,
+    imgSrc: Img51,
+    author: "Pahal",
+  },
+  {
+    id: 52,
+    imgSrc: Img52,
+    author: "Pahal",
+
+  },
+  {
+    id: 53,
+    imgSrc: Img53,
+    author: "Technex",
+  },
+  {
+    id: 54,
+    imgSrc: Img54,
+    author: "Technex",
+  },
+  {
+    id: 55,
+    imgSrc: Img55,
+    author: "Technex",
+  },
+  {
+    id: 56,
+    imgSrc: Img56,
+    author: "Technex",
+  },
+  {
+    id: 57,
+    imgSrc: Img57,
+    author: "Technex",
+  }
 ];
 
 export default data;
