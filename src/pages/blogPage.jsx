@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import blogData from "../data/blogData";
 import { BlogCard } from "../components/blogCards";
+import Footer from "../components/footer";
 // eslint-disable-next-line
 import SearchIcon from "@mui/icons-material/Search";
 
@@ -35,7 +36,7 @@ const BlogPage = () => {
       transition={{ duration: 0.5 }}
     >
       <div className="center-header-div">
-        <h2 className="center-heading">Blogs</h2>
+        <h2 className="center-heading">BLOGS</h2>
       </div>
 
       <SearchIcon className="search-icon" />
@@ -44,7 +45,7 @@ const BlogPage = () => {
           type="text"
           value={searchQuery}
           onChange={handleSearch}
-          placeholder="Search blogs..."
+          placeholder=" search blogs..."
         />
       </div>
 
@@ -70,6 +71,7 @@ const BlogPage = () => {
           />
         ))}
       </div>
+      <Footer />
     </motion.div>
   );
 };

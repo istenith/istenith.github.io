@@ -28,7 +28,7 @@
   position: absolute;
   width: calc(100% + 14px);
   height: 100%;
-  background-color: var(--dark-body-background);
+  background-color: var(--body-background);
   border-left: 2px solid;
   right: -8px;
   animation: cursor 0.8s infinite, typing 10s steps(14) infinite;
@@ -43,15 +43,15 @@
 @keyframes words {
   0%,
   33% {
-    content: "FAMILY";
+    content: "A FAMILY";
   }
   34%,
   66% {
-    content: "ORGANISATION";
+    content: "AN ORGANISATION";
   }
   67%,
   100% {
-    content: "TEAM";
+    content: "A TEAM";
   }
 }
 
@@ -64,7 +64,7 @@
   33%,
   66%,
   99% {
-    width: calc(100% + 8px);
+    width: calc(100% + 12px);
   }
 }
 
@@ -206,6 +206,10 @@
   min-height: 80vh;
 }
 
+.domain-cards-container {
+  padding-top: 0;
+}
+
 .domain-card {
   flex: 1;
   text-align: center;
@@ -215,6 +219,7 @@
 
 .domain-card h2 {
   font-size: var(--font-subheading);
+  font-weight: 600;
 }
 .domain-card p {
   font-size: var(--font-size-paragraph);
@@ -232,14 +237,11 @@
 /* Contact Section */
 .contact {
   position: relative;
-  min-height: 100vh;
   padding: 50px 100px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  /* background: url(../src/static/images/contact-bg.jpeg);
-  background-size: cover; */
 }
 
 .contact .content {
@@ -342,18 +344,22 @@
   color: #666;
 }
 .contactForm .inputBox input:focus ~ span,
-.contactForm
-  .inputBox
-  input:valid
-  ~ span
-  .contactForm
-  .inputBox
-  textarea:focus
-  ~ span,
+.contactForm .inputBox input:valid ~ span,
+.contactForm .inputBox textarea:focus ~ span,
 .contactForm .inputBox textarea:valid ~ span {
   color: var(--link-color);
   font-size: 12px;
   transform: translateY(-20px);
+}
+
+.contactForm .inputBox input:valid ~ span,
+.contactForm .inputBox textarea:valid ~ span {
+  transform: translateY(-20px);
+}
+
+.contactForm .inputBox input:not(:valid):placeholder-shown ~ span,
+.contactForm .inputBox textarea:not(:valid):placeholder-shown ~ span {
+  transform: translateY(0);
 }
 
 .contactForm .submit-btn {
@@ -364,6 +370,18 @@
   cursor: pointer;
   padding: 10px;
   font-size: 18px;
+  border-radius: 10px;
+  transition: 0.3 ease-in-out;
+}
+
+.contactForm .submit-btn:hover {
+  background: #8e0279;
+  background-image: -webkit-linear-gradient(top, #8e0279, #380066);
+  background-image: -moz-linear-gradient(top, #8e0279, #380066);
+  background-image: -ms-linear-gradient(top, #8e0279, #380066);
+  background-image: -o-linear-gradient(top, #8e0279, #380066);
+  background-image: linear-gradient(to bottom, #8e0279, #380066);
+  text-decoration: none;
 }
 
 @media (max-width: 1100px) {
@@ -422,6 +440,9 @@
   .cards-whole-container {
     background-image: none !important;
     background: transparent;
+  }
+  .about-us-box p {
+    font-size: 1.1rem;
   }
 }
 

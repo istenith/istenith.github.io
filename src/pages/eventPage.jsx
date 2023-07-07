@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import simpleParallax from "simple-parallax-js";
 import { motion } from "framer-motion";
-import firstImage from "../static/images/test_wp1.jpg";
-import secondImage from "../static/images/test_wp2.jpg";
-import thirdImage from "../static/images/pahal_img.JPG";
-import fourthImage from "../static/images//test_wp3.jpg";
+import firstImage from "../static/images/hult_events.jpg";
+import secondImage from "../static/images/prodyy_events.jpg";
+import thirdImage from "../static/images/pahal_events.jpg";
+import fourthImage from "../static/images//prarambh_events.jpg";
 import Footer from "../components/footer";
 
 const EventPage = () => {
@@ -52,24 +52,16 @@ const EventPage = () => {
 
             <div className="col-lg-4 txt text-1 content">
               <h1>Hult Prize</h1>
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Aliquam consectetur distinctio placeat, ex, error aut ea
-                explicabo earum laudantium rem at id nostrum! Sapiente alias
-                quam veniam non magni error.
-              </p>
+              <p>The Hult Prize is an annual international competition that challenges university students from around the world to develop innovative solutions to pressing global issues. It was founded by Ahmad Ashkar and is funded by Bertil Hult, the latter of whom, along with his family, donates US$1 million in seed capital to help the winning team launch a social enterprise. The Prize is a partnership between Hult International Business School and the United Nations Foundation. The Hult Prize has been referred to as the "Nobel Prize for students" by Nobel laureate Muhammad Yunus.</p>
+            <p>At ISTE NITH, we are proud to host and conduct the on-campus round of the Hult Prize. </p>
             </div>
           </div>
 
           <div className="row">
             <div className="col-lg-4 txt text-2 content">
               <h1>Prodyogiki</h1>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
-                non voluptatibus itaque illum, eum eius sequi iure similique
-                quasi, rem temporibus ab magni fugit laborum odio facilis
-                excepturi? Deserunt, repellendus!
-              </p>
+              <p>Prodyogiki, an exciting event organized by ISTE NIT Hamirpur. It is a platform where technology and engineering enthusiasts come together to showcase their skills and explore the practical aspects of what they have learned.It offers a variety of engaging activities, including interactive sessions, workshops, events, quizzes, and more.</p>
+            <p>At ISTE NIT Hamirpur, we are dedicated to promoting a culture of technological advancement. Prodyogiki serves as a melting pot, bringing together different branches of engineering and technical fields, and setting new standards of excellence at NIT Hamirpur.</p>
             </div>
 
             <div className="col-lg-6 img two">
@@ -84,24 +76,14 @@ const EventPage = () => {
 
             <div className="col-lg-4 txt text-3 content">
               <h1>Pahal</h1>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad
-                eaque maiores dignissimos nam iure aperiam, ratione molestias
-                laboriosam neque iusto beatae eligendi eius vel eveniet autem
-                dolore, perferendis, numquam veniam.
-              </p>
+              <p>Team ISTE at NIT Hamirpur is taking an initiative called PAHAL to support freshers during the admission process. We understand that starting college can be overwhelming, and that's why we are here to help. Our dedicated help desk and in-person guidance will provide you with the assistance and information you need to navigate the admission process smoothly. With PAHAL, we extend a helping hand, ensuring a confident start to your academic journey and making your transition to college life a seamless experience at NIT Hamirpur.</p>
             </div>
           </div>
 
           <div className="row">
             <div className="col-lg-4 txt text-4 content">
               <h1>Prarambh</h1>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
-                incidunt ad quaerat. Veniam tempore possimus aut totam sunt
-                corrupti suscipit magni blanditiis, quia necessitatibus iste
-                fugiat facilis sed fuga voluptatum?
-              </p>
+              <p>"Prarambh" – an exciting event by ISTE NIT Hamirpur that introduces you to the inspiring world of ISTE, a technical society dedicated to fostering innovation and excellence. Experience thrilling technical competitions, engaging workshops, thought-provoking seminars, and much more. Join us to unlock your potential, forge meaningful connections, and embark on a remarkable college journey filled with growth and success. Get ready to ignite your passion with ISTE NIT Hamirpur at Prarambh!</p>
             </div>
 
             <div className="col-lg-6 img five">
