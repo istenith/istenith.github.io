@@ -1,6 +1,10 @@
 import React from "react";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import BlueLogo from "../static/images/iste-logo-blue.png";
+import instagramIcon from "../static/images/icons/instagram.png";
+import facebookIcon from "../static/images/icons/facebook.png";
+import githubIcon from "../static/images/icons/github.png";
+import twitterIcon from "../static/images/icons/twitter.png";
+import linkedinIcon from "../static/images/icons/linkedin.png";
 
 const footer = () => {
   return (
@@ -8,7 +12,12 @@ const footer = () => {
       <div className="sb__footer  section__padding">
         <div className="sb__footer-links">
           <div className="sb__footer-links-div">
-            <h4>ISTE LOGO</h4>
+            <img
+              src={BlueLogo}
+              className="sb__footer-isteLogo"
+              alt=""
+              srcset=""
+            />
           </div>
 
           <div className="sb__footer-links-div">
@@ -28,24 +37,79 @@ const footer = () => {
             <h4>Connect with Us</h4>
             <div className="socialmedia">
               <p>
-                <InstagramIcon
-                  style={{ color: "#892be0", fontSize: "30px", width: "80%" }}
-                />
+                <a
+                  href="https://www.instagram.com/teamistenith/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className=""
+                >
+                  <img
+                    src={instagramIcon}
+                    alt=""
+                    className="sb__footer-links-icon"
+                    srcset=""
+                  />
+                </a>
               </p>
               <p>
-                <LinkedInIcon
-                  style={{ color: "#892be0", fontSize: "30px", width: "80%" }}
-                />
+                <a
+                  href="https://www.linkedin.com/company/iste-nith/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className=""
+                >
+                  <img
+                    src={linkedinIcon}
+                    alt=""
+                    className="sb__footer-links-icon"
+                    srcset=""
+                  />
+                </a>
               </p>
               <p>
-                <InstagramIcon
-                  style={{ color: "#892be0", fontSize: "30px", width: "80%" }}
-                />
+                <a
+                  href="https://www.facebook.com/teamistenith/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className=""
+                >
+                  <img
+                    src={facebookIcon}
+                    alt=""
+                    className="sb__footer-links-icon"
+                    srcset=""
+                  />
+                </a>
               </p>
               <p>
-                <InstagramIcon
-                  style={{ color: "#892be0", fontSize: "30px", width: "80%" }}
-                />
+                <a
+                  href="https://github.com/istenith"
+                  target="_blank"
+                  rel="noreferrer"
+                  className=""
+                >
+                  <img
+                    src={githubIcon}
+                    alt=""
+                    className="sb__footer-links-icon"
+                    srcset=""
+                  />
+                </a>
+              </p>
+              <p>
+                <a
+                  href="https://twitter.com/IsteNith"
+                  target="_blank"
+                  rel="noreferrer"
+                  className=""
+                >
+                  <img
+                    src={twitterIcon}
+                    alt=""
+                    className="sb__footer-links-icon"
+                    srcset=""
+                  />
+                </a>
               </p>
             </div>
           </div>
@@ -54,7 +118,7 @@ const footer = () => {
         <hr />
         <div className="sb_footer-below">
           <div className="sb_footer-copyright">
-            <p>ISTE NTIH@{new Date().getFullYear()}, Made with ❤️.</p>
+            <p>ISTE NITH@{new Date().getFullYear()}, Made with ❤️.</p>
           </div>
         </div>
       </div>

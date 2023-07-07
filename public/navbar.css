@@ -3,9 +3,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 10vh;
-  background-color: transparent;
+  height: 12vh;
+  background-color: var(--navbar-background);
   padding: 0 20px;
+  /* box-shadow: 0.2px 0.2px 20px black; */
 }
 
 .navbar a {

@@ -3,9 +3,10 @@ import { Link } from "react-router-dom";
 import DehazeIcon from "@mui/icons-material/Dehaze";
 import CloseIcon from "@mui/icons-material/Close";
 import DarkMode from "./DarkMode/DarkMode";
-import BlueLogo from "../static/images/iste-logo-blue.png";
+import LightLogo from "../static/images/iste-logo-lightblue.png";
+import DarkLogo from "../static/images/iste-logo-dark.png";
 
-const Navbar = () => {
+const Navbar = ({ theme, toggleTheme }) => {
   const [mobile, setMobile] = useState(false);
 
   const handleResize = () => {
@@ -28,11 +29,13 @@ const Navbar = () => {
   return (
     <>
       <nav className="navbar">
-        <img
-          src={BlueLogo}
-          alt="Logo"
-          style={{ width: "9vh", padding: "1px" }}
-        />
+        <Link to="/">
+          <img
+            src={theme === "light" ? LightLogo : DarkLogo}
+            alt="Logo"
+            style={{ width: "9vh", padding: "1px" }}
+          />
+        </Link>
         <button className="mobile-menu-icon" onClick={toggleMobileMenu}>
           {mobile ? <CloseIcon /> : <DehazeIcon />}
         </button>
@@ -53,7 +56,7 @@ const Navbar = () => {
             <Link to="/blogs">Blogs</Link>
           </li>
           <li onClick={() => setMobile(false)}>
-            <DarkMode />
+           <DarkMode theme={theme} toggleTheme={toggleTheme} />
           </li>
         </ul>
       </nav>

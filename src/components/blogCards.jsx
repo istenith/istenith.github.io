@@ -7,9 +7,9 @@ export function BlogCard(props) {
     navigate("/blog-details", { state: props.mdfile });
   };
 
-  const navigatetoTagsPage = () => {
-    navigate("/tags");
-  };
+  // const navigatetoTagsPage = () => {
+  //   navigate("/tags");
+  // };
 
   const customClassName = props.work_type;
   return (
@@ -29,7 +29,7 @@ export function BlogCard(props) {
                 <span
                   key={index}
                   className="tagItem"
-                  onClick={navigatetoTagsPage}
+                  // onClick={navigatetoTagsPage}
                 >
                   {tag}
                 </span>

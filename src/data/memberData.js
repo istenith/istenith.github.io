@@ -3,24 +3,26 @@
 // import AmbasthaImg from "../static/members/mehulambastha.webp";
 
 //Final Year
-import AlbertImg from "../static/members/Albert.webp";
-import DeepakImg from "../static/members/deepak.jpeg";
-import DevImg from "../static/members/Dev.webp";
-import DivyanshImg from "../static/members/Divyansh.webp";
-import GazalImg from "../static/members/Gazal.webp";
-import HarmanpreetImg from "../static/members/Harmanpreet.webp";
-import HarshwardhanImg from "../static/members/Harshwardhan.webp";
-import KartikImg from "../static/members/Kartik.webp";
-import KaustubhImg from "../static/members/Kaustubh.webp";
-import DishaImg from "../static/members/disha.webp";
-import TanmayImg from "../static/members/tanmay.webp";
-import MeenakshiImg from "../static/members/Meenakshi.webp";
-import NoelImg from "../static/members/noel.webp";
-import ShriyaImg from "../static/members/shriya.webp";
-import ShrutiImg from "../static/members/Shruti.webp";
-import SumitImg from "../static/members/sumit.webp";
-import VanshImg from "../static/members/Vansh.webp";
-import VanshikaImg from "../static/members/Vanshika2.webp";
+
+import AlbertImg from "../static/finalYrimg/Albert.webp";
+import DeepakImg from "../static/finalYrimg/deepak.webp";
+import DevImg from "../static/finalYrimg/Dev.webp";
+import DivyanshImg from "../static/finalYrimg/Divyansh.webp";
+import GazalImg from "../static/finalYrimg/Gazal.webp";
+import HarmanpreetImg from "../static/finalYrimg/Harmanpreet.webp";
+import HarshwardhanImg from "../static/finalYrimg/Harshwardhan.webp";
+import KartikImg from "../static/finalYrimg/Kartik.webp";
+import KaustubhImg from "../static/finalYrimg/Kaustubh.webp";
+import DishaImg from "../static/finalYrimg/disha.webp";
+import TanmayImg from "../static/finalYrimg/tanmay.webp";
+import MeenakshiImg from "../static/finalYrimg/Meenakshi.webp";
+import NoelImg from "../static/finalYrimg/noel.webp";
+import ShriyaImg from "../static/finalYrimg/shriya.webp";
+import ShrutiImg from "../static/finalYrimg/Shruti.webp";
+import SumitImg from "../static/finalYrimg/sumit.webp";
+import VanshImg from "../static/finalYrimg/Vansh.webp";
+import VanshikaImg from "../static/finalYrimg/Vanshika2.webp";
+
 
 //Third Year
 import AdityaImg from "../static/members/aditya.webp";
@@ -586,7 +588,8 @@ const profileData = [
   },
   {
     section: "secondYear",
-    name: "Ayan Chadoria",
+    name: "Ayan Choradia",
+
     branch: "Electrical Engineering",
     location: "Jodhpur, Rajasthan",
     instagram: "https://instagram.com/ayanchoradia?igshid=ZDdkNTZiNTM=",

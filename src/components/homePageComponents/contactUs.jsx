@@ -2,83 +2,96 @@ import React from "react";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import PhoneIcon from "@mui/icons-material/Phone";
 import EmailIcon from "@mui/icons-material/Email";
-// import bgImg from "../../static/images/contact-bg.jpeg"
 
-const contactUs = () => {
-  //   const divStyle = {
-  //     backgroundImage: `url(${bgImg})`,
-  //     backgroundSize: 'cover',
-  //     backgroundPosition: 'center',
-  //   };
+const ContactUs = () => {
+  const sendEmail = (event) => {
+    event.preventDefault(); // Prevent form submission
+
+    const fullName = document.getElementsByName("fullName")[0].value;
+    const email = document.getElementsByName("email")[0].value;
+    const message = document.querySelector("textarea").value;
+
+    if (!fullName || !email || !message) {
+      // Check if any required field is empty
+      alert("Please fill in all the required fields.");
+      return;
+    }
+
+    const subject = `Contact from ${fullName}`;
+    const body = message;
+
+    const mailtoLink = `mailto:iste@nith.ac.in?subject=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(body)}`;
+
+    window.location.href = mailtoLink;
+  };
 
   return (
-    <section class="contact">
-      <div class="content">
+    <section className="contact">
+      <div className="content">
         <h2>Contact Us</h2>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam.
+          Have a question or need assistance? Our team's always ready to help.
+          Feel free to reach out, and we'll be delighted to aid you by providing
+          heartfelt support.
         </p>
       </div>
-      <div class="contact-container">
-        <div class="contactInfo">
-          <div class="box">
-            <div class="icon">
+      <div className="contact-container">
+        <div className="contactInfo">
+          <div className="box">
+            <div className="icon">
               <LocationOnIcon />
             </div>
-            <div class="text">
+            <div className="text">
               <h3>Address</h3>
               <p>
-                NITH,Hamirpur
+                NIT,Hamirpur
                 <br />
                 Himachal Pradesh, India, <br />
                 177001
               </p>
             </div>
           </div>
-          <div class="box">
-            <div class="icon">
+          <div className="box">
+            <div className="icon">
               <PhoneIcon />
             </div>
-            <div class="text">
+            <div className="text">
               <h3>Phone</h3>
               <p>12345578</p>
             </div>
           </div>
-          <div class="box">
-            <div class="icon">
+          <div className="box">
+            <div className="icon">
               <EmailIcon />
             </div>
-            <div class="text">
+            <div className="text">
               <h3>Email</h3>
               <p>iste@nith.ac.in</p>
             </div>
           </div>
         </div>
 
-        <div class="contactForm">
+        <div className="contactForm">
           <form>
             <h2>Send Message</h2>
-            <div class="inputBox">
-              <input type="text" name=" " required="required" />
+            <div className="inputBox">
+              <input type="text" name="fullName" required="required" />
               <span>Full Name</span>
             </div>
-            <div class="inputBox">
-              <input type="text" name=" " required="required" />
+            <div className="inputBox">
+              <input type="text" name="email" required="required" />
               <span>Email</span>
             </div>
-            <div class="inputBox">
+            <div className="inputBox">
               <textarea required="required"></textarea>
               <span>Type your Message...</span>
             </div>
             <div>
-              <input
-                type="submit"
-                name=" "
-                value="send"
-                className="submit-btn"
-              />
+              <button className="submit-btn" onClick={sendEmail}>
+                Send
+              </button>
             </div>
           </form>
         </div>
@@ -87,4 +100,4 @@ const contactUs = () => {
   );
 };
 
-export default contactUs;
+export default ContactUs;

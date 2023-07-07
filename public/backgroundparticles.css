@@ -18,7 +18,7 @@
   position: relative;
   height: 90vh;
   width: 100%;
-  background: var(--dark-body-background);
+  background: var(--body-background);
   /* mix-blend-mode: multiply; */
   z-index: 0;
 }

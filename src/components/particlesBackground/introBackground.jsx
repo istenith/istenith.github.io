@@ -1,19 +1,18 @@
 import React, { useEffect, useRef } from "react";
 import "particles.js";
-import Logo from "../../static/images/iste-logo.png";
+import LightLogo from "../../static/images/iste-logo-lightblue.png";
+import DarkLogo from "../../static/images/iste-logo-dark.png";
 
 import GraphicAnimation from "../graphicAnimation";
 import animationData from "../../static/svgs/intro-animation-light.json";
 
-const ParticlesComponent = () => {
+const ParticlesComponent = ({ theme }) => {
   const particlesContainerRef = useRef(null);
 
   useEffect(() => {
     if (particlesContainerRef.current) {
-      window.particlesJS(
-        "particles-js",
-
-        {
+      window.particlesJS("particles-js", 
+       {
           particles: {
             number: {
               value: 500,
@@ -140,17 +139,20 @@ const ParticlesComponent = () => {
           <div className="intro-container iste-logo-particles">
             <div className="row">
               <div className="left-content">
-                <img src={Logo} alt="" className="intro-logo" />
+                <img
+                  src={theme === "dark" ? DarkLogo : LightLogo}
+                  alt=""
+                  className="intro-logo"
+                />
                 <h1
                   style={{
-                    "font-family": "'Catamaran', sans-serif",
-                    color: "white",
+                    fontFamily: "'Catamaran', sans-serif",
                   }}
                 >
                   ISTE<span className="nith-text"> NITH</span>
                 </h1>
                 <div class="animated-text">
-                  <p style={{ display: "inline", color: "white" }}>WE ARE </p>
+                  <p style={{ display: "inline" }}>WE ARE </p>
                   <span></span>
                 </div>
               </div>
