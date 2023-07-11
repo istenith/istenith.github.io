@@ -13,12 +13,13 @@
 
 .sb__footer-links {
   display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
-  flex-direction: row;
   flex-wrap: wrap;
+  text-align: center;
   width: 100%;
-  text-align: left;
+}
+
+.box2{
+  margin: auto;
 }
 
 .sb__footer-isteLogo{
@@ -26,13 +27,19 @@
 }
 
 .sb__footer-links-div {
-  width: fit-content;
-  text-align: center;
-  margin: 1rem;
   display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
+  flex: 1;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: fit-content;
+  margin: 1rem;
   color: var(--body_color);
+}
+
+.sb__footer-links-div>p{
+  margin: auto;
 }
 
 .footer a {
@@ -46,13 +53,13 @@
 }
 
 .sb__footer-links-div h4 {
-  font-size: 14px;
+  font-size: 17px;
   line-height: 17px;
   margin-bottom: 0.9rem;
 }
 .sb__footer-links-div p {
-  font-size: 12px;
-  line-height: 15px;
+  font-size: 14px;
+  line-height: 18px;
   margin: 0 0.5rem 0;
 }
 
@@ -102,5 +109,6 @@ hr {
     margin: auto;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
   }
 }

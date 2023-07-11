@@ -285,9 +285,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 50%;
+  border-radius: 80%;
   font-size: 22px;
 }
+
 .contact-container .contactInfo .box .text {
   display: flex;
   margin-left: 20px;
@@ -304,9 +305,12 @@
 .contactForm {
   width: 40%;
   padding: 40px;
-  box-shadow: 0.5rem 0.25rem 1rem var(--color-text-tertiary);
+  border-radius: 3px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   /* background: var(--body_color); */
 }
+
+
 
 .contactForm h2 {
   font-size: 30px;

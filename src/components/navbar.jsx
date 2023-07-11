@@ -6,7 +6,7 @@ import DarkMode from "./DarkMode/DarkMode";
 import LightLogo from "../static/images/iste-logo-lightblue.png";
 import DarkLogo from "../static/images/iste-logo-dark.png";
 
-const Navbar = ({ theme, toggleTheme }) => {
+const Navbar = ({setThemeParent, useTheme}) => {
   const [mobile, setMobile] = useState(false);
 
   const handleResize = () => {
@@ -26,12 +26,16 @@ const Navbar = ({ theme, toggleTheme }) => {
     setMobile(!mobile);
   };
 
+  const setThemeNavbar = (currentTheme)=>{
+    setThemeParent(currentTheme);
+  }
+
   return (
     <>
       <nav className="navbar">
         <Link to="/">
           <img
-            src={theme === "light" ? LightLogo : DarkLogo}
+            src={useTheme === "light" ? LightLogo : DarkLogo}
             alt="Logo"
             style={{ width: "9vh", padding: "1px" }}
           />
@@ -56,7 +60,7 @@ const Navbar = ({ theme, toggleTheme }) => {
             <Link to="/blogs">Blogs</Link>
           </li>
           <li onClick={() => setMobile(false)}>
-           <DarkMode theme={theme} toggleTheme={toggleTheme} />
+            <DarkMode setThemeNavbar={setThemeNavbar} setTheme={useTheme}/>
           </li>
         </ul>
       </nav>

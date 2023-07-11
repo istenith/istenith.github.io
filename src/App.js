@@ -10,20 +10,21 @@ import Preloader from "./components/Preloader";
 // eslint-disable-next-line
 
 const App = () => {
-  const [theme, setTheme] = useState("light");
-
-  const toggleTheme = () => {
-    setTheme(theme === "light" ? "dark" : "light");
-  };
+  const initialTheme = localStorage.getItem("selectedTheme");
+  console.log(`Found ${initialTheme} mode in local storage, setting theme that only.`);
+  const [theme, setTheme] = useState(initialTheme);
+  const setThemeOuter = (currentTheme)=>{
+    setTheme(currentTheme)
+  }
   return (
     <>
       <Preloader />
       <AnimatedCursor />
       <HashRouter>
         <Headroom>
-          <Navbar theme={theme} toggleTheme={toggleTheme} />
+          <Navbar setThemeParent={setThemeOuter} useTheme={theme}/>
         </Headroom>
-        <AnimatedRoutes />
+        <AnimatedRoutes useTheme={theme}/>
       </HashRouter>
     </>
   );

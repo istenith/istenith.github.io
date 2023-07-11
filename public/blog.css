@@ -11,14 +11,15 @@
   flex: 1 0 25rem;
   max-width: 30rem;
   max-height: 50rem;
+  border-radius: 5px;
   transition: 0.3s;
-  box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem #bbbbbb;
+  box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem var(--shadow-primary);
 }
 
 .blogCard:hover {
-  transition: ease 0.5s;
+  transition: ease 0.3s;
   transform: translateY(-0.5rem);
-  box-shadow: 0.5rem 0.75rem 1.5rem var(--color-text-tertiary);
+  box-shadow: 0.3rem 0.3rem .5rem var(--shadow-secondary);
   background-image: linear-gradient(
     to right,
     #8f4dc5,
@@ -100,7 +101,7 @@
   padding: 4px 8px;
   border-radius: 4px;
   margin-right: 6px;
-  box-shadow: 1px 1px 1px 1px var(--body-darker-background);
+  box-shadow: 1px 1px 1px 1px var(--shadow-primary);
   transition: 0.1s;
 }
 
