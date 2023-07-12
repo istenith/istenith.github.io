@@ -6,7 +6,9 @@ import hultImage1 from "../../static/images/Hult_Images/Hult_01N.jpg";
 import hultImage2 from "../../static/images/Hult_Images/Hult_04N.jpg";
 import pahalImage1 from "../../static/images/Hult_Images/Hult_01N.jpg";
 import pahalImage2 from "../../static/images/pahal_events.jpg";
-import technexImage from "../../static/images/Technex 05.jpg";
+import technexImage1 from "../../static/images/Technex 05.jpg";
+import technexImage2 from "../../static/images/Technex 04.jpg";
+import technexImage3 from "../../static/images/Technex 03.jpg";
 
 const ImageCarousel = () => {
   const carouselImages = [
@@ -14,7 +16,9 @@ const ImageCarousel = () => {
     hultImage2,
     pahalImage1,
     pahalImage2,
-    technexImage
+    technexImage1,
+    technexImage2,
+    technexImage3,
   ];
 
   
@@ -31,7 +35,7 @@ const ImageCarousel = () => {
           >
             {carouselImages.map((image, index) => (
               <div key={index}>
-                <img src={image} alt={`Carousel Image ${index + 1}`} />
+                <img src={image} alt={`img ${index + 1}`} />
               </div>
             ))}
           </Carousel>
