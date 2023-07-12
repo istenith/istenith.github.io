@@ -95,7 +95,6 @@ const Domains = () => {
               transition={{ duration: 2, delay: 0.75 }}
             >
               <h2 className="domain-heading">Design</h2>
-
               <p className="para-domain">
                 The design team is the creative force to elevate society's
                 visual, artistic and aesthetic aspects. The Design team works

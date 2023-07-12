@@ -3,7 +3,6 @@
 // import AmbasthaImg from "../static/members/mehulambastha.webp";
 
 //Final Year
-
 import AlbertImg from "../static/finalYrimg/Albert.webp";
 import DeepakImg from "../static/finalYrimg/deepak.webp";
 import DevImg from "../static/finalYrimg/Dev.webp";

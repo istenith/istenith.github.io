@@ -22,7 +22,9 @@
   --color-green: #00d085;
   --color-white-text: #dddddd;
   --dark-body-background: #131418;
-
+  --shadow-primary: #bbbbbb;
+  --shadow-secondary: #afafaf;
+  
   /* Theme Colors */
   --body-background: #efefef;
   --footer-background: #ddd;
@@ -43,7 +45,10 @@
   /* --body-background : #000; */
   --footer-background: #222;
   --body-darker-background: #555;
-  --navbar-background: #1e1e1e;
+  --navbar-background: #231616;
+  --shadow-primary: #141313;
+  --shadow-secondary: #141313;
+  
   --body_color: #fff;
   /* --link-color : #129eeb; */
   --link-color: #8428df;

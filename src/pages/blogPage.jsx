@@ -7,7 +7,7 @@ import Footer from "../components/footer";
 // eslint-disable-next-line
 import SearchIcon from "@mui/icons-material/Search";
 
-const BlogPage = () => {
+const BlogPage = (useTheme) => {
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredblogs, setFilteredblogs] = useState(blogData);
 
@@ -35,7 +35,7 @@ const BlogPage = () => {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="center-header-div">
+      <div className="center-header-div" style={{"margin-top": "1rem"}}>
         <h2 className="center-heading">BLOGS</h2>
       </div>
 
@@ -71,7 +71,7 @@ const BlogPage = () => {
           />
         ))}
       </div>
-      <Footer />
+      <Footer useTheme={useTheme}/>
     </motion.div>
   );
 };

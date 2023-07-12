@@ -7,7 +7,7 @@ import thirdImage from "../static/images/pahal_events.jpg";
 import fourthImage from "../static/images//prarambh_events.jpg";
 import Footer from "../components/footer";
 
-const EventPage = () => {
+const EventPage = (useTheme) => {
   useEffect(() => {
     const initParallax = () => {
       const imageOne = document.getElementsByClassName("ione");
@@ -93,7 +93,7 @@ const EventPage = () => {
         </div>
       </div>
 
-      <Footer />
+      <Footer useTheme={useTheme}/>
     </motion.div>
   );
 };
