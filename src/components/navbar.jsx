@@ -37,6 +37,7 @@ const Navbar = ({setThemeParent, useTheme}) => {
           <img
             src={useTheme === "light" ? LightLogo : DarkLogo}
             alt="Logo"
+            className="navLogo"
             style={{ width: "9vh", padding: "1px" }}
           />
         </Link>

@@ -120,7 +120,7 @@ const footer = (currentThemeState) => {
         <hr />
         <div className="sb_footer-below">
           <div className="sb_footer-copyright">
-            <p>ISTE NITH@{new Date().getFullYear()}, Made with ❤️</p>
+            <p>All rights reserved by ISTE NITH@{new Date().getFullYear()}</p>
           </div>
         </div>
       </div>
