@@ -20,6 +20,7 @@
   text-decoration: none;
 }
 
+
 .navbar li {
   position: relative;
   z-index: 1000;
@@ -72,6 +73,10 @@
       left: 305px; */
   }
 
+  .navLogo{
+    display: none;
+  }
+  
   .nav-links {
     display: none;
   }
@@ -104,4 +109,6 @@
     display: block;
     right: 20px;
   }
+  
 }
+

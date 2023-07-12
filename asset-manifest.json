@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.0dc55911.css",
-    "main.js": "/static/js/main.d20a61a7.js",
+    "main.js": "/static/js/main.853d9204.js",
     "static/js/787.68a4761b.chunk.js": "/static/js/787.68a4761b.chunk.js",
     "static/media/Hult_04N.jpg": "/static/media/Hult_04N.50614681e1e9f8b4f4fb.jpg",
     "static/media/Technex 05.jpg": "/static/media/Technex 05.f4661a8576e909f24113.jpg",
@@ -127,11 +127,11 @@
     "index.html": "/index.html",
     "static/media/Moon.svg": "/static/media/Moon.af99a536ce1d19f741275b8554beaa63.svg",
     "main.0dc55911.css.map": "/static/css/main.0dc55911.css.map",
-    "main.d20a61a7.js.map": "/static/js/main.d20a61a7.js.map",
+    "main.853d9204.js.map": "/static/js/main.853d9204.js.map",
     "787.68a4761b.chunk.js.map": "/static/js/787.68a4761b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0dc55911.css",
-    "static/js/main.d20a61a7.js"
+    "static/js/main.853d9204.js"
   ]
 }
