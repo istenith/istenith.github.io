@@ -1,0 +1,114 @@
+.section__padding {
+  padding: 4rem;
+}
+
+.footer {
+  background-color: var(--footer-background);
+}
+
+.sb__footer {
+  display: flex;
+  flex-direction: column;
+}
+
+.sb__footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  width: 100%;
+}
+
+.box2{
+  margin: auto;
+}
+
+.sb__footer-isteLogo{
+  width: 100px;
+}
+
+.sb__footer-links-div {
+  display: flex;
+  flex: 1;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: fit-content;
+  margin: 1rem;
+  color: var(--body_color);
+}
+
+.sb__footer-links-div>p{
+  margin: auto;
+}
+
+.footer a {
+  color: var(--body_color);
+  text-decoration: none;
+}
+
+.footer .socialmedia {
+  display: flex;
+  flex-direction: row;
+}
+
+.sb__footer-links-div h4 {
+  font-size: 17px;
+  line-height: 17px;
+  margin-bottom: 0.9rem;
+}
+.sb__footer-links-div p {
+  font-size: 14px;
+  line-height: 18px;
+  margin: 0 0.5rem 0;
+}
+
+.sb__footer-below {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+hr {
+  color: white !important;
+  width: 80%;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.sb_footer-copyright p {
+  width: 100%;
+  text-align: center;   
+  margin: auto;
+  font-size: 13px;
+  line-height: 15px;
+  font-weight: 600;
+}
+
+.sb__footer-links-icon{
+  width: 30px;
+}
+
+@media screen and (max-width: 850px) {
+  .sb_footer-heading h1 {
+    font-size: 44px;
+    line-height: 50px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .sb_footer-heading h1 {
+    font-size: 34px;
+    line-height: 42px;
+  }
+  .sb_footer-links div {
+    margin: 1rem 0;
+  }
+
+  .sb__footer-below {
+    margin: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

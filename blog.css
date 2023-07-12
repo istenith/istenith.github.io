@@ -1,0 +1,155 @@
+.blogList {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 0rem;
+  /* margin-right: 90px; */
+}
+
+.blogCard {
+  position: relative;
+  margin: 1rem;
+  flex: 1 0 25rem;
+  max-width: 30rem;
+  max-height: 50rem;
+  border-radius: 5px;
+  transition: 0.3s;
+  box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem var(--shadow-primary);
+}
+
+.blogCard:hover {
+  transition: ease 0.3s;
+  transform: translateY(-0.5rem);
+  box-shadow: 0.3rem 0.3rem .5rem var(--shadow-secondary);
+  background-image: linear-gradient(
+    to right,
+    #8f4dc5,
+    #ff3988,
+    #ff31a3,
+    #ff29bf,
+    #fe2198
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.blogCard__wishlist {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+}
+
+.blogCard__wishlist:hover {
+  transition: 0.3s;
+  color: white;
+}
+
+.blogCard__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+.blogCard__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 2rem;
+}
+
+.blogImage {
+  max-width: 25%;
+  height: auto;
+  margin-right: 1rem;
+  border-radius: 100%;
+}
+
+.blogName {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  flex-grow: 1;
+  transition: 0.1s;
+}
+.blogName:hover {
+  transition: 0.4s;
+}
+
+.blogCompany {
+  transition: 0.1s;
+}
+
+.blogCompany:hover {
+  transition: 0.3s;
+}
+
+.displayStack__1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.tagsContainer {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 10px;
+}
+
+.tagItem {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin-right: 6px;
+  box-shadow: 1px 1px 1px 1px var(--shadow-primary);
+  transition: 0.1s;
+}
+
+.tagItem:hover {
+  transition: 0.3s;
+  color: var(--color-grey-primary);
+}
+
+.search-bar {
+  display: flex;
+  width: 100%;
+  position: relative;
+  margin: auto;
+  padding-bottom: 2rem;
+}
+
+.search-bar input {
+  position: relative;
+  font-size: 1.7rem;
+  width: 60%;
+  border-radius: 5px;
+  margin: auto;
+  color: var(--color-grey-primary);
+  background-color: var(--color-grey-primary);
+}
+
+.search-icon {
+  transform: translateX(-2rem);
+  /* color: black; */
+}
+
+@media screen and (max-width: 1073px) {
+  .blogCard {
+    max-width: 40rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .search-bar input {
+    width: 90%;
+  }
+  .blogCard {
+    max-width: 25rem;
+    max-height: auto;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .blogCard {
+    max-width: 16rem;
+  }
+}

@@ -1,0 +1,144 @@
+/*  CSS for ChatBot  */
+
+.w3c__message--widget {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+}
+
+.w3c__message--icon {
+  background-color: var(--link-color);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  z-index: 2147482999;
+  padding: 15px 10px 10px;
+  text-align: center;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.06), 0 2px 32px rgba(0, 0, 0, 0.16) !important;
+  cursor: pointer;
+}
+
+.w3c__chat--icon img {
+  max-width: 30px;
+  transition: all 0.3s ease;
+}
+
+.w3c__close--icon img {
+  position: absolute;
+  max-width: 14px;
+  left: 50%;
+  top: 50%;
+  margin-left: -7px;
+  margin-top: -7px;
+  transform: rotate(-30deg);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.w3c__widget--open .w3c__chat--icon img {
+  opacity: 0;
+  transform: rotate(30deg) scale(0.7);
+}
+
+.w3c__widget--open .w3c__close--icon img {
+  opacity: 1;
+  transform: rotate(0deg);
+}
+
+.w3c__background--gradient {
+  z-index: 2147482998;
+  position: fixed;
+  width: 500px;
+  height: 500px;
+  bottom: 0;
+  right: 0;
+  content: "";
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse at bottom right,
+    rgba(29, 39, 54, 0.16) 0,
+    rgba(29, 39, 54, 0) 72%
+  );
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.w3c__widget--open .w3c__background--gradient {
+  opacity: 1;
+}
+
+.w3c__message--box {
+  background: #fff;
+  min-height: 300px;
+  width: 300px;
+  border-radius: 8px;
+  box-shadow: 0 5px 40px rgba(0, 0, 0, 0.16);
+  position: absolute;
+  bottom: 100px;
+  right: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+}
+
+.w3c__widget--open .w3c__message--box {
+  opacity: 1;
+  z-index: 2147483999;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.w3c__message-box--header {
+  background-color: var(--link-color);
+  color: #fff;
+  padding: 20px;
+}
+.w3c__message-box--header span {
+  display: block;
+}
+
+.w3c__message-box--title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.contact-form {
+  padding-top: 10px;
+  text-align: center;
+}
+
+.contact-box {
+  margin-bottom: 10px;
+  width: 220px;
+}
+
+.message-submit {
+  margin-bottom: 10px;
+  background-color: var(--link-color);
+  color: white;
+  border: none;
+  padding: 10px;
+}
+
+.message-box {
+  height: 70px;
+}
+
+.toggle .tabs {
+  width: 100%;
+  overflow: hidden;
+  line-height: 30px;
+  font-family: "Euclid Circular B Medium";
+  font-size: 2vw;
+  padding: 1vw 4vw;
+  padding-top: 3vw;
+}

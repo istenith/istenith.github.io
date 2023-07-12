@@ -1,0 +1,154 @@
+.team-section-main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: calc(
+    100vh - 80px
+  ); /* Adjust the value based on your header height */
+  padding-bottom: 100px; /* Add bottom padding to create space for the footer */
+}
+
+.profile-card {
+  position: relative;
+  width: 15rem;
+  height: 15rem;
+  background: var(--link-color);
+  padding: 20px;
+  border-radius: 50%;
+  box-shadow: 0 0 22px #3336;
+  transition: 0.6s;
+  margin: 0 25px;
+}
+
+.profile-card:hover {
+  border-radius: 10px;
+  height: 400px;
+}
+
+.profile-card .profile-img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: 0.6s;
+  z-index: 0;
+}
+
+.profile-card:hover .profile-img {
+  transform: translateY(-80px);
+}
+.profile-img img {
+  aspect-ratio: 1/1;
+  width: 100%;
+  border-radius: 50%;
+  box-shadow: 0 0 22px #3336;
+  transition: 0.6s;
+}
+
+.profile-card:hover img {
+  border-radius: 10px;
+}
+
+.profile-card .caption {
+  text-align: center;
+  transform: translateY(-240px);
+  opacity: 0;
+  transition: 0.6s ease-in-out;
+  color: white;
+}
+.profile-card:hover .caption {
+  opacity: 1;
+}
+
+.profile-card .caption h3 {
+  font-size: 1.4rem;
+  padding-top: 3px;
+  padding-bottom: 5px;
+}
+.profile-card .caption p {
+  width: 100%;
+  font-size: 1rem;
+  margin-top: 2px;
+  padding: 0;
+  /* margin: 2px; */
+}
+
+.team-social-links .s-icon {
+  color: #333;
+  margin-right: 18px;
+  font-size: 18px;
+}
+
+.profile-card:hover .team-social-links .s-icon {
+  color: aqua;
+}
+
+.section-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.section-button {
+  padding: 10px 20px;
+  margin: 0 50px;
+
+  background-color: var(--link-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.9s;
+}
+.section-button:hover {
+  background: -webkit-linear-gradient(
+    0deg,
+    var(--scroll-end-color) 0%,
+    var(--scroll-start-color) 100%
+  );
+  background: linear-gradient(
+    0deg,
+    var(--scroll-end-color) 0%,
+    var(--scroll-start-color) 100%
+  );
+}
+.section-button.active {
+  background-color: #33085c;
+  border: 1px white;
+}
+
+@media (max-width: 768px) {
+  .section-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .section-button {
+    width: 80%;
+    margin: 5px 0;
+  }
+}
+
+@media (max-width: 420px) {
+  .team-section-main .profile-card:nth-child(n + 2) {
+    margin-top: 20px;
+  }
+}
+
+@media (min-width: 769px) {
+  .team-section-main .profile-card:nth-child(n + 1) {
+    margin-top: 20px;
+  }
+}
+
+@media (min-width: 421px) and (max-width: 768px) {
+  .team-section-main .profile-card:nth-child(n + 4) {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 420px) {
+}
