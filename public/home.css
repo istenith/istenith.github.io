@@ -103,7 +103,7 @@
   } */
 
 .nith-text {
-  color: #129eeb;
+  color: var(--link-color);
 }
 
 .container {
@@ -464,4 +464,31 @@
   .about-us-bg-img {
     margin-bottom: 20px;
   }
+}
+
+
+/* Coursel CSS */
+.carousel-container {
+  width: 90%;
+  padding: 10px;
+}
+
+.carousel-wrapper {
+  background-color: var(--link-color);
+  border-radius: 10px;
+  padding: 2px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-wrapper .carousel .slide {
+  border-radius: 10px;
+}
+
+.carousel-wrapper .carousel .slide img {
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.carousel .control-dots {
+  display: none; 
 }

@@ -2,9 +2,7 @@ import React, { useEffect, useRef } from "react";
 import "particles.js";
 import LightLogo from "../../static/images/iste-logo-lightblue.png";
 import DarkLogo from "../../static/images/iste-logo-dark.png";
-
-import GraphicAnimation from "../graphicAnimation";
-import animationData from "../../static/svgs/intro-animation-light.json";
+import ImageCarousel from "../homePageComponents/carousel";
 
 const ParticlesComponent = ({ theme }) => {
   const particlesContainerRef = useRef(null);
@@ -140,7 +138,7 @@ const ParticlesComponent = ({ theme }) => {
             <div className="row">
               <div className="left-content">
                 <img
-                  src={theme === "dark" ? DarkLogo : LightLogo}
+                  src={theme === "light" ? LightLogo : DarkLogo }
                   alt=""
                   className="intro-logo"
                 />
@@ -157,7 +155,7 @@ const ParticlesComponent = ({ theme }) => {
                 </div>
               </div>
               <div className="right-content">
-                <GraphicAnimation animationData={animationData} />
+                <ImageCarousel  />
               </div>
             </div>
           </div>

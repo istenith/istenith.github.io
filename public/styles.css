@@ -43,9 +43,9 @@
 [data-theme="dark"] {
   --body-background: #1e1d1d;
   /* --body-background : #000; */
-  --footer-background: #222;
+  --footer-background: #2A2929;
   --body-darker-background: #555;
-  --navbar-background: #231616;
+  --navbar-background: #2A2929;
   --shadow-primary: #141313;
   --shadow-secondary: #141313;
   

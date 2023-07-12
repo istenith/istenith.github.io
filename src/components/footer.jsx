@@ -28,8 +28,8 @@ const footer = (currentThemeState) => {
           <div className="sb__footer-links-div box2">
             <p>
               <h4>Visit Us</h4>
-              <p>iste@nith.ac.in</p>
-              <p>marketinghead.iste@gmail.com</p>
+              <a href="mailto: iste@nith.ac.in">iste@nith.ac.in</a> <br />
+              <a href="mailto: teamiste@gmail.com">marketingteam.iste@gmail.com</a>
             </p>
           </div>
 
