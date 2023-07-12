@@ -10,6 +10,9 @@
   font-size: 34px;
   font-weight: 600;
   min-width: 280px;
+  width: 500px;
+  margin: 0 auto;
+  text-align: start;
 }
 
 .animated-text span {

@@ -45,6 +45,8 @@
   border-radius: 50%;
   box-shadow: 0 0 22px #3336;
   transition: 0.6s;
+  object-fit: contain;
+  background: whitesmoke;
 }
 
 .profile-card:hover img {
