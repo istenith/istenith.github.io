@@ -3,13 +3,11 @@ import BlueLogo from "../static/images/iste-logo-blue.png";
 import instagramIcon from "../static/images/icons/instagram.png";
 import facebookIcon from "../static/images/icons/facebook.png";
 import githubIconDark from "../static/images/icons/github-dark2.png";
-import githubIconLight from "../static/images/icons/github-light.png";
+// import githubIconLight from "../static/images/icons/github-light.png";
 import twitterIcon from "../static/images/icons/twitter.png";
 import linkedinIcon from "../static/images/icons/linkedin.png";
 
-const footer = (currentThemeState) => {
-  const themeWord = currentThemeState.useTheme.useTheme.useTheme;
-  console.log("Logging this from the footer, the current theme fetched frmo the navbar switch button is: ", themeWord);
+const footer = () => {
   return (
     <div className="footer">
       <div className="sb__footer  section__padding">
@@ -90,7 +88,7 @@ const footer = (currentThemeState) => {
                     className=""
                   >                
                     <img
-                      src={(themeWord === "dark") ? githubIconDark : githubIconLight}
+                      src={ githubIconDark}
                       alt=""
                       className="sb__footer-links-icon"
                       srcset=""

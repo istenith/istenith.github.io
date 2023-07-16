@@ -1,10 +1,10 @@
 import React, { useEffect, useRef } from "react";
 import "particles.js";
-import LightLogo from "../../static/images/iste-logo-lightblue.png";
+// import LightLogo from "../../static/images/iste-logo-lightblue.png";
 import DarkLogo from "../../static/images/iste-logo-dark.png";
 import ImageCarousel from "../homePageComponents/carousel";
 
-const ParticlesComponent = ({ theme }) => {
+const ParticlesComponent = () => {
   const particlesContainerRef = useRef(null);
 
   useEffect(() => {
@@ -138,7 +138,7 @@ const ParticlesComponent = ({ theme }) => {
             <div className="row">
               <div className="left-content">
                 <img
-                  src={theme === "light" ? LightLogo : DarkLogo }
+                  src={ DarkLogo }
                   alt=""
                   className="intro-logo"
                 />

@@ -2,11 +2,11 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import DehazeIcon from "@mui/icons-material/Dehaze";
 import CloseIcon from "@mui/icons-material/Close";
-import DarkMode from "./DarkMode/DarkMode";
-import LightLogo from "../static/images/iste-logo-lightblue.png";
+// import DarkMode from "./DarkMode/DarkMode";
+// import LightLogo from "../static/images/iste-logo-lightblue.png";
 import DarkLogo from "../static/images/iste-logo-dark.png";
 
-const Navbar = ({setThemeParent, useTheme}) => {
+const Navbar = () => {
   const [mobile, setMobile] = useState(false);
 
   const handleResize = () => {
@@ -26,16 +26,13 @@ const Navbar = ({setThemeParent, useTheme}) => {
     setMobile(!mobile);
   };
 
-  const setThemeNavbar = (currentTheme)=>{
-    setThemeParent(currentTheme);
-  }
 
   return (
     <>
       <nav className="navbar">
         <Link to="/">
           <img
-            src={useTheme === "light" ? LightLogo : DarkLogo}
+            src= {DarkLogo}
             alt="Logo"
             className="navLogo"
             style={{ width: "9vh", padding: "1px" }}
@@ -60,9 +57,9 @@ const Navbar = ({setThemeParent, useTheme}) => {
           <li onClick={() => setMobile(false)} className="navlink-text">
             <Link to="/blogs">Blogs</Link>
           </li>
-          <li onClick={() => setMobile(false)}>
+          {/* <li onClick={() => setMobile(false)}>
             <DarkMode setThemeNavbar={setThemeNavbar} setTheme={useTheme}/>
-          </li>
+          </li> */}
         </ul>
       </nav>
     </>

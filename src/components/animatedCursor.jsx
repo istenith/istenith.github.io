@@ -6,10 +6,10 @@ const animatedCursor = () => {
     <AnimatedCursor
       innerSize={6}
       outerSize={36}
-      color="115, 40, 200"
+      color="85, 215, 220"
       outerAlpha={0.2}
       outerStyle={{
-        border: "2px solid #7328C8",
+        border: "2px solid #55d7dc",
       }}
       innerScale={1}
       outerScale={2}
@@ -22,6 +22,7 @@ const animatedCursor = () => {
         'input[type="submit"]',
         'input[type="image"]',
         "label[for]",
+        "img",
         "select",
         "textarea",
         "button",

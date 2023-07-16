@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import bgImg from "../../static/images/teamiste-jan2k23.webp";
+// import bgImg from "../../static/images/teamiste-jan2k23.webp";
 import { motion, useInView, useAnimation } from "framer-motion";
 
 const AboutUs = () => {
@@ -15,13 +15,15 @@ const AboutUs = () => {
   }, [isInView]);
 
   const divStyle = {
-    backgroundImage: `url(${bgImg})`,
     backgroundSize: "cover",
     backgroundPosition: "center",
   };
 
   return (
     <div ref={ref}>
+       <div className="aboutus-heading">
+          <h2 className="aboutus-h2">About us</h2>
+        </div>
       <div style={divStyle} className="about-us-bg-img">
         <motion.div
           className="about-us-container container-fluid"
@@ -35,7 +37,6 @@ const AboutUs = () => {
         >
           <div className="blur-div">
             <div className="about-us-box">
-              <h2>About Us</h2>
               <p>
                 The Indian Society for Technical Education (ISTE) is the leading
                 National Professional non-profit making Society for the

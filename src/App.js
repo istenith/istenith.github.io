@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { HashRouter } from "react-router-dom";
 
 import Navbar from "./components/navbar";
@@ -10,21 +10,21 @@ import Preloader from "./components/Preloader";
 // eslint-disable-next-line
 
 const App = () => {
-  const initialTheme = localStorage.getItem("selectedTheme");
-  console.log(`Found ${initialTheme} mode in local storage, setting theme that only.`);
-  const [theme, setTheme] = useState(initialTheme);
-  const setThemeOuter = (currentTheme)=>{
-    setTheme(currentTheme)
-  }
+  // const initialTheme = localStorage.getItem("selectedTheme");
+  // console.log(`Found ${initialTheme} mode in local storage, setting theme that only.`);
+  // const [theme, setTheme] = useState(initialTheme);
+  // const setThemeOuter = (currentTheme)=>{
+  //   setTheme(currentTheme)
+  // }
   return (
     <>
       <Preloader />
       <AnimatedCursor />
       <HashRouter>
         <Headroom>
-          <Navbar setThemeParent={setThemeOuter} useTheme={theme}/>
+          <Navbar />
         </Headroom>
-        <AnimatedRoutes useTheme={theme}/>
+        <AnimatedRoutes />
       </HashRouter>
     </>
   );

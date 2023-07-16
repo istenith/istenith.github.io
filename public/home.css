@@ -31,7 +31,7 @@
   position: absolute;
   width: calc(100% + 14px);
   height: 100%;
-  background-color: var(--body-background);
+  background-color: #222831;
   border-left: 2px solid;
   right: -8px;
   animation: cursor 0.8s infinite, typing 10s steps(14) infinite;
@@ -184,7 +184,7 @@
 }
 
 .about-us-box {
-  backdrop-filter: brightness(30%);
+  backdrop-filter: brightness(80%);
   width: 80%;
   margin: auto;
   padding: 2% 5% 3%;
@@ -202,6 +202,12 @@
   margin-bottom: 10px;
   color: var(--color-white-text);
   font-size: var(--font-subheading);
+}
+.aboutus-heading{
+  padding-top: 20px;
+}
+.aboutus-h2{
+  text-align: center;
 }
 
 .domain-container {
@@ -284,7 +290,7 @@
   min-width: 60px;
   height: 60px;
   color: var(--link-color);
-  background: #bfbfbf;
+  background: var(--body-background);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -328,7 +334,7 @@
 }
 .contactForm .inputBox input,
 .contactForm .inputBox textarea {
-  background-color: var(--body-background);
+  background-color: #22283100;
   color: var(--color-text-primary);
   width: 100%;
   padding: 5px 0;
@@ -382,12 +388,12 @@
 }
 
 .contactForm .submit-btn:hover {
-  background: #8e0279;
-  background-image: -webkit-linear-gradient(top, #8e0279, #380066);
+  background:var(--body-background);
+  /* background-image: -webkit-linear-gradient(top, #8e0279, #380066);
   background-image: -moz-linear-gradient(top, #8e0279, #380066);
   background-image: -ms-linear-gradient(top, #8e0279, #380066);
   background-image: -o-linear-gradient(top, #8e0279, #380066);
-  background-image: linear-gradient(to bottom, #8e0279, #380066);
+  background-image: linear-gradient(to bottom, #8e0279, #380066); */
   text-decoration: none;
 }
 
