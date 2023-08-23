@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import profileData from "../data/memberData";
+import Footer from "../components/footer";
 
 const MembersPage = () => {
   const [selectedSection, setSelectedSection] = useState("finalYear");
@@ -16,7 +17,7 @@ const MembersPage = () => {
   );
 
   const cardVariants = {
-    initial: { opacity: 0, y: -100 },
+    initial: { opacity: 0, y: 0 },
     animate: { opacity: 1, y: 0 },
   };
 
@@ -114,7 +115,6 @@ const MembersPage = () => {
           </motion.div>
         ))}
       </div>
-      {/* <Footer /> */}
     </motion.div>
   );
 };
