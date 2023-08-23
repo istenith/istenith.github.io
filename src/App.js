@@ -1,5 +1,5 @@
 import React from "react";
-import underConstructionImage from './static/images/underconstruction.png';
+import underConstructionImage from "./static/images/underconstruction.png";
 
 // import { HashRouter } from "react-router-dom";
 // import Navbar from "./components/navbar";
@@ -30,23 +30,25 @@ const App = () => {
     //   </HashRouter>
     // </>
     <div
-    style={{
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      height: '100vh',
-      fontSize: '3rem',
-      flexDirection: 'column',
-      fontFamily: 'Anton, sans-serif',
-    }}
-  >
-    <img
-      src={underConstructionImage}
-      alt="Under Construction"
-      style={{ width: '200px', height: 'auto' }} // Adjust the size as needed
-    />
-    <p style={{ marginTop: '1rem', fontFamily: 'Anton, sans-serif' }}>Coming Soon!</p>
-  </div>
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        height: "100vh",
+        fontSize: "3rem",
+        flexDirection: "column",
+        fontFamily: "Anton, sans-serif",
+      }}
+    >
+      <img
+        src={underConstructionImage}
+        alt="Under Construction"
+        style={{ width: "200px", height: "auto" }} // Adjust the size as needed
+      />
+      <p style={{ marginTop: "1rem", fontFamily: "Anton, sans-serif" }}>
+        Coming Soon!
+      </p>
+    </div>
   );
 };
 
