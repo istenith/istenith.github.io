@@ -4,7 +4,7 @@
   --font-inter: Inter;
 
   /* font sizes */
-  --font-size-11xl: 30px;
+  --font-size-11xl: 50px;
   --font-size-8xl: 27px;
   --font-size-41xl: 60px;
   --font-size-16xl: 35px;
@@ -31,7 +31,7 @@
   --body-darker-background: #bbb;
   --body_color: #fff;
   --navbar-background: #ececec;
-  --link-color: #55d7dc;
+  --link-color: rgb(199, 162, 224);;
   --color-text-primary: #dddddd;
   --color-text-secondary: #bfbfbf;
   --color-text-tertiary: #7e7e7e;
