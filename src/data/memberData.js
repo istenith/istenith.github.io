@@ -22,7 +22,6 @@ import SumitImg from "../static/finalYrimg/sumit.webp";
 import VanshImg from "../static/finalYrimg/Vansh.webp";
 import VanshikaImg from "../static/finalYrimg/Vanshika2.webp";
 
-
 //Third Year
 import AdityaImg from "../static/members/aditya.webp";
 import ArmaanImg from "../static/members/armaan.webp";
@@ -575,16 +574,16 @@ const profileData = [
     img: AnshumanImg,
     post: "Volunteer",
   },
-  {
-    section: "secondYear",
-    name: "Archan Banerjee",
-    branch: "Engineering Physics",
-    location: "Asansol, West Bengal",
-    instagram: "https://instagram.com/_.g.o.o.f.y._?igshid=ZDdkNTZiNTM=",
-    linkedin: "",
-    img: ArchanImg,
-    post: "Volunteer",
-  },
+  // {
+  //   section: "secondYear",
+  //   name: "Archan Banerjee",
+  //   branch: "Engineering Physics",
+  //   location: "Asansol, West Bengal",
+  //   instagram: "https://instagram.com/_.g.o.o.f.y._?igshid=ZDdkNTZiNTM=",
+  //   linkedin: "",
+  //   img: ArchanImg,
+  //   post: "Volunteer",
+  // },
   {
     section: "secondYear",
     name: "Ayan Choradia",
@@ -646,16 +645,16 @@ const profileData = [
     img: MehulAImg,
     post: "Volunteer",
   },
-  {
-    section: "secondYear",
-    name: "Naman Sharma",
-    branch: "Electronics and Communication Engineering",
-    location: "Panipat, Haryana",
-    instagram: "https://instagram.com/naman2236s?igshid=YmMyMTA2M2Y=",
-    linkedin: "https://www.linkedin.com/in/naman-sharma-7928a1223",
-    img: NamanImg,
-    post: "Volunteer",
-  },
+  // {
+  //   section: "secondYear",
+  //   name: "Naman Sharma",
+  //   branch: "Electronics and Communication Engineering",
+  //   location: "Panipat, Haryana",
+  //   instagram: "https://instagram.com/naman2236s?igshid=YmMyMTA2M2Y=",
+  //   linkedin: "https://www.linkedin.com/in/naman-sharma-7928a1223",
+  //   img: NamanImg,
+  //   post: "Volunteer",
+  // },
   {
     section: "secondYear",
     name: "Oshin Sharma",
@@ -666,17 +665,17 @@ const profileData = [
     img: OshinImg,
     post: "Volunteer",
   },
-  {
-    section: "secondYear",
-    name: "Prikshit Saini",
-    branch: "Computer Science and Engineering",
-    location: "Baddi, Himachal Pradesh",
-    instagram:
-      "https://www.instagram.com/invites/contact/?i=1dhjsr58wjn08&utm_content=qf87blc",
-    linkedin: "https://www.linkedin.com/in/prikshit-saini-39b85920b/",
-    img: PrikshitImg,
-    post: "Volunteer",
-  },
+  // {
+  //   section: "secondYear",
+  //   name: "Prikshit Saini",
+  //   branch: "Computer Science and Engineering",
+  //   location: "Baddi, Himachal Pradesh",
+  //   instagram:
+  //     "https://www.instagram.com/invites/contact/?i=1dhjsr58wjn08&utm_content=qf87blc",
+  //   linkedin: "https://www.linkedin.com/in/prikshit-saini-39b85920b/",
+  //   img: PrikshitImg,
+  //   post: "Volunteer",
+  // },
   {
     section: "secondYear",
     name: "Rishika Sharma",
@@ -697,16 +696,16 @@ const profileData = [
     img: SakshiImg,
     post: "Volunteer",
   },
-  {
-    section: "secondYear",
-    name: "Sana Sheikh",
-    branch: "Mathematics and Computing",
-    location: "Shimla, Himachal Pradesh",
-    instagram: "https://instagram.com/blu.aesthetics?igshid=OGQ2MjdiOTE=",
-    linkedin: "https://www.linkedin.com/in/sana-sheikh-a24714257",
-    img: SanaImg,
-    post: "Volunteer",
-  },
+  // {
+  //   section: "secondYear",
+  //   name: "Sana Sheikh",
+  //   branch: "Mathematics and Computing",
+  //   location: "Shimla, Himachal Pradesh",
+  //   instagram: "https://instagram.com/blu.aesthetics?igshid=OGQ2MjdiOTE=",
+  //   linkedin: "https://www.linkedin.com/in/sana-sheikh-a24714257",
+  //   img: SanaImg,
+  //   post: "Volunteer",
+  // },
   {
     section: "secondYear",
     name: "Tanashvi Joshi",
@@ -717,16 +716,16 @@ const profileData = [
     img: TanashviImg,
     post: "Volunteer",
   },
-  {
-    section: "secondYear",
-    name: "Urvashi Pandey",
-    branch: "Civil Engineering",
-    location: "Gorakhpur, Uttar Pradesh",
-    instagram: "https://instagram.com/urv_ssii.07?igshid=NmQ2ZmYxZjA=",
-    linkedin: "https://www.linkedin.com/in/urvii-pandey-943021258",
-    img: UrvashiImg,
-    post: "Volunteer",
-  },
+  // {
+  //   section: "secondYear",
+  //   name: "Urvashi Pandey",
+  //   branch: "Civil Engineering",
+  //   location: "Gorakhpur, Uttar Pradesh",
+  //   instagram: "https://instagram.com/urv_ssii.07?igshid=NmQ2ZmYxZjA=",
+  //   linkedin: "https://www.linkedin.com/in/urvii-pandey-943021258",
+  //   img: UrvashiImg,
+  //   post: "Volunteer",
+  // },
 ];
 
 export default profileData;

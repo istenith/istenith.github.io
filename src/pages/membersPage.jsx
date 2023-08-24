@@ -115,6 +115,7 @@ const MembersPage = () => {
           </motion.div>
         ))}
       </div>
+      {/* <Footer /> */}
     </motion.div>
   );
 };

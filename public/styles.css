@@ -24,14 +24,14 @@
   --dark-body-background: #131418;
   --shadow-primary: #bbbbbb;
   --shadow-secondary: #afafaf;
-  
+
   /* Theme Colors */
   --body-background: #222831ec;
   --footer-background: #1c2229;
   --body-darker-background: #bbb;
   --body_color: #fff;
   --navbar-background: #ececec;
-  --link-color: rgb(199, 162, 224);;
+  --link-color: rgb(199, 162, 224);
   --color-text-primary: #dddddd;
   --color-text-secondary: #bfbfbf;
   --color-text-tertiary: #7e7e7e;
@@ -39,10 +39,9 @@
   --scroll-start-color: var(--link-color);
   --scroll-end-color: var(--link-color);
   --body-darker-background: #555;
-  --navbar-background: #2A2929;
+  --navbar-background: #2a2929;
   --shadow-primary: #141313;
   --shadow-secondary: #141313;
-
 }
 
 * {
