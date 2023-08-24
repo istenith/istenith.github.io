@@ -51,7 +51,7 @@ const App = () => {
     //       </p>
     //     </div>
     <>
-      {/* <Preloader />  */}
+      <Preloader /> 
       <AnimatedCursor />
       <HashRouter>
         <Headroom>

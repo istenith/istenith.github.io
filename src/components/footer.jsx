@@ -12,16 +12,9 @@ const Footer = () => {
   return (
     <div className="footer container-fluid ">
       <div className="section__padding row ">
-        <div className="footer__content ">
-          <div className="footer__logo margin-about col-lg-4">
-            <img src={BlueLogo} alt="ISTE Logo" />
-            
-            
-        </div>
-          </div>
-          
 
-          <div className="footer__social-links margin-about col-lg-4">
+
+      <div className="footer__social-links margin-about col-lg-4">
             <h4>Connect with Us</h4>
             <div className="socialmedia">
               <a
@@ -81,6 +74,15 @@ const Footer = () => {
               </a>
             </div>
           </div>
+
+        <div className="footer__content ">
+          <div className="footer__logo margin-about col-lg-4">
+            <img src={BlueLogo} alt="ISTE Logo" />
+          </div>
+        </div>
+          
+
+
           <div className="footer__google-map margin-about col-lg-4">
          
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3394.273282644758!2d76.52477231126821!3d31.70842907402051!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3904d5487e12c4a1%3A0x395f92d3a202a7d0!2sNational%20Institute%20of%20Technology%2C%20Hamirpur!5e0!3m2!1sen!2sin!4v1692795340624!5m2!1sen!2sin" width="350" height="200" style={{border:0}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
