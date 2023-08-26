@@ -22,7 +22,7 @@
 
 .animated-text span::before {
   content: "FAMILY";
-  color: #ff7f50;
+  color: var(--link-color);
   animation: words 10s infinite;
 }
 
@@ -31,7 +31,7 @@
   position: absolute;
   width: calc(100% + 14px);
   height: 100%;
-  background-color: #222831;
+  background-color: #323840;
   border-left: 2px solid;
   right: -8px;
   animation: cursor 0.8s infinite, typing 10s steps(14) infinite;
@@ -203,10 +203,10 @@
   color: var(--color-white-text);
   font-size: var(--font-subheading);
 }
-.aboutus-heading{
+.aboutus-heading {
   padding-top: 20px;
 }
-.aboutus-h2{
+.aboutus-h2 {
   text-align: center;
 }
 
@@ -319,8 +319,6 @@
   /* background: var(--body_color); */
 }
 
-
-
 .contactForm h2 {
   font-size: 30px;
   /* color: var(--color-text-secondary); */
@@ -388,7 +386,7 @@
 }
 
 .contactForm .submit-btn:hover {
-  background:var(--body-background);
+  background: var(--body-background);
   /* background-image: -webkit-linear-gradient(top, #8e0279, #380066);
   background-image: -moz-linear-gradient(top, #8e0279, #380066);
   background-image: -ms-linear-gradient(top, #8e0279, #380066);
@@ -475,7 +473,6 @@
   }
 }
 
-
 /* Coursel CSS */
 .carousel-container {
   width: 90%;
@@ -499,5 +496,5 @@
 }
 
 .carousel .control-dots {
-  display: none; 
+  display: none;
 }

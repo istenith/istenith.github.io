@@ -22,7 +22,6 @@ import SumitImg from "../static/finalYrimg/sumit.webp";
 import VanshImg from "../static/finalYrimg/Vansh.webp";
 import VanshikaImg from "../static/finalYrimg/Vanshika2.webp";
 
-
 //Third Year
 import AdityaImg from "../static/members/aditya.webp";
 import ArmaanImg from "../static/members/armaan.webp";
@@ -573,6 +572,8 @@ const profileData = [
     img: AnshumanImg,
     post: "Executive",
   },
+
+
   {
     section: "secondYear",
     name: "Ayan Choradia",
@@ -644,6 +645,7 @@ const profileData = [
     img: SourabhImg,
     post: "Executive",
   },
+
   {
     section: "secondYear",
     name: "Oshin Sharma",
@@ -665,6 +667,7 @@ const profileData = [
     img: AnuragImg,
     post: "Executive",
   },
+
   {
     section: "secondYear",
     name: "Rishika Sharma",
@@ -685,6 +688,7 @@ const profileData = [
     img: SakshiImg,
     post: "Executive",
   },
+
   {
     section: "secondYear",
     name: "Tanashvi Joshi",
