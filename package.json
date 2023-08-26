@@ -16,6 +16,7 @@
     "framer-motion": "^10.12.16",
     "gsap": "^3.12.1",
     "lottie-react": "^2.4.0",
+    "markdown-yaml-metadata-parser": "^3.0.0",
     "pace-js": "^1.2.4",
     "particles.js": "^2.0.0",
     "react": "^18.2.0",

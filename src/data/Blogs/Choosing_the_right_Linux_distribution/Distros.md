@@ -25,6 +25,7 @@ Ubuntu is without a doubt the most talked about distribution among all others. I
 
 ![image here](pop.png)
 
+
 PopOS! Is another distribution that is based heavily on Ubuntu. It is specially customized for gaming. PopOS comes with graphics cards support for both Nvidia and AMD cards out of the box. While on ubuntu you might run into problems with installing the right drivers for your graphics card you will likely face no such problems with PopOS. On the downside however PopOs is really meant for Pcs with relatively high specs. You should have at least 8GB ram and at least a 2GB graphics card to enjoy the full capabilities of this distro. Other than that it is basically the same as Ubuntu. It comes with the GNOME desktop environment by default and currently that is the only version available. To change the desktop environment you would have to install the necessary packages on your own. If you have a high end PC you should prefer PopOs over Ubuntu as it will save you a lot of time in case you run into any issues with the graphics card.
 
 ## 3. Arch Linux

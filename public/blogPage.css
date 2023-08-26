@@ -1,0 +1,14 @@
+.markdown-container{
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    font-size: 20px;
+}
+img{    
+    height: 100%;
+    max-width: 80%;
+    margin: 20px;
+    border-radius: 20px;
+
+}

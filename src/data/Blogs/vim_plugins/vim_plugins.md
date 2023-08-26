@@ -1,13 +1,15 @@
 ---
 title: "Vim plugins that make life easy!"
 date: "2020-12-21"
-featuredImage: "vim.png"
 author: "Parth Pant"
 email: "parthpant4@gmail.com"
 tags: ['vim', 'development']
 ---
 
-![vim](vim.png)
+
+# Vim Plugins that make life easy!
+
+![Vim](vim.png)
 
 Vim is a great text editor, in fact some would argue it is the best text editor! But the problem is that it is just a text editor. Nothing more, nothing less.
 People accustomed with using full fledged IDEs like Visual Studio, VS code, Atom etc. might feel hard to get started with vim. A great feature of vim is that it supports a large number of plugins that can increase its functionality in all the ways imaginable!
