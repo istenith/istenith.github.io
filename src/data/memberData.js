@@ -48,7 +48,6 @@ import AbhimanyuImg from "../static/members/abhimanyu.webp";
 import AdityaSImg from "../static/members/adityasharma.webp";
 import AnkurImg from "../static/members/ankur.webp";
 import AnshumanImg from "../static/members/anshuman.webp";
-import ArchanImg from "../static/members/archan.webp";
 import AyanImg from "../static/members/ayan.webp";
 import AyushiImg from "../static/members/ayushishukla.webp";
 import GugliImg from "../static/members/gugli.webp";

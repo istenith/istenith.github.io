@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import React from "react";
 // import underConstructionImage from './static/images/underconstruction.png';
 
 import { HashRouter } from "react-router-dom";
@@ -14,10 +14,10 @@ const App = () => {
   console.log(
     `Found ${initialTheme} mode in local storage, setting theme that only.`
   );
-  const [theme, setTheme] = useState(initialTheme);
-  const setThemeOuter = (currentTheme) => {
-    setTheme(currentTheme);
-  };
+  // const [theme, setTheme] = useState(initialTheme);
+  // const setThemeOuter = (currentTheme) => {
+  //   setTheme(currentTheme);
+  // };
   return (
     // Uncomment the below lines to Have everything working!
     //     // <>
