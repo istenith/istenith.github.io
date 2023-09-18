@@ -81,6 +81,8 @@ import KartikMittalImg from "../static/firstYrimg/KartikMittal.webp";
 import SaloniImg from "../static/firstYrimg/Saloni.webp";
 import PradyumnaImg from "../static/firstYrimg/Pradyumna.webp";
 import AbhishekImg from "../static/firstYrimg/Abhishek.webp";
+import AryanImg from "../static/firstYrimg/Aryan.webp";
+import SonalImg from "../static/firstYrimg/Sonal.webp";
 
 const profileData = [
   // Final Year
@@ -93,7 +95,7 @@ const profileData = [
     instagram: "https://www.instagram.com/b3.berty/",
     img: AlbertImg,
     rollNumber: "1niOjXJKVLFb1ICZ___4pHryOw6ysQt3z",
-    branch: "Mathematics and Scientific computing",
+    branch: "Mathematics and Scientific Computing",
     location: "Bilaspur, Himachal Pradesh",
     about:
       "Loves to explore the world around Data. Loves to devote time in reading about the Defence forces and the analysis of field decision.",
@@ -131,7 +133,7 @@ const profileData = [
     instagram: "https://www.instagram.com/dg__disha_/",
     img: DishaImg,
     rollNumber: "1cMSLUYaTd_-_d0bWjLBF-VVSiQcmPDaX",
-    branch: "Mathematics and Scientific computing",
+    branch: "Mathematics and Scientific Computing",
     location: "Una, Himachal Pradesh",
     about:
       "ML enthusiast, Programmer, Developer, Open to learn new technologies",
@@ -168,7 +170,7 @@ const profileData = [
     instagram: "https://www.instagram.com/harmanpreet_013/",
     img: HarmanpreetImg,
     rollNumber: "18hlg1lzF81JB-DJKg36G5SHzOM2zB7Xz",
-    branch: "Computer Science and Engineering Dual",
+    branch: "Computer Science and Engineering (Dual Degree)",
     location: "Nalagarh, Himachal Pradesh",
     about:
       "A computer-science student, web developer, programmer, and love to play Hockey.",
@@ -206,7 +208,7 @@ const profileData = [
     instagram: "https://www.instagram.com/kaus._.tubh/",
     img: KaustubhImg,
     rollNumber: "16_rAwwruLc2BS3XuKMGjF2K70foAL39d",
-    branch: "Mathematics and Scientific computing",
+    branch: "Mathematics and Scientific Computing",
     location: "Lucknow, Uttar Pradesh",
     about:
       "Web Developer, Passionate about Machine Learning and why I exist in this world?",
@@ -283,7 +285,7 @@ const profileData = [
     instagram: "https://instagram.com/the_caring_diary?igshid=YmMyMTA2M2Y=",
     img: TanmayImg,
     rollNumber: "156x7nF6Vjqlqz0aV1u_krIV2F0B-lvpm",
-    branch: "Computer Science and Engineering Dual",
+    branch: "Computer Science and Engineering (Dual Degree)",
     location: "Ballia, Uttar Pradesh",
     about:
       "Passionate about coding and designing software for businesses and consumers alike.",
@@ -323,7 +325,7 @@ const profileData = [
     instagram: "https://www.instagram.com/adt.rana/",
     img: AdityaImg,
     rollNumber: "1LjuDNVhaQmaOaujbP3XWpNtAaXtnAZNo",
-    branch: "Computer science and Engineering",
+    branch: "Computer Science and Engineering",
     location: "Kangra, Himachal Pradesh",
     about:
       "I am an instance of my own class | Fresher @ CSE NITH | Always learning and implementing latest and greatest technologies | Freelancer @ fiverr | Android Developer",
@@ -336,7 +338,7 @@ const profileData = [
     instagram: "https://www.instagram.com/armaan._shukla/",
     img: ArmaanImg,
     rollNumber: "1Tpnk2k0ZIv73FWy7JeLxcRBjC_Oq7O-f",
-    branch: "Mathematics and Computing",
+    branch: "Mathematics and Scientific Computing",
     location: "Kangra, Himachal Pradesh",
     about: "Batch 2025",
   },
@@ -412,7 +414,7 @@ const profileData = [
     branch: "Mathematics and Scientific Computing",
     location: "Nainital, Uttarakhand",
     about:
-      "Pursuing BTech in Mathematics And Computing (2025), Interested in Tech. And Financial Stuff. Travel Freak",
+      "Pursuing BTech in Mathematics and Scientific Computing (2025), Interested in Tech. And Financial Stuff. Travel Freak",
   },
   {
     name: "Jeevak Sangodkar",
@@ -486,7 +488,7 @@ const profileData = [
     branch: "Mathematics and Scientific Computing",
     location: "Haridwar, Uttarakhand",
     about:
-      "A student at NIT Hamirpur currently pursuing Mathematics and Computing; learning, trying, and testing new technologies and skills every day.",
+      "A student at NIT Hamirpur currently pursuing Mathematics and Scientific Computing; learning, trying, and testing new technologies and skills every day.",
   },
   {
     name: "Navdeep Kaur",
@@ -555,7 +557,7 @@ const profileData = [
   {
     section: "secondYear",
     name: "Abhimanyu Singh",
-    branch: "CSE dual",
+    branch: "Computer Science and Engineering (Dual Degree)",
     location: "Bareilly, Uttar Pradesh",
     instagram: "https://instagram.com/alternate_manyu?igshid=YmMyMTA2M2Y=",
     linkedin: "http://linkedin.com/in/abhimanyu-singh-326343266",
@@ -575,7 +577,7 @@ const profileData = [
   {
     section: "secondYear",
     name: "Ankur Yadav",
-    branch: "Mathematics and Computing",
+    branch: "Mathematics and Scientific Computing",
     location: "Solan, Himachal Pradesh",
     instagram: "https://instagram.com/ig_ankuryadav?igshid=ZDdkNTZiNTM=",
     linkedin: "https://www.linkedin.com/in/ankuryadavsolan",
@@ -637,7 +639,7 @@ const profileData = [
   {
     section: "secondYear",
     name: "Laksh Bhandari",
-    branch: "Mathematics and Computing",
+    branch: "Mathematics and Scientific Computing",
     location: "Haldwani, Uttarakhand",
     instagram: "https://instagram.com/bhandari_g.29",
     linkedin: "https://www.linkedin.com/in/laksh-bhandari-70a4b225b",
@@ -733,7 +735,7 @@ const profileData = [
     name: "Amit Singh Bathyal",
     section: "firstYear",
     post: "Volunteer",
-    branch: "Civil",
+    branch: "Civil Engineering",
     location: "Haldwani, Uttarakhand",
     instagram: "https://instagram.com/the_a_s_bathyal?igshid=YTQwZjQ0NmI0OA==",
     linkedin: "https://www.linkedin.com/in/amit-singh-bathyal-a885a2242",
@@ -743,7 +745,7 @@ const profileData = [
     name: "Akshit Pathania",
     section: "firstYear",
     post: "Volunteer",
-    branch: "CSE",
+    branch: "Computer Science and Engineering",
     location: "Kangra, Himachal Pradesh",
     instagram: "https://instagram.com/ak.shit8432?igshid=NGVhN2U2NjQ0Yg==",
     linkedin: "https://www.linkedin.com/in/akshit-pathania-62522728b",
@@ -753,7 +755,7 @@ const profileData = [
     name: "Akshit Saini",
     section: "firstYear",
     post: "Volunteer",
-    branch: "ECE(dual)",
+    branch: "Electronics and Communication Engineering (Dual Degree)",
     location: "Una, Himachal Pradesh",
     instagram: "https://instagram.com/akshit.rxt?igshid=OGQ5ZDc2ODk2ZA==",
     linkedin: "https://www.linkedin.com/in/akshit-saini-905861290",
@@ -770,10 +772,21 @@ const profileData = [
     img: ArihantImg,
   },
   {
+    name: "Aryan Soni",
+    section: "firstYear",
+    post: "Volunteer",
+    branch: "Mathematics and Scientific Computing",
+    location: "Sikar,Rajasthan ",
+    instagram:
+      "https://instagram.com/introspective_aryan?igshid=OGQ5ZDc2ODk2ZA==",
+    linkedin: "https://www.linkedin.com/in/aryan-soni-6bbb5b270",
+    img: AryanImg,
+  },
+  {
     name: "Ashutosh K. Sadana",
     section: "firstYear",
     post: "Volunteer",
-    branch: "Mathematics And Computing",
+    branch: "Mathematics and Scientific Computing",
     location: "Mandi, Himachal Pradesh",
     instagram: "https://instagram.com/ashutosh_sadana?igshid=NGVhN2U2NjQ0Yg==",
     linkedin: "https://www.linkedin.com/in/ashutosh-sadana-922722201",
@@ -784,7 +797,7 @@ const profileData = [
     name: "Avirat Mahajan",
     section: "firstYear",
     post: "Volunteer",
-    branch: "ECE",
+    branch: "Electronics and Communication Engineering",
     location: "Shimla, Himachal Pradesh",
     linkedin: "https://www.linkedin.com/in/avirat-mahajan-77911a289",
     img: AviratImg,
@@ -793,7 +806,7 @@ const profileData = [
     name: "Devkriti Sharma",
     section: "firstYear",
     post: "Volunteer",
-    branch: "Electrical",
+    branch: "Electrical Engineering",
     location: "Hamirpur, Himachal Pradesh",
     instagram: "https://instagram.com/04d.kriti?igshid=OGQ5ZDc2ODk2ZA==",
     linkedin: "https://www.linkedin.com/in/devkriti-sharma-333932291",
@@ -813,7 +826,7 @@ const profileData = [
     name: "Kashyap Saksham Kumar",
     section: "firstYear",
     post: "Volunteer",
-    branch: "Mechanical",
+    branch: "Mechanical Engineering",
     location: "Patna, Bihar",
     instagram: "https://instagram.com/k.saksham.k?igshid=NGVhN2U2NjQ0Yg==",
     linkedin: "https://www.linkedin.com/in/kashyap-saksham-kumar-14b703291",
@@ -833,7 +846,7 @@ const profileData = [
     name: "Naman Srivastava",
     section: "firstYear",
     post: "Volunteer",
-    branch: "Mechanical",
+    branch: "Mechanical Engineering",
     location: "Prayagraj, U.P.",
     instagram: "https://instagram.com/_namansrivastava?igshid=OGQ5ZDc2ODk2ZA==",
     linkedin: "https://www.linkedin.com/in/naman-srivastava-035a5a234",
@@ -864,7 +877,7 @@ const profileData = [
     name: "Saloni Chaudhary",
     section: "firstYear",
     post: "Volunteer",
-    branch: "Electronics and communication",
+    branch: "Electronics and Communication Engineering",
     location: "Dharamshala, Himachal Pradesh",
     instagram:
       "https://instagram.com/saloni.c_23?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D",
@@ -874,7 +887,7 @@ const profileData = [
     name: "Shambhav Mishra",
     section: "firstYear",
     post: "Volunteer",
-    branch: "Mechanical",
+    branch: "Mechanical Engineering",
     location: "Lucknow, Uttar Pradesh",
     instagram: "https://instagram.com/shambhavvv?igshid=NjIwNzIyMDk2Mg==",
     linkedin: "https://www.linkedin.com/in/shambhav-mishra-b70312285",
@@ -884,17 +897,27 @@ const profileData = [
     name: "Siya Sood",
     section: "firstYear",
     post: "Volunteer",
-    branch: "ECE",
+    branch: "Electronics and Communication Engineering",
     location: "Kullu, Himachal Pradesh",
     instagram: "https://instagram.com/siya__._._?igshid=OGQ5ZDc2ODk2ZA==",
     linkedin: "https://www.linkedin.com/in/siya-sood-002307291",
     img: SiyaSoodImg,
   },
   {
+    name: "Sonal Dogra",
+    section: "firstYear",
+    post: "Volunteer",
+    branch: "Computer Science and Engineering (Dual Degree)",
+    location: "Kangra, Himachal Pradesh",
+    instagram: "https://instagram.com/sonaldogra11?igshid=OGQ5ZDc2ODk2ZA==",
+    linkedin: "https://www.linkedin.com/in/sonal-dogra-bb5555291",
+    img: SonalImg,
+  },
+  {
     name: "Vedant Tiwari",
     section: "firstYear",
     post: "Volunteer",
-    branch: "Civil",
+    branch: "Civil Engineering",
     location: "Bhopal, Madhya Pradesh",
     instagram: "https://instagram.com/eviloid.fr?igshid=NTc4MTIwNjQ2YQ==",
     linkedin: "https://www.linkedin.com/in/vedant-tiwari-3104ba262",
