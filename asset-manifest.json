@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.8eb20739.css",
-    "main.js": "/static/js/main.e19f2223.js",
+    "main.js": "/static/js/main.cd27ae74.js",
     "static/js/787.68a4761b.chunk.js": "/static/js/787.68a4761b.chunk.js",
     "static/media/Hult_04N.jpg": "/static/media/Hult_04N.50614681e1e9f8b4f4fb.jpg",
     "static/media/Technex 05.jpg": "/static/media/Technex 05.f4661a8576e909f24113.jpg",
@@ -137,11 +137,11 @@
     "static/media/Creating_Packages_in_Julia.md": "/static/media/Creating_Packages_in_Julia.c48fbb7e50eb7f9a5a47.md",
     "index.html": "/index.html",
     "main.8eb20739.css.map": "/static/css/main.8eb20739.css.map",
-    "main.e19f2223.js.map": "/static/js/main.e19f2223.js.map",
+    "main.cd27ae74.js.map": "/static/js/main.cd27ae74.js.map",
     "787.68a4761b.chunk.js.map": "/static/js/787.68a4761b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.8eb20739.css",
-    "static/js/main.e19f2223.js"
+    "static/js/main.cd27ae74.js"
   ]
 }
