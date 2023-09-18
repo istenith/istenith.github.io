@@ -15,7 +15,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
 }
 
 .footer__logo img {
@@ -51,7 +50,7 @@
 text-align:center;
 }
 .footer__google-map{
-  margin-top:3rem;
+  margin-top:3  rem;
 
 }
 .footer__sitemap li {
@@ -90,6 +89,17 @@ text-align:center;
 
   .footer__social-links {
     margin-top: 1rem;
+  }
+  .footer__google-map{
+    margin-top:3  rem;
+    margin:auto;
+
+    
+  
+  }
+  .map_ok{
+    padding:5%;
+    margin:5%;
   }
 
   
