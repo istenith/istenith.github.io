@@ -70,7 +70,7 @@ const MembersPage = () => {
         >
           Second Year
         </motion.button>
-        {/* <motion.button
+        <motion.button
           onClick={() => handleSectionClick("firstYear")}
           className={`section-button ${
             selectedSection === "firstYear" ? "active" : ""
@@ -80,7 +80,7 @@ const MembersPage = () => {
           animate="animate"
         >
           First Year
-        </motion.button> */}
+        </motion.button>
       </div>
       <br />
       <br />

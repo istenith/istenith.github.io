@@ -61,6 +61,27 @@ import TanashviImg from "../static/members/tenashvi.webp";
 import SourabhImg from "../static/members/sourabh.webp";
 import AnuragImg from "../static/members/anurag.webp";
 
+//First Year
+
+import DevkritiImg from "../static/firstYrimg/Devkriti.webp";
+import ShambhavImg from "../static/firstYrimg/Shambhav.webp";
+import AshutoshImg from "../static/firstYrimg/Ashutosh.webp";
+import AmitImg from "../static/firstYrimg/Amit.webp";
+import AkshitSainiImg from "../static/firstYrimg/AkshitSaini.webp";
+import NamanImg from "../static/firstYrimg/Naman.webp";
+import AkshitPathaniaImg from "../static/firstYrimg/AkshitPathania.webp";
+import SakshamImg from "../static/firstYrimg/Saksham.webp";
+import SiyaSoodImg from "../static/firstYrimg/SiyaSood.webp";
+import MannatImg from "../static/firstYrimg/Mannat.webp";
+import AviratImg from "../static/firstYrimg/Avirat.webp";
+import VedantImg from "../static/firstYrimg/Vedant.webp";
+import NiharikaImg from "../static/firstYrimg/Niharika.webp";
+import ArihantImg from "../static/firstYrimg/Arihant.webp";
+import KartikMittalImg from "../static/firstYrimg/KartikMittal.webp";
+import SaloniImg from "../static/firstYrimg/Saloni.webp";
+import PradyumnaImg from "../static/firstYrimg/Pradyumna.webp";
+import AbhishekImg from "../static/firstYrimg/Abhishek.webp";
+
 const profileData = [
   // Final Year
 
@@ -297,7 +318,7 @@ const profileData = [
   {
     name: "Aditya Rana",
     section: "thirdYear",
-    post: "Executive Member",
+    post: "Co-Ordinator",
     linkedin: "https://www.linkedin.com/in/aditya-rana-6156071aa",
     instagram: "https://www.instagram.com/adt.rana/",
     img: AdityaImg,
@@ -310,7 +331,7 @@ const profileData = [
   {
     name: "Armaan Shukla",
     section: "thirdYear",
-    post: "Executive Member",
+    post: "Co-Ordinator",
     linkedin: "https://www.linkedin.com/in/armaan-shukla-b17a80141/",
     instagram: "https://www.instagram.com/armaan._shukla/",
     img: ArmaanImg,
@@ -322,7 +343,7 @@ const profileData = [
   {
     name: "Chandan Kumar",
     section: "thirdYear",
-    post: "Executive Member",
+    post: "Co-Ordinator",
     linkedin: "https://www.linkedin.com/in/chandan-kumar-19880a22a/",
     instagram: "https://www.instagram.com/chandan_._kr/",
     img: ChandanImg,
@@ -334,7 +355,7 @@ const profileData = [
   {
     name: "Charu",
     section: "thirdYear",
-    post: "Executive Member",
+    post: "Co-Ordinator",
     linkedin: "https://www.linkedin.com/in/charu-229665223",
     instagram: "https://www.instagram.com/charuchauhan575/",
     img: CharuImg,
@@ -346,7 +367,7 @@ const profileData = [
   {
     name: "Dharuva Thakur",
     section: "thirdYear",
-    post: "Executive Member",
+    post: "Co-Ordinator",
     linkedin: "https://www.linkedin.com/in/dharuva-thakur-83576122a",
     instagram: "https://www.instagram.com/dharuva_thakur/",
     img: DharuvaImg,
@@ -358,7 +379,7 @@ const profileData = [
   {
     name: "Ekansh Verma",
     section: "thirdYear",
-    post: "Executive Member",
+    post: "Co-Ordinator",
     linkedin: "https://www.linkedin.com/in/ekansh-verma-469557228",
     instagram: "https://www.instagram.com/i_ekanshverma/",
     img: EkanshImg,
@@ -371,7 +392,7 @@ const profileData = [
   {
     name: "Gargi Dhawan",
     section: "thirdYear",
-    post: "Executive Member",
+    post: "Co-Ordinator",
     linkedin: "https://www.linkedin.com/in/gargi-dhawan-7706a722a",
     instagram: "https://www.instagram.com/gargidh1/",
     img: GargiImg,
@@ -383,7 +404,7 @@ const profileData = [
   {
     name: "Hardik Sachdeva",
     section: "thirdYear",
-    post: "Executive Member",
+    post: "Co-Ordinator",
     linkedin: "https://www.linkedin.com/in/hardik-sachdeva-a69987217",
     instagram: "https://www.instagram.com/_haardyy_/",
     img: HardikImg,
@@ -396,7 +417,7 @@ const profileData = [
   {
     name: "Jeevak Sangodkar",
     section: "thirdYear",
-    post: "Executive Member",
+    post: "Co-Ordinator",
     linkedin: "https://www.linkedin.com/in/jeevak-sangodkar-919653228/",
     instagram: "https://www.instagram.com/jeevaks17/",
     img: JeevakImg,
@@ -408,7 +429,7 @@ const profileData = [
   {
     name: "Kanika Sharma",
     section: "thirdYear",
-    post: "Executive Member",
+    post: "Co-Ordinator",
     linkedin: "https://www.linkedin.com/in/kanika-sharma-aa274b22a",
     instagram: "https://www.instagram.com/kanika_shh/",
     img: KanikaImg,
@@ -420,7 +441,7 @@ const profileData = [
   {
     name: "Kuldeep Kumar",
     section: "thirdYear",
-    post: "Executive Member",
+    post: "Co-Ordinator",
     linkedin: "https://www.linkedin.com/in/kuldeep-kumar-205a9b229/",
     instagram: "https://www.instagram.com/_.kuldeep_kumar._/",
     img: KuldeepImg,
@@ -433,7 +454,7 @@ const profileData = [
   {
     name: "Madhukesh Singh",
     section: "thirdYear",
-    post: "Executive Member",
+    post: "Co-Ordinator",
     linkedin: "https://www.linkedin.com/in/madhukesh-singh-195618233/",
     instagram: "https://www.instagram.com/madhukesh_singh/",
     img: MadhukeshImg,
@@ -445,7 +466,7 @@ const profileData = [
   {
     name: "Manik Singh",
     section: "thirdYear",
-    post: "Executive Member",
+    post: "Co-Ordinator",
     linkedin: "https://www.linkedin.com/in/manik-singh-021945194/",
     instagram: "https://www.instagram.com/maniksingh2002/",
     img: ManikImg,
@@ -457,7 +478,7 @@ const profileData = [
   {
     name: "Mehul Aggarwal",
     section: "thirdYear",
-    post: "Executive Member",
+    post: "Co-Ordinator",
     linkedin: "https://www.linkedin.com/in/mehul-aggarwal-47285421b/",
     instagram: "https://www.instagram.com/mehul_tp26/",
     img: MehulImg,
@@ -470,7 +491,7 @@ const profileData = [
   {
     name: "Navdeep Kaur",
     section: "thirdYear",
-    post: "Executive Member",
+    post: "Co-Ordinator",
     linkedin: "https://www.linkedin.com/in/navdeep-kaur-44375022a/",
     instagram: "https://www.instagram.com/navikaur_612/",
     img: NavdeepImg,
@@ -482,7 +503,7 @@ const profileData = [
   {
     name: "Shashank Shekhar",
     section: "thirdYear",
-    post: "Executive Member",
+    post: "Co-Ordinator",
     linkedin: "https://www.linkedin.com/in/shashank-shekhar-196786229/",
     instagram: "https://www.instagram.com/sshekharr28/",
     img: ShashankImg,
@@ -493,7 +514,7 @@ const profileData = [
   {
     name: "Shariq Verma",
     section: "thirdYear",
-    post: "Executive Member",
+    post: "Co-Ordinator",
     linkedin: "https://www.linkedin.com/in/shariq-verma-94a75122a",
     instagram: "https://www.instagram.com/shariq_verma/",
     img: ShariqImg,
@@ -506,7 +527,7 @@ const profileData = [
   {
     name: "Siya Rana",
     section: "thirdYear",
-    post: "Executive Member",
+    post: "Co-Ordinator",
     linkedin: "https://www.linkedin.com/in/siya-rana-b07639221",
     instagram: "https://www.instagram.com/siyarana18_/",
     img: SiyaImg,
@@ -519,7 +540,7 @@ const profileData = [
   {
     name: "Swastik Sharma",
     section: "thirdYear",
-    post: "Executive Member",
+    post: "Co-Ordinator",
     linkedin: "https://www.linkedin.com/in/swastkk",
     instagram: "https://www.instagram.com/swastik.sharmaa/",
     img: SwastikImg,
@@ -539,7 +560,7 @@ const profileData = [
     instagram: "https://instagram.com/alternate_manyu?igshid=YmMyMTA2M2Y=",
     linkedin: "http://linkedin.com/in/abhimanyu-singh-326343266",
     img: AbhimanyuImg,
-    post: "Executive",
+    post: "Executive Member",
   },
   {
     section: "secondYear",
@@ -549,7 +570,7 @@ const profileData = [
     instagram: "https://instagram.com/_.adityasharma_._?igshid=ZDdkNTZiNTM=",
     linkedin: "https://www.linkedin.com/in/aditya-sharma-82997921b",
     img: AdityaSImg,
-    post: "Executive",
+    post: "Executive Member",
   },
   {
     section: "secondYear",
@@ -559,7 +580,7 @@ const profileData = [
     instagram: "https://instagram.com/ig_ankuryadav?igshid=ZDdkNTZiNTM=",
     linkedin: "https://www.linkedin.com/in/ankuryadavsolan",
     img: AnkurImg,
-    post: "Executive",
+    post: "Executive Member",
   },
   {
     section: "secondYear",
@@ -569,9 +590,8 @@ const profileData = [
     instagram: "https://instagram.com/anshumaaaan_?igshid=ZDdkNTZiNTM=",
     linkedin: "https://www.linkedin.com/in/anshumanpayasi",
     img: AnshumanImg,
-    post: "Executive",
+    post: "Executive Member",
   },
-
 
   {
     section: "secondYear",
@@ -582,7 +602,7 @@ const profileData = [
     instagram: "https://instagram.com/ayanchoradia?igshid=ZDdkNTZiNTM=",
     linkedin: "https://www.linkedin.com/in/ayanchoradia",
     img: AyanImg,
-    post: "Executive",
+    post: "Executive Member",
   },
   {
     section: "secondYear",
@@ -592,7 +612,7 @@ const profileData = [
     instagram: "https://instagram.com/ayushii_05_?igshid=NmQ2ZmYxZjA=",
     linkedin: "https://www.linkedin.com/in/ayushi-shukla-7498b125b",
     img: AyushiImg,
-    post: "Executive",
+    post: "Executive Member",
   },
   {
     section: "secondYear",
@@ -602,7 +622,7 @@ const profileData = [
     instagram: "https://instagram.com/dude_its.gugli?igshid=NTE5MzUyOTU=",
     linkedin: "https://www.linkedin.com/in/gugli-thakur-73479425b",
     img: GugliImg,
-    post: "Executive",
+    post: "Executive Member",
   },
   {
     section: "secondYear",
@@ -612,7 +632,7 @@ const profileData = [
     instagram: "https://instagram.com/kunal_dhiman27971",
     linkedin: "",
     img: KunalImg,
-    post: "Executive",
+    post: "Executive Member",
   },
   {
     section: "secondYear",
@@ -622,7 +642,7 @@ const profileData = [
     instagram: "https://instagram.com/bhandari_g.29",
     linkedin: "https://www.linkedin.com/in/laksh-bhandari-70a4b225b",
     img: LakshImg,
-    post: "Executive",
+    post: "Executive Member",
   },
   {
     section: "secondYear",
@@ -632,7 +652,7 @@ const profileData = [
     instagram: "https://instagram.com/a.gyaani.ladka?igshid=YmMyMTA2M2Y=",
     linkedin: "https://www.linkedin.com/in/mehul-ambastha-234b92175/",
     img: MehulAImg,
-    post: "Executive",
+    post: "Executive Member",
   },
   {
     section: "secondYear",
@@ -642,7 +662,7 @@ const profileData = [
     instagram: "https://www.instagram.com/__sourabh.awasthy/",
     linkedin: "https://www.linkedin.com/in/sourabh-awasthy-38203525a/",
     img: SourabhImg,
-    post: "Executive",
+    post: "Executive Member",
   },
 
   {
@@ -653,18 +673,17 @@ const profileData = [
     instagram: "https://instagram.com/ohhshinnn?igshid=ZDdkNTZiNTM=",
     linkedin: "https://www.linkedin.com/in/oshin-sharma-b22584257",
     img: OshinImg,
-    post: "Executive",
+    post: "Executive Member",
   },
   {
     section: "secondYear",
     name: "Anurag Tripathi",
     branch: "Civil Engineering",
     location: "Lucknow, Uttar Pradesh",
-    instagram:
-      "https://www.instagram.com/anurag5feb/",
+    instagram: "https://www.instagram.com/anurag5feb/",
     linkedin: "https://www.linkedin.com/in/anurag-tripathi-1807a6236/",
     img: AnuragImg,
-    post: "Executive",
+    post: "Executive Member",
   },
 
   {
@@ -675,7 +694,7 @@ const profileData = [
     instagram: "https://instagram.com/rishika07.__?igshid=NmQ2ZmYxZjA=",
     linkedin: "https://www.linkedin.com/in/rishika-sharma-5bb235258",
     img: RishikaImg,
-    post: "Executive",
+    post: "Executive Member",
   },
   {
     section: "secondYear",
@@ -685,7 +704,7 @@ const profileData = [
     instagram: "https://instagram.com/sakshi.gothwal?igshid=ZDdkNTZiNTM=",
     linkedin: "https://www.linkedin.com/in/sakshi-gothwal-0466a925a",
     img: SakshiImg,
-    post: "Executive",
+    post: "Executive Member",
   },
 
   {
@@ -696,8 +715,191 @@ const profileData = [
     instagram: "https://instagram.com/tanashvi_joshi19?igshid=ZDdkNTZiNTM=",
     linkedin: "https://www.linkedin.com/in/tanashvi-joshi-528412255",
     img: TanashviImg,
-    post: "Executive",
-  }
+    post: "Executive Member",
+  },
+
+  //firstYear
+
+  {
+    name: "Abhishek Sharma",
+    section: "firstYear",
+    post: "Volunteer",
+    branch: "Materials Science and Engineering",
+    location: "Ghaziabad, Uttar Pradesh",
+    linkedin: "https://www.linkedin.com/in/abhishek-sharma-958952291",
+    img: AbhishekImg,
+  },
+  {
+    name: "Amit Singh Bathyal",
+    section: "firstYear",
+    post: "Volunteer",
+    branch: "Civil",
+    location: "Haldwani, Uttarakhand",
+    instagram: "https://instagram.com/the_a_s_bathyal?igshid=YTQwZjQ0NmI0OA==",
+    linkedin: "https://www.linkedin.com/in/amit-singh-bathyal-a885a2242",
+    img: AmitImg,
+  },
+  {
+    name: "Akshit Pathania",
+    section: "firstYear",
+    post: "Volunteer",
+    branch: "CSE",
+    location: "Kangra, Himachal Pradesh",
+    instagram: "https://instagram.com/ak.shit8432?igshid=NGVhN2U2NjQ0Yg==",
+    linkedin: "https://www.linkedin.com/in/akshit-pathania-62522728b",
+    img: AkshitPathaniaImg,
+  },
+  {
+    name: "Akshit Saini",
+    section: "firstYear",
+    post: "Volunteer",
+    branch: "ECE(dual)",
+    location: "Una, Himachal Pradesh",
+    instagram: "https://instagram.com/akshit.rxt?igshid=OGQ5ZDc2ODk2ZA==",
+    linkedin: "https://www.linkedin.com/in/akshit-saini-905861290",
+    img: AkshitSainiImg,
+  },
+  {
+    name: "Arihant Dogra",
+    section: "firstYear",
+    post: "Volunteer",
+    branch: "Computer Science and Engineering",
+    location: "Palampur, Himachal Pradesh",
+    instagram: "https://instagram.com/monsieur_arihant?igshid=YTQwZjQ0NmI0OA==",
+    linkedin: "https://www.linkedin.com/in/arihant-dogra-846959289",
+    img: ArihantImg,
+  },
+  {
+    name: "Ashutosh K. Sadana",
+    section: "firstYear",
+    post: "Volunteer",
+    branch: "Mathematics And Computing",
+    location: "Mandi, Himachal Pradesh",
+    instagram: "https://instagram.com/ashutosh_sadana?igshid=NGVhN2U2NjQ0Yg==",
+    linkedin: "https://www.linkedin.com/in/ashutosh-sadana-922722201",
+    img: AshutoshImg,
+  },
+
+  {
+    name: "Avirat Mahajan",
+    section: "firstYear",
+    post: "Volunteer",
+    branch: "ECE",
+    location: "Shimla, Himachal Pradesh",
+    linkedin: "https://www.linkedin.com/in/avirat-mahajan-77911a289",
+    img: AviratImg,
+  },
+  {
+    name: "Devkriti Sharma",
+    section: "firstYear",
+    post: "Volunteer",
+    branch: "Electrical",
+    location: "Hamirpur, Himachal Pradesh",
+    instagram: "https://instagram.com/04d.kriti?igshid=OGQ5ZDc2ODk2ZA==",
+    linkedin: "https://www.linkedin.com/in/devkriti-sharma-333932291",
+    img: DevkritiImg,
+  },
+  {
+    name: "Kartik Mittal",
+    section: "firstYear",
+    post: "Volunteer",
+    branch: "Chemical Engineering",
+    location: "Alwar, Rajasthan",
+    instagram: "https://instagram.com/kartik.070811?igshid=OGQ5ZDc2ODk2ZA==",
+    linkedin: "https://www.linkedin.com/in/kartik-mittal-72848a28a",
+    img: KartikMittalImg,
+  },
+  {
+    name: "Kashyap Saksham Kumar",
+    section: "firstYear",
+    post: "Volunteer",
+    branch: "Mechanical",
+    location: "Patna, Bihar",
+    instagram: "https://instagram.com/k.saksham.k?igshid=NGVhN2U2NjQ0Yg==",
+    linkedin: "https://www.linkedin.com/in/kashyap-saksham-kumar-14b703291",
+    img: SakshamImg,
+  },
+  {
+    name: "Mannat Katna",
+    section: "firstYear",
+    post: "Volunteer",
+    branch: "Engineering Physics",
+    location: "Solan, Himachal Pradesh",
+    instagram: "https://instagram.com/_mannnat__?igshid=OGQ5ZDc2ODk2ZA==",
+    linkedin: "https://www.linkedin.com/in/mannat-katna-664560289",
+    img: MannatImg,
+  },
+  {
+    name: "Naman Srivastava",
+    section: "firstYear",
+    post: "Volunteer",
+    branch: "Mechanical",
+    location: "Prayagraj, U.P.",
+    instagram: "https://instagram.com/_namansrivastava?igshid=OGQ5ZDc2ODk2ZA==",
+    linkedin: "https://www.linkedin.com/in/naman-srivastava-035a5a234",
+    img: NamanImg,
+  },
+  {
+    name: "Niharika Singh",
+    section: "firstYear",
+    post: "Volunteer",
+    branch: "Engineering Physics",
+    location: "Ghaziabad, Uttar Pradesh",
+    instagram: "https://instagram.com/_singhniharika_?igshid=OGQ5ZDc2ODk2ZA==",
+    linkedin: "https://www.linkedin.com/in/niharika-singh-303115285",
+    img: NiharikaImg,
+  },
+  {
+    name: "Pradyumna Sharma",
+    section: "firstYear",
+    post: "Volunteer",
+    branch: "Computer Science and Engineering",
+    location: "Kathmandu, Nepal",
+    instagram:
+      "https://instagram.com/pradyumna.14?utm_source=qr&igshid=YzU1NGVlODEzOA==",
+    linkedin: "https://www.linkedin.com/in/pradyumna14",
+    img: PradyumnaImg,
+  },
+  {
+    name: "Saloni Chaudhary",
+    section: "firstYear",
+    post: "Volunteer",
+    branch: "Electronics and communication",
+    location: "Dharamshala, Himachal Pradesh",
+    instagram:
+      "https://instagram.com/saloni.c_23?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D",
+    img: SaloniImg,
+  },
+  {
+    name: "Shambhav Mishra",
+    section: "firstYear",
+    post: "Volunteer",
+    branch: "Mechanical",
+    location: "Lucknow, Uttar Pradesh",
+    instagram: "https://instagram.com/shambhavvv?igshid=NjIwNzIyMDk2Mg==",
+    linkedin: "https://www.linkedin.com/in/shambhav-mishra-b70312285",
+    img: ShambhavImg,
+  },
+  {
+    name: "Siya Sood",
+    section: "firstYear",
+    post: "Volunteer",
+    branch: "ECE",
+    location: "Kullu, Himachal Pradesh",
+    instagram: "https://instagram.com/siya__._._?igshid=OGQ5ZDc2ODk2ZA==",
+    linkedin: "https://www.linkedin.com/in/siya-sood-002307291",
+    img: SiyaSoodImg,
+  },
+  {
+    name: "Vedant Tiwari",
+    section: "firstYear",
+    post: "Volunteer",
+    branch: "Civil",
+    location: "Bhopal, Madhya Pradesh",
+    instagram: "https://instagram.com/eviloid.fr?igshid=NTc4MTIwNjQ2YQ==",
+    linkedin: "https://www.linkedin.com/in/vedant-tiwari-3104ba262",
+    img: VedantImg,
+  },
 ];
 
 export default profileData;
